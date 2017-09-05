@@ -1,0 +1,86 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/text_white"
+    android:visibility="visible">
+
+    <RelativeLayout
+        android:id="@+id/logoContainer"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:padding="20dp"
+        android:visibility="visible"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/imageViewHapiCoachLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/hapicoach_logo_about"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_toRightOf="@+id/imageViewHapiCoachLogo"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/textViewAppName"
+            style="@style/blackNormal.ExtraLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:text="@string/app_name" />
+
+        <TextView
+            android:id="@+id/textViewVersopm"
+            style="@style/darkGrayNormal.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewAppName"
+            android:paddingLeft="10dp"
+            android:text="@string/app_version" />
+
+            </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/separatorContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logoContainer"
+        android:background="#FFFFFF"
+        android:visibility="visible">
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/common_gray_separator" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/aboutContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/separatorContainer"
+        android:background="#FFFFFF"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="5dp"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/textViewAbout"
+            style="@style/darkGrayNormal.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/PROFILE_ABOUT_DESCRIPTION"
+            android:gravity="right|fill_horizontal" />
+    </RelativeLayout>
+
+</RelativeLayout>

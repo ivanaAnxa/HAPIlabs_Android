@@ -1,0 +1,80 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:orientation="vertical"
+    android:id="@+id/stepsGFitLayout">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/steps_gFit_empty_displayTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/TAB_STEPS"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:layout_marginBottom="5dp" />
+
+        <ImageView
+            android:id="@+id/stepsinfo_empty"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/meal_info_icon" />
+    </RelativeLayout>
+
+
+    <!-- activity details -->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_background_gray_empty"
+        android:paddingTop="5dp">
+
+
+        <ImageView
+            android:id="@+id/steps_displaylogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/exercise_display_steps"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:id="@+id/steps_displayTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/GOOGLE_FIT_HEADER"
+            android:layout_toRightOf="@id/steps_displaylogo"
+            android:textStyle="bold"
+            android:textColor="@color/text_black"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/steps_selectedBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/GOOGLE_FIT_PAIR_ACCOUNT"
+            android:layout_toRightOf="@id/steps_displaylogo"
+            android:layout_below="@id/steps_displayTitle"
+            android:textColor="@color/text_darkgray" />
+
+        <ImageView
+            android:id="@+id/steps_add_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_black_24dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="5dp"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

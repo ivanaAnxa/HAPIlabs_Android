@@ -1,0 +1,86 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/mealitem_stepsdata"
+            layout="@layout/steps_itemlist"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent" />
+
+        <include
+            android:id="@+id/mealitem_stepsdata_gfit_empty"
+            layout="@layout/steps_itemcell_empty"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent" />
+
+        <include
+            android:id="@+id/mealitem_exercisedata"
+            layout="@layout/exercise_itemlist"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent" />
+        <include
+            android:id="@+id/mealitem_breakfast"
+            layout="@layout/mymeals_itemcell"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent" />
+
+        <include
+            android:id="@+id/mealitem_amsnack"
+            layout="@layout/mymeals_itemcell"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent" />
+
+        <include
+            android:id="@+id/mealitem_lunch"
+            layout="@layout/mymeals_itemcell"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent" />
+
+        <include
+            android:id="@+id/mealitem_pmsnack"
+            layout="@layout/mymeals_itemcell"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent" />
+
+        <include
+            android:id="@+id/mealitem_dinner"
+            layout="@layout/mymeals_itemcell"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent" />
+
+        <include
+            android:id="@+id/mealitem_exercise"
+            layout="@layout/exercise_itemcell"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent" />
+
+        <!--<include-->
+            <!--android:id="@+id/mealitem_water"-->
+            <!--layout="@layout/water_itemcell"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:theme="@android:style/Theme.Holo"/> -->
+        <!---->
+        <include
+            android:id="@+id/mealitem_water"
+            layout="@layout/water_itemcell_2"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:theme="@android:style/Theme.Holo"/>
+
+        <include
+            android:id="@+id/mealitem_hapimoment"
+            layout="@layout/hapimoment_itemcell"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:theme="@android:style/Theme.Holo"/>
+
+    </LinearLayout>
+</ScrollView>

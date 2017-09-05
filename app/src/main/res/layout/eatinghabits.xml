@@ -1,0 +1,24 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff" >
+
+
+
+    <include
+        android:id="@+id/footerbuttonlayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/footerbutton_orange"
+        android:visibility="visible" />
+
+    <include
+        android:id="@+id/eatinghabits"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/footerbuttonlayout2"
+       
+        layout="@layout/eatinghabitsview" />
+
+</RelativeLayout>

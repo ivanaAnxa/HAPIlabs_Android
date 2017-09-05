@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/hapicoach_bg" >
+
+    <com.anxa.hapilabs.activities.fragments.HeaderFragments
+          android:id="@+id/fragment_header"
+          android:layout_width="match_parent"
+          android:layout_height="44dp"
+          android:visibility="gone"
+          android:background="@color/text_orange" />
+      
+ <include
+        android:id="@+id/reg_page2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/objective"
+        android:layout_below="@id/fragment_header"
+        android:background="#0000ff"
+        android:visibility="gone"/>
+       
+  
+      <include
+        android:id="@+id/reg_page3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+         android:layout_below="@id/fragment_header"
+      
+        layout="@layout/eatinghabitsview"
+        android:visibility="gone" />
+    
+         <include
+        android:id="@+id/reg_page4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+         android:layout_below="@id/fragment_header"
+      
+        layout="@layout/signup"
+        android:visibility="gone" />
+         
+        <include
+        android:id="@+id/reg_page5"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+         android:layout_below="@id/fragment_header"
+      
+        layout="@layout/completeyourprofile"
+        android:visibility="gone" />
+
+    
+     
+    <android.support.v4.view.ViewPager
+        android:id="@+id/reg_page1"
+        android:layout_alignParentTop="true"
+        android:layout_width="fill_parent"
+        android:layout_above="@+id/pager"
+          android:visibility="visible"
+        android:layout_height="match_parent" />
+    
+    
+    <include
+        android:id="@+id/footerbuttonlayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/footerbutton_orange"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/pager"
+        android:visibility="visible"
+        android:layout_width="fill_parent"
+        android:layout_height="15dp"
+        android:orientation="horizontal"
+        android:layout_margin="3dp"
+        android:gravity="center_horizontal"
+        android:layout_above="@id/footerbuttonlayout2"
+        android:background="@android:color/transparent" >
+
+        <ImageView
+            android:id="@+id/pager1"
+            android:layout_width="5dp"
+            android:src="@drawable/button_register_pager_orange"
+            android:layout_height="15dp"
+            android:layout_marginRight="10dp"/>
+        
+        
+        <ImageView
+            android:id="@+id/pager2"
+            android:layout_width="5dp"
+            android:src="@drawable/button_register_pager_orange"
+            android:layout_height="15dp"
+               android:layout_marginRight="10dp"/>
+        
+        <ImageView
+            android:id="@+id/pager3"
+            android:layout_width="5dp"
+            android:src="@drawable/button_register_pager_orange"
+            android:layout_height="15dp"
+               android:layout_marginRight="10dp" />
+        
+        <ImageView
+            android:id="@+id/pager4"
+            android:layout_width="5dp"
+            android:src="@drawable/button_register_pager_orange"
+            android:layout_height="15dp"
+               android:layout_marginRight="10dp" />
+        
+        <ImageView
+            android:id="@+id/pager5"
+            android:layout_width="5dp"
+            android:src="@drawable/button_register_pager_orange"
+            android:layout_height="15dp"
+               android:layout_marginRight="10dp"/>
+        
+        <ImageView
+            android:id="@+id/pager6"
+            android:layout_width="5dp"
+               android:layout_marginRight="10dp"
+            android:src="@drawable/button_register_pager_orange"
+            android:layout_height="15dp"/>
+    </LinearLayout>
+    
+    
+    <LinearLayout
+        android:id="@+id/progress"
+        android:layout_centerInParent="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <ProgressBar
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_horizontal"
+              android:id="@+id/progressBar"
+            android:indeterminateDrawable="@drawable/animateprogress"
+            android:visibility="visible" />
+    </LinearLayout>
+
+</RelativeLayout>

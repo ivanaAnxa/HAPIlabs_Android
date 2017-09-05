@@ -1,0 +1,164 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="visible" >
+
+    <LinearLayout
+        android:id="@+id/signupcontainer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:weightSum="10" >
+
+        <RelativeLayout
+            android:id="@+id/usernamecontainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:background="@color/common_button_white"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/emailabel"
+                style="@style/grayNormal.Large"
+                
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:paddingLeft="10dp"
+                android:paddingRight="2dp"
+                android:paddingTop="5dp"
+                android:singleLine="true"
+                android:text="@string/SIGNUP_EMAIL" />
+
+            <EditText
+                android:id="@+id/signup_username_et"
+                style="@style/blackNormal.Large"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/emailabel"
+                android:gravity="right"
+                  android:background="@android:color/transparent"
+                android:hint="@string/SIGNUP_EMAIL"
+                android:inputType="textEmailAddress"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:singleLine="true"
+                android:textColorHint="#cacaca" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/common_gray_separator" />
+        
+        <RelativeLayout
+            android:id="@+id/passwordcontainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:background="@color/common_button_white"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/passwordlabel"
+                style="@style/grayNormal.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:paddingLeft="10dp"
+                android:paddingRight="2dp"
+                android:paddingTop="5dp"
+                android:singleLine="true"
+                android:text="@string/SIGNUP_PASSWORD" />
+
+            <EditText
+                android:id="@+id/signup_password_et"
+                style="@style/blackNormal.Large"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/passwordlabel"
+                android:gravity="right"
+                    android:background="@android:color/transparent"
+              android:inputType="textPassword"
+                android:hint="@string/SIGNUP_PASSWORD"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:singleLine="true"
+                android:textColorHint="#cacaca" />
+        </RelativeLayout>
+        
+        
+        
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/common_gray_separator" />
+        
+        <RelativeLayout
+            android:id="@+id/confirmpasswordcontainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:background="@color/common_button_white"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/confirmpasswordlabel"
+                style="@style/grayNormal.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:paddingLeft="10dp"
+                android:paddingRight="2dp"
+                android:paddingTop="5dp"
+                android:singleLine="true"
+                android:text="@string/SIGNUP_CONFIRM_PASSWORD" />
+
+            <EditText
+                android:id="@+id/signup_confirmpassword_et"
+                style="@style/blackNormal.Large"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/confirmpasswordlabel"
+                android:gravity="right"
+                 android:inputType="textPassword"
+             android:background="@android:color/transparent"
+                android:hint="@string/SIGNUP_CONFIRM_PASSWORD"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:singleLine="true"
+                android:textColorHint="#cacaca" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/progress"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:visibility="invisible" >
+
+        <ProgressBar
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:indeterminateDrawable="@drawable/animateprogress"
+            android:visibility="visible" />
+    </LinearLayout>
+
+
+
+</RelativeLayout>

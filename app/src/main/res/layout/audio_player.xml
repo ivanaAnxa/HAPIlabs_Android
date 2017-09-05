@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/comment_bubble_coach">
+
+    <TextView
+        android:id="@+id/chat_voice_message"
+        style="@style/grayItalic.Medium"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:ellipsize="end"
+        android:gravity="center_vertical|left"
+        android:text="Voice Message: "/>
+
+    <RelativeLayout
+        android:layout_below="@+id/chat_voice_message"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:background="@drawable/rounded_button_white_bordergray">
+
+
+        <ImageButton
+            android:id="@+id/playButton"
+            android:layout_width="28dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:background="@color/tw__transparent"
+            android:src="@drawable/audio_play"
+            android:clickable="true"
+            android:scaleType="centerInside" />
+
+        <ImageButton
+            android:id="@+id/soundButton"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/tw__transparent"
+            android:src="@drawable/audio_sound_on"
+            android:clickable="true"
+            android:scaleType="centerInside" />
+
+        <SeekBar
+            android:id="@+id/audioSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/playButton"
+            android:layout_toLeftOf="@id/soundButton"
+            android:background="@android:color/transparent"
+            android:max="10"
+            android:progress="4"
+            android:theme="@android:style/Theme.Holo"
+            style="@android:style/Widget.Holo.Light.ProgressBar.Horizontal"
+            android:thumb="@color/tw__transparent"
+            android:progressTint="@color/text_orangedark" />
+
+        <TextView
+            android:id="@+id/audioTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/audioSeekBar"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/audioSeekBar"
+            android:text="00:00"
+            android:textColor="@color/tw__medium_gray"
+            android:textSize="11sp" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,145 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+      <com.anxa.hapilabs.activities.fragments.HeaderFragments
+          android:id="@+id/fragment_header"
+          android:layout_width="match_parent"
+          android:layout_height="44dp"
+          android:background="@color/text_orangedark" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#F9F9F9"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/prevMonth"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10sp"
+            android:src="@drawable/left_arrow_orange" >
+        </ImageView>
+
+        <TextView
+            android:id="@+id/currentMonth"
+            android:layout_width="0dp"
+            android:layout_height="60sp"
+            android:layout_weight="0.6"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#FB7619" >
+        </TextView>
+
+        <ImageView
+            android:id="@+id/nextMonth"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="10sp"
+            android:src="@drawable/right_arrow_orange" >
+        </ImageView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#F9F9F9"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:weightSum="7" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/CALENDAR_SU"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#8E8E8E" >
+        </TextView>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/CALENDAR_MO"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#8E8E8E" >
+        </TextView>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/CALENDAR_TU"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#8E8E8E" >
+        </TextView>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/CALENDAR_WE"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#8E8E8E" >
+        </TextView>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/CALENDAR_TH"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#8E8E8E" >
+        </TextView>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/CALENDAR_FR"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#8E8E8E" >
+        </TextView>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/CALENDAR_SA"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#8E8E8E" >
+        </TextView>
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/calendar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-7dp"
+        android:columnWidth="90dp"
+        android:gravity="top"
+        android:horizontalSpacing="0dp"
+        android:numColumns="7"
+        android:paddingTop="-7dp"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="0dp" >
+    </GridView>
+
+</LinearLayout>

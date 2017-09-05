@@ -1,0 +1,86 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/helptips_black_overlay">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/text_gray"
+        android:orientation="vertical">
+
+        <com.anxa.hapilabs.activities.fragments.HeaderFragments
+            android:id="@+id/fragment_header"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/text_orange"
+            android:layout_alignParentTop="true"/>
+
+        <include
+            android:id="@+id/commentfieldcontainer"
+            layout="@layout/commentfield"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:visibility="visible" />
+
+        <View
+            android:id="@+id/separator"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_above="@id/commentfieldcontainer"
+            android:background="@color/common_gray_separator" />
+
+        <RelativeLayout
+            android:id="@+id/meal_community_header"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#f7f7f7"
+            android:visibility="gone"
+            android:layout_below="@+id/fragment_header">
+
+            <com.anxa.hapilabs.ui.RoundedImageView
+                android:id="@+id/meal_community_avatar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/hapicoach_default_profilepic" />
+
+            <TextView
+                android:id="@+id/meal_community_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/meal_community_avatar"
+                android:text="April Patio"
+                android:textColor="@color/text_blue_comment"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/mealviewitem"
+            layout="@layout/mymeals_view_item"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/separator"
+            android:layout_below="@id/meal_community_header"
+            android:visibility="visible" />
+
+        <ProgressBar
+            android:id="@+id/progressBar_mealView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+</LinearLayout>

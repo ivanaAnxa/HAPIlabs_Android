@@ -1,0 +1,30 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="100dp"
+    android:orientation="vertical"
+    android:id="@+id/rlCalendarViewMonth"
+        android:clickable="true">
+
+    <TextView
+        android:id="@+id/currentMonth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#FB7619" 
+        android:duplicateParentState="true">
+    </TextView>
+
+    <GridView
+        android:id="@+id/gvGridDays"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:horizontalSpacing="0dp"
+        android:numColumns="7"
+        android:gravity="left"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="3dp"
+        android:layout_below="@+id/currentMonth">
+    </GridView>
+
+</RelativeLayout>

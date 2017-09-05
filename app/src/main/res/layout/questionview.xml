@@ -1,0 +1,22 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/hapicoach_bg"
+    android:visibility="visible" >
+    
+    <WebView android:layout_width="fill_parent" 
+        android:id="@+id/webkit"
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/footerbuttonlayout2"
+        android:layout_height="fill_parent"/>
+   
+    <include
+        android:id="@+id/footerbuttonlayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/footerbutton_orange"
+        android:visibility="visible" />
+  
+
+</RelativeLayout>

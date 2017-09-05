@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:visibility="visible" >
+    
+   <com.anxa.hapilabs.activities.fragments.HeaderFragments
+          android:id="@+id/fragment_header"
+          android:layout_width="match_parent"
+          android:layout_height="44dp"
+          android:background="@color/text_orange" />
+   
+   
+   
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/fragment_header"
+       android:layout_centerVertical="true"
+        android:layout_above="@+id/footerbuttonlayout2"
+        android:padding="5dp">
+   
+   
+   <ImageView android:id="@+id/viewcontent"
+        android:layout_width="wrap_content"
+       
+          android:layout_centerHorizontal="true"
+        android:layout_height="200dp"/>
+        
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/viewcontentGraph"
+        setVisibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+       android:layout_below="@id/viewcontent"
+        android:layout_centerHorizontal="true"
+        
+        android:layout_centerVertical="true"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/content1"
+            style="@style/darkGrayNormal.Large"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="#ffffff"
+            android:gravity="center_horizontal"
+            android:text="@string/CRM_CONTENT_1" />
+        
+     
+    </RelativeLayout>
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/footerbuttonlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        layout="@layout/footerbutton_orange" />
+     <include
+        android:id="@+id/footerbuttonlayout2"
+        android:layout_width="fill_parent"
+        android:visibility="visible"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/footerbutton_orange_2" />
+
+</RelativeLayout>

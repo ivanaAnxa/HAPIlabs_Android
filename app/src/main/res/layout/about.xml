@@ -1,0 +1,19 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff" >
+
+   <com.anxa.hapilabs.activities.fragments.HeaderFragments
+          android:id="@+id/fragment_header"
+          android:layout_width="match_parent"
+          android:layout_height="44dp"
+          android:background="@color/text_orange" />
+
+    <include
+        android:id="@+id/aboutlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/fragment_header"
+        layout="@layout/aboutview" />
+
+</RelativeLayout>

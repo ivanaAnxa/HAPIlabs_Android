@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <com.anxa.hapilabs.activities.fragments.HeaderFragments
+        android:id="@+id/fragment_header"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/text_orange" />
+
+    <ScrollView
+        android:id="@+id/water_view_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/water_commentfieldcontainer"
+        android:layout_below="@+id/fragment_header"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/common_button_white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/text_white">
+
+            <RelativeLayout
+                android:id="@+id/water_community_header"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#f7f7f7"
+                android:visibility="gone">
+
+                <com.anxa.hapilabs.ui.RoundedImageView
+                    android:id="@+id/water_community_avatar"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/hapicoach_default_profilepic" />
+
+                <TextView
+                    android:id="@+id/water_community_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/water_community_avatar"
+                    android:text=""
+                    android:textColor="@color/text_blue_comment"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/water_content_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/water_community_header"
+                android:background="@color/text_white"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/waterViewTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp"
+                    android:text=""
+                    android:textColor="@color/text_blackgray"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="115dp"
+                    android:background="@drawable/custom_btn_gray"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:id="@+id/numLabel_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_above="@+id/seekBar_water"
+                        android:orientation="horizontal"
+                        android:paddingLeft="0dp"
+                        android:paddingRight="0dp"
+                        android:weightSum="13">
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="1" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="6" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="12" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <SeekBar
+                        android:id="@+id/seekBar_water_thumb"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_above="@+id/seekBar_water"
+                        android:layout_alignTop="@+id/numLabel_ll"
+                        android:background="@android:color/transparent"
+                        android:max="12"
+                        android:maxHeight="50dp"
+                        android:minHeight="45dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:progress="0"
+                        android:progressDrawable="@android:color/transparent"
+                        android:theme="@android:style/Theme.Holo"
+                        android:thumb="@drawable/water_bubble_orange" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"
+                        android:layout_below="@id/seekBar_water_thumb"
+                        android:orientation="horizontal"
+                        android:paddingLeft="0dp"
+                        android:paddingRight="0dp"
+                        android:weightSum="13">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal">
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="10dp"
+                                android:background="@color/tw__light_gray" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal">
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="10dp"
+                                android:background="@color/tw__light_gray" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal">
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="10dp"
+                                android:background="@color/tw__light_gray" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal">
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="10dp"
+                                android:background="@color/tw__light_gray" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal">
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="10dp"
+                                android:background="@color/tw__light_gray" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal">
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="10dp"
+                                android:background="@color/tw__light_gray" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal">
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="10dp"
+                                android:background="@color/tw__light_gray" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal">
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="10dp"
+                                android:background="@color/tw__light_gray" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal">
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="10dp"
+                                android:background="@color/tw__light_gray" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal">
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="10dp"
+                                android:background="@color/tw__light_gray" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal">
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="10dp"
+                                android:background="@color/tw__light_gray" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal">
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="10dp"
+                                android:background="@color/tw__light_gray" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal">
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="10dp"
+                                android:background="@color/tw__light_gray" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <SeekBar
+                        android:id="@+id/seekBar_water"
+                        style="@android:style/Widget.Holo.Light.ProgressBar.Horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@android:color/transparent"
+                        android:max="12"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:progress="0"
+                        android:progressTint="@color/common_button_blue"
+                        android:theme="@android:style/Theme.Holo"
+                        android:thumb="@drawable/water_glass_blue" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/seekBar_water"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="@string/MEAL_WATER_GLASSES"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+                <ProgressBar
+                    android:id="@+id/waterProgressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/save_button_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/water_content_ll"
+                android:background="@color/common_button_white"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <Button
+                    android:id="@+id/validate_submitBtn"
+                    style="@style/btnStyleOrange"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:gravity="bottom|center_horizontal"
+                    android:onClick="saveWaterEntry"
+                    android:text="@string/btn_save" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/water_approvedIconContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/save_button_ll"
+                android:gravity="center_vertical"
+                android:minHeight="30dp"
+                android:padding="5dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/meal_approved_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/COACH_CHECKED"
+                    android:textColor="@color/text_checked_green" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/water_comments_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/water_approvedIconContainer"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/blackNormal.Large"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Comments"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:id="@+id/water_comments_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:id="@+id/water_coach_comments_container"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/comments_background"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="coachCommentsSelected">
+
+                        <TextView
+                            android:id="@+id/water_coach_comments_btn"
+                            style="@style/blackNormal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_horizontal"
+                            android:paddingLeft="5dp"
+                            android:text="Coach" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/water_community_comments_container"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/comments_background"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="communityCommentsSelected">
+
+                        <TextView
+                            android:id="@+id/water_community_comments_btn"
+                            style="@style/blackNormal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_horizontal"
+                            android:paddingLeft="5dp"
+                            android:text="@string/MYCOMMUNITY_TITLE" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/water_hapi4u_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/water_comments_ll"
+                    android:background="#f7f7f7"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/water_hapi4u_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:onClick="postHAPI4U"
+                        android:paddingLeft="10dp"
+                        android:src="@drawable/hapi4u_blue" />
+
+                    <TextView
+                        android:id="@+id/water_hapi4u_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/water_hapi4u_iv"
+                        android:clickable="true"
+                        android:onClick="postHAPI4U"
+                        android:paddingLeft="10dp"
+                        android:text="HAPI 4U"
+                        android:textColor="@color/text_blue_comment"
+                        android:textSize="16dp" />
+
+                    <com.anxa.hapilabs.ui.RoundedImageView
+                        android:id="@+id/water_hapi4u_avatar"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/water_hapi4u_num_image"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/hapicoach_default_profilepic"
+                        android:visibility="invisible" />
+
+                    <com.anxa.hapilabs.ui.RoundedImageView
+                        android:id="@+id/water_hapi4u_num_image"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/rounded_button_dark_orange_borderless"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/water_hapi4u_num_label"
+                        style="@style/whiteNormal"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center"
+                        android:text=""
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:id="@+id/water_hapi4u_smiley"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_alignBottom="@+id/water_hapi4u_avatar"
+                        android:layout_alignEnd="@+id/water_hapi4u_avatar"
+                        android:layout_alignRight="@+id/water_hapi4u_avatar"
+                        android:src="@drawable/meal_smiley_orange"
+                        android:visibility="invisible" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <com.anxa.hapilabs.ui.CommentListLayout
+                android:id="@+id/water_commentlist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/water_comments_layout"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/water_commentfieldcontainer"
+        layout="@layout/commentfield"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:visibility="visible" />
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/water_commentfieldcontainer"
+        android:background="@color/common_gray_separator" />
+
+    <ProgressBar
+        android:id="@+id/water_view_progressBar"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerInParent="true"
+        android:indeterminateDrawable="@drawable/animateprogress"
+        android:visibility="visible" />
+
+</RelativeLayout>

@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+            android:id="@+id/profilecontainer"
+    
+        android:layout_margin="10dp" >
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/hapicoach_default_profilepic" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:padding="5dp"
+            android:layout_toRightOf="@id/avatar">
+
+            <TextView
+                android:id="@+id/subtitle"
+                style="@style/grayNormal.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@android:color/transparent" />
+            
+            
+            <TextView
+                android:id="@+id/name"
+                style="@style/blackNormal.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/subtitle"
+                android:background="@android:color/transparent"/>
+
+           
+        </RelativeLayout>
+    </RelativeLayout>
+    
+     <RelativeLayout
+          android:id="@+id/subitem"
+               
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/text_orangedark"
+     android:visibility="visible"
+        android:layout_below="@id/profilecontainer">
+        
+           <ImageView
+            android:id="@+id/arrowwhite"
+            android:layout_width="wrap_content"
+          android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/coach_white_arrow" />
+           
+          <TextView
+                android:id="@+id/profile"
+             android:layout_margin="15dp"
+                style="@style/whiteNormal.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:text="Specialities weight loss Specialities weight loss Specialities weight loss Specialities weight loss Specialities weight loss Specialities weight lossSpecialities weight lossSpecialities weight lossSpecialities weight lossSpecialities weight loss" />
+            
+        
+    </RelativeLayout>
+
+</RelativeLayout>

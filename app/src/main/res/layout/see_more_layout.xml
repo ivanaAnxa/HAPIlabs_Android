@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/seeMoreLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:visibility="visible"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:indeterminateDrawable="@drawable/animateprogress"
+        android:visibility="visible"
+        android:layout_marginBottom="20dp" />
+
+    <Button
+        android:id="@+id/seeMoreButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:enabled="true"
+        android:text="@string/SEE_MORE_BTN"
+        android:textColor="@color/common_button_blue"
+        android:visibility="visible"
+        android:clickable="true"
+        android:textSize="18sp"
+        android:background="@android:color/transparent"
+        android:layout_marginBottom="20dp" />
+
+</LinearLayout>

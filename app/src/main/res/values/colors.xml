@@ -1,0 +1,69 @@
+<resources>
+
+    <!-- generics colors -->
+    <color name="helptips_black_overlay">#66000000</color>
+    <color name="login_black_overlay">#22000000</color>
+    <color name="common_gray_separator">#d3d3d3</color>
+    <color name="common_gray_light_separator">#cacaca</color>
+
+    <color name="common_button_orange">#ff9900</color>
+    <color name="common_button_white">#ffffff</color>
+    <color name="common_button_blue">#229cd9</color>
+
+
+    <!-- Text colors -->
+    <color name="text_black">#000000</color>
+    <color name="text_yellow">#ffff00</color>
+
+    <color name="text_blackgray">#2d2d2d</color>
+    <color name="text_gray">#eaeaea</color>
+    <color name="text_lightgray">#c8c8c8</color>
+    <color name="text_darkgray">#909090</color>
+
+    <color name="text_green">#00ff00</color>
+    <color name="text_checked_green">#70ac37</color>
+    <color name="text_blue">#0000ff</color>
+
+    <color name="text_blue_comment">#399deb</color>
+
+    <color name="text_white">#ffffff</color>
+    <color name="text_orange">#ff9900</color>
+
+    <color name="text_orangedark">#f68802</color>
+
+
+    <!-- Dialog colors -->
+    <color name="dialog_bg">#ffffff</color>
+    <color name="dialog_leftbtn_bg">#229CD9</color>
+    <color name="dialog_rightbtn_bg">#ffffff</color>
+    <color name="dialog_textcolor_header">#fff000</color>
+    <color name="dialog_textcolor_message">#898989</color>
+
+    <!--progress bar tint-->
+    <color name="water_tint">#4db6e3</color>
+
+
+    <!--meal options-->
+    <color name="meal_options_top">#eeeeee</color>
+
+    <!--profile timeline-->
+    <color name="profile_summary_bg">#f4f4f4</color>
+    <color name="profile_sub_title_color">#e6e6e6</color>
+    <color name="profile_name_color">#3b3b3b</color>
+
+    <!--meal stats-->
+    <color name="meal_border_color">#DFDFDF</color>
+
+    <color name="light_orange">#FFEDDF</color>
+
+    <color name="text_normal">#ff000000</color>
+    <color name="text_hilite">#ffffffff</color>
+
+    <color name="control_border">#ff0099cc</color>
+
+    <color name="button_pressed">#ff0099cc</color>
+    <color name="button_checked">#ff33b5e5</color>
+
+    <color name="gray_background">#f9f9f9</color>
+
+</resources>

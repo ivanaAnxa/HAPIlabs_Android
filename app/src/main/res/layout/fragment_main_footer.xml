@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    
+    android:orientation="vertical" >
+    
+ <View
+        android:layout_width="fill_parent"
+        android:layout_height="2px"
+        android:background="@color/common_gray_separator" />
+ 
+  
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:layout_marginTop="5dp"
+    android:orientation="horizontal"
+    android:weightSum="3" >
+       
+   
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="0.75"
+        android:orientation="vertical" >
+        
+    
+        <ImageButton
+            android:id="@+id/footer1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@drawable/fragment_main_footer_meals" />
+
+        <!-- <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/MYMEALS_TITLE" /> -->
+    </LinearLayout>
+
+    
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="0.75"
+        android:orientation="vertical" >
+        <ImageButton
+            android:id="@+id/footer2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+             android:background="@android:color/transparent"
+            android:src="@drawable/fragment_main_footer_message" />
+
+      <!--   <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/MYMESSAGE_TITLE" /> -->
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="0.75"
+        android:orientation="vertical" >
+
+        <ImageButton
+            android:id="@+id/footer3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@drawable/fragment_main_footer_progress" />
+    </LinearLayout>
+    
+     <LinearLayout
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center"
+         android:layout_weight="0.75"
+         android:orientation="vertical" >
+        <ImageButton
+            android:id="@+id/footer4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+             android:background="@android:color/transparent"
+            android:src="@drawable/fragment_main_footer_me" />
+
+      <!--   <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/MYPROFILE_TITLE" /> -->
+    </LinearLayout>
+
+</LinearLayout>
+</LinearLayout>

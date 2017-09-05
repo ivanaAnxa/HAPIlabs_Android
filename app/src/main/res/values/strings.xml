@@ -1,0 +1,1341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="app_name">HAPI</string>
+    <string name="app_version" translatable="false">Version 2.2</string>
+
+    <!-- broadcastStrings -->
+    <string name="broadcast_sync" translatable="false">HAPI_BROADCAST_SYNCUPDATE</string>
+    <string name="meallist_photo_download" translatable="false">HAPI_BROADCAST_MEALLISTPHOTO</string>
+    <string name="meallist_photo_download_update" translatable="false">HAPI_BROADCAST_MEALLISTPHOTO_UPDATE</string>
+    <string name="meallist_getmeal_week" translatable="false">HAPI_BROADCAST_WEEK_SWIPE</string>
+    <string name="meallist_get_new_week" translatable="false">HAPI_BROADCAST_NEW_WEEK</string>
+    <string name="meallist_getavatar" translatable="false">HAPI_BROADCAST_AVATAR</string>
+    <string name="meallist_addmeal" translatable="false">HAPI_BROADCAST_ADD_MEAL</string>
+    <string name="meallist_addmeal_refresh" translatable="false">HAPI_BROADCAST_ADD_MEAL_REFRESH</string>
+    <string name="meallist_deletehapimoment_refresh" translatable="false">HAPI_BROADCAST_DELETE_HAPIMOMENT_REFRESH</string>
+    <string name="meallist_deletemeal_refresh" translatable="false">HAPI_BROADCAST_DELETE_MEAL_REFRESH</string>
+    <string name="workoutListUpdate" translatable="false">HAPI_BROADCAST_WORKOUT</string>
+    <string name="workoutListDelete" translatable="false">HAPI_BROADCAST_DELETE_WORKOUT</string>
+    <string name="progress_refresh" translatable="false">PROGRESS_REFRESH</string>
+    <string name="googlefit_request" translatable="false">GOOGLEFIT_REQUEST_AGAIN</string>
+    <string name="googlefit_webview" translatable="false">GOOGLEFIT_WEBVIEW</string>
+
+    <!-- buttons and dialogs -->
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_yes">Yes</string>
+    <string name="btn_no">No</string>
+    <string name="btn_ok">OK</string>
+    <string name="btn_save">Save</string>
+    <string name="btn_continue">Continue</string>
+    <string name="btn_premium" translatable="false">Premium</string>
+    <string name="btn_now" translatable="false">Now</string>
+    <string name="btn_later">Later</string>
+    <string name="btn_delete">Delete</string>
+    <string name="btn_retry">Retry</string>
+    <string name="btn_done">Done</string>
+    <string name="btn_gotit">I want to start now</string>
+    <string name="btn_login">Login</string>
+    <string name="btn_logout">Logout</string>
+    <string name="btn_submit">Submit</string>
+    <string name="btn_tellme">Tell me more</string>
+    <string name="btn_edit">Edit</string>
+    <string name="btn_editmeal">Edit Meal</string>
+
+    <string name="message_hint">Add Message</string>
+
+    <string name="about_about">About</string>
+    <string name="about_me">Me</string>
+    <string name="about_terms">Terms of Service</string>
+    <string name="about_policy">Privacy Policy</string>
+    <string name="about_contactus">Contact Us</string>
+
+    <string name="default_coach_firstname" translatable="false"></string>
+    <string name="default_coach_lastname" translatable="false"></string>
+
+    <!-- Registration /login/subcriptions -->
+    <string name="ONETOONECOACHING_INTRO_HEADER">Your new diet journal is now easier to use</string>
+    <string name="ONETOONECOACHING_INTRO_TEXT1">For each meal, use your mobile phone or tablet to take a picture of what is on your plate</string>
+    <string name="ONETOONECOACHING_INTRO_TEXT2">Add a description (if you want!)</string>
+    <string name="ONETOONECOACHING_INTRO_TEXT3">And you will receive comments from your dietitian</string>
+    <string name="ONETOONECOACHING_INTRO_CARNETMINCEUR">Diet Journal</string>
+    <string name="ONETOONECOACHING_INTRO_BUTTONAGREE">I agree</string>
+
+    <string-array name="objective_array">
+        <item name="OBJECTIVES_SELECTION_1">Lose Weight</item>
+        <item name="OBJECTIVES_SELECTION_2">Eat Healthier</item>
+        <item name="OBJECTIVES_SELECTION_3">Get More Fit</item>
+    </string-array>
+
+    <string-array name="source_array">
+        <item name="SOURCE_SELECTION_1">Actinutrition</item>
+        <item name="SOURCE_SELECTION_2">Clinique De Paris</item>
+        <item name="SOURCE_SELECTION_3">Medias</item>
+        <item name="SOURCE_SELECTION_4">Advertising</item>
+        <item name="SOURCE_SELECTION_5">Word Of Mouth</item>
+        <item name="SOURCE_SELECTION_6">Other</item>
+    </string-array>
+
+    <string-array name="profession_array">
+        <item name="PROFESSION_SELECTION_1">Registered dietetian</item>
+        <item name="PROFESSION_SELECTION_2">Fitness coach</item>
+        <item name="PROFESSION_SELECTION_3">Life coach</item>
+        <item name="PROFESSION_SELECTION_4">Medical Doctor</item>
+        <item name="PROFESSION_SELECTION_5">Other</item>
+    </string-array>
+
+
+    <string name="EATINGHABITS_SELECTION_1">I eat balanced meals</string>
+    <string name="EATINGHABITS_SELECTION_2">I skip meals often</string>
+    <string name="EATINGHABITS_SELECTION_3">I often eat fastfood</string>
+    <string name="EATINGHABITS_SELECTION_4">I often eat for pleasure</string>
+    <string name="EATINGHABITS_SELECTION_5">I eat plenty of fruits &amp; veggies</string>
+    <string name="EATINGHABITS_SELECTION_6">I am following a specific diet</string>
+
+    <string name="SIGNUP_EMAIL">Email</string>
+    <string name="SIGNUP_PASSWORD">Password</string>
+    <string name="SIGNUP_CONFIRM_PASSWORD">Confirm Password</string>
+    <string name="SIGNUP_EMAIL_PLACEHOLDER">Input email</string>
+    <string name="SIGNUP_EMAIL_ERROR">Your email format is wrong. Please input a valid email.</string>
+    <string name="SIGNUP_PASSWORD_PLACEHOLDER">Input password</string>
+    <string name="SIGNUP_CONFIRM_PASSWORD_PLACEHOLDER">Re-input password</string>
+    <string name="SIGNUP_EMAIL_EXIST">Email already exists</string>
+
+    <!-- navigation bar title -->
+    <string name="NAVIGATIONTITLE_OBJECTIVE">Your Objective</string>
+    <string name="NAVIGATIONTITLE_EATINGHABITS">Describe Your Eating Habits</string>
+    <string name="NAVIGATION_SIGNUP">Sign Up!</string>
+    <string name="NAVIGATIONTITLE_COMPLETE_HAPIPROFILE">Complete Your HAPI Profile</string>
+    <string name="NAVIGATIONTITLE_SELECTCOACH">Select Your Coach</string>
+
+    <!-- user objective label text -->
+    <string name="OBJECTIVE_IWANTTO">I want to...</string>
+    <string name="OBJECTIVE_CURRENTWEIGHT">Current Weight</string>
+    <string name="OBJECTIVE_TARGETWEIGHT">Target Weight</string>
+    <string name="OBJECTIVE_HEIGHT">Height</string>
+
+    <!-- profile label text -->
+    <string name="PROFILE_FIRSTNAME">First Name</string>
+    <string name="PROFILE_LASTNAME">Last Name</string>
+    <string name="PROFILE_GENDER">Gender</string>
+
+    <string-array name="gender_array">
+        <item name="PROFILE_GENDER_MALE_ARR">Male</item>
+        <item name="PROFILE_GENDER_FEMALE_ARR">Female</item>
+    </string-array>
+
+    <string-array name="number_array">
+        <item name="number44">44 kg</item>
+        <item name="number45">45 kg</item>
+        <item name="number46">46 kg</item>
+        <item name="number47">47 kg</item>
+        <item name="number48">48 kg</item>
+        <item name="number49">49 kg</item>
+        <item name="number50">50 kg</item>
+        <item name="number51">51 kg</item>
+        <item name="number52">52 kg</item>
+        <item name="number53">53 kg</item>
+        <item name="number54">54 kg</item>
+        <item name="number55">55 kg</item>
+        <item name="number56">56 kg</item>
+        <item name="number57">57 kg</item>
+        <item name="number58">58 kg</item>
+        <item name="number59">59 kg</item>
+        <item name="number60">60 kg</item>
+        <item name="number61">61 kg</item>
+        <item name="number62">62 kg</item>
+        <item name="number63">63 kg</item>
+        <item name="number64">64 kg</item>
+        <item name="number65">65 kg</item>
+        <item name="number66">66 kg</item>
+        <item name="number67">67 kg</item>
+        <item name="number68">68 kg</item>
+        <item name="number69">69 kg</item>
+        <item name="number70">70 kg</item>
+        <item name="number71">71 kg</item>
+        <item name="number72">72 kg</item>
+        <item name="number73">73 kg</item>
+        <item name="number74">74 kg</item>
+        <item name="number75">75 kg</item>
+        <item name="number76">76 kg</item>
+        <item name="number77">77 kg</item>
+        <item name="number78">78 kg</item>
+        <item name="number79">79 kg</item>
+        <item name="number80">80 kg</item>
+        <item name="number81">81 kg</item>
+
+    </string-array>
+
+    <string-array name="number_cm_array">
+        <item name="number120">120 cm</item>
+        <item name="number121">121 cm</item>
+        <item name="number122">122 cm</item>
+        <item name="number123">123 cm</item>
+        <item name="number124">124 cm</item>
+        <item name="number125">125 cm</item>
+        <item name="number126">126 cm</item>
+        <item name="number127">127 cm</item>
+        <item name="number128">128 cm</item>
+        <item name="number129">129 cm</item>
+        <item name="number130">130 cm</item>
+        <item name="number131">131 cm</item>
+        <item name="number132">132 cm</item>
+        <item name="number133">133 cm</item>
+        <item name="number134">134 cm</item>
+        <item name="number135">135 cm</item>
+        <item name="number136">136 cm</item>
+        <item name="number137">137 cm</item>
+        <item name="number138">138 cm</item>
+        <item name="number139">139 cm</item>
+        <item name="number140">140 cm</item>
+        <item name="number141">141 cm</item>
+        <item name="number142">142 cm</item>
+        <item name="number143">143 cm</item>
+        <item name="number144">144 cm</item>
+        <item name="number145">145 cm</item>
+        <item name="number146">146 cm</item>
+        <item name="number147">147 cm</item>
+        <item name="number148">148 cm</item>
+        <item name="number149">149 cm</item>
+        <item name="number150">150 cm</item>
+        <item name="number151">151 cm</item>
+        <item name="number152">152 cm</item>
+        <item name="number153">153 cm</item>
+        <item name="number154">154 cm</item>
+        <item name="number155">155 cm</item>
+        <item name="number156">156 cm</item>
+        <item name="number157">157 cm</item>
+        <item name="number158">158 cm</item>
+        <item name="number159">159 cm</item>
+        <item name="number160">160 cm</item>
+        <item name="number161">161 cm</item>
+        <item name="number162">162 cm</item>
+        <item name="number163">163 cm</item>
+        <item name="number164">164 cm</item>
+        <item name="number165">165 cm</item>
+        <item name="number166">166 cm</item>
+        <item name="number167">167 cm</item>
+        <item name="number168">168 cm</item>
+        <item name="number169">169 cm</item>
+        <item name="number170">170 cm</item>
+        <item name="number171">171 cm</item>
+        <item name="number172">172 cm</item>
+        <item name="number173">173 cm</item>
+        <item name="number174">174 cm</item>
+        <item name="number175">175 cm</item>
+        <item name="number176">176 cm</item>
+        <item name="number177">177 cm</item>
+        <item name="number178">178 cm</item>
+        <item name="number179">179 cm</item>
+        <item name="number180">180 cm</item>
+        <item name="number181">181 cm</item>
+        <item name="number182">182 cm</item>
+        <item name="number183">183 cm</item>
+        <item name="number184">184 cm</item>
+        <item name="number185">185 cm</item>
+    </string-array>
+
+    <string name="PROFILE_GENDER_MALE">Male</string>
+    <string name="PROFILE_GENDER_FEMALE">Female</string>
+    <string name="PROFILE_BIRTHDAY">Birthday</string>
+    <string name="PROFILE_COUNTRY">Country</string>
+    <string name="PROFILE_CONTACT">Contact</string>
+    <string name="PROFILE_LANGUAGE">Language</string>
+    <string name="PROFILE_TIMEZONE">Timezone</string>
+    <string name="FIRSTNAME_PLACEHOLDER">Firstname</string>
+    <string name="LASTNAME_PLACEHOLDER">Lastname</string>
+    <string name="GENDER_PLACEHOLDER">Gender</string>
+    <string name="BDAY_PLACEHOLDER">Birthday</string>
+    <string name="COUNTRY_PLACEHOLDER">Country</string>
+    <string name="CONTACT_PLACEHOLDER">Contact No.</string>
+    <string name="lANGUAGE_PLACEHOLDER">Language</string>
+    <string name="TIMEZONE_PLACEHOLDER">Timezone</string>
+    <string name="TELNUM_PLACEHOLDER">Tel. number</string>
+    <string name="CODE_PLACEHOLDER">Code</string>
+
+    <!-- Meals -->
+    <string name="ONETOONECOACHING_DEFAULT_APPROVED_COMMENT">$coach has approved your $m</string>
+    <string name="ONETOONECOACHING_JOURNAL_APPROVED">Approved</string>
+    <string name="ONETOONECOACHING_JOURNAL_COMMENT">Commented</string>
+    <string name="FOR">for</string>
+    <string name="COMMENT_FAILED_TITLE">This message has failed to send:</string>
+    <string name="ERROR">Error</string>
+    <string name="MEALTYPE_BREAKFAST">Breakfast</string>
+    <string name="MEALTYPE_MORNINGSNACK">Morning Snack</string>
+    <string name="MEALTYPE_LUNCH">Lunch</string>
+    <string name="MEALTYPE_AFTERNOONSNACK">Afternoon Snack</string>
+    <string name="MEALTYPE_DINNER">Dinner</string>
+    <string name="MEALTYPE_WATER">Water</string>
+    <string name="MEAL_WATER_GLASSES">Glasses of water</string>
+    <string name="ONETOONECOACHING_JOURNAL_TODAY">Today</string>
+    <string name="ONETOONECOACHING_ADDMEAL_DESCRIBEMEAL">Describe your meal</string>
+    <string name="ONETOONECOACHING_ADDMEAL_BUTTONSUBMIT">Submit</string>
+    <string name="ONETOONECOACHING_ADDMEAL_IMAGELOADING">Uploading</string>
+    <string name="ONETOONECOACHING_ADDMEAL_SUCCESS">Success! Your meal has been logged</string>
+    <string name="ONETOONECOACHING_ADDMEAL_IMAGELOADINGERROR">Oops, sorry! Please try again</string>
+    <string name="ONETOONECOACHING_ADDMEAL_IMAGELOADINGDONE">Upload done</string>
+    <string name="ONETOONECOACHING_ADDMEAL_IMAGELOADINGFAILED">Oops, sorry! Upload failed</string>
+    <string name="ONETOONECOACHING_ADDCOMMENT_YOURCOMMENT">Add a comment</string>
+    <string name="ONETOONECOACHING_MEAL_PROMPTDELETE">Are you sure you want to delete this meal? All photos and comments will be lost</string>
+    <string name="ONETOONECOACHING_MEAL_DELETEBUTTON">Delete</string>
+    <string name="ONETOONECOACHING_COACHRESPONSENOTIFICATION_NONE">No new notifications</string>
+    <string name="ONETOONECOACHING_TIPS_MONDAYBREAKFAST">Time for breakfast. Dont skip this first meal of the day to get your body and mood going for the day ahead.</string>
+    <string name="ONETOONECOACHING_TIPS_MONDAYMORNINGSNACK">A bit hungry? Dont eat just anything. Get some healthy, satiating snack ideas in the Bonus section.</string>
+    <string name="ONETOONECOACHING_TIPS_MONDAYLUNCH">Lunchtime! Avoid skipping meals, so make sure to eat something right now to avoid snacking for the rest of the day.</string>
+    <string name="ONETOONECOACHING_TIPS_MONDAYAFTERNOONSNACK">Are you getting enough water today? Always drink before you feel thirsty. 8 glasses of water a day is recommended for adequate fluid intake.</string>
+    <string name="ONETOONECOACHING_TIPS_MONDAYDINNER">Have a light dinner. A heavy meal in the evening may affect your sleep.</string>
+    <string name="ONETOONECOACHING_TIPS_TUESDAYBREAKFAST">Its another beautiful day. Enjoy breakfast while sitting at the table, and follow your meal plan well to avoid the mid-morning munchies!</string>
+    <string name="ONETOONECOACHING_TIPS_TUESDAYMORNINGSNACK">Think about carrying fruit cups or fruit bags for morning cravings. Easy to carry in your bag at all times.</string>
+    <string name="ONETOONECOACHING_TIPS_TUESDAYLUNCH">Lunch is essential, so treat it as such. Take your time, savor every bite, and chew well.</string>
+    <string name="ONETOONECOACHING_TIPS_TUESDAYAFTERNOONSNACK">Are you thirsty but hate water? Why not enjoy unsweetened tea, a small decaf, or even an infusion?</string>
+    <string name="ONETOONECOACHING_TIPS_TUESDAYDINNER">Herbal infusions can help you sleep better: chamomile, mint, tarragon, valerian, tilia, or rosemary to help digestion. Sweet dreams!</string>
+    <string name="ONETOONECOACHING_TIPS_WEDNESDAYBREAKFAST">Eggs, ham, and smoked salmon are great sources of protein for breakfast. Theyll also keep you full through the morning!</string>
+    <string name="ONETOONECOACHING_TIPS_WEDNESDAYMORNINGSNACK">Are you feeling hungry even after having breakfast this morning? Drink water or a hot unsweetened drink and wait a few minutes to see if its true hunger.</string>
+    <string name="ONETOONECOACHING_TIPS_WEDNESDAYLUNCH">Take a breather while its peaceful. Eat lunch while comfortably seated, and if necessary, stay away from the busy office. Enjoy this moment and nothing else.</string>
+    <string name="ONETOONECOACHING_TIPS_WEDNESDAYAFTERNOONSNACK">"Do snack cakes tempt you every afternoon? Take away that option. Stay focused on your weight loss goal and have your own healthy snack.</string>
+    <string name="ONETOONECOACHING_TIPS_WEDNESDAYDINNER">Make the most out of this last meal of the day and spend it with family, without any distractions. Make it a time for discussion and sharing.</string>
+    <string name="ONETOONECOACHING_TIPS_THURSDAYBREAKFAST">Having a good breakfast is essential: a combination of a hot drink, fresh fruit, dairy, and grains. Then youll say goodbye to mid-meal hunger!</string>
+    <string name="ONETOONECOACHING_TIPS_THURSDAYMORNINGSNACK">If you didnt finish your breakfast today, take the leftover items with you to enjoy as a mid-morning snack.</string>
+    <string name="ONETOONECOACHING_TIPS_THURSDAYLUNCH">Be sure to closely follow the structure of your daily meals: raw vegetables, starches, cooked vegetables, protein, lean dairy, and fruit.</string>
+    <string name="ONETOONECOACHING_TIPS_THURSDAYAFTERNOONSNACK">"Want to make a cake for your afternoon snack? Check the recipes for healthy options.</string>
+    <string name="ONETOONECOACHING_TIPS_THURSDAYDINNER">Avoid stimulants in the evening: coffee, tea, smartphones, video games...anything that can upset digestion and the quality of your sleep.</string>
+    <string name="ONETOONECOACHING_TIPS_FRIDAYBREAKFAST">Not feeling like taking breakfast? Dont force yourself to finish your meal. Eat what you can and pack the rest. You can eat them as a mid-morning snack.</string>
+    <string name="ONETOONECOACHING_TIPS_FRIDAYMORNINGSNACK">Time for a break! Step away from your desk, breathe some fresh air, or start a pleasant conversation with your colleagues.</string>
+    <string name="ONETOONECOACHING_TIPS_FRIDAYLUNCH">Do you scarf down your lunch in just 10 minutes? If so, dont eat your dessert right away. Instead, wait 20 minutes to know if youre still hungry.</string>
+    <string name="ONETOONECOACHING_TIPS_FRIDAYAFTERNOONSNACK">Ignore all the temptations of candy bars, cakes, chocolates, and other goodies. Prioritize your taste and your figure!</string>
+    <string name="ONETOONECOACHING_TIPS_FRIDAYDINNER">Care for a snack? Always have healthy options at hand (raw vegetable sticks, light dairy) and avoid processed food and sugar.</string>
+    <string name="ONETOONECOACHING_TIPS_SATURDAYBREAKFAST">Care for a morning workout? Have a breakfast thats rich in protein, dairy, and whole grains like whole-grain bread and cereal without added sugar.</string>
+    <string name="ONETOONECOACHING_TIPS_SATURDAYMORNINGSNACK">Hungry? Are you raring for lunch? Stop! Have a healthy snack instead so you can resume your work quietly.</string>
+    <string name="ONETOONECOACHING_TIPS_SATURDAYLUNCH">Dont forget pleasure! Just because youre dieting does it mean everythings off-limits. Use the list of food equivalents to keep yourself happy.</string>
+    <string name="ONETOONECOACHING_TIPS_SATURDAYAFTERNOONSNACK">Want healthy and tasty snack ideas? 2 squares of 70% dark chocolate, a handful of almonds, some dried fruit, a fruit cup, raw vegetable sticks, or dairy.</string>
+    <string name="ONETOONECOACHING_TIPS_SATURDAYDINNER">A warm soup for dinner is an ally for your program. It fills you up with cooked vegetables and is easy to digest.</string>
+    <string name="ONETOONECOACHING_TIPS_SUNDAYBREAKFAST">Good morning! Eat according to the season to avoid monotony Pears, kiwis, oranges in winter. Apricots, berries, peaches, and melon in the summer!</string>
+    <string name="ONETOONECOACHING_TIPS_SUNDAYMORNINGSNACK">Healthy snack ideas: fruit cups, fruit packs, a handful of almonds, some dried fruit</string>
+    <string name="ONETOONECOACHING_TIPS_SUNDAYLUNCH">Even a traditional family meal can comply with the rules of your diet. Your loved ones will also benefit from healthy eating. Stay focused!</string>
+    <string name="ONETOONECOACHING_TIPS_SUNDAYAFTERNOONSNACK">"Cant live without an afternoon snack? Save your fruit dessert from lunch and keep it for this occasion.</string>
+    <string name="ONETOONECOACHING_TIPS_SUNDAYDINNER">Have dinner as early as possible to make it as far from bedtime as you can. This will improve the quality of your sleep, and therefore your weight loss! Good night!</string>
+    <string name="ALERTMESSAGE_MEALADDDED_SUCCESS">Success! Your meal has been logged</string>
+    <string name="ALERTMESSAGE_MEALADDDED_ONGOING">Your meal is currently in process...</string>
+    <string name="ALERTMESSAGE_MEALDELETE_ONGOING">Your meal has been deleted.</string>
+    <string name="ALERTMESSAGE_MEALADDED_FAILED">Oops, looks like your meal has not been uploaded successfully.</string>
+    <string name="ALERTMESSAGE_SELECTCOACH">Take snapshots of your meals and get personalized feedback from a registered nutrition expert</string>
+    <string name="ALERTMESSAGE_SELECTCOACH_BTN">Choose Your Coach Now</string>
+    <string name="ALERTMESSAGE_RENEWSUBCRIPTION">Oops, sad news from HAPI.com!</string>
+    <string name="ALERTMESSAGE_RENEWSUBCRIPTION_TITLE">Your subscription to HAPI has ended.\n\n Contact us if you think we commited a mistake!</string>
+    <string name="ALERTMESSAGE_RENEWSUBCRIPTION_BTN">Renew Subscription</string>
+    <string name="ALERTMESSAGE_FORM_EMPTY_TITLE">Oops! looks like some of your fields are empty</string>
+    <string name="ALERTMESSAGE_CONTACT_MAX_CHAR">Oops, you have reached the maximum digits for contact!</string>
+    <string name="ALERTMESSAGE_GETTING_COACH_LIST">Getting Coach List</string>
+    <string name="ALERTMESSAGE_FORGOTPASSWORD">Please fill up the email field first</string>
+    <string name="ALERTMESSAGE_SERVERSYNC_FAILED">Server Sync Failed</string>
+    <string name="ALERTMESSAGE_LOGIN_FAILED">Login Failed</string>
+    <string name="ALERTMESSAGE_PAYMENT_PAGE">Payment Page</string>
+    <string name="ALERTMESSAGE_COMMENT_FAILED">This message has failed to send:</string>
+    <string name="ALERTMESSAGE_MEALDESCRIPTION">Take a photo or describe your meal so your coach can evaluate it better</string>
+    <string name="ALERTMESSAGE_MY_MEALS_TITLE">Journal</string>
+    <string name="ALERTMESSAGE_DELETE_MEAL">Are you sure you want to delete this entry?</string>
+    <string name="ALERTMESSAGE_JSON_FAILED">Oops, looks like there is a processing issue at this time.</string>
+    <string name="ALERTMESSAGE_FIRSTNAME_EMPTY">Oops, looks like you missed your first name</string>
+    <string name="ALERTMESSAGE_FIRSTNAME_EXCEEDED">Oops, you have exceeded the maximun characters for first name Please edit this field.</string>
+    <string name="ALERTMESSAGE_LASTNAME_EMPTY">Oops, looks like you missed your last name</string>
+    <string name="ALERTMESSAGE_LASTNAME_EXCEEDED">Oops you have exceeded the maximun characters for last name Please edit this field.</string>
+    <string name="ALERTMESSAGE_BIRTHDAY_VALIDATION">Oops, to coach you better we will need your birthdate</string>
+    <string name="ALERTMESSAGE_CONTACTNUMBER_EMPTY">Oops, looks like you missed your contact number. Dont worry, HAPI will keep your data confidential</string>
+    <string name="ALERTMESSAGE_CONTACTNUMBER_VALIDATION">Looks like your contact number format is wrong</string>
+    <string name="ALERTMESSAGE_MYPROFILE_TITLE">Me</string>
+    <string name="ALERTMESSAGE_PROFILEDATA_SAVED">Your changes have been saved</string>
+    <string name="ALERTMESSAGE_SELECT_GOAL">We would like to know you better. Please select your goal.</string>
+    <string name="ALERTMESSAGE_CURRENTWEIGHT">Oops, you have missed a field. Please select your current weight.</string>
+    <string name="ALERTMESSAGE_TARGETWEIGHT">Oops, you have missed a field. Please select your target weight.</string>
+    <string name="ALERTMESSAGE_HEIGHT">Oops, you have missed a field. Please select your height.</string>
+    <string name="ALERTMESSAGE_USERNAME_VALIDATION">To complete your registration, please input a username</string>
+    <string name="ALERTMESSAGE_PASSWORD_EMPTY">To complete your registration, please input a password</string>
+    <string name="ALERTMESSAGE_RE_INPUT_PASSWORD">One more step to complete the registration, Please re-input your password</string>
+    <string name="ALERTMESSAGE_PASSWORD_VALIDATION">Password should be the same.</string>
+    <string name="ALERTMESSAGE_PHOTOUPLOAD_FAILED">Photo Upload Failed</string>
+    <string name="ALERTMESSAGE_NETWORK_ERROR">There seems to be a connection problem at this time, Please try again at a later time.</string>
+    <string name="ALERTMESSAGE_PAYMENT_SUCCESSFUL">Payment is successful. Please wait while we update your profile...</string>
+    <string name="ALERTMESSAGE_PAYMENT_FAILED">Payment has failed. Please try again.</string>
+    <string name="ALERTMESSAGE_PAYMENT_FREE" translatable="false"></string>
+    <string name="ALERTMESSAGE_PAYMENT_CANCELLED">Payment has been cancelled.</string>
+    <string name="ALERTMESSAGE_INTERNETCONNECTION_OFFLINE">There is a problem loading this page. Your internet connection appears to be offline</string>
+    <string name="ALERTMESSAGE_LOGIN_EMPTY">Invalid login credentials</string>
+    <string name="ALERTMESSAGE_GENDER_EMPTY">Oops, looks like you forgot to specify your gender</string>
+    <string name="ALERTMESSAGE_COUNTRY_EMPTY">Oops, looks like you missed your country.</string>
+    <string name="ALERTMESSAGE_OFFLINE">Your internet connection appears to be offline.</string>
+    <string name="ALERTMESSAGE_OFFLINE_POST">No Internet Connection. You can still post while offline</string>
+    <string name="MESSAGE_NOTIFICATION_APPROVEDTEXT">$coach has approved your meal.</string>
+
+    <!-- food groups title -->
+    <string name="FOODGROUP_PROTEIN">Protein</string>
+    <string name="FOODGROUP_DAIRY">Dairy</string>
+    <string name="FOODGROUP_STARCHES">Starches</string>
+    <string name="FOODGROUP_FRUITSVEGGIES">Fruits and Vegetables</string>
+    <string name="FOODGROUP_FAT">Fat</string>
+    <string name="FOODGROUP_DRINKS">Drinks</string>
+    <string name="FOODGROUP_SWEETS">Sweets</string>
+
+    <!-- food groups description -->
+    <string name="TIPS_PROTEIN">Eat meat, fish, eggs, or an equivalent source of vegetable protein (soy, combination of grains and legumes) at least once a day. Choose quality protein to maintain muscle mass.</string>
+    <string name="TIPS_DAIRY">Consume dairy at every meal for protein and calcium, which is important for bone growth and strength.</string>
+    <string name="TIPS_STARCHES">Starches (grains, potatoes, pulses, bread, cereal, etc) are the basis of our energy supply. Have them at the two main meals of the day and choose less processed starches for the most fiber.</string>
+    <string name="TIPS_FRUITSVEGGIES">Eat as much as you can when it comes to vegetables (without fat or oil) to get the most vitamins, minerals, and fiber. Eat at least 2 vegetable portions a day (at least 1 raw). Have 2-3 portions a day to be full of energy!</string>
+    <string name="TIPS_FAT">The body needs essential fatty acids are needed for fat-soluble vitamins A, D, E, and K. Consume with moderation, and choose good fats like olive oil or canola oil.</string>
+    <string name="TIPS_DRINKS">Drink at least 8 glasses of water a day, and keep in mind the only essential drink for the body is water! You can also consider unsweetened tea, coffee, or herbal infusions.</string>
+    <string name="TIPS_SWEETS">Sweets are not essential for the body and remain food for enjoyment, to be consumed in moderation. Opt for natural sweeteners (honey, stevia, agave, etc.)</string>
+
+    <!-- //payout -->
+    <string name="PAYOUT_WELCOME">Welcome</string>
+    <string name="PAYOUT_HOW_HAPICOACH_WORKS">This is how HAPI works.</string>
+    <string name="PAYOUT_HOWTOSTART">How to Start</string>
+    <string name="PAYOUT_IMREADYFORYOU">Im ready for you!</string>
+    <string name="PAYOUT_IDLIKETOSTART">Id like to start</string>
+    <string name="PAYOUT_GOT_IT_BUTTON">Got it</string>
+
+    <!-- //registration tour -->
+    <string name="REGISTRATION_IWANTTOSTART">I want to start now!</string>
+    <string name="REGISTRATION_TELL_ME_MORE">Tell me more</string>
+    <string name="RESULTS_TITLE">My Results</string>
+    <string name="PAYMENT_HEADER_TITLE">Choose Your Membership</string>
+    <string name="WELCOME_HEADER_TITLE">Welcome</string>
+    <string name="QUESTION_HEADER_TITLE">Welcome</string>
+    <string name="HOWITWORKS_HEADER_TITLE">How it works!</string>
+    <string name="WELCOME_FOOTER_LETMEANSWER" translatable="false">Let me answer now</string>
+    <string name="QUESTION_FOOTER_BACK">Back</string>
+    <string name="QUESTION_FOOTER_NEXT">Next</string>
+    <string name="QUESTION_FOOTER_QOF" formatted="false">Question %s of %p</string>
+    <string name="WELCOME2_FOOTER_LOG">Log your first meal!</string>
+
+
+    <!-- //About Page -->
+    <string name="ABOUTPAGE_CONTENT">HAPI is developed and maintained by HAPILABS. \n\nHAPI provides you with your own personal dietitian on your smartphone. You and your HAPIcoach will work together on your chosen health goal. Take pictures of your meals with the HAPI app, and your dietitian will review them and let you know how you\'re doing towards your goal.</string>
+    <string name="PROFILE_ABOUT_DESCRIPTION">HAPI: Bring your own personal dietitian to the table!\n\nHAPI provides you with your own personal dietitian on your smartphone. You and your HAPIcoach will work together on your chosen health goal. Take pictures of your meals with the HAPI app, and your dietitian will review them and let you know how you\'re doing towards your goal.\n\nHAPI is developed and maintained by HAPILABS."</string>
+    <string name="MYMEALS_GETMEAL_UPDATE">Sync</string>
+    <string name="MYMEALS_GETMEAL_UPDATE_SUCCESSFUL">This meal is successfully sync to HAPI server</string>
+    <string name="APPROVED">Approved</string>
+    <string name="COMMENTED">Commented</string>
+    <string name="HAPI_COACH_SELECTION">Finding the best experts to help you reach your weight loss or healthy eating goals</string>
+    <string name="HAPI_HOW">This is how HAPI works.</string>
+    <string name="LABEL_WELCOME">Welcome</string>
+    <string name="LOGIN_APPROVED">Forgot Password?</string>
+    <string name="LOGIN_LABEL">Log in to HAPI.com \nto access your account</string>
+    <string name="MEALSADD_ADDCOMMENT">Add a comment</string>
+    <string name="MEALSADD_DESCRIPTION">Describe your meal</string>
+    <string name="MEALSADD_FOODGROUP">Identify food groups</string>
+    <string name="MEALSADD_TITLE">meals</string>
+    <string name="MYCOACH_LABEL">Coach</string>
+    <string name="MYCOACH_TITLE">Coach</string>
+    <string name="MYMESSAGE_TITLE" translatable="false">Messages</string>
+    <string name="MYMEALS_BREAKFAST">Breakfast</string>
+    <string name="MYMEALS_ERROR_UPLOAD">Resume upload</string>
+    <string name="MYMEALS_FREE_COMMENT">Get personalized feedback from the expert</string>
+    <string name="MYMEALS_LABEL" translatable="false">Log Meal</string>
+    <string name="MYMEALS_TITLE">Journal</string>
+    <string name="MYPROFILE_TITLE">Profile</string>
+    <string name="MYWEIGHT_TITLE">My Weight Graph</string>
+    <string name="MYRESULTS_TITLE">Results</string>
+    <string name="MYWEEKLYSUMMARY_TITLE">Weekly Summary</string>
+    <string name="MYSUBS_TITLE">Subscription</string>
+    <string name="MYCOMMUNITY_TITLE">Community</string>
+    <string name="MYSETTINGS_TITLE">Settings</string>
+    <string name="MYHELP_TITLE">Help / Contact</string>
+    <string name="MYPROFILE">Profile</string>
+    <string name="REG_LABEL_EMAIL">Input your email</string>
+    <string name="REG_TITLE_EMAIL">E-mail</string>
+    <string name="REG_TITLE_FNAME">Firstname</string>
+    <string name="REG_TITLE_LNAME">LastName</string>
+    <string name="RETAKE_PHOTO">Retake</string>
+    <string name="TAKE_PHOTO" translatable="false">take</string>
+    <string name="USE_PHOTO" translatable="false">Use Photo</string>
+
+    <string-array name="country_array">
+        <item name="country_united_states">United States</item>
+        <item name="country_canada">Canada</item>
+        <item name="country_france">France</item>
+        <item name="country_united_kingdom">United Kingdom</item>
+        <item name="country_afghanistan">Afghanistan</item>
+        <item name="country_albania">Albania</item>
+        <item name="country_algeria">Algeria</item>
+        <item name="country_american_samora">American Samoa</item>
+        <item name="country_andora">Andora</item>
+        <item name="country_angola">Angola</item>
+        <item name="country_anguilla">Anguilla</item>
+        <item name="country_antigua">Antigua and Barbuda</item>
+        <item name="country_argentina">Argentina</item>
+        <item name="country_armenia">Armenia</item>
+        <item name="country_aruba">Aruba</item>
+        <item name="country_australia">Australia</item>
+        <item name="country_austria">Austria</item>
+        <item name="country_azerbaijan">Azerbaijan</item>
+        <item name="country_bahamas">Bahamas</item>
+        <item name="country_bahrain">Bahrain</item>
+        <item name="country_bangladesh">Bangladesh</item>
+        <item name="country_barbados">Barbados</item>
+        <item name="country_belarus">Belarus</item>
+        <item name="country_belgium">Belgium</item>
+        <item name="country_belize">Belize</item>
+        <item name="country_benin">Benin</item>
+        <item name="country_bermuda">Bermuda</item>
+        <item name="country_bhutan">Bhutan</item>
+        <item name="country_bolivarian">Bolivarian Republic of Venezuela</item>
+        <item name="country_bolivia">Bolivia</item>
+        <item name="country_bosnia">Bosnia and Herzegovina</item>
+        <item name="country_botswana">Botswana</item>
+        <item name="country_brazil">Brazil</item>
+        <item name="country_british_virgin_islands">British Virgin Islands</item>
+        <item name="country_brunei_darussalam">Brunei Darussalam</item>
+        <item name="country_bulgaria">Bulgaria</item>
+        <item name="country_burkina_faso">Burkina Faso</item>
+        <item name="country_burundi">Burundi</item>
+        <item name="country_cambodia">Cambodia</item>
+        <item name="country_cameroon">Cameroon</item>
+        <item name="country_cape_verde_islands">Cape Verde Islands</item>
+        <item name="country_cayman_islands">Cayman Islands</item>
+        <item name="country_caribbean">Caribbean</item>
+        <item name="country_central_african_republic">Central African Republic</item>
+        <item name="country_chad">Chad</item>
+        <item name="country_chile">Chile</item>
+        <item name="country_chine">People\'s Republic of China</item>
+        <item name="country_colombia">Colombia</item>
+        <item name="country_comoros_and_mayotte">Comoros and Mayotte</item>
+        <item name="country_congo">Congo</item>
+        <item name="country_cook_islands">Cook Islands</item>
+        <item name="country_costa_rica">Costa Rica</item>
+        <item name="country_crotia">Crotia</item>
+        <item name="country_cuba">Cuba</item>
+        <item name="country_cyprus">Cyprus</item>
+        <item name="country_czech_republic">Czech Republic</item>
+        <item name="country_denmark">Denmark</item>
+        <item name="country_dominca">Dominca</item>
+        <item name="country_dominican_republic">Dominican Republic</item>
+        <item name="country_djibouti">Djibouti</item>
+        <item name="country_ecuador">Ecuador</item>
+        <item name="country_egypt">Egypt</item>
+        <item name="country_el_salvador">El Salvador</item>
+        <item name="country_equatorial_guinea">Equatorial Guinea</item>
+        <item name="country_eritrea">Eritrea</item>
+        <item name="country_estonia">Estonia</item>
+        <item name="country_ethiopia">Ethiopia</item>
+        <item name="country_faroe_islands">Faroe Islands</item>
+        <item name="country_fiji">Fiji</item>
+        <item name="country_finland">Finland</item>
+        <item name="country_french_guiana">French Guiana</item>
+        <item name="country_gabon">Gabon</item>
+        <item name="country_gambia">Gambia</item>
+        <item name="country_georgia">Georgia</item>
+        <item name="country_germany">Germany</item>
+        <item name="country_ghana">Ghana</item>
+        <item name="country_gibraltar">Gibraltar</item>
+        <item name="country_greece">Greece</item>
+        <item name="country_greenland">Greenland</item>
+        <item name="country_grenata">Grenata</item>
+        <item name="country_guam">Guam</item>
+        <item name="country_guatemala">Guatemala</item>
+        <item name="country_guinea">Guinea</item>
+        <item name="country_guinea_bissau">Guinea-Bissau</item>
+        <item name="country_guyana">Guyana</item>
+        <item name="country_haiti">Haiti</item>
+        <item name="country_honduras">Honduras</item>
+        <item name="country_hongkong">Hong Kong S.A.R.</item>
+        <item name="country_hungary">Hungary</item>
+        <item name="country_iceland">Iceland</item>
+        <item name="country_india">India</item>
+        <item name="country_indonesia">Indonesia</item>
+        <item name="country_iran">Iran</item>
+        <item name="country_iraq">Iraq</item>
+        <item name="country_ireland">Ireland</item>
+        <item name="country_islamic">Islamic Republic of Pakistan</item>
+        <item name="country_israel">Israel</item>
+        <item name="country_italy">Italy</item>
+        <item name="country_jamaica">Jamaica</item>
+        <item name="country_japan">Japan</item>
+        <item name="country_jordan">Jordan</item>
+        <item name="country_kazakhstan">Kazakhstan</item>
+        <item name="country_kenya">Kenya</item>
+        <item name="country_kiribati_republic">Kiribati Republic</item>
+        <item name="country_south_korea">Korea, Republic of (South Korea)</item>
+        <item name="country_north_korea">Korea, Democratic People\'s Republic of (North Korea)</item>
+        <item name="country_korea">Korea</item>
+        <item name="country_kuwait">Kuwait</item>
+        <item name="country_kyrgyzstan">Kyrgyzstan</item>
+        <item name="country_lao_pdr">Lao P.D.R.</item>
+        <item name="country_latvia">Latvia</item>
+        <item name="country_lebanon">Lebanon</item>
+        <item name="country_lesotho">Lesotho</item>
+        <item name="country_liberia">Liberia</item>
+        <item name="country_libya">Libya</item>
+        <item name="country_liechtenstein">Liechtenstein</item>
+        <item name="country_lithunia">Lithuania</item>
+        <item name="country_luxembourg">Luxembourg</item>
+        <item name="country_macao">Macao S.A.R.</item>
+        <item name="country_macedonia">Macedonia (FYROM)</item>
+        <item name="country_madagascar">Madagascar</item>
+        <item name="country_malawi">Malawi</item>
+        <item name="country_malaysia">Malaysia</item>
+        <item name="country_maldives">Maldives</item>
+        <item name="country_mali">Mali</item>
+        <item name="country_malta">Malta</item>
+        <item name="country_marshall_islands">Marshall Islands</item>
+        <item name="country_martinique">Martinique (French Atilles)</item>
+        <item name="country_mauritania">Mauritania</item>
+        <item name="country_mauritius">Mauritius</item>
+        <item name="country_mayolte">Mayolte</item>
+        <item name="country_mexico">Mexico</item>
+        <item name="country_micronesia">Micronesia, Federated States of</item>
+        <item name="country_moldova">Moldova, Republic of</item>
+        <item name="country_mongolia">Mongolia</item>
+        <item name="country_montserrat">Montserrat</item>
+        <item name="country_montenegro">Montenegro</item>
+        <item name="country_morocco">Morocco</item>
+        <item name="country_mozambique">Mozambique</item>
+        <item name="country_myanmar">Myanmar</item>
+        <item name="country_namibia">Namibia</item>
+        <item name="country_nauru">Nauru</item>
+        <item name="country_nepal">Nepal</item>
+        <item name="country_netherlands">Netherlands</item>
+        <item name="country_netherlands_antilles">Netherlands Antilles</item>
+        <item name="country_new_caledonia">New Caledonia</item>
+        <item name="country_new_zeland">New Zealand</item>
+        <item name="country_nicaragua">Nicaragua</item>
+        <item name="country_niger">Niger</item>
+        <item name="country_nigeria">Nigeria</item>
+        <item name="country_niue">Niue</item>
+        <item name="country_northern_mariana_islands">Northern Mariana Islands (Saipan)</item>
+        <item name="country_norway">Norway</item>
+        <item name="country_oman">Oman</item>
+        <item name="country_palau">Palau</item>
+        <item name="country_panama">Panama</item>
+        <item name="country_papua_new_guinea">Papua New Guinea</item>
+        <item name="country_paraguay">Paraguay</item>
+        <item name="country_peru">Peru</item>
+        <item name="country_philippines">Philippines</item>
+        <item name="country_poland">Poland</item>
+        <item name="country_portugal">Portugal</item>
+        <item name="country_prinicipality_of_monaco">Principality of Monaco</item>
+        <item name="country_puerto_rico">Puerto Rico</item>
+        <item name="country_qatar">Qatar</item>
+        <item name="country_romania">Romania</item>
+        <item name="country_russia">Russia</item>
+        <item name="country_rwanda">Rwanda</item>
+        <item name="country_saipan">Saipan</item>
+        <item name="country_san_marino">San Marino</item>
+        <item name="country_sao_tome_and_principe">Sao Tome and Principe</item>
+        <item name="country_saudi_arabia">Saudi Aranbia</item>
+        <item name="country_senegal">Senegal</item>
+        <item name="country_serbia">Serbia</item>
+        <item name="country_serbia_and_montenegro">Serbie and Montenegro (Former)</item>
+        <item name="country_seychelles">Seychelles</item>
+        <item name="country_sierra_leone">Sierra Leone</item>
+        <item name="country_singapore">Singapore</item>
+        <item name="country_slovakia">Slovakia</item>
+        <item name="country_slovenia">Slovenia</item>
+        <item name="country_solomon_islands">Solomon Islands</item>
+        <item name="country_somalia">Somalia</item>
+        <item name="country_south_africa">South Africa</item>
+        <item name="country_spain">Spain</item>
+        <item name="country_sri_lanka">Sri Lanka</item>
+        <item name="country_st_helena">St. Helena</item>
+        <item name="country_st_kitts">St. Kitts/Nevis</item>
+        <item name="country_st_pierre_and_miquelon">St. Pierre and Miquelon</item>
+        <item name="country_sudan">Sudan</item>
+        <item name="country_suriname">Suriname</item>
+        <item name="country_swaziland">Swaziland</item>
+        <item name="country_sweden">Sweden</item>
+        <item name="country_switzerland">Switzerland</item>
+        <item name="country_syria">Syria</item>
+        <item name="country_tahiti">Tahiti (French Polynesia)</item>
+        <item name="country_taiwan">Taiwan</item>
+        <item name="country_tajikistan">Tajikistan</item>
+        <item name="country_tanzania">Tanzania, United Republic of</item>
+        <item name="country_thailand">Thailand</item>
+        <item name="country_togo">Togo</item>
+        <item name="country_tokelau">Tokelau</item>
+        <item name="country_tonga">Tonga</item>
+        <item name="country_trinidad_and_tobago">Trinidad and Tobago</item>
+        <item name="country_tunisa">Tunisia</item>
+        <item name="country_turkey">Turkey</item>
+        <item name="country_turkmenistan">Turkmenistan</item>
+        <item name="country_tuvalu">Tuvalu</item>
+        <item name="country_uganda">Uganda</item>
+        <item name="country_uae">U.A.E.</item>
+        <item name="country_ukraine">Ukraine</item>
+        <item name="country_uruguay">Uruguay</item>
+        <item name="country_uzbekistan">Uzbekistan</item>
+        <item name="country_vanuatu">Vanuatu</item>
+        <item name="country_vatican_city">Vatican City</item>
+        <item name="country_venezuela">Venezuela, Bolivarian Republic of</item>
+        <item name="country_vietnam">Vietnam</item>
+        <item name="country_virgin_islands">Virgin Islands</item>
+        <item name="country_wallis_and_futuna">Wallis and Futuna</item>
+        <item name="country_western_samoa">Western Samoa</item>
+        <item name="country_yemen">Yemen</item>
+        <item name="country_zaire">Zaire</item>
+        <item name="country_zambia">Zambia</item>
+        <item name="country_zimbabwe">Zimbabwe</item>
+    </string-array>
+
+    <string-array name="country_code_array" translatable="false">
+        <item name="code_country_united_states">+1</item>
+        <item name="code_country_canada">+1</item>
+        <item name="code_country_france">+33</item>
+        <item name="code_country_united_kingdom">+44</item>
+        <item name="code_country_afghanistan">+93</item>
+        <item name="code_country_albania">+355</item>
+        <item name="code_country_algeria">+213</item>
+        <item name="code_country_american_samora">+684</item>
+        <item name="code_country_andora">+376</item>
+        <item name="code_country_angola">+244</item>
+        <item name="code_country_anguilla">+809</item>
+        <item name="code_country_antigua">+268</item>
+        <item name="code_country_argentina">+54</item>
+        <item name="code_country_armenia">+374</item>
+        <item name="code_country_aruba">+297</item>
+        <item name="code_country_australia">+61</item>
+        <item name="code_country_austria">+43</item>
+        <item name="code_country_azerbaijan">+994</item>
+        <item name="code_country_bahamas">+242</item>
+        <item name="code_country_bahrain">+973</item>
+        <item name="code_country_bangladesh">+880</item>
+        <item name="code_country_barbados">+1</item>
+        <item name="code_country_belarus">+375</item>
+        <item name="code_country_belgium">+32</item>
+        <item name="code_country_belize">+501</item>
+        <item name="code_country_benin">+229</item>
+        <item name="code_country_bermuda">+809</item>
+        <item name="code_country_bhutan">+975</item>
+        <item name="code_country_bolivarian">+591</item>
+        <item name="code_country_bolivia">+591</item>
+        <item name="code_country_bosnia">+387</item>
+        <item name="code_country_botswana">+267</item>
+        <item name="code_country_brazil">+55</item>
+        <item name="code_country_british_virgin_islands">+284</item>
+        <item name="code_country_brunei_darussalam">+673</item>
+        <item name="code_country_bulgaria">+359</item>
+        <item name="code_country_burkina_faso">+226</item>
+        <item name="code_country_burundi">+257</item>
+        <item name="code_country_cambodia">+855</item>
+        <item name="code_country_cameroon">+237</item>
+        <item name="code_country_cape_verde_islands">+238</item>
+        <item name="code_country_cayman_islands">+345</item>
+        <item name="code_country_caribbean">+23n</item>
+        <item name="code_country_central_african_republic">6</item>
+        <item name="code_country_chad">+235</item>
+        <item name="code_country_chile">+56</item>
+        <item name="code_country_chine">+86</item>
+        <item name="code_country_colombia">+57</item>
+        <item name="code_country_comoros_and_mayotte">+269</item>
+        <item name="code_country_congo">+242</item>
+        <item name="code_country_cook_islands">+682</item>
+        <item name="code_country_costa_rica">+506</item>
+        <item name="code_country_crotia">+385</item>
+        <item name="code_country_cuba">+53</item>
+        <item name="code_country_cyprus">+357</item>
+        <item name="code_country_czech_republic">+420</item>
+        <item name="code_country_denmark">+45</item>
+        <item name="code_country_dominca">+767</item>
+        <item name="code_country_dominican_republic">+809</item>
+        <item name="code_country_djibouti">+253</item>
+        <item name="code_country_ecuador">+593</item>
+        <item name="code_country_egypt">+20</item>
+        <item name="code_country_el_salvador">+503</item>
+        <item name="code_country_equatorial_guinea">+240</item>
+        <item name="code_country_eritrea">+291</item>
+        <item name="code_country_estonia">+372</item>
+        <item name="code_country_ethiopia">+251</item>
+        <item name="code_country_faroe_islands">+298</item>
+        <item name="code_country_fiji">+679</item>
+        <item name="code_country_finland">+358</item>
+        <item name="code_country_french_guiana">+594</item>
+        <item name="code_country_gabon">+241</item>
+        <item name="code_country_gambia">+220</item>
+        <item name="code_country_georgia">+995</item>
+        <item name="code_country_germany">+49</item>
+        <item name="code_country_ghana">+233</item>
+        <item name="code_country_gibraltar">+350</item>
+        <item name="code_country_greece">+30</item>
+        <item name="code_country_greenland">+299</item>
+        <item name="code_country_grenata">+473</item>
+        <item name="code_country_guam">+671</item>
+        <item name="code_country_guatemala">+502</item>
+        <item name="code_country_guinea">+224</item>
+        <item name="code_country_guinea_bissau">+245</item>
+        <item name="code_country_guyana">+592</item>
+        <item name="code_country_haiti">+509</item>
+        <item name="code_country_honduras">+504</item>
+        <item name="code_country_hongkong">+852</item>
+        <item name="code_country_hungary">+36</item>
+        <item name="code_country_iceland">+354</item>
+        <item name="code_country_india">+91</item>
+        <item name="code_country_indonesia">+62</item>
+        <item name="code_country_iran">+98</item>
+        <item name="code_country_iraq">+964</item>
+        <item name="code_country_ireland">+353</item>
+        <item name="code_country_islamic">+92</item>
+        <item name="code_country_israel">+972</item>
+        <item name="code_country_italy">+39</item>
+        <item name="code_country_jamaica">+876</item>
+        <item name="code_country_japan">+81</item>
+        <item name="code_country_jordan">+96</item>
+        <item name="code_country_kazakhstan">+7</item>
+        <item name="code_country_kenya">+254</item>
+        <item name="code_country_kiribati_republic">+686</item>
+        <item name="code_country_south_korea">+82</item>
+        <item name="code_country_north_korea">+850</item>
+        <item name="code_country_korea">+82</item>
+        <item name="code_country_kuwait">+965</item>
+        <item name="code_country_kyrgyzstan">+996</item>
+        <item name="code_country_lao_pdr">+856</item>
+        <item name="code_country_latvia">+371</item>
+        <item name="code_country_lebanon">+961</item>
+        <item name="code_country_lesotho">+266</item>
+        <item name="code_country_liberia">+231</item>
+        <item name="code_country_libya">+218</item>
+        <item name="code_country_liechtenstein">+423</item>
+        <item name="code_country_lithunia">+370</item>
+        <item name="code_country_luxembourg">+352</item>
+        <item name="code_country_macao">+853</item>
+        <item name="code_country_macedonia">+389</item>
+        <item name="code_country_madagascar">+261</item>
+        <item name="code_country_malawi">+265</item>
+        <item name="code_country_malaysia">+60</item>
+        <item name="code_country_maldives">+960</item>
+        <item name="code_country_mali">+223</item>
+        <item name="code_country_malta">+356</item>
+        <item name="code_country_marshall_islands">+692</item>
+        <item name="code_country_martinique">+596</item>
+        <item name="code_country_mauritania">+222</item>
+        <item name="code_country_mauritius">+230</item>
+        <item name="code_country_mayolte">+269</item>
+        <item name="code_country_mexico">+52</item>
+        <item name="code_country_micronesia">+691</item>
+        <item name="code_country_moldova">+373</item>
+        <item name="code_country_mongolia">+33</item>
+        <item name="code_country_montserrat">+976</item>
+        <item name="code_country_montenegro">+473</item>
+        <item name="code_country_morocco">+212</item>
+        <item name="code_country_mozambique">+258</item>
+        <item name="code_country_myanmar">+95</item>
+        <item name="code_country_namibia">+264</item>
+        <item name="code_country_nauru">+674</item>
+        <item name="code_country_nepal">+977</item>
+        <item name="code_country_netherlands">+31</item>
+        <item name="code_country_netherlands_antilles">+599</item>
+        <item name="code_country_new_caledonia">+687</item>
+        <item name="code_country_new_zeland">+64</item>
+        <item name="code_country_nicaragua">+505</item>
+        <item name="code_country_niger">+227</item>
+        <item name="code_country_nigeria">+234</item>
+        <item name="code_country_niue">+683</item>
+        <item name="code_country_northern_mariana_islands">+1 670</item>
+        <item name="code_country_norway">+47</item>
+        <item name="code_country_oman">+968</item>
+        <item name="code_country_palau">+680</item>
+        <item name="code_country_panama">+507</item>
+        <item name="code_country_papua_new_guinea">+675</item>
+        <item name="code_country_paraguay">+595</item>
+        <item name="code_country_peru">+51</item>
+        <item name="code_country_philippines">+63</item>
+        <item name="code_country_poland">+48</item>
+        <item name="code_country_portugal">+351</item>
+        <item name="code_country_prinicipality_of_monaco">+377</item>
+        <item name="code_country_puerto_rico">+1 787</item>
+        <item name="code_country_qatar">+974</item>
+        <item name="code_country_romania">+40</item>
+        <item name="code_country_russia">+7</item>
+        <item name="code_country_rwanda">+250</item>
+        <item name="code_country_saipan">+670</item>
+        <item name="code_country_san_marino">+37</item>
+        <item name="code_country_sao_tome_and_principe">+239e</item>
+        <item name="code_country_saudi_arabia">+966</item>
+        <item name="code_country_senegal">+221</item>
+        <item name="code_country_serbia">+381</item>
+        <item name="code_country_serbia_and_montenegro">+381</item>
+        <item name="code_country_seychelles">+248</item>
+        <item name="code_country_sierra_leone">+232</item>
+        <item name="code_country_singapore">+65</item>
+        <item name="code_country_slovakia">+421</item>
+        <item name="code_country_slovenia">+386</item>
+        <item name="code_country_solomon_islands">+677</item>
+        <item name="code_country_somalia">+252</item>
+        <item name="code_country_south_africa">+27</item>
+        <item name="code_country_spain">+34</item>
+        <item name="code_country_sri_lanka">+94</item>
+        <item name="code_country_st_helena">+290</item>
+        <item name="code_country_st_kitts">+1 869</item>
+        <item name="code_country_st_pierre_and_miquelon">+508</item>
+        <item name="code_country_sudan">+249</item>
+        <item name="code_country_suriname">+597</item>
+        <item name="code_country_swaziland">+268</item>
+        <item name="code_country_sweden">+46</item>
+        <item name="code_country_switzerland">+41</item>
+        <item name="code_country_syria">+963</item>                       
+        <item name="code_country_tahiti">+689</item>
+        <item name="code_country_taiwan">+886</item>
+        <item name="code_country_tajikistan">+7</item>
+        <item name="code_country_tanzania">+255</item>
+        <item name="code_country_thailand">+66</item>
+        <item name="code_country_togo">+228</item>
+        <item name="code_country_tokelau">+690</item>
+        <item name="code_country_tonga">+676</item>
+        <item name="code_country_trinidad_and_tobago">+1 868</item>
+        <item name="code_country_tunisa">+216</item>
+        <item name="code_country_turkey">+90</item>
+        <item name="code_country_turkmenistan">+933</item>
+        <item name="code_country_tuvalu">+688</item>
+        <item name="code_country_uganda">+256</item>
+        <item name="code_country_uae">+971</item>
+        <item name="code_country_ukraine">+380</item>
+        <item name="code_country_uruguay">+598</item>
+        <item name="code_country_uzbekistan">+998</item>
+        <item name="code_country_vanuatu">+678</item>
+        <item name="code_country_vatican_city">+39</item>
+        <item name="code_country_venezuela">+58</item>
+        <item name="code_country_vietnam">+84</item>
+        <item name="code_country_virgin_islands">+1 340</item>
+        <item name="code_country_wallis_and_futuna">+681</item>
+        <item name="code_country_western_samoa">+685</item>
+        <item name="code_country_yemen">+381</item>
+        <item name="code_country_zaire">+243</item>
+        <item name="code_country_zambia">+260</item>
+        <item name="code_country_zimbabwe">+263</item>   
+    </string-array>
+
+
+    <string name="ERRORMESSAGE_INVALID_URL">invalid url. connection will  be ignored</string>
+    <!--<string name="facebook_app_id" translatable="false">961806053835007</string>-->
+
+    <!-- //calendar -->
+    <string name="CALENDAR_SU">SU</string>
+    <string name="CALENDAR_MO">MO</string>
+    <string name="CALENDAR_TU">TU</string>
+    <string name="CALENDAR_WE">WE</string>
+    <string name="CALENDAR_TH">TH</string>
+    <string name="CALENDAR_FR">FR</string>
+    <string name="CALENDAR_SA">SA</string>
+
+    <!-- Coach selection -->
+    <string name="SEARCHING_COACHES">Searching for Coaches</string>
+    <string name="FINDING_EXPERTS">Finding the best experts to help you reach your weight loss or healthy eating goals.</string>
+    <string name="PLEASE_SELECT">Please select</string>
+    <string name="CANCEL">Cancel</string>
+
+    <!-- Notifications -->
+    <string name="NOTIFICATIONS" translatable="false">Notifications</string>
+    <string name="NOTIFICATIONS_MARK_ALL_AS_READ">Mark all as read</string>
+    <string name="NOTIFICATIONS_CLEAR_ALL">Clear all</string>
+    <string name="NOTIFICATIONS_CANCEL">Cancel</string>
+    <string name="LOCAL_NOTIF_BREAKFAST">Hi %@, remember to add your breakfast.</string>
+    <string name="LOCAL_NOTIF_LUNCH">Hi %@, remember to add your lunch.</string>
+    <string name="LOCAL_NOTIF_DINNER">Hi %@, remember to add your dinner.</string>
+    <string name="HEADER_MEALREMINDER">Meal Reminder</string>
+
+    <!--CRM content updated-->
+    <string name="CRM_CONTENT_1">Congrats! You posted your\n %s meal with HAPI</string>
+    <string name="CRM_CONTENT_2odd">By recording your meals\nregularly, you stay focused on\nyour weight loss goal.</string>
+    <string name="CRM_CONTENT_2even">By recording your meals\nregularly, you learn how to\nmake better food choices.</string>
+    <string name="CRM_CONTENT_2_MEAL1">By logging your meals,\n you learn to make better food choices\n when you log your meals regularly.</string>
+    <string name="CRM_CONTENT_2_MEAL2">By logging your meals,\n you give yourself the means\n to achieve your goal weight.</string>
+    <string name="CRM_CONTENT_2_MEAL3">By logging your meals,\n you\'ll know if you\'re eating 5 servings \nof fruits and vegetables a day.</string>
+    <string name="CRM_CONTENT_2_MEAL4">By logging your meals,\n you\'ll know if you\'re eating a balanced diet.</string>
+    <string name="CRM_CONTENT_2_MEAL5">By logging your meals, \nyou\'ll know if you\'re consuming \n3 dairy products a day.</string>
+    <string name="CRM_CONTENT_2_MEAL6">By logging your meals,\n you\'ll adopt the ideal diet: protein, \ncarbohydrates, a dairy product, and fruits and vegetables.</string>
+    <string name="CRM_CONTENT_2_MEAL7">By logging your meals, \nyou\'ll be aware of your carbohydrate \nintake: bread, grains, pasta, and starches.</string>
+    <string name="CRM_CONTENT_2_MEAL8">By logging your meals, \nyou\'ll make sure that you\'re eating at least \n2 servings of protein (meat, fish ...) daily.</string>
+    <string name="CRM_CONTENT_2_MEAL9">By logging your meals,\n you\'ll know if you\'re drinking enough, \nat least 1.5L of water a day.</string>
+    <string name="CRM_CONTENT_2_MEAL10">By logging your meals,\n you\'ll adopt the best and most\n effective way of losing weight.</string>
+    <string name="CRM_CONTENT_2_MEAL11">By logging your meals,\n you\'ll be aware that you shouldn\'t\n eat too many salty products (crisps, peanuts ...).</string>
+    <string name="CRM_CONTENT_2_MEAL12">By logging your meals,\n you\'ll identify your small daily\n obsessions: desserts, sweets, snacks, cocktails ...</string>
+    <string name="CRM_CONTENT_2_MEAL13">By logging your meals,\n you\'ll be mindful enough to control\n your fat intake (sausages, sauces, butter, cream ...).</string>
+    <string name="CRM_CONTENT_2_MEAL14">By logging your meals,\n you\'ll make sure that you get to eat\n a balanced meal with the proper portions.</string>
+    <string name="CRM_CONTENT_2_MEAL15">By logging your meals,\n you\'ll get to check the variety of your sources\n of calcium: milk, yoghurt, cheese ...</string>
+    <string name="CRM_CONTENT_2_MEAL16">By logging your meals,\n you get to check your consumption of carbohydrates\n that provide the energy your body needs.</string>
+    <string name="CRM_CONTENT_2_MEAL17">By logging your meals,\n you\'ll make sure that you do not consume\n too many sugary drinks or treats.</string>
+    <string name="CRM_CONTENT_2_MEAL18">By logging your meals,\n you become mindful of what you are really\n eating and, if applicable, your excesses.</string>
+    <string name="CRM_CONTENT_2_MEAL19">By logging your meals,\n you become mindful of what \ntime and how you really eat</string>
+    <string name="CRM_CONTENT_2_MEAL20">By also logging your snacks in \nbetween meals, you get a clearer idea \nof your eating habits.</string>
+    <string name="CRM_CONTENT_2_MEAL21">By logging your meals,\n you\'ll make sure to eat the right amount\n of grains (bread, pasta, rice ...).</string>
+    <string name="CRM_CONTENT_2_MEAL22">By logging your meals,\n you become aware when\n you are hungry in general.</string>
+    <string name="CRM_CONTENT_2_MEAL23">By logging your meals,\n you become aware of the meals\n you crave most often.</string>
+    <string name="CRM_CONTENT_2_MEAL24">By logging your meals, you can easily check if you \nalways eat the same thing.</string>
+    <string name="CRM_CONTENT_2_MEAL25">By logging your meals,\n you become aware of which tastes you\n prefer: salty, sweet, spicy, sour ...</string>
+    <string name="CRM_CONTENT_2_MEAL26">By logging your meals,\n you\'ll learn which textures you \nprefer, crunchy, chewy, liquid....</string>
+    <string name="CRM_CONTENT_2_MEAL27">By logging your meals,\n you get to check if you eat \nenough protein, vegetables and fruit.</string>
+    <string name="CRM_CONTENT_2_MEAL28">By logging your meals, you\'ll understand the situations that lead \nyou to eat even when you\'re not hungry.</string>
+    <string name="CRM_CONTENT_2_MEAL29">By logging your meal, \nyou "officially" document what you really eat, \nboth in quantity and quality.</string>
+    <string name="CRM_CONTENT_2_MEAL30">By logging your meals,\n you spot situations, emotional states \nand the problems that cause you to overeat.</string>
+    <string name="MEAL_REWARD_DESCRIPTION_FREE_USER">Another %s and your\ncoach will post personalised\n feedback.\n\nYou can also upgrade to\npremium to get an analysis of\neach of your meals.</string>
+    <string name="MEAL_REWARD_DESCRIPTION_WEEKLY_USER" translatable="false">Your coach will take this meal\ninto account for your weekly\n personalised report.\n\nYou can also upgrade to\npremium to get an analysis of\neach of your meals.</string>
+    <string name="MEAL_REWARD_DESCRIPTION_PREMIUM_USER">Your coach will be alerted\nshortly and will provide you\nwith personalised feedback.</string>
+    <string name="MEAL_REWARD_DESCRIPTION_GOAL_REACHED">You won a personalised\nanalysis.\nYour coach will send it to you\nwithin 2 days.\nYou can also upgrade to\npremium to get an analysis of\neach of your meals.</string>
+    <string name="MEAL_REWARD_DESCRIPTION_GOAL_REACHED_PREMIUM">You won a personalised\nanalysis.\n\nYour coach will send it to you\nwithin 2 days.</string>
+    <string name="MEAL_REWARD_DESCRIPTION_GOAL_REACHED_HTML"><![CDATA[
+    <b><font color=\'#2f2f2f\'><big><big>You won a personalized<br/>analysis.</big></font></b><br/> <br/>
+    Your coach will be alerted<br/>shortly and will provide you<br/>with personalized feedback.<br/><br/>You can also upgrade to<br/><font color=\'#1f89d0\'>premium </font>to get an analysis of<br/>each of your meals.</big>
+    ]]></string>
+    <string name="MEAL_REWARD_DESCRIPTION_GOAL_REACHED_FREE_HTML"><![CDATA[
+    <b><font color=\'#2f2f2f\'><big><big>You won a personalized<br/>analysis.</big></font></b> <br/> <br />To receive it for free, you must first<br/>select your coach<br/>by choosing <font color=\'#1f89d0\'>Premium.</font></big>
+    ]]></string>
+
+    <string name="CRM_REMINDER_COACH_TITLE">Oops...You did not choose a coach yet!</string>
+    <string name="CRM_REMINDER_COACH_MESSAGE">Click on premium to select your coach and take advantage of the free offer</string>
+    <string name="CRM_HEADER_1">Meals recorded</string>
+    <string name="CRM_HEADER_2">Objectives</string>
+    <string name="CRM_HEADER_3">Rewards</string>
+    <string name="btn_send" translatable="false">SEND</string>
+    <string name="OBJECTIVE_STARTINGWEIGHT">Starting Weight</string>
+    <string name="PROFILE_TELNUM">Tel. number</string>
+    <string name="PROFILE_MY_SUBSCRIPTION">My Subscription</string>
+    <string name="PROFILE_MY_RESULTS">My Results</string>
+    <string name="PROFILE_MY_PROFILE">My Profile</string>
+    <string name="PROFILE_MY_COACH">My Coach</string>
+    <string name="PROFILE_MY_CMS">My CMS</string>
+    <string name="PROFILE_LIVE_SUPPORT">Live Support</string>
+    <string name="PROFILE_HELP">Help / Contact</string>
+    <string name="PROFILE_HELP_ABOUT">About</string>
+    <string name="PROFILE_HELP_CONTACT">Contact us</string>
+    <string name="PROFILE_HELP_LOGOUT">Logout</string>
+    <string name="PROFILE_HELP_PRIVACY">Privacy Policy</string>
+    <string name="PROFILE_HELP_TERMS">Terms of Service</string>
+    <string name="PROFILE_CODE">Code</string>
+    <string name="FIRST_CONNECTION_MESSAGE">If you\'re not currently eating, please describe your last meal.</string>
+    <string name="OBJECTIVE_SOURCE">I first heard about the HAPI app from:</string>
+    <string name="OBJECTIVE_SELECT">Select</string>
+    <string name="BUTTON_START_NOW">Start Now</string>
+    <string name="action_finish" translatable="false">Finish</string>
+    <string name="action_next" translatable="false">Next</string>
+    <string name="TOUR_TEXT1">HAPI will help you lose weight and eat better in just 5 days.</string>
+    <string name="TOUR_TEXT2">It’s super easy. Simply log 10 meals within 5 days by taking pictures of your dishes.</string>
+    <string name="TOUR_TEXT3">Once you achieve this, a nutrition expert will analyse your eating habits for FREE</string>
+    <string name="ONETOONECOACHING_PASSWORD_EMAIL">Email with instructions has been sent to you.</string>
+    <string name="ONETOONECOACHING_PASSWORD_EMAIL_FAILED">Email not found.</string>
+    <string name="BTN_GET_STARTED">Get started</string>
+    <string name="LINK_ALREADY_REGISTERED">Already registered? Login</string>
+    <string name="BTN_WHATSINTHEAPP">What\'s in the app?</string>
+    <string name="REG_MAIN_OBJECTIVE">What\'s your main objective?</string>
+    <string name="REG_GOAL_LOSEWEIGHT">Lose Weight</string>
+    <string name="REG_GOAL_EATHEALTHIER">Eat Healthier</string>
+    <string name="REG_GOAL_GETMOREFIT">Get More Fit</string>
+    <string name="REG_QUESTION_CURRENT_WEIGHT">1/4 - What’s your current weight ? \n(in kilos)</string>
+    <string name="REG_QUESTION_TARGET_WEIGHT">2/4 - What’s your target weight ? \n(in kilos)</string>
+    <string name="REG_QUESTION_MOTIVATION_LEVEL">What’s your level of motivation? \n(from 1 to 10)</string>
+    <string name="REG_QUESTION_ENGAGEMENT">How many minutes will you spend every day to reach your objective?</string>
+    <string name="REGISTRATION_TITLE">Registration</string>
+    <string name="REGISTRATION_FAILED">Registration Failed</string>
+    <string name="REG_I_AM_A_MAN"> I am a male</string>
+    <string name="REG_I_AM_A_WOMAN">I am a female</string>
+    <string name="OPTIN_HEALTH_PROFESSIONAL">I am a health professional</string>
+    <string name="OPTIN_SEND_TIPS">Please send me nutrition and fitness tips regularly.</string>
+    <string name="OPTIN_SEND_TIPS_YES">Yes, great!</string>
+    <string name="OPTIN_SEND_TIPS_NO">No, thanks</string>
+    <string name="REG_OPTIN_PROFESSION">Profession</string>
+    <string name="startingWeightDefaultValue" translatable="false">40</string>
+    <string name="targetWeightDefaultValue" translatable="false">40</string>
+    <string name="motivationDefaultValue" translatable="false">0</string>
+    <string name="engagementDefaultValue" translatable="false">0</string>
+    <string name="FORGOT_PASSWORD_LABEL">Send a password reminder to your email</string>
+    <string name="SAVING_PROGRESS_FAILED">Failed</string>
+    <string name="SAVING_PROGRESS_TEXT">Saving</string>
+    <string name="SAVING_PROGRESS_RETRY">Retry</string>
+    <string name="SAVING_PROGRESS_LATER">Later</string>
+    <string name="PROFILE_JOINED_SINCE">Joined</string>
+
+    <string name="MEAL_PHOTO_TAKE_PHOTO">Take Photo</string>
+    <string name="MEAL_PHOTO_PICK_FROM_GALLERY">Pick From Gallery</string>
+    <string name="LOAD_MORE_BTN">Load earlier messages</string>
+    <string name="LOAD_MORE_NO_MORE_BTN">No more contents to show</string>
+    <string name="CLOSE_BTN">Close</string>
+    <string name="LOCAL_NOTIF_HEADER">Set the time for your meal reminder</string>
+
+    <!--Meal Options-->
+    <string name="MEAL_OPTIONS_NAV_HEADER">Meal Options</string>
+    <string name="MEAL_OPTIONS_HEADER" translatable="false">Options</string>
+    <string name="MEAL_OPTIONS_INTRO">Select an option to qualify your meals</string>
+    <string name="MEAL_OPTIONS_1">I want to evaluate the quality of my meals</string>
+    <string name="MEAL_OPTIONS_2">I want to select the food groups of my meals</string>
+
+    <!--Meal Ratings-->
+    <string name="MEAL_RATING_EVALUATE">Evaluate the quality of your meal</string>
+    <string name="MEAL_RATING_EVALUATE_0">No evaluation</string>
+    <string name="MEAL_RATING_EVALUATE_1">Very unhealthy</string>
+    <string name="MEAL_RATING_EVALUATE_2">Somewhat unhealthy</string>
+    <string name="MEAL_RATING_EVALUATE_3">Neither healthy nor unhealthy</string>
+    <string name="MEAL_RATING_EVALUATE_4">Somewhat healthy</string>
+    <string name="MEAL_RATING_EVALUATE_5">Very healthy</string>
+    <string name="MEAL_RATING_COACH">Coach rating</string>
+    <string name="MEAL_RATING_PERSONAL">Your personal rating</string>
+
+    <!--Progress-->
+    <string name="PROGRESS_TITLE">Progress</string>
+    <string name="WEIGHT_BUTTON">Weight</string>
+    <string name="STEPS_BUTTON">Steps</string>
+    <string name="MEALS_BUTTON">Meals</string>
+
+    <!--Meal Stats-->
+    <string name="ALL_BUTTON">All</string>
+    <string name="HEALTHY_BUTTON">Healthy</string>
+    <string name="JUSTOK_BUTTON">Just OK</string>
+    <string name="UNHEALTHY_BUTTON">Unhealthy</string>
+    <string name="ALL_MEALS_RATED">%d meals rated</string>
+    <string name="HEALTHY_MEALS">%d healthy meals</string>
+    <string name="JUST_OK_MEALS">%d just OK meals</string>
+    <string name="UNHEALTHY_MEALS">%d unhealthy meals</string>
+    <string name="YOUR_MEAL_HISTORY">Your meal history</string>
+    <string name="MEALS_LIKE_THIS_AS_OFTEN_AS_YOU_LIKE">Meals like this as often as you like</string>
+    <string name="MEALS_LIKE_THIS_NOT_TOO_OFTEN">Meals like this not too often</string>
+    <string name="MEALS_LIKE_THIS_IN_MODERATION">Meals like this in moderation</string>
+    <string name="SEE_MORE_BTN">See More</string>
+
+    <!--Sharing-->
+    <string name="btn_options">Options</string>
+    <string name="MENU_EDIT_MEAL">Edit Meal</string>
+    <string name="MENU_SHARE_FACEBOOK">Share via Facebook</string>
+    <string name="MENU_SHARE_TWITTER">Share via Twitter</string>
+    <string name="MENU_SHARE_INSTAGRAM">Share via Instagram</string>
+    <string name="MENU_DELETE_MEAL">Delete Meal</string>
+    <string name="facebook_app_id" translatable="false">1435864650039329</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb1435864650039329</string>
+    <string name="FACEBOOK_TITLE"> with HAPI at </string>
+    <string name="FACEBOOK_CONTENT">I just had a meal with my #HAPIcoach. Let\'s all be HAPI and #eathealthier !</string>
+    <string name="FACEBOOK_DESCRIPTION">#HAPIcoach #eathealthier</string>
+    <string name="FACEBOOK_DESCRIPTION_HAPIMOMENT">#HAPIcoach #livebetter</string>
+    <string name="FACEBOOK_DESCRIPTION_EXERCISE">#HAPIcoach</string>
+    <string name="FACEBOOK_EXERCISE_CONTENT">I am sharing this great activity with #HAPIcoach. Let\'s all be HAPI, fit and active!</string>
+    <string name="FACEBOOK_HAPIMOMENT_CONTENT">I am sharing this HAPIMoment with #HAPIcoach. Let\'s all be HAPI and #livebetter !</string>
+    <string name="FACEBOOK_SUCCESSFUL_TITLE">Great move!</string>
+    <string name="FACEBOOK_SUCCESSFUL_CONTENT">Your meal was successfully shared on Facebook.</string>
+    <string name="FACEBOOK_SUCCESSFUL_TITLE_HAPIMOMENT">Great move!</string>
+    <string name="FACEBOOK_SUCCESSFUL_CONTENT_HAPIMOMENT">Your HAPIMoment was successfully shared on Facebook.</string>
+    <string name="FACEBOOK_SUCCESSFUL_TITLE_ACTIVITY">Congrats!</string>
+    <string name="FACEBOOK_SUCCESSFUL_CONTENT_ACTIVITY">Your activity was successfully shared on Facebook.</string>
+    <string name="FACEBOOK_FAILED_TITLE">Facebook Unavailable</string>
+    <string name="FACEBOOK_FAILED_CONTENT">Facebook integration is not available. A Facebook account must be set up on your device.</string>
+
+    <!--Twitter-->
+    <string name="TWITTER_CONTENT">I just had a meal with my #HAPIcoach. Let\'s all be HAPI and #eathealthier !</string>
+    <string name="TWITTER_SUCCESSFUL_CONTENT">Your meal was successfully shared on Twitter.</string>
+    <string name="TWITTER_SUCCESSFUL_CONTENT_HAPIMOMENT">Your HAPIMoment was successfully shared on Twitter.</string>
+    <string name="TWITTER_SUCCESSFUL_TITLE_ACTIVITY">Congrats!</string>
+    <string name="TWITTER_SUCCESSFUL_CONTENT_ACTIVITY">Your activity  was successfully shared on Twitter.</string>
+    <string name="TWITTER_FAILED_TITLE">Twitter Unavailable</string>
+    <string name="TWITTER_FAILED_CONTENT">Twitter integration is not available. A Twitter account must be set up on your device.</string>
+
+    <!--Exercise-->
+    <string name="EXERCISE">Exercise</string>
+    <string name="EXERCISE_WALK">Walk</string>
+    <string name="EXERCISE_RUN">Run</string>
+    <string name="EXERCISE_BIKE">Bike</string>
+    <string name="EXERCISE_SWIM">Swim</string>
+    <string name="EXERCISE_WORKOUT">Workout</string>
+    <string name="EXERCISE_OTHER">Other</string>
+    <string name="ONETOONECOACHING_DESCRIBEACTIVITY">Describe your activity (optional)</string>
+    <string name="EXERCISE_OTHEROPTION">Please select</string>
+    <string name="EXERCISE_DURATION">Duration: </string>
+    <string name="EXERCISE_DISTANCE">Distance</string>
+    <string name="EXERCISE_STEPS">Steps</string>
+    <string name="EXERCISE_MENU_RUN_DEVICE">Run (%@)</string>
+    <string name="EXERCISE_MENU_ACTIVITY">Activity (%@)</string>
+    <string name="EXERCISE_MENU_OTHER">Other</string>
+    <string name="EXERCISE_MENU_RUN">Run</string>
+    <string name="EXERCISE_MENU_BIKE">Bike</string>
+    <string name="EXERCISE_MENU_MOUNTAIN_BIKING">Mountain Biking</string>
+    <string name="EXERCISE_MENU_WALK">Walk</string>
+    <string name="EXERCISE_MENU_HIKING">Hiking</string>
+    <string name="EXERCISE_MENU_DOWNHILL_SKIING">Downhill Skiing</string>
+    <string name="EXERCISE_MENU_CROSS_COUNTRY_SKIING">Cross-Country Skiing</string>
+    <string name="EXERCISE_MENU_SNOWBOARDING">Snowboarding</string>
+    <string name="EXERCISE_MENU_SKATING">Skating</string>
+    <string name="EXERCISE_MENU_SWIM">Swim</string>
+    <string name="EXERCISE_MENU_WHEELCHAIR">Wheelchair</string>
+    <string name="EXERCISE_MENU_ROWING">Rowing</string>
+    <string name="EXERCISE_MENU_ELLIPTICAL">Elliptical</string>
+    <string name="EXERCISE_MENU_YOGA">Yoga</string>
+    <string name="EXERCISE_MENU_PILATES">Pilates</string>
+    <string name="EXERCISE_MENU_CROSSFIT">Crossfit</string>
+    <string name="EXERCISE_MENU_SPINNING">Spinning</string>
+    <string name="EXERCISE_MENU_ZUMBA">Zumba</string>
+    <string name="EXERCISE_MENU_BARRE">Barre</string>
+    <string name="EXERCISE_MENU_GROUP_WORKOUT">Group Workout</string>
+    <string name="EXERCISE_MENU_DANCE">Dance</string>
+    <string name="EXERCISE_MENU_BOOTCAMP">Bootcamp</string>
+    <string name="EXERCISE_MENU_BOXING">Boxing</string>
+    <string name="EXERCISE_MENU_MMA">MMA</string>
+    <string name="EXERCISE_MENU_MEDITATION">Meditation</string>
+    <string name="EXERCISE_MENU_STRENGTH_TRAINING">Strength Training</string>
+    <string name="EXERCISE_MENU_CIRCUIT_TRAINING">Circuit Training</string>
+    <string name="EXERCISE_MENU_CORE_STRENGTHENING">Core Strengthening</string>
+    <string name="EXERCISE_MENU_ARC_TRAINER">Arc Trainer</string>
+    <string name="EXERCISE_MENU_STAIRMASTER">Stairmaster</string>
+    <string name="EXERCISE_MENU_STEPWELL">Stepwell</string>
+    <string name="EXERCISE_MENU_NORDIC_WALKING">Nordic Walking</string>
+    <string name="EXERCISE_MENU_SPORTS">Sports</string>
+    <string name="EXERCISE_MENU_WORKOUT">Workout</string>
+    <string name="EXERCISE_MENU_AQUAGYM">Aquagym</string>
+    <string name="EXERCISE_MENU_GOLF">Golf</string>
+
+    <string-array name="otherexercise_array">
+        <item name="OTHER_EXERCISE_1">Aquagym</item>
+        <item name="OTHER_EXERCISE_2">Mountain Biking</item>
+        <item name="OTHER_EXERCISE_3">Hiking</item>
+        <item name="OTHER_EXERCISE_4">Downhill Skiing</item>
+        <item name="OTHER_EXERCISE_5">Cross-Country Skiing</item>
+        <item name="OTHER_EXERCISE_6">Snowboarding</item>
+        <item name="OTHER_EXERCISE_7">Skating</item>
+        <item name="OTHER_EXERCISE_8">Rowing</item>
+        <item name="OTHER_EXERCISE_9">Elliptical</item>
+        <item name="OTHER_EXERCISE_10">Yoga</item>
+        <item name="OTHER_EXERCISE_11">Pilates</item>
+        <item name="OTHER_EXERCISE_12">Zumba</item>
+        <item name="OTHER_EXERCISE_13">Barre</item>
+        <item name="OTHER_EXERCISE_14">Group Workout</item>
+        <item name="OTHER_EXERCISE_15">Dance</item>
+        <item name="OTHER_EXERCISE_16">BootCamp</item>
+        <item name="OTHER_EXERCISE_17">Boxing</item>
+        <item name="OTHER_EXERCISE_18">MMA</item>
+        <item name="OTHER_EXERCISE_19">Meditation</item>
+        <item name="OTHER_EXERCISE_20">Core Strengthening</item>
+        <item name="OTHER_EXERCISE_21">Arc Trainer</item>
+        <item name="OTHER_EXERCISE_22">Stairmaster</item>
+        <item name="OTHER_EXERCISE_23">Nordic Walking</item>
+        <item name="OTHER_EXERCISE_24">Sports</item>
+        <item name="OTHER_EXERCISE_25">Golf</item>
+    </string-array>
+
+    <string name="EXERCISE_HEADER">Exercise</string>
+    <string name="EDIT_EXERCISE_HEADER">Edit Exercise</string>
+    <string name="LOG_EXERCISE_HEADER">Exercise</string>
+    <string name="EXERCISEVIEW_STEPS">Steps Taken</string>
+    <string name="EXERCISEVIEW_DISTANCE">Km travelled</string>
+    <string name="EXERCISEVIEW_DURATION">Duration</string>
+    <string name="STEPS">steps</string>
+    <string name="MENU_EDIT_EXERCISE">Edit Exercise</string>
+    <string name="MENU_DELETE_EXERCISE">Delete Exercise</string>
+    <string name="ALERTMESSAGE_EXERCISETYPE">Please select your exercise</string>
+
+    <!--Free+-->
+    <string name="PAYMENT_OPTIONS_TITLE">Choose Your Plan</string>
+    <string name="FREE_TRIAL_BIG">$0 - Free trial</string>
+    <string name="FREE_TRIAL_SMALL">(Limited time only)</string>
+    <string name="FOR_ONE_MONTH_BIG">$12.49 per week"</string>
+    <string name="FOR_ONE_MONTH_SMALL">($49.99 for 1 month)</string>
+    <string name="FOR_THREE_MONTHS_BIG">$7.69 per week</string>
+    <string name="FOR_THREE_MONTHS_SMALL">($99.99 for 3 months)</string>
+    <string name="PAYMENT_OPTIONS_CONTENT">HAPI provides professional 1:1\nnutrition coaching by certified dietitians\nat a fraction of the price of a clinic\nconsultation.</string>
+    <string name="PAYMENT_OPTIONS_CONTENT_GUARANTEE">100% Money-Back Guarantee</string>
+    <string name="PREMIUM_ACCESS_TITLE">Verify your phone number</string>
+    <string name="PREMIUM_ACCESS_CONTENT_TOP">To receive your verification code,\nConfirm your country code and type\nyour telephone number below</string>
+    <string name="PREMIUM_ACCESS_COUNTRY">Country</string>
+    <string name="PREMIUM_ACCESS_CODE">Code</string>
+    <string name="PREMIUM_ACCESS_TEL_NUMBER">Tel. number</string>
+    <string name="PREMIUM_ACCESS_BUTTON_TITLE">Verify</string>
+    <string name="PREMIUM_TYPE_CONTACT_NUMBER">To receive your verification code,\nConfirm your country code and type\nyour telephone number below"</string>
+    <string name="PREMIUM_TEL_NO_CONFIRMATION_TITLE">Confirmation</string>
+    <string name="PREMIUM_TEL_NO_CONFIRMATION_DES">We will send your verification code\nto the following number:</string>
+    <string name="PREMIUM_SENT_BY_SMS">Your verification code\nhas been sent by SMS to:</string>
+    <string name="PREMIUM_ENTER_IT_BELOW">Please enter it below:</string>
+    <string name="PREMIUM_RESEND_ACCESS_CODE_BUTTON">Resend verification code</string>
+    <string name="WELCOME_BRAVO">Bravo, you now have full access\nto HAPI features!</string>
+    <string name="WELCOME_WHAT_HAPPENS_NEXT">What happens next?</string>
+    <string name="WELCOME_POST_PREMIUM_DESCRIPTION">Feel free to send me messages, and\nlog as many meals as possible.\nThe more meals you log, the better I\ncan personalize your experience."</string>
+    <string name="WELCOME_POST_PREMIUM_DESCRIPTION_QUESTIONNAIRE">To help you better, I would like to\nkindly ask you to answer a few extra\nquestions about your eating habits and\ncoaching preferences. Ready?</string>
+    <string name="WELCOME_LETS_MOVE_ON">Let\'s move on!</string>
+    <string name="WELCOME_TITLE">Welcome</string>
+
+    <!--Hapi moment-->
+    <string name="HAPIMOMENT_ADDPHOTO">Add a photo\nof your HAPI Moment</string>
+    <string name="HAPIMOMENT_YOURTHOUGHTS">What are your thoughts, $name?</string>
+    <string name="HAPIMOMENT_ADDLOCATION">Add location</string>
+    <string name="HAPIMOMENT_GREAT">HAPI Moment</string>
+    <string name="HAPIMOMENT_GOOD">Great moment</string>
+    <string name="HAPIMOMENT_OKAY">Regular moment</string>
+    <string name="HAPIMOMENT_NOTGOOD">Sad moment</string>
+    <string name="HAPIMOMENT_BAD">Terrible Moment</string>
+    <string name="MENU_EDIT_HAPIMOMENT">Edit moment</string>
+    <string name="MENU_DELETE_HAPIMOMENT">Delete moment</string>
+    <string name="COACH_CHECKED">Checked</string>
+    <string name="MEALTYPE_HAPIMOMENT">HAPI Moment</string>
+    <string name="meallist_addhapimoment_refresh" translatable="false">HAPI_BROADCAST_ADD_HAPIMOMENT_REFRESH</string>
+    <string name="WATER_JOURNAL_EMPTY">Record your water intake</string>
+    <string name="WATER_JOURNAL_NOT_EMPTY">%@ glasses of water</string>
+
+    <!--Upgrade Screens-->
+    <string name="UPGRADE_WELCOME_HEADER">Upgrade to Premium\nand unlock all features</string>
+    <string name="UPGRADE_WELCOME_SUBTITLE1">Personalized program to reach your objective</string>
+    <string name="UPGRADE_WELCOME_SUBTITLE2">Customized meal plans</string>
+    <string name="UPGRADE_WELCOME_SUBTITLE3">Quick feedback for each meal</string>
+    <string name="UPGRADE_WELCOME_SUBTITLE4">Unlimited messaging with your coach</string>
+    <string name="UPGRADE_WELCOME_SUBTITLE5">Weekly progress assessments</string>
+    <string name="UPGRADE_WELCOME_SUBTITLE6">Learn all nutrition basics</string>
+    <string name="UPGRADE_WELCOME_SUBTITLE7">Possibility to switch to another coach</string>
+    <string name="UPGRADE_SCREEN_HEADER">Upgrade now for unlimited\naccess to all Premium features</string>
+    <string name="UPGRADE_NOW_BUTTON">Upgrade Now!</string>
+    <string name="ADD_PHOTO_MEAL">Add a photo\nof your meal</string>
+
+    <!--New Welcome Tour Page-->
+    <string name="TOUR_TITLE_1">Set Your Objectives</string>
+    <string name="TOUR_TITLE_2">It’s Super Easy</string>
+    <string name="TOUR_TITLE_3">Nutrition coaching</string>
+    <string name="TOUR_SUBTITLE_1">Do you want to lose weight\nor balance your diet?</string>
+    <string name="TOUR_SUBTITLE_2">Take pictures of everything you eat</string>
+    <string name="TOUR_SUBTITLE_3">A nutrition expert will help you\nby analyzing your eating habits</string>
+    <string name="TOUR_NEXT">Next</string>
+    <string name="TOUR_START">Start</string>
+
+    <!--Improvement Registration Screen-->
+    <string name="REG_WELCOME">Welcome to</string>
+    <string name="REG_BOTTOM_CONTENT">Start losing weight and\neating healthy in just 5 days</string>
+    <string name="REG_CONTINUE_EMAIL">Continue with your Email</string>
+    <string name="REG_CONTINUE_FACEBOOK">Continue with Facebook</string>
+
+    <!--Updated Me Page-->
+    <string name="ME_MY_COACH">My coach </string>
+    <!--<string name="ME_MY_COACH">My coach </string>-->
+
+    <!--Improved Progress Page-->
+    <string name="TAB_WEIGHT">Weight</string>
+    <string name="TAB_STEPS">Steps</string>
+    <string name="TAB_MEALS">Meals</string>
+
+    <!--Weight Graph-->
+    <string name="WEIGHT_GRAPH_CURRENT_WEIGHT_ASOF">Current Weight: %@ kg as of </string>
+    <string name="WEIGHT_GRAPH_NO_DATA">Current Weight: No Data</string>
+    <string name="WEIGHT_GRAPH_WEIGHT_TIP">Our tip: weigh yourself once a week to keep this chart up to date!</string>
+    <string name="WEIGHT_GRAPH_ENTER_CURRENT_WEIGHT">Enter your current weight</string>
+    <string name="WEIGHT_GRAPH_TARGET_WEIGHT">Target Weight</string>
+    <string name="WEIGHT_GRAPH_CURRENT_BMI">Current BMI</string>
+    <string name="WEIGHT_GRAPH_WEIGHT_LOST">Weight Lost</string>
+    <string name="WEIGHT_GRAPH_WEIGHT_LOG">Weight Log</string>
+    <string name="NO_DATA">No Data</string>
+    <string name="WEIGHT_GRAPH_STEPS_LOG">Steps Log</string>
+    <string name="WEIGHT_GRAPH_DATE">Date</string>
+    <string name="WEIGHT_GRAPH_SEE_MORE">See More</string>
+    <string name="WEIGHT_GRAPH_DEVICE">Device</string>
+    <string name="WEIGHT_GRAPH_NO_MORE_CONTENTS_TO_SHOW">No more contents to show</string>
+    <string name="WEIGHT_GRAPH_EDIT_WEIGHT">Edit Weight</string>
+    <string name="WEIGHT_GRAPH_BROADCAST_DELETE" translatable="false">WEIGHT_GRAPH_DELETE</string>
+    <string name="WEIGHT_GRAPH_BROADCAST_EDIT" translatable="false">WEIGHT_GRAPH_EDIT</string>
+    <string name="STEPS_GRAPH_BROADCAST_DELETE" translatable="false">STEPS_GRAPH_DELETE</string>
+    <string name="STEPS_GRAPH_BROADCAST_EDIT" translatable="false">STEPS_GRAPH_EDIT</string>
+    <string name="EDIT_STEPS">Edit Steps</string>
+    <string name="LAST_RECORDED_STEPS">Last recorded steps: %d steps as of "</string>
+    <string name="LAST_RECORDED_STEPS_NO_DATA">Last recorded steps: No Data</string>
+    <string name="NO_STEPS_DATA">No Data</string>
+    <string name="ENTER_YOUR_CURRENT_STEPS">Enter your current steps</string>
+    <string name="STEPS_TAKEN">Steps Taken</string>
+    <string name="KM_TRAVELLED">Km travelled</string>
+    <string name="CALORIES_BURNED">Calories burned</string>
+    <string name="LOADING_TEXT">Loading...</string>
+
+    <string name="VOICE_MESSAGE">Voice Message:</string>
+    <string name="PROGRESS_MEALS_REGISTRATION">meals since your registration on</string>
+
+    <string name="COMMENTS_TITLE">Comments</string>
+
+    <!--Google Fit-->
+    <string name="GOOGLE_FIT_FIRST_LAUNCH">You can use your \"Google Fit\"  account to display your steps data to HAPI.\n\nDo you want to sync your Google account?</string>
+    <string name="GOOGLE_FIT_PAIR_ACCOUNT">Pair your account now.</string>
+    <string name="GOOGLE_FIT_HEADER">Google Fit</string>
+    <string name="GOOGLE_FIT_POPUP">Manage Google Fit settings</string>
+    <string name="GOOGLE_FIT_STEP_COUNT_FAILED">There was a problem getting the step count</string>
+
+</resources>

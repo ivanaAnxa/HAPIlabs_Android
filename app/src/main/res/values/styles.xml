@@ -1,0 +1,313 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+
+
+    <!-- Application theme. -->
+
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!--All customizations that are NOT specific to a particular API-level can go here.-->
+        <item name="segmentedControlButtonStyle">@style/SegmentedControlButton</item>
+
+    </style>
+
+    <style name="blackNormal">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="blackBold">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="whiteBold">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="whiteNormal">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="orangeNormal">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/text_orange</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="blackNormal.Small">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="grayNormal">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#C8C8C8</item>
+    </style>
+
+    <style name="grayNormal.Large">
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="grayItalic">
+        <item name="android:textStyle">italic</item>
+        <item name="android:textColor">#C8C8C8</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+    <style name="grayNormal.Medium">
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="grayNormal.Small">
+        <item name="android:textSize">10sp</item>
+    </style>
+    <style name="grayItalic.Medium">
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="darkGrayNormal">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#808080</item>
+    </style>
+
+    <style name="darkGrayNormal.Large">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#909090</item>
+    </style>
+
+    <style name="darkGrayNormal.Medium">
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="darkGrayNormal.Small">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="blackNormal.Medium">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="blackBold.Medium">
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="blackNormal.Large">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="blackNormal.ExtraLarge">
+        <item name="android:textSize">25sp</item>
+    </style>
+
+    <style name="blackBold.Large">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="blackBold.ExtraLarge">
+        <item name="android:textSize">25sp</item>
+    </style>
+
+    <style name="whiteNormal.Small">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="whiteNormal.Medium">
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="whiteNormal.Large">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="whiteBold.Large">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="whiteBold.ExtraLarge">
+        <item name="android:textSize">25sp</item>
+    </style>
+
+    <style name="textHeader">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/text_white</item>
+    </style>
+
+    <style name="btnStyleWhite" parent="@android:style/Widget.Button">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/text_orange</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/rounded_button_white_borderless</item>
+        <item name="android:paddingTop">10dip</item>
+        <item name="android:paddingBottom">10dip</item>
+    </style>
+
+    <style name="btnStyleWhiteTour" parent="@android:style/Widget.Button">
+        <item name="android:textSize">19sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text_orange</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/rounded_button_white_borderless</item>
+        <item name="android:paddingTop">10dip</item>
+        <item name="android:paddingBottom">10dip</item>
+    </style>
+
+    <style name="btnStyleWhiteReg" parent="@android:style/Widget.Button">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text_orangedark</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/rounded_button_white_borderless</item>
+        <!--<item name="android:paddingTop">10dip</item>-->
+        <!--<item name="android:paddingBottom">10dip</item>-->
+    </style>
+
+    <style name="btnStyleWhiteRegUpdate" parent="@android:style/Widget.Button">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/text_orangedark</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/rounded_button_white_borderless</item>
+    </style>
+
+    <style name="btnStyleWhiteTour2" parent="@android:style/Widget.Button">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text_orange</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/rounded_button_white_borderless</item>
+        <item name="android:paddingTop">10dip</item>
+        <item name="android:paddingBottom">10dip</item>
+    </style>
+
+    <style name="btnStyleOrange" parent="@android:style/Widget.Button">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/text_white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/rounded_button_orange_borderless</item>
+        <item name="android:paddingTop">10dip</item>
+        <item name="android:paddingBottom">10dip</item>
+    </style>
+
+    <style name="btnStyleOrangeSmall" parent="@android:style/Widget.Button">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text_white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/rounded_button_orange_borderless</item>
+        <item name="android:paddingTop">3dip</item>
+        <item name="android:paddingBottom">3dip</item>
+    </style>
+
+    <style name="btnStyleWhiteSmall" parent="@android:style/Widget.Button">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text_blackgray</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/rounded_button_white_borderless</item>
+        <item name="android:paddingTop">3dip</item>
+        <item name="android:paddingBottom">3dip</item>
+    </style>
+
+
+    <style name="btnStyleDarkOrange" parent="@android:style/Widget.Button">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text_white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/rounded_button_dark_orange_borderless</item>
+        <item name="android:paddingTop">5dip</item>
+        <item name="android:paddingBottom">5dip</item>
+    </style>
+
+    <style name="btnStyleDarkOrangeTour" parent="@android:style/Widget.Button">
+        <item name="android:textSize">18dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text_white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/hapicoach_button_orange_big</item>
+        <item name="android:paddingTop">2dip</item>
+        <item name="android:paddingBottom">2dip</item>
+    </style>
+
+    <style name="btnStyleblue" parent="@android:style/Widget.Button">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text_white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/rounded_button_blue_borderless</item>
+        <item name="android:paddingTop">10dip</item>
+        <item name="android:paddingBottom">10dip</item>
+    </style>
+
+    <style name="btnStyleFBblue" parent="@android:style/Widget.Button">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/text_white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/rounded_button_fb_blue_borderless</item>
+        <!--<item name="android:paddingTop">10dip</item>-->
+        <!--<item name="android:paddingBottom">10dip</item>-->
+    </style>
+
+    <style name="btnStyleTransparent" parent="@android:style/Widget.Button">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text_white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/button_background</item>
+        <item name="android:paddingTop">10dip</item>
+        <item name="android:paddingBottom">10dip</item>
+    </style>
+
+    <style name="dateHeaderSelected">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+    <style name="dateHeaderUnSelected">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/text_blackgray</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="dateHeaderFuture">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text_lightgray</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Theme.Transparent" parent="android:Theme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="SegmentedControlButton" parent="@android:style/Widget.CompoundButton.RadioButton">
+        <item name="android:minWidth">@dimen/segmented_control_min_width</item>
+        <item name="android:minHeight">@dimen/segmented_control_min_height</item>
+        <item name="android:gravity">center</item>
+        <item name="android:button">@null</item>
+        <item name="android:background">@drawable/segmented_control_button_bg</item>
+        <item name="android:textColor">@color/segmented_control_button_text</item>
+    </style>
+
+</resources>

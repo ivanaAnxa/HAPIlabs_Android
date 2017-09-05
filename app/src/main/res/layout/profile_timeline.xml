@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_weight="2"
+                    android:src="@drawable/hapicoach_default_profilepic" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Leandro Barbosa"
+                        android:textColor="@color/profile_name_color"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="Male, 33"
+                        android:textColor="@color/profile_sub_title_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="Sao Paolo, Brazil"
+                        android:textColor="@color/profile_sub_title_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="registered on 02/10/2013"
+                        android:textColor="@color/profile_sub_title_color"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--end of first block-->
+
+            <!--start of 2nd block-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:background="@color/profile_summary_bg"
+                android:orientation="vertical">
+
+                <!--progress block-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <TextView
+                        android:id="@+id/profile_lost_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center_horizontal"
+                        android:text="You lost 1.5 kilos of 6!"
+                        android:layout_marginTop="5dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/profile_lost_tv"
+                        android:weightSum="5"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:id="@+id/profile_current_weight_tv"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="50 kg"
+                            android:textColor="@color/text_blackgray"
+                            android:textStyle="bold" />
+
+                        <ProgressBar
+                            android:id="@+id/savingProgressBar"
+                            style="@android:style/Widget.Holo.ProgressBar.Horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:clickable="false"
+                            android:indeterminate="false"
+                            android:max="100"
+                            android:progress="25" />
+
+                        <TextView
+                            android:id="@+id/profile_target_weight_tv"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="46 kg"
+                            android:textStyle="bold"
+                            android:textColor="@color/text_blackgray" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="@color/common_button_white" />
+
+                <!--meals, messages block-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/profile_img_meal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_toLeftOf="@+id/textView_meals"
+                            android:layout_toStartOf="@+id/textView_meals"
+                            android:src="@drawable/timeline_stats_icon_meal" />
+
+                        <TextView
+                            android:id="@+id/textView_meals"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="76"
+                            android:textColor="@color/text_orangedark"
+                            android:textSize="32sp" />
+
+                        <TextView
+                            android:id="@+id/textView2_meals"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textView_meals"
+                            android:layout_centerHorizontal="true"
+                            android:text="meals"
+                            android:textColor="@color/text_lightgray" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="2px"
+                        android:layout_height="match_parent"
+                        android:background="@color/common_button_white" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/profile_img_messages"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_toLeftOf="@+id/textView_msg"
+                            android:layout_toStartOf="@+id/textView_msg"
+                            android:src="@drawable/timeline_stats_icon_messages" />
+
+                        <TextView
+                            android:id="@+id/textView_msg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="18"
+                            android:textColor="@color/text_orangedark"
+                            android:textSize="32sp" />
+
+                        <TextView
+                            android:id="@+id/textView2_msg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textView_msg"
+                            android:layout_centerHorizontal="true"
+                            android:text="messages"
+                            android:textColor="@color/text_lightgray" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <!--end of meals, messages block-->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="@color/common_button_white" />
+
+                <!--weigh-ins, exercise block-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/profile_img_weighins"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_toLeftOf="@+id/textView_weighins"
+                            android:layout_toStartOf="@+id/textView_weighins"
+                            android:src="@drawable/timeline_stats_icon_weighin" />
+
+                        <TextView
+                            android:id="@+id/textView_weighins"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="34"
+                            android:textColor="@color/text_orangedark"
+                            android:textSize="32sp" />
+
+                        <TextView
+                            android:id="@+id/textView2_weighins"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textView_weighins"
+                            android:layout_centerHorizontal="true"
+                            android:text="weigh-ins"
+                            android:textColor="@color/text_lightgray" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="2px"
+                        android:layout_height="match_parent"
+                        android:background="@color/common_button_white" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/profile_img_exercise"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_toLeftOf="@+id/textView_exercise"
+                            android:layout_toStartOf="@+id/textView_exercise"
+                            android:src="@drawable/timeline_stats_icon_activities" />
+
+                        <TextView
+                            android:id="@+id/textView_exercise"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="18"
+                            android:textColor="@color/text_orangedark"
+                            android:textSize="32sp" />
+
+                        <TextView
+                            android:id="@+id/textView2_exercise"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textView_exercise"
+                            android:layout_centerHorizontal="true"
+                            android:text="exercise"
+                            android:textColor="@color/text_lightgray" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <!--end of weighins, exercise block-->
+
+            </LinearLayout>
+            <!--end of 2nd block-->
+
+
+        </LinearLayout>
+        <!--end of main linear layout-->
+    </ScrollView>
+
+</LinearLayout>

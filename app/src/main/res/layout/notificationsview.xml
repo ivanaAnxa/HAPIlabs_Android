@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/notificationsview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:visibility="visible">
+
+    <com.anxa.hapilabs.activities.fragments.HeaderFragments
+        android:id="@+id/fragment_header"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_below="@id/separatorContainer"
+        android:background="@color/text_orange" />
+
+
+    <com.anxa.hapilabs.ui.CustomListView
+        android:id="@+id/listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/fragment_header"
+        android:cacheColorHint="#00000000"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp" />
+
+    <RelativeLayout
+        android:id="@+id/dummy_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:background="@color/tw__transparent"
+        android:focusable="true"
+        android:clickable="true">
+
+        <ProgressBar
+            android:id="@+id/notificatios_progressBar"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:indeterminateDrawable="@drawable/animateprogress"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/white_slider">
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/tour_page1"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible" />
+
+    <!--android:layout_above="@+id/footerbuttonlayout"-->
+
+
+    <Button
+        android:id="@+id/footerbutton"
+        style="@style/btnStyleDarkOrangeTour"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="5dp"/>
+
+    <LinearLayout
+        android:id="@+id/pager"
+        android:layout_width="fill_parent"
+        android:layout_height="15dp"
+        android:layout_above="@id/footerbutton"
+        android:layout_margin="3dp"
+        android:background="@android:color/transparent"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/pager1"
+            android:layout_width="5dp"
+            android:layout_height="15dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/button_register_pager_orange" />
+
+
+        <ImageView
+            android:id="@+id/pager2"
+            android:layout_width="5dp"
+            android:layout_height="15dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/button_register_pager_orange" />
+
+        <ImageView
+            android:id="@+id/pager3"
+            android:layout_width="5dp"
+            android:layout_height="15dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/button_register_pager_orange" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tourTextView"
+        style="@style/whiteNormal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tourTextView_sub"
+        android:layout_alignParentBottom="false"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:gravity="center_horizontal"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@color/text_white"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tourTextView_sub"
+        style="@style/whiteNormal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/pager"
+        android:layout_alignParentBottom="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@color/text_white"
+        android:textSize="16dp"
+        android:fontFamily="sans-serif-thin"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,26 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+ android:paddingTop="25dp"
+ android:weightSum="10"
+ android:orientation="horizontal"
+ android:background="@color/text_white"
+ android:paddingBottom="25dp"
+ android:layout_height="wrap_content" >
+
+     <Button
+         android:layout_weight="5"
+            android:id="@+id/footerbutton2premium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+      	     style="@style/btnStyleblue"/>
+          <Button
+            android:id="@+id/footerbutton2continue"
+            android:layout_weight="5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+      	     style="@style/btnStyleOrange"/>
+</LinearLayout>

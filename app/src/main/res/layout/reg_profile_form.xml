@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/hapicoach_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/reg_header"
+            android:layout_width="fill_parent"
+            android:layout_height="44dp"
+            android:layout_alignParentBottom="true"
+            layout="@layout/reg_header"/>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/common_gray_separator" />
+
+        <RelativeLayout
+            android:id="@+id/firstNameContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@color/common_button_white"
+            android:padding="5dp">
+
+            <EditText
+                android:id="@+id/reg_firstName"
+                style="@style/blackNormal.Large"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical|left"
+                android:hint="@string/PROFILE_FIRSTNAME"
+                android:inputType="textCapWords|text"
+                android:maxLength="50"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:textColorHint="#cacaca" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/common_gray_separator" />
+
+        <RelativeLayout
+            android:id="@+id/lastNameContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@color/common_button_white"
+            android:padding="5dp">
+
+            <EditText
+                android:id="@+id/reg_lastName"
+                style="@style/blackNormal.Large"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical|left"
+                android:hint="@string/PROFILE_LASTNAME"
+                android:inputType="textCapWords|text"
+                android:maxLength="50"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:textColorHint="#cacaca" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/common_gray_separator" />
+
+        <RelativeLayout
+            android:id="@+id/emailContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@color/common_button_white"
+            android:padding="5dp">
+
+            <EditText
+                android:id="@+id/reg_email"
+                style="@style/blackNormal.Large"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical|left"
+                android:hint="@string/REG_TITLE_EMAIL"
+                android:inputType="textEmailAddress"
+                android:maxLength="50"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:textColorHint="#cacaca" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/common_gray_separator" />
+
+        <RelativeLayout
+            android:id="@+id/passwordContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@color/common_button_white"
+            android:padding="5dp">
+
+            <EditText
+                android:id="@+id/reg_password"
+                style="@style/blackNormal.Large"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical|left"
+                android:hint="@string/SIGNUP_PASSWORD"
+                android:inputType="textPassword"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:textColorHint="#cacaca" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/common_gray_separator" />
+
+        <RelativeLayout
+            android:id="@+id/countryContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@color/common_button_white"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/reg_country"
+                style="@style/blackNormal.Large"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:editable="true"
+                android:gravity="center_vertical|left"
+                android:hint="@string/COUNTRY_PLACEHOLDER"
+                android:inputType="textCapSentences|text"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:textColorHint="#cacaca"
+                android:clickable="true" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/common_gray_separator" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15dp">
+
+                <ImageButton
+                    android:id="@+id/reg_manBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00ffffff"
+                    android:baselineAlignBottom="false"
+                    android:src="@drawable/gender_man"
+                    android:onClick="selectGender"
+                    android:clickable="true" />
+
+                <TextView
+                    android:id="@+id/reg_manTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:paddingBottom="5dp"
+                    android:text="@string/REG_I_AM_A_MAN" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15dp">
+
+                <ImageButton
+                    android:id="@+id/reg_womanBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00ffffff"
+                    android:baselineAlignBottom="false"
+                    android:src="@drawable/gender_woman"
+                    android:onClick="selectGender"
+                    android:clickable="true" />
+
+                <TextView
+                    android:id="@+id/reg_womanTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:paddingBottom="5dp"
+                    android:text="@string/REG_I_AM_A_WOMAN" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/reg_submitBtn"
+                style="@style/btnStyleWhiteReg"
+                android:layout_width="243dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:onClick="validateRegistrationForm"
+                android:text="@string/btn_submit"
+                android:clickable="true" />
+
+            <TextView
+                style="@style/whiteNormal.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="or"
+                android:padding="10dp"/>
+
+            <!--<ImageButton-->
+                <!--android:id="@+id/reg_fbBtn"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="bottom"-->
+                <!--android:layout_marginLeft="70dp"-->
+                <!--android:layout_marginRight="70dp"-->
+                <!--android:background="#00ffffff"-->
+                <!--android:clickable="true"-->
+                <!--android:src="@drawable/btn_facebook"-->
+                <!--android:onClick="facebookConnect"/>-->
+
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/fb_login_button"
+                android:layout_width="243dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center_horizontal"
+                android:drawableLeft="@drawable/btn_facebook"
+                style="@style/btnStyleWhiteTour"
+                android:paddingRight="10dp"
+                android:background="@drawable/btn_facebook"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/progress"
+            android:layout_centerInParent="true"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="invisible" >
+
+            <ProgressBar
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/progressBar"
+                android:indeterminateDrawable="@drawable/animateprogress"
+                android:visibility="visible" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

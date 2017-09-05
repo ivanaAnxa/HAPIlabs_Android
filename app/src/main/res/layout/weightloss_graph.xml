@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_button_white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent">
+
+            <LinearLayout
+                android:id="@+id/weight_graph_date_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:background="@color/gray_background"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/weight_graph_date_btn_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <Button
+                        android:id="@+id/weight_1m_btn"
+                        android:layout_width="40dp"
+                        android:layout_height="30dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/button_weight_graph_bg"
+                        android:clickable="true"
+                        android:text="1M"
+                        android:textColor="@drawable/button_weight_graph_text"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/weight_3m_btn"
+                        android:layout_width="40dp"
+                        android:layout_height="30dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/button_weight_graph_bg"
+                        android:clickable="true"
+                        android:text="3M"
+                        android:textColor="@drawable/button_weight_graph_text"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/weight_1y_btn"
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/button_weight_graph_bg"
+                        android:clickable="true"
+                        android:text="1Y"
+                        android:textColor="@drawable/button_weight_graph_text"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/weight_all_btn"
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/button_weight_graph_bg"
+                        android:clickable="true"
+                        android:text="All"
+                        android:textColor="@drawable/button_weight_graph_text"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/weight_graph_date_range_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/tw__transparent"
+                    android:gravity="center"
+                    android:visibility="visible">
+
+                    <Button
+                        android:id="@+id/date_left_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="5dp"
+                        android:layout_toLeftOf="@+id/weight_date_range"
+                        android:background="@color/tw__transparent"
+                        android:clickable="true"
+                        android:text="‹"
+                        android:textColor="@color/text_orangedark"
+                        android:textSize="32sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/weight_date_range"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="5dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="5dp"
+                        android:textColor="@color/text_darkgray"
+                        android:textSize="12dp"
+                        android:text="January 2016"/>
+
+                    <Button
+                        android:id="@+id/date_right_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="5dp"
+                        android:layout_toRightOf="@+id/weight_date_range"
+                        android:background="@color/tw__transparent"
+                        android:clickable="true"
+                        android:text="›"
+                        android:textColor="@color/text_darkgray"
+                        android:textSize="32sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/currentWeight_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/weight_graph_date_ll"
+                android:layout_centerHorizontal="true"
+                android:padding="10dp"
+                android:textColor="@color/text_darkgray" />
+
+            <ImageView
+                android:id="@+id/viewcontent"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_below="@id/currentWeight_tv"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="" />
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/viewcontentGraph"
+                setVisibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@id/currentWeight_tv"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+
+            <RelativeLayout
+                android:id="@+id/weight_data_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@id/viewcontent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:clickable="true">
+
+                <TextView
+                    android:id="@+id/tipTextView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/common_button_white"
+                    android:gravity="center_horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="@string/WEIGHT_GRAPH_WEIGHT_TIP"
+                    android:textColor="@color/text_darkgray"
+                    android:textSize="14dp" />
+
+                <LinearLayout
+                    android:id="@+id/enterCurrentWeight_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tipTextView"
+                    android:background="@color/gray_background"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/enterCurrentWeight"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:paddingTop="10dp"
+                        android:text="@string/WEIGHT_GRAPH_ENTER_CURRENT_WEIGHT"
+                        android:textColor="@color/text_darkgray"
+                        android:textSize="16dp" />
+
+                    <LinearLayout
+                        android:id="@+id/enterFieldCurrentWeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/enterCurrentWeight_tb_ll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/rounded_button_white_borderorange"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/weight_enter_et"
+                                android:layout_width="105dp"
+                                android:layout_height="30dp"
+                                android:gravity="center"
+                                android:hint=" (ex. 76.5)"
+                                android:inputType="numberDecimal"
+                                android:textColor="@color/text_darkgray"
+                                android:textColorHint="@color/text_lightgray"
+                                android:background="@color/tw__transparent"
+                                android:imeOptions="actionSend"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/weight_unit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="10dp"
+                            android:text="kg"
+                            android:textColor="@color/text_darkgray"
+                            android:textSize="16dp" />
+
+                        <Button
+                            android:id="@+id/weight_submitButton"
+                            style="@style/btnStyleOrangeSmall"
+                            android:layout_width="100dp"
+                            android:layout_height="35dp"
+                            android:clickable="true"
+                            android:text="@string/btn_submit" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2px"
+                    android:layout_below="@id/enterCurrentWeight_ll"
+                    android:background="@color/common_gray_separator" />
+
+                <LinearLayout
+                    android:id="@+id/latestWeightData_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/enterCurrentWeight_ll"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:id="@+id/targetweight_ll"
+                        android:layout_width="0dp"
+                        android:layout_height="90dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/rounded_background_gray"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/targetWeightValue_tv"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="67 kg"
+                                android:textColor="@color/text_blackgray"
+                                android:textSize="20dp" />
+
+                            <TextView
+                                android:id="@+id/targetWeight_tv"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:paddingTop="5dp"
+                                android:text="@string/WEIGHT_GRAPH_TARGET_WEIGHT"
+                                android:textColor="@color/text_darkgray"
+                                android:textSize="12dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/bmi_ll"
+                        android:layout_width="0dp"
+                        android:layout_height="90dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/rounded_background_gray"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/bmiValue_tv"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="0.0"
+                                android:textColor="@color/text_blackgray"
+                                android:textSize="20dp" />
+
+                            <TextView
+                                android:id="@+id/bmi_tv"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:paddingTop="5dp"
+                                android:text="@string/WEIGHT_GRAPH_CURRENT_BMI"
+                                android:textColor="@color/text_darkgray"
+                                android:textSize="12dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/weight_lost_ll"
+                        android:layout_width="0dp"
+                        android:layout_height="90dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/rounded_background_gray"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/lostWeightValue_tv"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="0.80 kg"
+                                android:textColor="@color/text_blackgray"
+                                android:textSize="20dp" />
+
+                            <TextView
+                                android:id="@+id/lostWeight_tv"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:paddingTop="5dp"
+                                android:text="@string/WEIGHT_GRAPH_WEIGHT_LOST"
+                                android:textColor="@color/text_darkgray"
+                                android:textSize="12dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2px"
+                    android:layout_below="@id/latestWeightData_ll"
+                    android:background="@color/common_gray_separator" />
+
+
+            </RelativeLayout>
+
+            <ProgressBar
+                android:id="@+id/weight_graph_progressBar"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:indeterminateDrawable="@drawable/animateprogress"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/weight_log_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/weight_data_rl"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/weight_log_tv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/WEIGHT_GRAPH_WEIGHT_LOG"
+                    android:textColor="@color/text_orange"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/weight_log_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:paddingLeft="10dp"
+                        android:text="@string/WEIGHT_GRAPH_DATE"
+                        android:textColor="@color/text_darkgray"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:paddingLeft="10dp"
+                        android:text="@string/WEIGHT_BUTTON"
+                        android:textColor="@color/text_darkgray"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:paddingLeft="10dp"
+                        android:text="@string/WEIGHT_GRAPH_DEVICE"
+                        android:textColor="@color/text_darkgray"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/text_darkgray"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2px"
+                    android:layout_below="@id/latestWeightData_ll"
+                    android:background="@color/common_gray_separator" />
+
+                <ListView
+                    android:id="@+id/weight_graph_listView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@null"
+                    android:dividerHeight="0dp"
+                    android:drawSelectorOnTop="false"
+                    android:listSelector="@android:color/transparent" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/text_orange">
+
+    <com.anxa.hapilabs.activities.fragments.HeaderFragments
+        android:id="@+id/fragment_header"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="#ff8801" />
+
+    <include
+        android:id="@+id/footerbuttonlayout2"
+        layout="@layout/footerbutton_orange"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible" />
+
+    <View
+        android:id="@+id/footerseparator"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_above="@id/footerbuttonlayout2"
+        android:background="@color/common_gray_separator" />
+
+    <include
+        android:id="@+id/coachselection"
+        layout="@layout/coachselectionview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/footerseparator"
+        android:layout_below="@+id/fragment_header"
+        android:background="@color/text_orangedark" />
+
+    <include
+        android:id="@+id/progresscontainer"
+        layout="@layout/coachselectionprogress"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone" />
+</RelativeLayout>

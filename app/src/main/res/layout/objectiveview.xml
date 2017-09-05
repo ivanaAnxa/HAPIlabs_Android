@@ -1,0 +1,272 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="visible" >
+
+    <LinearLayout
+        android:id="@+id/objectiveContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:weightSum="10" >
+
+        <RelativeLayout
+            android:id="@+id/iWantToContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/common_button_white"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/iWantToLabel"
+                style="@style/blackNormal.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:paddingLeft="10dp"
+                android:paddingRight="2dp"
+                android:paddingTop="5dp"
+                android:singleLine="true"
+                android:text="@string/OBJECTIVE_IWANTTO" />
+
+            <TextView
+                android:id="@+id/iWantTo_et"
+                style="@style/blackNormal.Large"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/iWantToLabel"
+                android:gravity="right"
+                android:inputType="text"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:singleLine="true"
+                android:background="@android:color/transparent"
+                android:textColorHint="#cacaca" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/common_gray_separator" />
+
+        <RelativeLayout
+            android:id="@+id/currentWeightContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/common_button_white"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/currentWeightLabel"
+                style="@style/blackNormal.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:paddingLeft="10dp"
+                android:paddingRight="2dp"
+                android:paddingTop="5dp"
+                android:singleLine="true"
+                android:text="@string/OBJECTIVE_CURRENTWEIGHT" />
+
+            <TextView
+                android:id="@+id/currentweight_et"
+                style="@style/blackNormal.Large"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                  android:background="@android:color/transparent"
+              
+                android:layout_marginRight="15dp"
+                android:layout_toRightOf="@+id/currentWeightLabel"
+                android:gravity="right"
+                android:inputType="text"
+                android:paddingTop="5dp"
+                android:text="82" />
+
+           
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/common_gray_separator" />
+
+        <RelativeLayout
+            android:id="@+id/targetWeightContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/common_button_white"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/targetWeightLabel"
+                style="@style/blackNormal.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:paddingLeft="10dp"
+                android:paddingRight="2dp"
+                android:paddingTop="5dp"
+                android:singleLine="true"
+                android:text="@string/OBJECTIVE_TARGETWEIGHT" />
+
+            <TextView
+                android:id="@+id/targetweight_et"
+                style="@style/blackNormal.Large"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_toRightOf="@+id/targetWeightLabel"
+                android:gravity="right"
+                android:inputType="text"
+                  android:background="@android:color/transparent"
+              
+                android:paddingTop="5dp"
+                android:text="72" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/common_gray_separator" />
+
+        <RelativeLayout
+            android:id="@+id/heightContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/common_button_white"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/heightLabel"
+                style="@style/blackNormal.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:paddingLeft="10dp"
+                android:paddingRight="2dp"
+                android:paddingTop="5dp"
+                android:singleLine="true"
+                android:text="@string/OBJECTIVE_HEIGHT" />
+
+            <TextView
+                android:id="@+id/height_et"
+                style="@style/blackNormal.Large"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_toRightOf="@+id/heightLabel"
+                android:gravity="right"
+                android:inputType="text"
+                  android:background="@android:color/transparent"
+              
+                android:paddingTop="5dp"
+                android:text="175" />
+
+           
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/common_gray_separator" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:background="@color/text_orangedark" />
+
+    <RelativeLayout
+        android:id="@+id/sourceContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/common_button_white"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/sourceLabel"
+            style="@style/blackNormal.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="2dp"
+            android:paddingTop="5dp"
+            android:singleLine="false"
+            android:text="@string/OBJECTIVE_SOURCE" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/common_gray_separator" />
+
+    <RelativeLayout
+        android:id="@+id/sourceOptionContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/common_gray_light_separator"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/sourceOptionLabel"
+            style="@style/darkGrayNormal.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="2dp"
+            android:paddingTop="5dp"
+            android:singleLine="true"
+            android:text="@string/OBJECTIVE_SELECT" />
+
+        <TextView
+            android:id="@+id/sourceOption_et"
+            style="@style/blackNormal.Large"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_toRightOf="@+id/sourceOptionLabel"
+            android:gravity="right"
+            android:inputType="text"
+            android:background="@android:color/transparent"
+            android:paddingTop="5dp"
+            android:text="^" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/common_gray_separator" />
+</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/progress"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:visibility="invisible" >
+
+        <ProgressBar
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:indeterminateDrawable="@drawable/animateprogress"
+            android:visibility="visible" />
+    </LinearLayout>
+
+</RelativeLayout>

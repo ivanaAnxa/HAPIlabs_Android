@@ -1,0 +1,11 @@
+
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+
+    <item android:drawable="@drawable/loader_big_white01" android:duration="100" />
+    <item android:drawable="@drawable/loader_big_white02" android:duration="100" />
+    <item android:drawable="@drawable/loader_big_white03" android:duration="100" />
+    <item android:drawable="@drawable/loader_big_white04" android:duration="100" />
+    <item android:drawable="@drawable/loader_big_white05" android:duration="100" />
+    
+</animation-list>

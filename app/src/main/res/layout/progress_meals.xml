@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <ScrollView
+        android:id="@+id/progress_meals_sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/totalMeals_reg_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fragment_header"
+                android:layout_centerHorizontal="true"
+                android:padding="10dp"
+                android:text=""
+                android:textColor="@color/text_darkgray"
+                android:textSize="12dp"/>
+
+            <ImageView
+                android:id="@+id/viewcontent"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_below="@id/totalMeals_reg_tv"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="" />
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/mealsGraph"
+                setVisibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@id/totalMeals_reg_tv"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_margin="10dp"/>
+
+            <TabHost
+                android:id="@+id/tabHost"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/mealsGraph"
+                android:layout_centerHorizontal="true"
+                android:background="#eeeeeeee">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TabWidget
+                        android:id="@android:id/tabs"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#eeeeeeee"
+                        android:tabStripEnabled="false"></TabWidget>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/mealRatedCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="5dp"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@android:color/black"
+                            android:textSize="20dp" />
+
+                        <TextView
+                            android:id="@+id/mealRatedDesc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="5dp"
+                            android:text="5 meals reated"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="#5d5d5d" />
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#eeeeeeee" />
+
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:id="@android:id/tabcontent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/white">
+
+                        <LinearLayout
+                            android:id="@+id/tab_all"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ListView
+                                android:id="@+id/allMealsListView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:divider="@null"
+                                android:dividerHeight="0dp"
+                                android:drawSelectorOnTop="false"
+                                android:listSelector="@android:color/transparent" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/tab_healthy"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ListView
+                                android:id="@+id/allHealthyMealsListView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:divider="@null"
+                                android:dividerHeight="0dp"
+                                android:drawSelectorOnTop="false"
+                                android:listSelector="@android:color/transparent" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/tab_justok"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ListView
+                                android:id="@+id/allJustOKMealsListView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:divider="@null"
+                                android:dividerHeight="0dp"
+                                android:drawSelectorOnTop="false"
+                                android:listSelector="@android:color/transparent" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/tab_unhealthy"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ListView
+                                android:id="@+id/allUnhealthyMealsListView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:divider="@null"
+                                android:dividerHeight="0dp"
+                                android:drawSelectorOnTop="false"
+                                android:listSelector="@android:color/transparent" />
+
+                        </LinearLayout>
+                    </FrameLayout>
+
+                </LinearLayout>
+            </TabHost>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerInParent="true"
+            android:indeterminateDrawable="@drawable/animateprogress"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+</RelativeLayout>

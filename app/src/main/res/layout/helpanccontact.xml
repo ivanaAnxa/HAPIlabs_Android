@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:visibility="visible" >
+
+    <RelativeLayout
+        android:id="@+id/logoContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp"
+        android:visibility="visible" >
+
+        <ImageView
+            android:id="@+id/imageViewHapiCoachLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/hapicoach_logo_about"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/textViewAppName"
+            style="@style/blackNormal.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imageViewHapiCoachLogo"
+             android:paddingLeft="10dp" 
+             android:paddingRight="10dp"   
+            android:paddingTop="10dp"
+            android:text="@string/app_name" />
+        
+         <TextView
+            android:id="@+id/textViewVersopm"
+            style="@style/darkGrayNormal.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:layout_below="@+id/textViewAppName"
+            android:layout_toRightOf="@+id/imageViewHapiCoachLogo"
+            android:paddingLeft="10dp"  
+            android:paddingRight="10dp"          
+            android:text="@string/app_version" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/separatorContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logoContainer"
+        android:background="#FFFFFF"
+        android:visibility="visible" >
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/common_gray_separator" />
+    </RelativeLayout>
+
+   <com.anxa.hapilabs.ui.CustomListView
+                    android:id="@+id/listview"
+                    android:layout_width="fill_parent"
+                    android:cacheColorHint="#00000000"
+  
+                    android:layout_below="@id/separatorContainer"
+                    android:layout_height="fill_parent"
+                    android:divider="@android:color/transparent"
+                    android:dividerHeight="1dp" />
+
+</RelativeLayout>

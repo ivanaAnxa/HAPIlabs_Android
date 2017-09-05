@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="thumbphoto1" type="id" />
+    <item name="thumbphoto2" type="id" />
+    <item name="thumbphoto3" type="id" />
+    <item name="thumbphoto4" type="id" />
+    <item name="thumbphoto5" type="id" />
+
+    <item name="weblinksurl" type="id" />
+    <item name="weblinkslabel" type="id" />
+
+    <item name="commentid" type="id" />
+    <item name="datepage1" type="id" />
+    <item name="datepage2" type="id" />
+    <item name="datepage3" type="id" />
+    <item name="coachselect_coachindex" type="id" />
+    <item name="coachselect_coachid" type="id" />
+
+
+    <item name="notif_id" type="id" />
+    <item name="notif_refid" type="id" />
+    <item name="notif_pos" type="id" />
+
+
+</resources>

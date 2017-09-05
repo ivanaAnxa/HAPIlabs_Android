@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="80dp"
+    android:orientation="vertical" 
+    android:id="@+id/llGridCell"
+    >
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="#EFEFEF" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="3dp" />
+
+    <Button
+        android:id="@+id/day_gridcell"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_gravity="center"
+        android:background="@drawable/calendar_button_selector"
+        android:gravity="top|center"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#8E8E8E" >
+    </Button>
+
+    <LinearLayout
+        android:id="@+id/layoutIcons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/llMealIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:visibility="invisible" >
+
+            <TextView
+                android:id="@+id/txtMealCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingRight="2dp"
+                android:textColor="#FB7619"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/mealIcon"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_gravity="center"
+                android:src="@drawable/meal_tabicon_meals_orange" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llCommentIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:visibility="invisible" >
+
+            <TextView
+                android:id="@+id/txtCommentCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingRight="2dp"
+                android:textColor="#4AB0EA"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/mealCommentIcon"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_gravity="center"
+                android:src="@drawable/meal_commented_icon" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llApprovedIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:visibility="invisible" >
+
+            <TextView
+                android:id="@+id/txtApprovedCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingRight="2dp"
+                android:textColor="#73CC46"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/mealApprovedIcon"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_gravity="center"
+                android:src="@drawable/meal_approved_icon" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

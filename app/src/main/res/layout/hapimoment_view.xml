@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/hapimoment_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_button_white"
+    android:orientation="vertical">
+
+    <com.anxa.hapilabs.activities.fragments.HeaderFragments
+        android:id="@+id/fragment_header"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/text_orange" />
+
+    <ScrollView
+        android:id="@+id/hapimoment_view_scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragment_header"
+        android:layout_above="@+id/hapimoment_commentfieldcontainer"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/common_button_white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/text_white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/hapimoment_community_header"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#f7f7f7"
+                android:visibility="gone">
+
+                <com.anxa.hapilabs.ui.RoundedImageView
+                    android:id="@+id/hapimoment_community_avatar"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/hapicoach_default_profilepic" />
+
+                <TextView
+                    android:id="@+id/hapimoment_community_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/hapimoment_community_avatar"
+                    android:text="April Patio"
+                    android:textColor="@color/text_blue_comment"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/hapimomentTitleContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/hapimoment_community_header">
+
+                <ImageView
+                    android:id="@+id/hapiMoodImage"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:id="@+id/hapimomentViewTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@+id/hapiMoodImage"
+                    android:textColor="@color/text_darkgray"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/photoContainer"
+                android:layout_width="fill_parent"
+                android:layout_height="130dp"
+                android:layout_below="@id/hapimomentTitleContainer">
+
+                <ImageView
+                    android:id="@+id/mealphoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/hapi_default_image" />
+
+                <LinearLayout
+                    android:id="@+id/mealphoto_thumbcontainer"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#66000000"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <LinearLayout
+                        android:id="@+id/mealphoto_thumb1_containers"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/squared_button_white_borderless"
+                        android:padding="2dp"
+                        android:visibility="invisible">
+
+                        <ImageView
+                            android:id="@+id/mealphoto_thumb1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="top"
+                            android:scaleType="centerCrop" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/mealphoto_thumb2_containers"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/squared_button_white_borderless"
+                        android:padding="2dp"
+                        android:visibility="invisible">
+
+                        <ImageView
+                            android:id="@+id/mealphoto_thumb2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="top"
+                            android:scaleType="centerCrop" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/mealphoto_thumb3_containers"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/squared_button_white_borderless"
+                        android:padding="2dp"
+                        android:visibility="invisible">
+
+                        <ImageView
+                            android:id="@+id/mealphoto_thumb3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="top"
+                            android:scaleType="centerCrop" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/mealphoto_thumb4_containers"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/squared_button_white_borderless"
+                        android:padding="2dp"
+                        android:visibility="invisible">
+
+                        <ImageView
+                            android:id="@+id/mealphoto_thumb4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="top"
+                            android:scaleType="centerCrop" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/mealphoto_thumb5_containers"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="6dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/squared_button_white_borderless"
+                        android:padding="2dp"
+                        android:visibility="invisible">
+
+                        <ImageView
+                            android:id="@+id/mealphoto_thumb5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="top"
+                            android:scaleType="centerCrop" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/approvedIconContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/photoContainer"
+                android:minHeight="30dp"
+                android:padding="5dp"
+                android:visibility="visible"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/meal_approved_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/COACH_CHECKED"
+                    android:textColor="@color/text_checked_green" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/hapimomentDescriptionContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/approvedIconContainer"
+                android:minHeight="30dp"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/hapimomentDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/common_gray_light_separator" />
+
+                <TextView
+                    android:id="@+id/hapimomentLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/hapimomentDescription"
+                    android:textColor="@color/text_black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/hapimoment_comments_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hapimomentDescriptionContainer"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/blackNormal.Large"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Comments"
+                    android:visibility="visible"/>
+
+                <LinearLayout
+                    android:id="@+id/hapimoment_comments_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:id="@+id/hapimoment_coach_comments_container"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/comments_background"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="coachCommentsSelected">
+
+                        <TextView
+                            android:id="@+id/hapimoment_coach_comments_btn"
+                            style="@style/blackNormal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_horizontal"
+                            android:paddingLeft="5dp"
+                            android:text="Coach" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/hapimoment_community_comments_container"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/comments_background"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="communityCommentsSelected">
+
+                        <TextView
+                            android:id="@+id/hapimoment_community_comments_btn"
+                            style="@style/blackNormal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_horizontal"
+                            android:paddingLeft="5dp"
+                            android:text="@string/MYCOMMUNITY_TITLE" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/hapimoment_hapi4u_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/hapimoment_comments_ll"
+                    android:background="#f7f7f7"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/hapimoment_hapi4u_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:src="@drawable/hapi4u_blue"
+                        android:clickable="true"
+                        android:onClick="postHAPI4U"/>
+
+                    <TextView
+                        android:id="@+id/hapimoment_hapi4u_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/hapimoment_hapi4u_iv"
+                        android:paddingLeft="10dp"
+                        android:text="HAPI 4U"
+                        android:textColor="@color/text_blue_comment"
+                        android:textSize="16dp"
+                        android:clickable="true"
+                        android:onClick="postHAPI4U"/>
+
+                    <com.anxa.hapilabs.ui.RoundedImageView
+                        android:id="@+id/hapimoment_hapi4u_avatar"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/hapimoment_hapi4u_num_image"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/hapicoach_default_profilepic"
+                        android:visibility="invisible"/>
+
+                    <com.anxa.hapilabs.ui.RoundedImageView
+                        android:id="@+id/hapimoment_hapi4u_num_image"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@android:color/transparent"
+                        android:visibility="invisible"
+                        android:src="@drawable/rounded_button_dark_orange_borderless" />
+
+                    <TextView
+                        android:id="@+id/hapimoment_hapi4u_num_label"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:text="2"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        style="@style/whiteNormal"
+                        android:gravity="center"
+                        android:visibility="invisible"/>
+
+                    <ImageView
+                        android:id="@+id/hapimoment_hapi4u_smiley"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/meal_smiley_orange"
+                        android:layout_alignBottom="@+id/hapimoment_hapi4u_avatar"
+                        android:layout_alignRight="@+id/hapimoment_hapi4u_avatar"
+                        android:layout_alignEnd="@+id/hapimoment_hapi4u_avatar"
+                        android:visibility="invisible"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <com.anxa.hapilabs.ui.CommentListLayout
+                android:id="@+id/hapimoment_commentlist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/hapimoment_comments_layout"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/hapimoment_commentfieldcontainer"
+        layout="@layout/commentfield"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:visibility="visible" />
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/hapimoment_commentfieldcontainer"
+        android:background="@color/common_gray_separator" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hapimomentview_progressBar"
+        android:visibility="gone"
+        android:layout_gravity="center" />
+
+</RelativeLayout>

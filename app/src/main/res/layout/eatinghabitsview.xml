@@ -1,0 +1,108 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:divider="@android:drawable/divider_horizontal_dark"
+        android:dividerPadding="10dp"
+        android:orientation="vertical" >
+
+        <RadioButton
+            android:id="@+id/radio_eatinghabits1"
+            style="@style/blackNormal.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:button="@drawable/registration_radiobutton"
+            android:checked="true"
+            
+            android:text="@string/EATINGHABITS_SELECTION_1" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/common_gray_separator" />
+
+        <RadioButton
+            android:id="@+id/radio_eatinghabits2"
+            style="@style/blackNormal.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:button="@drawable/registration_radiobutton"
+            
+            android:text="@string/EATINGHABITS_SELECTION_2" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/common_gray_separator" />
+
+        <RadioButton
+            android:id="@+id/radio_eatinghabits3"
+            style="@style/blackNormal.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:button="@drawable/registration_radiobutton"
+            
+            android:text="@string/EATINGHABITS_SELECTION_3" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/common_gray_separator" />
+
+        <RadioButton
+            android:id="@+id/radio_eatinghabits4"
+            style="@style/blackNormal.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:button="@drawable/registration_radiobutton"
+            
+            android:text="@string/EATINGHABITS_SELECTION_4" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/common_gray_separator" />
+
+        <RadioButton
+            android:id="@+id/radio_eatinghabits5"
+            style="@style/blackNormal.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:button="@drawable/registration_radiobutton"
+            
+            android:text="@string/EATINGHABITS_SELECTION_5" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/common_gray_separator" />
+
+        <RadioButton
+            android:id="@+id/radio_eatinghabits6"
+            style="@style/blackNormal.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:button="@drawable/registration_radiobutton"
+            
+            android:text="@string/EATINGHABITS_SELECTION_6" />
+    </RadioGroup>
+
+</LinearLayout>

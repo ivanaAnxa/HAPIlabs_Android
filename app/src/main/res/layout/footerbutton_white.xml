@@ -1,0 +1,17 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="120dp">
+
+    <Button
+         android:id="@+id/footer_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+       android:layout_marginLeft="30dp"
+          android:layout_marginRight="30dp"
+        android:layout_centerInParent="true"
+		 style="@style/btnStyleOrange"
+        android:text="Button text" />
+
+</RelativeLayout>

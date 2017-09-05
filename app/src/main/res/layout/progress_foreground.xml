@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:background="@android:color/transparent"
+    android:gravity="center">
+
+    <Button
+        android:id="@+id/bg_button"
+        android:layout_width="210dp"
+        android:layout_height="44dp"
+        android:background="@android:color/transparent"
+        android:layout_alignParentTop="true"/>
+
+    <LinearLayout
+        android:layout_width="210dp"
+        android:layout_height="44dp"
+        android:orientation="horizontal"
+        android:background="@android:color/transparent"
+        android:weightSum="3"
+        android:layout_gravity="center"
+        android:layout_alignTop="@+id/bg_button">
+
+        <TextView
+            android:id="@+id/weight_label"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="@string/TAB_WEIGHT"
+            style="@style/orangeNormal"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/steps_label"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="@string/TAB_STEPS"
+            style="@style/orangeNormal"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/meals_label"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="@string/TAB_MEALS"
+            style="@style/orangeNormal"
+            android:gravity="center"/>
+    </LinearLayout>
+</RelativeLayout>

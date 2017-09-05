@@ -1,0 +1,158 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/paymentoptions_rl"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/hapicoach_bg">
+
+    <com.anxa.hapilabs.activities.fragments.HeaderFragments
+        android:id="@+id/fragment_header"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="#ff8801"/>
+
+    <LinearLayout
+        android:id="@+id/plan_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fragment_header"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/plan1_ll"
+            android:layout_width="285dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_button_orange_white_border"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:clickable="true"
+            android:onClick="proceedToPremium">
+
+            <TextView
+                android:id="@+id/plan1_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                android:text="@string/FREE_TRIAL_BIG"
+                android:textColor="@color/text_white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/plan1_teaser_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="21dp"
+                android:text="@string/FREE_TRIAL_SMALL"
+                android:textColor="#FFDA4B"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/plan2_ll"
+            android:layout_width="285dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/plan1_ll"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_button_orange_white_border"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:onClick="proceedToWebKit"
+            android:clickable="true">
+
+
+            <TextView
+                android:id="@+id/plan2_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                android:text="@string/FOR_ONE_MONTH_BIG"
+                android:textColor="@color/text_white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/plan2_teaser_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="21dp"
+                android:text="@string/FOR_ONE_MONTH_SMALL"
+                android:textColor="#FFDA4B"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/plan3_ll"
+            android:layout_width="285dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/plan2_ll"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_button_orange_white_border"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:clickable="true"
+            android:onClick="proceedToWebKit">
+
+            <TextView
+                android:id="@+id/plan3_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                android:text="@string/FOR_THREE_MONTHS_BIG"
+                android:textColor="@color/text_white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/plan3_teaser_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="21dp"
+                android:text="@string/FOR_THREE_MONTHS_SMALL"
+                android:textColor="#FFDA4B"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/plan_ll"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/PAYMENT_OPTIONS_CONTENT"
+            android:textColor="@color/text_white"
+            android:textSize="16.5sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/PAYMENT_OPTIONS_CONTENT_GUARANTEE"
+            android:textColor="@color/text_white"
+            android:textSize="16.5sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar_payment"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

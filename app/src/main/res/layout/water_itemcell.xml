@@ -1,0 +1,77 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:id="@+id/mealtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/MEALTYPE_WATER"
+            android:textColor="#000000"
+            android:textSize="20dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/hapimoment_background">
+
+        <SeekBar
+            android:id="@+id/seekBar_water"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/glasses_water"
+            android:max="12"
+            android:progress="0"
+            android:thumb="@drawable/water_glass_blue"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:theme="@android:style/Theme.Holo"
+            android:background="@android:color/transparent"
+            android:progressDrawable="@drawable/water_progressbar"/>
+
+        <SeekBar
+            android:id="@+id/seekBar_orange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/seekBar_water"
+            android:max="12"
+            android:progress="0"
+            android:progressDrawable="@android:color/transparent"
+            android:thumb="@drawable/water_bubble_orange"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp" />
+
+
+        <TextView
+            android:id="@+id/glasses_water"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
+            android:text="@string/MEAL_WATER_GLASSES" />
+
+    </RelativeLayout>
+
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/container"
+        android:background="@color/common_gray_separator" />
+
+</LinearLayout>

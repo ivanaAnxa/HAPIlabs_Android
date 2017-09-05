@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/hapicoach_bg"
+    android:weightSum="6">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:layout_gravity="center_horizontal|bottom"
+        android:src="@drawable/login_logohapicoach" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="visible" >
+
+        <Button
+            android:id="@+id/landing_getstarted"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            style="@style/btnStyleWhiteTour"
+            android:text="@string/BTN_GET_STARTED"
+            android:onClick="callRegister"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/text_white"
+            android:id="@+id/landing_loginlink"
+            android:layout_marginTop="20dp"
+            style="@style/whiteNormal.Large"
+            android:text="@string/LINK_ALREADY_REGISTERED"
+            android:onClick="callLogin"
+            android:linksClickable="true"
+            android:clickable="true" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="visible">
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/landing_whatsintheapp"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            style="@style/btnStyleWhiteTour"
+            android:text="@string/BTN_WHATSINTHEAPP"
+            android:onClick="showWhatsInTheApp"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

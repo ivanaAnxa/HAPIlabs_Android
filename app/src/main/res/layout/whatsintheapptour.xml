@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/hapicoach_bg" >
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/tour_page1"
+        android:layout_width="fill_parent"
+        android:layout_above="@+id/footerbuttonlayout"
+        android:visibility="visible"
+        android:layout_height="match_parent" />
+
+
+    <include
+        android:id="@+id/footerbuttonlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/footerbutton_tour"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/pager"
+        android:visibility="visible"
+        android:layout_width="fill_parent"
+        android:layout_height="15dp"
+        android:orientation="horizontal"
+        android:layout_margin="3dp"
+        android:gravity="center_horizontal"
+        android:layout_above="@id/footerbuttonlayout"
+        android:background="@android:color/transparent" >
+
+        <ImageView
+            android:id="@+id/pager1"
+            android:layout_width="5dp"
+            android:src="@drawable/button_register_pager_orange"
+            android:layout_height="15dp"
+            android:layout_marginRight="10dp"/>
+        <ImageView
+            android:id="@+id/pager2"
+            android:layout_width="5dp"
+            android:src="@drawable/button_register_pager_orange"
+            android:layout_height="15dp"
+            android:layout_marginRight="10dp"/>
+        <ImageView
+            android:id="@+id/pager3"
+            android:layout_width="5dp"
+            android:src="@drawable/button_register_pager_orange"
+            android:layout_height="15dp"
+            android:layout_marginRight="10dp" />
+        <ImageView
+            android:id="@+id/pager4"
+            android:layout_width="5dp"
+            android:src="@drawable/button_register_pager_orange"
+            android:layout_height="15dp"
+            android:layout_marginRight="10dp" />
+        <ImageView
+            android:id="@+id/pager5"
+            android:layout_width="5dp"
+            android:src="@drawable/button_register_pager_orange"
+            android:layout_height="15dp"
+            android:layout_marginRight="10dp" />
+    </LinearLayout>
+
+</RelativeLayout>

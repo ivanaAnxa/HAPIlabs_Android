@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:orientation="vertical"
+    android:id="@+id/stepsLayout">
+
+
+    <!-- activity details -->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_background_gray"
+        android:paddingTop="5dp">
+
+        <ImageView
+            android:id="@+id/steps_displaylogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/exercise_display_steps"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:id="@+id/steps_displayTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Activity "
+            android:layout_toRightOf="@id/steps_displaylogo"
+            android:textStyle="bold"
+            android:textColor="@color/text_black" />
+
+        <TextView
+            android:id="@+id/steps_selectedBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_toRightOf="@id/steps_displaylogo"
+            android:layout_below="@id/steps_displayTitle"
+            android:textColor="@color/text_darkgray" />
+
+
+        <TextView
+            android:id="@+id/steps_displayTime"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="11:59 PM"
+            android:layout_toRightOf="@id/steps_displaylogo"
+            android:layout_below="@id/steps_selectedBody"
+            android:theme="@style/grayNormal"
+            android:textColor="@color/text_gray" />
+
+    </RelativeLayout>
+
+</LinearLayout>

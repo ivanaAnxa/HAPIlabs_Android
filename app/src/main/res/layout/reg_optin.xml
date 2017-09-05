@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/hapicoach_bg">
+
+    <include
+        android:id="@+id/reg_header"
+        layout="@layout/reg_header"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentTop="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/reg_header"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/common_gray_separator" />
+
+        <LinearLayout
+            android:id="@+id/healthProfContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/common_button_white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/optin_healthProf_tv"
+                style="@style/blackNormal.Large"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:gravity="left"
+                android:paddingLeft="20dp"
+                android:paddingTop="20dp"
+                android:singleLine="true"
+                android:text="@string/OPTIN_HEALTH_PROFESSIONAL" />
+
+            <LinearLayout
+                android:id="@+id/healthProf_checkBox_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="false"
+                android:layout_below="@+id/optin_healthProf_tv"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <CheckBox
+                    android:id="@+id/healthProf_checkBoxYes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_weight="1"
+                    android:text="@string/btn_yes"
+                    android:textColor="@color/text_black"
+                    android:onClick="setCheckBoxValue"/>
+
+                <CheckBox
+                    android:id="@+id/healthProf_checkBoxNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:text="@string/btn_no"
+                    android:textColor="@color/text_black"
+                    android:onClick="setCheckBoxValue"/>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/profession_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="false">
+
+                <TextView
+                    android:id="@+id/optin_prof_tv"
+                    style="@style/blackNormal.Large"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:gravity="left"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/REG_OPTIN_PROFESSION"
+                    android:clickable="true"
+                    android:onClick="showProfessionOptions"/>
+
+                <TextView
+                    android:id="@+id/optin_profarrow_tv"
+                    style="@style/blackBold.Large"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="right"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text=">"
+                    android:clickable="true"
+                    android:onClick="showProfessionOptions"
+                    android:layout_alignParentRight="true" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/common_gray_separator" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/common_gray_separator" />
+
+        <LinearLayout
+            android:id="@+id/sourceContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="110dp"
+            android:background="@color/common_button_white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/optin_source_tv"
+                style="@style/blackNormal.Large"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:gravity="left"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="15dp"
+                android:paddingTop="15dp"
+                android:text="@string/OBJECTIVE_SOURCE"
+                android:lines="2" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/common_gray_separator" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/optin_select_tv"
+                    style="@style/blackNormal.Large"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:gravity="left"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/OBJECTIVE_SELECT"
+                    android:clickable="true"
+                    android:onClick="showOptinSources"/>
+
+                <TextView
+                    android:id="@+id/optin_sourcearrow_tv"
+                    style="@style/blackBold.Large"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="right"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text=">"
+                    android:clickable="true"
+                    android:onClick="showOptinSources"
+                    android:layout_alignParentRight="true" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/common_gray_separator" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/sendTipsContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:background="@color/common_button_white">
+
+            <TextView
+                android:id="@+id/optin_sendTips_tv"
+                style="@style/blackNormal.Large"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:gravity="left"
+                android:paddingLeft="20dp"
+                android:paddingRight="15dp"
+                android:paddingTop="15dp"
+                android:text="@string/OPTIN_SEND_TIPS" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <CheckBox
+                    android:id="@+id/tips_checkBoxYes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_weight="1"
+                    android:text="@string/OPTIN_SEND_TIPS_YES"
+                    android:textColor="@color/text_black"
+                    android:onClick="setCheckBoxValue"/>
+
+                <CheckBox
+                    android:id="@+id/tips_checkBoxNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:text="@string/OPTIN_SEND_TIPS_NO"
+                    android:textColor="@color/text_black"
+                    android:onClick="setCheckBoxValue"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/footerbuttonlayout"
+        layout="@layout/footerbutton_tour"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible" />
+
+
+        <ProgressBar
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerInParent="true"
+            android:id="@+id/progressBar_optin"
+            android:visibility="visible" />
+
+</RelativeLayout>

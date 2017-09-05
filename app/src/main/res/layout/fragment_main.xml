@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/text_white">
+
+
+    <com.anxa.hapilabs.activities.fragments.HeaderFragments
+        android:id="@+id/fragment_header"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/text_orange" />
+
+    <RelativeLayout
+        android:id="@+id/fragment_headerprogress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/text_orange"
+        android:minHeight="44dp"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="220dp"
+            android:layout_height="44dp"
+            android:layout_centerInParent="true">
+
+            <include
+                android:id="@+id/background_seekbar"
+                layout="@layout/progress_background"
+                android:layout_width="216dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true">
+            </include>
+
+            <SeekBar
+                android:id="@+id/main_progress_seekbar"
+                android:layout_width="216dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@android:color/transparent"
+                android:max="2"
+                android:maxWidth="230dp"
+                android:minWidth="230dp"
+                android:progress="2"
+                android:progressDrawable="@android:color/transparent"
+                android:thumb="@drawable/progress_slider"
+                android:thumbOffset="-1dp" />
+
+            <include
+                android:id="@+id/background_seekbar_label"
+                layout="@layout/progress_foreground"
+                android:layout_width="216dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true">
+            </include>
+
+            <SeekBar
+                android:id="@+id/main_progress_seekbar_clickable"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@android:color/transparent"
+                android:max="2"
+                android:maxWidth="180dp"
+                android:minWidth="18dp"
+                android:progress="0"
+                android:progressDrawable="@android:color/transparent"
+                android:thumb="@android:color/transparent" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/header_right_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/nav_icon_summary"
+            android:visibility="visible" />
+
+
+    </RelativeLayout>
+
+
+    <include
+        android:id="@+id/fragment_footer"
+        layout="@layout/fragment_main_footer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"></include>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/fragment_footer"
+        android:layout_below="@id/fragment_header" />
+
+
+</RelativeLayout>

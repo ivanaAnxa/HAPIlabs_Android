@@ -1,0 +1,158 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:visibility="visible" >
+
+    <LinearLayout
+        android:id="@+id/logincontainer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:weightSum="10"
+        android:focusable="true"
+        android:clickable="true"
+        android:focusableInTouchMode="true"
+        android:visibility="visible" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:layout_gravity="center_horizontal|bottom"
+            android:src="@drawable/login_logohapicoach" />
+
+        <TextView
+            style="@style/whiteNormal.Large"
+            android:layout_width="fill_parent"    
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:text="@string/LOGIN_LABEL" />
+
+        <EditText
+            android:id="@+id/login_username_et"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/common_button_white"
+            android:hint="@string/SIGNUP_EMAIL"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textColorHint="#cacaca"
+            android:inputType="textEmailAddress" />
+        
+        <View android:layout_width="fill_parent" android:background="@color/common_gray_light_separator" android:layout_height="1px"/>
+
+        <EditText
+            android:id="@+id/login_password_et"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"
+            android:background="@color/common_button_white"
+            android:hint="@string/SIGNUP_PASSWORD"
+            android:inputType="textPassword"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textColorHint="#cacaca" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="visible" >
+
+        <Button
+            android:id="@+id/login_loginbtn"
+            android:layout_width="243dp"
+            android:layout_height="40dp"
+            style="@style/btnStyleWhiteReg"
+            android:text="@string/btn_login" />
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:layout_gravity="center"
+            android:textColor="@color/text_white"
+            android:id="@+id/login_forgotpassword"
+            style="@style/whiteNormal.Large"
+            android:text="@string/LOGIN_APPROVED"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/progress"
+        android:layout_centerInParent="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <ProgressBar
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_horizontal"
+              android:id="@+id/progressBar"
+            android:indeterminateDrawable="@drawable/animateprogress"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <!--<android.support.v4.view.ViewPager-->
+        <!--android:id="@+id/tourPager"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_above="@+id/pager"-->
+        <!--android:visibility="visible"-->
+        <!--android:layout_height="match_parent" />-->
+
+    <!--<include-->
+        <!--android:id="@+id/footerbuttonlayout2"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--layout="@layout/footerbutton_orange"-->
+        <!--android:visibility="visible" />-->
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/tourPagerLayout"-->
+        <!--android:visibility="visible"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="15dp"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_margin="3dp"-->
+        <!--android:gravity="center_horizontal"-->
+        <!--android:layout_above="@id/footerbuttonlayout2"-->
+        <!--android:background="@android:color/transparent" >-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/pager1"-->
+            <!--android:layout_width="5dp"-->
+            <!--android:src="@drawable/button_register_pager_orange"-->
+            <!--android:layout_height="15dp"-->
+            <!--android:layout_marginRight="10dp"/>-->
+
+
+        <!--<ImageView-->
+            <!--android:id="@+id/pager2"-->
+            <!--android:layout_width="5dp"-->
+            <!--android:src="@drawable/button_register_pager_orange"-->
+            <!--android:layout_height="15dp"-->
+            <!--android:layout_marginRight="10dp"/>-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/pager3"-->
+            <!--android:layout_width="5dp"-->
+            <!--android:src="@drawable/button_register_pager_orange"-->
+            <!--android:layout_height="15dp"-->
+            <!--android:layout_marginRight="10dp" />-->
+
+
+    <!--</LinearLayout>-->
+
+</RelativeLayout>

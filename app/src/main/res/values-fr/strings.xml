@@ -1,0 +1,1082 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ABOUTPAGE_CONTENT">Cette application est une création collaborative des sociétés ANXA et HAPILABS. \n\nElle vous permet de bénéficier de l\'accompagnement d\'une diététicienne diplômée sur votre smartphone. Grace à cet outil et au soutien de votre coach, vous allez pouvoir atteindre votre objectif et prendre de bonnes habitudes alimentaires. Pour commencer, prenez une photo de votre prochain repas et chargez-la à la date d\’aujourd\’hui dans l\'application.</string>
+    <string name="PROFILE_ABOUT_DESCRIPTION">Cette application vous permet de bénéficier de l\'accompagnement d\'une diététicienne diplômée sur votre smartphone.\n\nGrace à cet outil et au soutien de votre coach, vous allez pouvoir atteindre votre objectif et prendre de bonnes habitudes alimentaires. Pour commencer, prenez une photo de votre prochain repas et chargez-la à la date d\'aujourd\'hui dans l\'application.\n\nCette application est une production de la société HAPILABS.</string>
+    <string name="ALERTMESSAGE_BIRTHDAY_VALIDATION">Oops… Pour mieux vous accompagner, nous souhaitons connaître votre date de naissance.</string>
+    <string name="ALERTMESSAGE_CONTACTNUMBER_EMPTY">Oops… Vous avez oublié d\'entrer votre téléphone. Cette information restera confidentielle.</string>
+    <string name="ALERTMESSAGE_CONTACTNUMBER_VALIDATION">Oops… Votre numéro de téléphone semble erroné.</string>
+    <string name="ALERTMESSAGE_CURRENTWEIGHT">Oops… Vous avez oublié d\'entrer votre poids actuel.</string>
+    <string name="ALERTMESSAGE_DELETE_MEAL">Voulez-vous vraiment supprimer cette entrée ?</string>
+    <string name="ALERTMESSAGE_COMMENT_FAILED">Ce message n\'a pas été envoyé:</string>
+    <string name="ALERTMESSAGE_CONTACT_MAX_CHAR">Oops… Vous avez atteint le nombre maximum de caractères.</string>
+    <string name="ALERTMESSAGE_FIRSTNAME_EMPTY">Oops… Vous avez oublié d\'entrer votre prénom.</string>
+    <string name="ALERTMESSAGE_FIRSTNAME_EXCEEDED">Oops… Vous avez dépassé le nombre maximum de caractères pour votre prénom. Merci de le raccourcir.</string>
+    <string name="ALERTMESSAGE_FORGOTPASSWORD">Merci de remplir d\'abord le champs Prénom.</string>
+    <string name="ALERTMESSAGE_FORM_EMPTY_TITLE">Oops… Vous avez oublié de remplir certains champs.</string>
+    <string name="ALERTMESSAGE_GETTING_COACH_LIST">Affichage de la liste des coachs disponibles</string>
+    <string name="ALERTMESSAGE_HEIGHT">Oops… Vous avez oublié d\'entrer votre taille.</string>
+    <string name="ALERTMESSAGE_INTERNETCONNECTION_OFFLINE">La page ne se charge pas : Il semble y avoir un problème de connexion.</string>
+    <string name="ALERTMESSAGE_JSON_FAILED">Oops… Il y a un problème.</string>
+    <string name="ALERTMESSAGE_LASTNAME_EMPTY">Oops… Vous n’avez pas entré votre nom de famille.</string>
+    <string name="ALERTMESSAGE_LASTNAME_EXCEEDED">Oops… Vous avez dépassé le nombre maximum de caractères pour votre nom de famille. Merci de le raccourcir.</string>
+    <string name="ALERTMESSAGE_LOGIN_FAILED">La connexion à votre compte a échoué.</string>
+    <string name="ALERTMESSAGE_MEALADDDED_ONGOING">Votre repas est actuellement en cours &#8230;</string>
+    <string name="ALERTMESSAGE_MEALADDED_FAILED">Oops… Il semble que votre repas n\'ait pas été enregistré.</string>
+    <string name="ALERTMESSAGE_MEALADDDED_SUCCESS">Bien joué… Votre repas a bien été enregistré.</string>
+    <string name="ALERTMESSAGE_MEALDESCRIPTION">Prenez votre repas en photo ou décrivez-le pour que votre coach puisse l\'analyser.</string>
+    <string name="ALERTMESSAGE_MYPROFILE_TITLE">Moi</string>
+    <string name="ALERTMESSAGE_MY_MEALS_TITLE">Carnet</string>
+    <string name="ALERTMESSAGE_NETWORK_ERROR">Il semble y avoir un problème de connexion. Merci d’essayer à nouveau un peu plus tard.</string>
+    <string name="ALERTMESSAGE_PASSWORD_EMPTY">Pour compléter votre inscription, merci de saisir un mot de passe.</string>
+    <string name="ALERTMESSAGE_PASSWORD_VALIDATION">Les 2 mots de passe ne correspondent pas !</string>
+    <string name="ALERTMESSAGE_PAYMENT_CANCELLED">Désolé, la demande de paiement a été annulée..</string>
+    <string name="ALERTMESSAGE_PAYMENT_FAILED">Oops… le paiement a échoué. Ca vaut le coup d’essayer à nouveau.</string>
+    <string name="ALERTMESSAGE_PAYMENT_PAGE">Page de paiement</string>
+    <string name="ALERTMESSAGE_PAYMENT_SUCCESSFUL">Bravo, le paiement a fonctionné ! Nous mettons votre profil à jour…</string>
+    <string name="ALERTMESSAGE_PHOTOUPLOAD_FAILED">Le chargement de l\'image a échoué.</string>
+    <string name="ALERTMESSAGE_PROFILEDATA_SAVED">Vos modifications ont été sauvegardées.</string>
+    <string name="ALERTMESSAGE_RENEWSUBCRIPTION">Oops… Mauvaise nouvelle !</string>
+    <string name="ALERTMESSAGE_RENEWSUBCRIPTION_TITLE">Votre abonnement est terminé.\n\n Contactez-nous si vous pensez qu\'il s\'agit d\'une erreur.</string>
+    <string name="ALERTMESSAGE_RENEWSUBCRIPTION_BTN">Renouveler l\'abonnement</string>
+    <string name="ALERTMESSAGE_RE_INPUT_PASSWORD">Pour compléter votre inscription, merci d\'entrer votre mot de passe à nouveau.</string>
+    <string name="ALERTMESSAGE_SELECTCOACH">Prenez des photos de vos repas et recevez l\'analyse personnalisée d\'une diététicienne diplômée.</string>
+    <string name="ALERTMESSAGE_SELECTCOACH_BTN">Choisissez votre coach</string>
+    <string name="ALERTMESSAGE_SELECT_GOAL">Nous souhaitons mieux vous connaître, merci de sélectionner votre objectif.</string>
+    <string name="ALERTMESSAGE_SERVERSYNC_FAILED">La synchronisation a échoué.</string>
+    <string name="ALERTMESSAGE_TARGETWEIGHT">Oops… Vous avez oublié d\'entrer le poids que vous visez.</string>
+    <string name="ALERTMESSAGE_USERNAME_VALIDATION">Pour compléter votre inscription, merci d\'entrer votre nom d\'utilisateur.</string>
+    <string name="ALERTMESSAGE_OFFLINE">La connexion Internet semble interrompue.</string>
+    <string name="ALERTMESSAGE_OFFLINE_POST">Pas de connection internet. Les repas postés seront synchronisés plus tard.</string>
+
+
+    <string name="ALERTMESSAGE_GENDER_EMPTY">Oops… Vous avez oublié de préciser si vous êtes un homme ou une femme.</string>
+    <string name="ALERTMESSAGE_COUNTRY_EMPTY"> Oops… ressemble vous avez raté votre pays.</string>
+
+    <string name="APPROVED">Approuvé</string>
+    <string name="BDAY_PLACEHOLDER">Date de naissance</string>
+    <string name="CANCEL">Annuler</string>
+    <string name="COMMENTED">Commenté</string>
+    <string name="COMMENT_FAILED_TITLE">Ce message n\'a pas été envoyé:</string>
+    <string name="CONTACT_PLACEHOLDER">Téléphone</string>
+    <string name="COUNTRY_PLACEHOLDER">Pays</string>
+    <string name="TELNUM_PLACEHOLDER">Tel. number</string>
+    <string name="CODE_PLACEHOLDER">Code</string>
+
+    <!--CRM-->
+    <string name="CRM_CONTENT_1">Bravo, tu as enregistré ton\n%s repas !</string>
+    <string name="CRM_CONTENT_2even">En enregistrant régulièrement\ntes repas, tu apprends à faire de meilleurs\nchoix alimentaires.</string>
+    <string name="CRM_CONTENT_2odd">En entrant régulièrement\ntes repas, tu apprends à faire de\nmeilleurs choix alimentaires.</string>
+    <string name="CRM_HEADER_1">Repas enregistré</string>
+    <string name="CRM_HEADER_3">Récompense</string>
+    <string name="CRM_REMINDER_COACH_MESSAGE">Clique sur Premium pour choisir ton coach et profiter de l’analyse gratuite.</string>
+    <string name="CRM_REMINDER_COACH_TITLE">Oops&#8230; Tu n’as pas encore choisi ton coach !</string>
+
+    <!-- Eating Habits page -->
+    <string name="EATINGHABITS_SELECTION_1">Je mange équilibré</string>
+    <string name="EATINGHABITS_SELECTION_2">Je saute souvent des repas</string>
+    <string name="EATINGHABITS_SELECTION_3">Je mange au fast-food</string>
+    <string name="EATINGHABITS_SELECTION_4">Je suis trop gourmand</string>
+    <string name="EATINGHABITS_SELECTION_5">J’adore les fruits et légumes</string>
+    <string name="EATINGHABITS_SELECTION_6">Je suis un régime particulier</string>
+    <string name="FINDING_EXPERTS">Nous recherchons les meilleurs experts en nutrition pour vous aider à atteindre votre objectif.</string>
+    <string name="FIRSTNAME_PLACEHOLDER">Prénom</string>
+
+    <!-- food groups title -->
+    <string name="FOODGROUP_PROTEIN">Protéines</string>
+    <string name="FOODGROUP_DAIRY">Produits laitiers</string>
+    <string name="FOODGROUP_STARCHES">Féculents</string>
+    <string name="FOODGROUP_FRUITSVEGGIES">Fruits et légumes</string>
+    <string name="FOODGROUP_FAT">Matières grasses</string>
+    <string name="FOODGROUP_DRINKS">Boissons</string>
+    <string name="FOODGROUP_SWEETS">Produits sucrés</string>
+    <string name="FOR">pour</string>
+    <string name="GENDER_PLACEHOLDER">Je suis</string>
+    <string name="HAPI_COACH_SELECTION">Nous recherchons les meilleurs experts en nutrition pour vous aider à atteindre votre objectif.</string>
+    <string name="HAPI_HOW">Voici comment fonctionne l’appli…</string>
+    <string name="HEADER_MEALREMINDER">Alertes repas</string>
+    <string name="LABEL_WELCOME">Bienvenue</string>
+    <string name="LASTNAME_PLACEHOLDER">Nom</string>
+    <string name="LOCAL_NOTIF_BREAKFAST">Bonjour %@ ? Pensez bien à ajouter votre petit-déjeuner.</string>
+    <string name="LOCAL_NOTIF_DINNER">Bonsoir %@ ? Pensez bien à ajouter votre diner.</string>
+    <string name="LOCAL_NOTIF_LUNCH">Ca va %@ ? Pensez bien à ajouter votre déjeuner.</string>
+    <string name="LOGIN_APPROVED">Mot de passe oublié?</string>
+    <string name="LOGIN_LABEL">Connectez-vous en utilisant vos identifiants</string>
+    <string name="MEALSADD_ADDCOMMENT">Ajouter un commentaire</string>
+    <string name="MEALSADD_TITLE">repas</string>
+    <string name="MEALSADD_DESCRIPTION">Décrivez votre repas</string>
+    <string name="MEALTYPE_BREAKFAST">Petit-déjeuner</string>
+    <string name="MEALTYPE_MORNINGSNACK">Encas du matin</string>
+    <string name="MEALTYPE_LUNCH">Déjeuner</string>
+    <string name="MEALTYPE_AFTERNOONSNACK">Goûter</string>
+    <string name="MEALTYPE_DINNER">Dîner</string>
+    <string name="MEAL_REWARD_DESCRIPTION_FREE_USER">Encore %s repas et votre coach vous\nenverra gratuitement votre analyse personnalisée.\n\nVous pouvez aussi passer au premium\npour obtenir une analyse de chacun de vos repas.</string>
+    <string name="MEAL_REWARD_DESCRIPTION_PREMIUM_USER">Votre coach va être alerté\net vous enverra un\ncommentaire personnalisé.</string>
+    <string name="MEAL_REWARD_DESCRIPTION_GOAL_REACHED">Vous avez gagné une analyse\npersonnalisée de votre\ncomportement alimentaire.\n\nVotre coach va être alerté et vous\nenverra un commentaire.\n\nVous pouvez aussi passer au\npremium pour obtenir une analyse\nde chacun de vos repas.</string>
+
+    <string name="MEAL_REWARD_DESCRIPTION_GOAL_REACHED_HTML"><![CDATA[
+    <b><font color=\'#2f2f2f\'><big><big> Vous avez gagné une analyse<br/>personnalisée de votre<br/>comportement alimentaire. </big></b><br/><br/>
+    Votre coach va être alerté et vous<br/>enverra un commentaire.<br/><br/>Vous pouvez aussi passer au<br/><font color=\'#1f89d0\'>premium </font>pour obtenir une analyse<br/>de chacun de vos repas.</big>
+    ]]></string>
+
+    <string name="MEAL_REWARD_DESCRIPTION_GOAL_REACHED_FREE_HTML"><![CDATA[
+    <b><font color=\'#2f2f2f\'><big><big>Vous avez gagné une<br />analyse de votre comportement alimentaire.</big></b> <br /> <br />Pour la recevoir gratuitement,<br/>vous devez choisir votre coach<br/>en cliquant <font color=\'#1f89d0\'>Premium</font></big>.
+    ]]></string>
+
+    <string name="MEAL_REWARD_DESCRIPTION_GOAL_REACHED_PREMIUM">Vous avez gagné une analyse\npersonnalisée de votre\ncomportement alimentaire.\n\nVotre coach va être alerté et vous\nenverra un commentaire.\n\nVous pouvez aussi passer au\npremium pour obtenir une analyse\nde chacun de vos repas.</string>
+    <string name="MESSAGE_NOTIFICATION_APPROVEDTEXT">$coach a approuvé votre meal</string>
+    <string name="MYCOACH_TITLE">Coach</string>
+    <string name="MYCOACH_LABEL">Coach</string>
+    <string name="MYHELP_TITLE">Aide &amp; contact</string>
+    <string name="MYMEALS_BREAKFAST">Petit-déjeuner</string>
+    <string name="MYMEALS_GETMEAL_UPDATE">Synchronisation en cours</string>
+    <string name="MYMEALS_GETMEAL_UPDATE_SUCCESSFUL">Ce repas a bien été enregistré sur notre serveur.</string>
+    <string name="MYMEALS_TITLE">Carnet</string>
+    <string name="MYPROFILE">Profil</string>
+    <string name="MYPROFILE_TITLE">Mon profil</string>
+    <string name="MYRESULTS_TITLE">Progrès</string>
+    <string name="MYWEEKLYSUMMARY_TITLE">Bilan de la Semaine</string>
+    <string name="MYSUBS_TITLE">Abonnement</string>
+    <string name="MYWEIGHT_TITLE">Mon poids</string>
+    <string name="MYCOMMUNITY_TITLE">Communauté</string>
+    <string name="MYSETTINGS_TITLE">Paramètres du compte</string>
+
+    <!-- navigation bar title -->
+    <string name="NAVIGATIONTITLE_OBJECTIVE">Votre objectif</string>
+    <string name="NAVIGATIONTITLE_EATINGHABITS">Vos habitudes alimentaires</string>
+    <string name="NAVIGATION_SIGNUP">Inscrivez-vous !</string>
+    <string name="NAVIGATIONTITLE_COMPLETE_HAPIPROFILE">Complétez votre profil</string>
+    <string name="NAVIGATIONTITLE_SELECTCOACH">Choisissez votre coach</string>
+
+    <!-- user objective label text -->
+    <string name="OBJECTIVE_IWANTTO">Je veux…</string>
+    <string name="OBJECTIVE_CURRENTWEIGHT">Poids actuel</string>
+    <string name="OBJECTIVE_STARTINGWEIGHT">Poids de départ</string>
+    <string name="OBJECTIVE_TARGETWEIGHT">Poids visé</string>
+    <string name="OBJECTIVE_HEIGHT">Taille</string>
+    <string name="ONETOONECOACHING_ADDCOMMENT_YOURCOMMENT">Ajouter un commentaire</string>
+    <string name="ONETOONECOACHING_ADDMEAL_DESCRIBEMEAL">Décrivez votre repas</string>
+    <string name="ONETOONECOACHING_ADDMEAL_BUTTONSUBMIT">Poster</string>
+    <string name="ONETOONECOACHING_ADDMEAL_IMAGELOADING">Chargement en cours.</string>
+    <string name="ONETOONECOACHING_ADDMEAL_SUCCESS">Bien joué&#8230; Votre repas est enregistré.</string>
+    <string name="ONETOONECOACHING_ADDMEAL_IMAGELOADINGERROR">Oops ! Petit problème. Merci d\'essayer à nouveau.</string>
+    <string name="ONETOONECOACHING_ADDMEAL_IMAGELOADINGDONE">Chargement terminé.</string>
+    <string name="ONETOONECOACHING_ADDMEAL_IMAGELOADINGFAILED">Désolé ! Le chargement a échoué.</string>
+    <string name="ONETOONECOACHING_COACHRESPONSENOTIFICATION_NONE">Pas de nouvelles notifications</string>
+    <string name="ONETOONECOACHING_DEFAULT_APPROVED_COMMENT">$coach a approuvé votre $m</string>
+    <string name="ONETOONECOACHING_INTRO_HEADER">Votre nouvelle appli minceur est encore plus facile à utiliser</string>
+    <string name="ONETOONECOACHING_INTRO_TEXT1">A chaque repas, sur votre mobile, vous postez une photo du contenu de votre assiette</string>
+    <string name="ONETOONECOACHING_INTRO_TEXT2">Vous ajoutez une description (si vous le souhaitez !)</string>
+    <string name="ONETOONECOACHING_INTRO_TEXT3">Vous recevez les commentaires de votre diététicienne Savoir Maigrir</string>
+    <string name="ONETOONECOACHING_INTRO_CARNETMINCEUR">Carnet alimentaire</string>
+    <string name="ONETOONECOACHING_INTRO_BUTTONAGREE">J\'ai compris</string>
+    <string name="ONETOONECOACHING_JOURNAL_TODAY">Aujourd’hui</string>
+    <string name="ONETOONECOACHING_JOURNAL_APPROVED">Approuvé</string>
+    <string name="ONETOONECOACHING_JOURNAL_COMMENT">Commenté</string>
+    <string name="ONETOONECOACHING_MEAL_DELETEBUTTON">Supprimer</string>
+    <string name="ONETOONECOACHING_MEAL_PROMPTDELETE">Voulez-vous vraiment supprimer ce repas ?</string>
+    <string name="ONETOONECOACHING_TIPS_MONDAYBREAKFAST">Bonjour ! Le soleil vient de se lever, c’est l’heure du petit déjeuner. Surtout, quelle que soit l’heure à laquelle vous émergez des limbes ne sautez pas ce repas primordial pour mettre votre en corps en bonnes conditions pour une journée du tonnerre.</string>
+    <string name="ONETOONECOACHING_TIPS_MONDAYMORNINGSNACK">Un petit creux ? Ne vous jetez pas sur n’importe quoi sous prétexte que vous avez faim… Allez donc piocher des idées dans vos bonus.</string>
+    <string name="ONETOONECOACHING_TIPS_MONDAYLUNCH">L’heure du déjeuner c’est maintenant ! Surtout ne sautez pas le repas : quoi qu’il arrive mangez un petit quelque chose pour tenir et ne pas favoriser le grignotage pour le reste de la journée.</string>
+    <string name="ONETOONECOACHING_TIPS_MONDAYAFTERNOONSNACK">Nous sommes à la mi-journée : c’est le moment de vérifier si vous êtes suffisamment hydraté(e). Il faut toujours boire dans la journée avant d’avoir soif. Pour rappel, il faut consommer environ 8 verres d’eau par jour pour un apport hydrique suffisant.</string>
+    <string name="ONETOONECOACHING_TIPS_MONDAYDINNER">Bonsoir, pensez « dîner léger » : un repas trop riche le soir risque d’altérer la qualité de votre sommeil.</string>
+    <string name="ONETOONECOACHING_TIPS_TUESDAYBREAKFAST">Bonjour. Une belle journée s’annonce : commencez-la dans de bonnes conditions. Prenez le temps de petit-déjeuner assis(e) et n’oubliez aucun élément de votre menu. Suivez-bien votre plan de repas, ainsi vous pourrez vous éviter le petit creux de 11h !</string>
+    <string name="ONETOONECOACHING_TIPS_TUESDAYMORNINGSNACK">Idée d’encas de matinée : un fruit à croquer. En plus c’est facile à emporter dans votre sac.</string>
+    <string name="ONETOONECOACHING_TIPS_TUESDAYLUNCH">Le repas du midi est important. Traitez-le comme tel. Prenez votre temps, apprenez à savourer chaque bouchée, mangez doucement, mastiquer bien.</string>
+    <string name="ONETOONECOACHING_TIPS_TUESDAYAFTERNOONSNACK">Vous avez soif, mais vous détestez l’eau ? C’est l’heure du goûter alors pourquoi ne pas opter pour un thé sans sucres, un petit déca ou encore une tisane ?</string>
+    <string name="ONETOONECOACHING_TIPS_TUESDAYDINNER">La tisane est votre alliée pour dormir : camomille, valériane, tilleul ou encore menthe ou romarin pour la digestion. Bonne nuit !</string>
+    <string name="ONETOONECOACHING_TIPS_WEDNESDAYBREAKFAST">Hello. Envie d’originalité ce matin ? Pensez à l’américaine et faites-vous un petit déjeuner type brunch avec des œufs, du jambon ou du saumon fumé par exemple. Dans vos plans de repas ou vos bonus vous trouverez facilement des idées.</string>
+    <string name="ONETOONECOACHING_TIPS_WEDNESDAYMORNINGSNACK">Vous avez la sensation d’avoir faim alors que vous avez pris un bon petit déjeuner ce matin ? Buvez un verre d’eau ou une boisson chaude non sucrée et attendez quelques minutes pour voir si cette sensation est réelle.</string>
+    <string name="ONETOONECOACHING_TIPS_WEDNESDAYLUNCH">Hello ! Il est midi et à midi… ? C’est le moment où on est au calme ! Mangez confortablement assis(e) et, si besoin, éloignez-vous des contrariétés du bureau. Mieux vaut profiter d’un moment présent rien qu’à soi.</string>
+    <string name="ONETOONECOACHING_TIPS_WEDNESDAYAFTERNOONSNACK">On vous nargue avec ces gâteaux sous vos yeux et votre estomac crie « C’est l’heure du goûter ! »… Ne craquez pas, restez concentré(e) sur votre objectif minceur et sortez votre propre goûter conforme aux principes de votre programme.</string>
+    <string name="ONETOONECOACHING_TIPS_WEDNESDAYDINNER">Bonsoir, c’est le dernier repas de la journée, profitez-en pour le passer en famille sans TV, ni querelle. Faites-en un moment d’échanges et de partage.</string>
+    <string name="ONETOONECOACHING_TIPS_THURSDAYBREAKFAST">Bonjour. Vous êtes affamé(e) ce matin ? Un bon petit déjeuner s’impose. Boisson chaude, fruit frai, laitage et féculent… Tout doit disparaitre !</string>
+    <string name="ONETOONECOACHING_TIPS_THURSDAYMORNINGSNACK">Besoin d’un encas ? Vous n’arrivez pas à finir votre petit déjeuner mais vous avez toujours faim en milieu de matinée ? Emportez avec vous ce qu’il reste : vous en profiterez quand vous aurez faim.</string>
+    <string name="ONETOONECOACHING_TIPS_THURSDAYLUNCH">Bonjour, n’oubliez pas de suivre au mieux la structure alimentaire journalière c’est-à-dire le squelette de vos repas : crudités, féculents, légumes cuits, protéines, laitage maigre et fruit. Pensez-y à la cantine surtout quand vous composez votre plateau.</string>
+    <string name="ONETOONECOACHING_TIPS_THURSDAYAFTERNOONSNACK">Envie de faire un gâteau pour le goûter ? Pensez à piocher dans les recettes de votre programme. Cela ravira les petits et les grands dont vous faites partie !</string>
+    <string name="ONETOONECOACHING_TIPS_THURSDAYDINNER">Bonsoir ! Évitez les excitants le soir : café, thé, écrans, jeux vidéos… bref tout ce qui peut contrarier votre bonne digestion ainsi que la qualité de votre sommeil.</string>
+    <string name="ONETOONECOACHING_TIPS_FRIDAYBREAKFAST">Bonjour, ce matin, c’est la soupe à la grimace ? Pas faim ? Pas envie de se lever ? Ne vous forcez pas, dans votre plan de repas du jour, prenez ce qui vous fait plaisir et emportez le reste : vous pourrez le manger plus tard dans la matinée si vous avez faim.</string>
+    <string name="ONETOONECOACHING_TIPS_FRIDAYMORNINGSNACK">C’est l’heure de votre encas ? Profitez-en pour faire une véritable pause ! Sortez de votre bureau, prenez l’air frais ou bien lancez une conversation agréable avec vos collègues.</string>
+    <string name="ONETOONECOACHING_TIPS_FRIDAYLUNCH">Vous le midi, c’est 10 minutes pour le repas et puis basta ? Alors ne mangez pas votre dessert tout de suite. Accordez 20 minutes à votre cerveau pour savoir si vous avez encore faim. Si non, gardez-le pour plus tard.</string>
+    <string name="ONETOONECOACHING_TIPS_FRIDAYAFTERNOONSNACK">Ne passez surtout pas par le distributeur de bonbons, gâteaux, chocolats et autres friandises… Faites-lui la grève : préférez votre goûter et votre silhouette !</string>
+    <string name="ONETOONECOACHING_TIPS_FRIDAYDINNER">Vous avez envie de grignoter ? Ayez à porter de main des aliments sains (légumes crus, laitages maigres…) et bannissez les aliments transformés et sucrés.</string>
+    <string name="ONETOONECOACHING_TIPS_SATURDAYBREAKFAST">Bonjour ! Une séance de sport ce matin ? Choisissez un petit déjeuner riche en protéines, laitages et féculents peu transformés comme le pain complet ou les céréales sans sucres ajoutés.</string>
+    <string name="ONETOONECOACHING_TIPS_SATURDAYMORNINGSNACK">Vous avez faim ? Et vous êtes irrésistiblement attiré(e) par ce que vous êtes en train de préparer pour midi ? Stop ! Prenez un encas plutôt, vous pourrez ainsi vaquer à vos occupations sereinement.</string>
+    <string name="ONETOONECOACHING_TIPS_SATURDAYLUNCH">N’oubliez pas le plaisir ! Ce n’est pas parce que vous êtes au régime que vous devez tout vous interdire. Utilisez la liste des équivalences pour vous autoriser un plaisir de temps en temps.</string>
+    <string name="ONETOONECOACHING_TIPS_SATURDAYAFTERNOONSNACK">Idées de goûters sains et gourmands ? 2 carrés de chocolat noir à 70%, une poignée d’amandes, quelques fruits secs, un fruit à croquer… Mais aussi des bâtonnets de légumes crus ou un laitage par exemple.</string>
+    <string name="ONETOONECOACHING_TIPS_SATURDAYDINNER">Une bonne soupe le soir est un allié pour votre régime. Elle vous permet de faire le plein de légumes cuits, tout en vous rassasiant. Elle sera également facilement digérée. Alors, des idées originales de soupes pour ce soir ?</string>
+    <string name="ONETOONECOACHING_TIPS_SUNDAYBREAKFAST">Bonjour ! Adaptez bien votre déjeuner en fonction de la saison : vous éviterez ainsi la monotonie. Des poires, des kiwis et des oranges en hiver… Des abricots, des fruits rouges, des pêches et du melon en été !</string>
+    <string name="ONETOONECOACHING_TIPS_SUNDAYMORNINGSNACK">Idées d’encas sains : fruits à croquer, une petite poignée d’amandes, quelques fruits secs…</string>
+    <string name="ONETOONECOACHING_TIPS_SUNDAYLUNCH">Même un repas familial traditionnel peut respecter aisément les bases de votre régime. Ne vous découragez pas sous prétexte que vous avez du monde à la maison ou que les bouches de vos jeunes têtes blondes piaffent d’impatience… Restez concentré(e) !</string>
+    <string name="ONETOONECOACHING_TIPS_SUNDAYAFTERNOONSNACK">Vous ne pouvez pas vivre sans un goûter à 16h ? Essayez-donc de ne pas manger votre dessert du déjeuner et gardez-le pour l’occasion.</string>
+    <string name="ONETOONECOACHING_TIPS_SUNDAYDINNER">Prenez votre repas du soir le plus tôt possible afin qu’il soit suffisamment éloigné du moment où vous irez vous coucher. Cela améliorera la qualité de votre sommeil, or pour bien maigrir il faut bien dormir ! Bonne nuit.</string>
+    <string name="PAYMENT_HEADER_TITLE">Choisissez votre offre</string>
+
+    <string name="PAYOUT_WELCOME">Bienvenue</string>
+    <string name="PAYOUT_HOW_HAPICOACH_WORKS">Voici comment fonctionne l’appli…</string>
+    <string name="PAYOUT_HOWTOSTART">Comment débuter</string>
+    <string name="PAYOUT_IMREADYFORYOU">Je suis prêt</string>
+    <string name="PAYOUT_IDLIKETOSTART">Je veux commencer</string>
+    <string name="PAYOUT_GOT_IT_BUTTON">J\'ai compris</string>
+    <string name="PLEASE_SELECT">Sélectionner</string>
+
+    <!-- profile label text -->
+    <string name="PROFILE_FIRSTNAME">Prénom</string>
+    <string name="PROFILE_LASTNAME">Nom</string>
+    <string name="PROFILE_GENDER">Je suis</string>
+    <string name="PROFILE_GENDER_MALE">Homme</string>
+    <string name="PROFILE_GENDER_FEMALE">Femme</string>
+    <string name="PROFILE_BIRTHDAY">Date de naissance</string>
+    <string name="PROFILE_COUNTRY">Pays</string>
+    <string name="PROFILE_CODE">Code</string>
+    <string name="PROFILE_TELNUM">Numéro de tel.</string>
+    <string name="PROFILE_CONTACT">Téléphone</string>
+    <string name="PROFILE_LANGUAGE">Langue</string>
+    <string name="PROFILE_TIMEZONE">Fuseau horaire</string>
+    <string name="PROFILE_MY_RESULTS">Mes progrès</string>
+    <string name="PROFILE_MY_COACH">Mon coach</string>
+    <string name="PROFILE_MY_PROFILE">Mon profil</string>
+    <string name="PROFILE_MY_SUBSCRIPTION">Mon abonnement</string>
+    <string name="PROFILE_HELP">Aide &amp; contact</string>
+    <string name="PROFILE_LIVE_SUPPORT">Assistance en direct</string>
+    <string name="PROFILE_MY_CMS">Mon CMS</string>
+    <string name="PROFILE_HELP_ABOUT">A propos</string>
+    <string name="PROFILE_HELP_TERMS">Conditions générales d’utilisation</string>
+    <string name="PROFILE_HELP_PRIVACY">Confidentialité</string>
+    <string name="PROFILE_HELP_CONTACT">Contact</string>
+    <string name="PROFILE_HELP_LOGOUT">Déconnexion</string>
+    <string name="QUESTION_HEADER_TITLE">Bienvenue</string>
+
+    <string name="REGISTRATION_IWANTTOSTART">Je veux commencer</string>
+    <string name="REGISTRATION_TELL_ME_MORE">Je veux en savoir plus</string>
+    <string name="RESULTS_TITLE">Mon poids</string>
+    <string name="REG_LABEL_EMAIL">Entrez votre Email</string>
+    <string name="REG_TITLE_EMAIL">E-mail</string>
+    <string name="REG_TITLE_FNAME">Prénom</string>
+    <string name="REG_TITLE_LNAME">Nom</string>
+    <string name="SEARCHING_COACHES">Affichage de la liste des coachs disponibles</string>
+    <string name="SIGNUP_CONFIRM_PASSWORD">Confirmez MdP</string>
+    <string name="SIGNUP_CONFIRM_PASSWORD_PLACEHOLDER">Resaisir le mot de passe</string>
+    <string name="SIGNUP_EMAIL">E-mail</string>
+    <string name="SIGNUP_EMAIL_PLACEHOLDER">Entrer votre E-mail</string>
+    <string name="SIGNUP_PASSWORD">Mot de passe</string>
+    <string name="SIGNUP_PASSWORD_PLACEHOLDER">Entrer votre mot de passe</string>
+    <string name="TIMEZONE_PLACEHOLDER">Fuseau horaire</string>
+    <!-- food groups description -->
+    <string name="TIPS_PROTEIN">Il est conseillé de consommer de la viande, du poisson, des oeufs ou autre équivalence protidique végétale (soja, association céréales + légumineuse) au moins une fois par jour et de choisir des protéines de qualité pour le maintien de notre masse musculaire.</string>
+    <string name="TIPS_DAIRY">Il est conseillé de consommer un produit laitier à chaque repas pour leur apport en protéines et le calcium indispensables à la croissance et à la solidité des os.</string>
+    <string name="TIPS_STARCHES">Les féculents (céréales, pommes de terre, légumes secs, pain, etc.) constituent la base énergétique de notre alimentation. Il est conseillé d\'en consommer à l\'un des deux repas principaux de la journée et de choisir les moins transformés et plus riches en fibres.</string>
+    <string name="TIPS_FRUITSVEGGIES">Les légumes sans MG sont à consommer à volonté pour profiter de leurs apports en vitamines, minéraux et fibres. Consommez au moins 2 portions de légumes par jour dont une crudité. Pour les fruits, croquez 2 à 3 portions chaque jour pour faire le plein de vitalité !</string>
+    <string name="TIPS_FAT">Indispensables pour le bon fonctionnement de votre organisme, les matières grasses apportent les acides gras essentiels et les vitamines liposolubles A, D, E et K. Il est conseillé de consommer les graisses avec modération et de privilégier les lipides de bonne qualité comme l\'huile d\'olive ou de colza.</string>
+    <string name="TIPS_DRINKS">Une hydratation régulière est indispensable à l\'organisme. Buvez chaque jour au moins 1,5 litre de boisson et retenez que la seule boisson indispensable à votre organisme reste l\'eau ! Alors buvez de l\'eau plate ou gazeuse tout au long de la journée mais pensez aussi aux tisanes, au thé et au café.</string>
+    <string name="TIPS_SWEETS">Non indispensables à l\'organisme, les produits sucrés restent des aliments plaisir, à consommer avec modération. Pour les produits sucrants, préférez les édulcorants naturels.</string>
+    <string name="WELCOME2_FOOTER_LOG">Entrez votre 1er repas !</string>
+    <string name="WELCOME_HEADER_TITLE">Bienvenue</string>
+    <string name="about_about">A propos</string>
+    <string name="about_contactus">Contact</string>
+    <string name="about_policy">Confidentialité</string>
+    <string name="about_terms">Conditions générales d’utilisation</string>
+    <string name="btn_cancel">Annuler</string>
+    <string name="btn_continue">Continuer</string>
+    <string name="btn_delete">Supprimer</string>
+    <string name="btn_done">OK</string>
+    <string name="btn_editmeal">Editer le repas</string>
+    <string name="btn_edit">Editer</string>
+    <string name="btn_gotit">Je veux commencer</string>
+    <string name="btn_login">Connexion</string>
+    <string name="btn_logout">Déconnexion</string>
+    <string name="btn_no">Non</string>
+    <string name="btn_yes">Oui</string>
+    <string name="btn_ok">OK</string>
+    <string name="btn_later">Plus tard</string>
+    <string name="btn_retry">Réessayer</string>
+    <string name="btn_save">Enregistrer</string>
+    <string name="btn_submit">Poster</string>
+    <string name="btn_tellme">Je veux en savoir plus</string>
+    <string name="lANGUAGE_PLACEHOLDER">Langue</string>
+    <string name="ALERTMESSAGE_LOGIN_EMPTY">Authentification invalide</string>
+    <string name="ALERTMESSAGE_MEALDELETE_ONGOING">Votre repas a été supprimé .</string>
+    <string name="CRM_HEADER_2">Bien joué !</string>
+    <string name="ERROR">Erreur</string>
+    <string name="ERRORMESSAGE_INVALID_URL">URL invalide. connexion sera ignoré</string>
+    <string name="HOWITWORKS_HEADER_TITLE">Comment ça marche ?</string>
+    <string name="MEALSADD_FOODGROUP">Précisez les familles d’aliments</string>
+    <string name="MYMEALS_ERROR_UPLOAD">Reprendre le chargement</string>
+    <string name="MYMEALS_FREE_COMMENT">Recevez l’analyse personalisée d’une diététicienne diplômée.</string>
+    <string name="QUESTION_FOOTER_BACK">Précédent</string>
+    <string name="QUESTION_FOOTER_NEXT">Suivant</string>
+    <string name="QUESTION_FOOTER_QOF">Question %1$s sur %1$p</string>
+    <string name="RETAKE_PHOTO">Reprendre</string>
+    <string name="SIGNUP_EMAIL_ERROR">Le format de votre e-mail est erronée. Veuillez entrer une adresse email valide .</string>
+    <string name="SIGNUP_EMAIL_EXIST">L’adresse e-mail est déjà utilisée</string>
+    <string name="about_me">Moi</string>
+    <string name="message_hint">Écrire</string>
+
+    <string-array name="objective_array">
+        <item name="OBJECTIVES_SELECTION_1">Perdre du poids</item>
+        <item name="OBJECTIVES_SELECTION_2">Manger plus équilibré</item>
+        <item name="OBJECTIVES_SELECTION_3">Être plus en forme</item>
+        <!--<item name="OBJECTIVES_SELECTION_4">Manger équilibré</item>-->
+    </string-array>
+
+    <string-array name="source_array">
+        <item name="SOURCE_SELECTION_1">Milical</item>
+        <item name="SOURCE_SELECTION_2">Actinutrition</item>
+        <item name="SOURCE_SELECTION_3">Les médias</item>
+        <item name="SOURCE_SELECTION_4">La publicité</item>
+        <item name="SOURCE_SELECTION_5">Le bouche à oreille</item>
+        <item name="SOURCE_SELECTION_6">Autres</item>
+    </string-array>
+
+    <string-array name="profession_array">
+        <item name="PROFESSION_SELECTION_1">Diététicien(ne) diplomé(e)</item>
+        <item name="PROFESSION_SELECTION_2">Coach sportif</item>
+        <item name="PROFESSION_SELECTION_3">Coach de vie</item>
+        <item name="PROFESSION_SELECTION_4">Médecin</item>
+        <item name="PROFESSION_SELECTION_5">Autre</item>
+    </string-array>
+
+    <string-array name="gender_array">
+        <item name="PROFILE_GENDER_MALE_ARR">Homme</item>
+        <item name="PROFILE_GENDER_FEMALE_ARR">Femme</item>
+    </string-array>
+
+    <string-array name="number_array">
+        <item name="number44">44 kg</item>
+        <item name="number45">45 kg</item>
+        <item name="number46">46 kg</item>
+        <item name="number47">47 kg</item>
+        <item name="number48">48 kg</item>
+        <item name="number49">49 kg</item>
+        <item name="number50">50 kg</item>
+        <item name="number51">51 kg</item>
+        <item name="number52">52 kg</item>
+        <item name="number53">53 kg</item>
+        <item name="number54">54 kg</item>
+        <item name="number55">55 kg</item>
+        <item name="number56">56 kg</item>
+        <item name="number57">57 kg</item>
+        <item name="number58">58 kg</item>
+        <item name="number59">59 kg</item>
+        <item name="number60">60 kg</item>
+        <item name="number61">61 kg</item>
+        <item name="number62">62 kg</item>
+        <item name="number63">63 kg</item>
+        <item name="number64">64 kg</item>
+        <item name="number65">65 kg</item>
+        <item name="number66">66 kg</item>
+        <item name="number67">67 kg</item>
+        <item name="number68">68 kg</item>
+        <item name="number69">69 kg</item>
+        <item name="number70">70 kg</item>
+        <item name="number71">71 kg</item>
+        <item name="number72">72 kg</item>
+        <item name="number73">73 kg</item>
+        <item name="number74">74 kg</item>
+        <item name="number75">75 kg</item>
+        <item name="number76">76 kg</item>
+        <item name="number77">77 kg</item>
+        <item name="number78">78 kg</item>
+        <item name="number79">79 kg</item>
+        <item name="number80">80 kg</item>
+        <item name="number81">81 kg</item>
+
+    </string-array>
+
+    <string-array name="number_cm_array">
+
+        <item name="number120">120 cm</item>
+        <item name="number121">121 cm</item>
+        <item name="number122">122 cm</item>
+        <item name="number123">123 cm</item>
+        <item name="number124">124 cm</item>
+        <item name="number125">125 cm</item>
+        <item name="number126">126 cm</item>
+        <item name="number127">127 cm</item>
+        <item name="number128">128 cm</item>
+        <item name="number129">129 cm</item>
+        <item name="number130">130 cm</item>
+        <item name="number131">131 cm</item>
+        <item name="number132">132 cm</item>
+        <item name="number133">133 cm</item>
+        <item name="number134">134 cm</item>
+        <item name="number135">135 cm</item>
+        <item name="number136">136 cm</item>
+        <item name="number137">137 cm</item>
+        <item name="number138">138 cm</item>
+        <item name="number139">139 cm</item>
+        <item name="number140">140 cm</item>
+        <item name="number141">141 cm</item>
+        <item name="number142">142 cm</item>
+        <item name="number143">143 cm</item>
+        <item name="number144">144 cm</item>
+        <item name="number145">145 cm</item>
+        <item name="number146">146 cm</item>
+        <item name="number147">147 cm</item>
+        <item name="number148">148 cm</item>
+        <item name="number149">149 cm</item>
+        <item name="number150">150 cm</item>
+        <item name="number151">151 cm</item>
+        <item name="number152">152 cm</item>
+        <item name="number153">153 cm</item>
+        <item name="number154">154 cm</item>
+        <item name="number155">155 cm</item>
+        <item name="number156">156 cm</item>
+        <item name="number157">157 cm</item>
+        <item name="number158">158 cm</item>
+        <item name="number159">159 cm</item>
+        <item name="number160">160 cm</item>
+        <item name="number161">161 cm</item>
+        <item name="number162">162 cm</item>
+        <item name="number163">163 cm</item>
+        <item name="number164">164 cm</item>
+        <item name="number165">165 cm</item>
+        <item name="number166">166 cm</item>
+        <item name="number167">167 cm</item>
+        <item name="number168">168 cm</item>
+        <item name="number169">169 cm</item>
+        <item name="number170">170 cm</item>
+        <item name="number171">171 cm</item>
+        <item name="number172">172 cm</item>
+        <item name="number173">173 cm</item>
+        <item name="number174">174 cm</item>
+        <item name="number175">175 cm</item>
+        <item name="number176">176 cm</item>
+        <item name="number177">177 cm</item>
+        <item name="number178">178 cm</item>
+        <item name="number179">179 cm</item>
+        <item name="number180">180 cm</item>
+        <item name="number181">181 cm</item>
+        <item name="number182">182 cm</item>
+        <item name="number183">183 cm</item>
+        <item name="number184">184 cm</item>
+        <item name="number185">185 cm</item>
+    </string-array>
+
+    <string-array name="country_array">
+        <item name="country_united_states">États-Unis</item>
+        <item name="country_canada">Canada</item>
+        <item name="country_france">France</item>
+        <item name="country_united_kingdom">Royaume-Uni</item>
+        <item name="country_afghanistan">Afghanistan</item>
+        <item name="country_albania">Albanie</item>
+        <item name="country_algeria">Algérie</item>
+        <item name="country_american_samora">American Samoa</item>
+        <item name="country_andora">Andora</item>
+        <item name="country_angola">Angola</item>
+        <item name="country_anguilla">Anguilla</item>
+        <item name="country_antigua">Antigua et Barbuda</item>
+        <item name="country_argentina">Argentine</item>
+        <item name="country_armenia">Arménie</item>
+        <item name="country_aruba">Aruba</item>
+        <item name="country_australia">Australie</item>
+        <item name="country_austria">Autriche</item>
+        <item name="country_azerbaijan">Azerbaïdjan</item>
+        <item name="country_bahamas">Bahamas</item>
+        <item name="country_bahrain">Bahreïn</item>
+        <item name="country_bangladesh">Bangladesh</item>
+        <item name="country_barbados">Barbade</item>
+        <item name="country_belarus">Biélorussie</item>
+        <item name="country_belgium">Belgique</item>
+        <item name="country_belize">Bélize</item>
+        <item name="country_benin">Bénin</item>
+        <item name="country_bermuda">Bermudes</item>
+        <item name="country_bhutan">Bhutan</item>
+        <item name="country_bolivarian">Vénézuéla</item>
+        <item name="country_bolivia">Bolivie</item>
+        <item name="country_bosnia">Bosnie-Herzégovine</item>
+        <item name="country_botswana">Botswana</item>
+        <item name="country_brazil">Brésil</item>
+        <item name="country_british_virgin_islands">British Virgin Islands</item>
+        <item name="country_brunei_darussalam">Brunei Darussalam</item>
+        <item name="country_bulgaria">Bulgarie</item>
+        <item name="country_burkina_faso">Burkina Faso</item>
+        <item name="country_burundi">Burundi</item>
+        <item name="country_cambodia">Cambodge</item>
+        <item name="country_cameroon">Cameroon</item>
+        <item name="country_cape_verde_islands">Cape Verde Islands</item>
+        <item name="country_cayman_islands">Cayman Islands</item>
+        <item name="country_caribbean">Caraïbes</item>
+        <item name="country_central_african_republic">Central African Republic</item>
+        <item name="country_chad">Chad</item>
+        <item name="country_chile">Chili</item>
+        <item name="country_chine">Chine</item>
+        <item name="country_colombia">Colombie</item>
+        <item name="country_comoros_and_mayotte">Comoros et Mayotte</item>
+        <item name="country_congo">Congo</item>
+        <item name="country_cook_islands">Cook Islands</item>
+        <item name="country_costa_rica">Costa Rica</item>
+        <item name="country_crotia">Croatie</item>
+        <item name="country_cuba">Cuba</item>
+        <item name="country_cyprus">Cyprus</item>
+        <item name="country_czech_republic">République Tchèque</item>
+        <item name="country_denmark">Danemark</item>
+        <item name="country_dominca">Dominca</item>
+        <item name="country_dominican_republic">République Dominicaine</item>
+        <item name="country_djibouti">Djibouti</item>
+        <item name="country_ecuador">Equateur</item>
+        <item name="country_egypt">Égypte</item>
+        <item name="country_el_salvador">Salvador</item>
+        <item name="country_equatorial_guinea">Equatorial Guinea</item>
+        <item name="country_eritrea">Eritrea</item>
+        <item name="country_estonia">Estonie</item>
+        <item name="country_ethiopia">Ethiopie</item>
+        <item name="country_faroe_islands">Iles Féroé</item>
+        <item name="country_fiji">Fiji</item>
+        <item name="country_finland">Finlande</item>
+        <item name="country_french_guiana">French Guiana</item>
+        <item name="country_gabon">Gabon</item>
+        <item name="country_gambia">Gambia</item>
+        <item name="country_georgia">Géorgie</item>
+        <item name="country_germany">Allemagne</item>
+        <item name="country_ghana">Ghana</item>
+        <item name="country_gibraltar">Gibraltar</item>
+        <item name="country_greece">Grèce</item>
+        <item name="country_greenland">Groenland</item>
+        <item name="country_grenata">Grenata</item>
+        <item name="country_guam">Guam</item>
+        <item name="country_guatemala">Guatémala</item>
+        <item name="country_guinea">Guinea</item>
+        <item name="country_guinea_bissau">Guinea-Bissau</item>
+        <item name="country_guyana">Guyana</item>
+        <item name="country_haiti">Haiti</item>
+        <item name="country_honduras">Honduras</item>
+        <item name="country_hongkong">Hong Kong</item>
+        <item name="country_hungary">Hongrie</item>
+        <item name="country_iceland">Islande</item>
+        <item name="country_india">Inde</item>
+        <item name="country_indonesia">Indonésie</item>
+        <item name="country_iran">Iran</item>
+        <item name="country_iraq">Irak</item>
+        <item name="country_ireland">Irlande</item>
+        <item name="country_islamic">Pakistan</item>
+        <item name="country_israel">Israël</item>
+        <item name="country_italy">Italie</item>
+        <item name="country_jamaica">Jamaïque</item>
+        <item name="country_japan">Japon</item>
+        <item name="country_jordan">Jordanie</item>
+        <item name="country_kazakhstan">Kazakhstan</item>
+        <item name="country_kenya">Kenya</item>
+        <item name="country_kiribati_republic">Kiribati Republic</item>
+        <item name="country_south_korea">Korea, Republic of (South Korea)</item>
+        <item name="country_north_korea">Korea, Democratic People\'s Republic of (North Korea)</item>
+        <item name="country_korea">Corée</item>
+        <item name="country_kuwait">Koweït</item>
+        <item name="country_kyrgyzstan">Kyrgyzstan</item>
+        <item name="country_lao_pdr">Laos</item>
+        <item name="country_latvia">Lettonie</item>
+        <item name="country_lebanon">Liban</item>
+        <item name="country_lesotho">Lesotho</item>
+        <item name="country_liberia">Liberia</item>
+        <item name="country_libya">Libye</item>
+        <item name="country_liechtenstein">Liechtenstein</item>
+        <item name="country_lithunia">Lituanie</item>
+        <item name="country_luxembourg">Luxembourg</item>
+        <item name="country_macao">Macao</item>
+        <item name="country_macedonia">Macédoine</item>
+        <item name="country_madagascar">Madagascar</item>
+        <item name="country_malawi">Malawi</item>
+        <item name="country_malaysia">Malaisie</item>
+        <item name="country_maldives">Maldives</item>
+        <item name="country_mali">Mali</item>
+        <item name="country_malta">Malte</item>
+        <item name="country_marshall_islands">Marshall Islands</item>
+        <item name="country_martinique">Martinique (French Atilles)</item>
+        <item name="country_mauritania">Mauritania</item>
+        <item name="country_mauritius">Mauritius</item>
+        <item name="country_mayolte">Mayolte</item>
+        <item name="country_mexico">Mexique</item>
+        <item name="country_micronesia">Micronesia, Federated States of</item>
+        <item name="country_moldova">Moldova, Republic of</item>
+        <item name="country_mongolia">Mongolie</item>
+        <item name="country_montserrat">Montserrat</item>
+        <item name="country_montenegro">Monténégro</item>
+        <item name="country_morocco">Maroc</item>
+        <item name="country_mozambique">Mozambique</item>
+        <item name="country_myanmar">Myanmar</item>
+        <item name="country_namibia">Namibia</item>
+        <item name="country_nauru">Nauru</item>
+        <item name="country_nepal">Népal</item>
+        <item name="country_netherlands">Pays-Bas</item>
+        <item name="country_netherlands_antilles">Netherlands Antilles</item>
+        <item name="country_new_caledonia">New Caledonia</item>
+        <item name="country_new_zeland">Nouvelle-Zélande</item>
+        <item name="country_nicaragua">Nicaragua</item>
+        <item name="country_niger">Niger</item>
+        <item name="country_nigeria">Nigeria</item>
+        <item name="country_niue">Niue</item>
+        <item name="country_northern_mariana_islands">Northern Mariana Islands (Saipan)</item>
+        <item name="country_norway">Norvège</item>
+        <item name="country_oman">Oman</item>
+        <item name="country_palau">Palau</item>
+        <item name="country_panama">Panama</item>
+        <item name="country_papua_new_guinea">Papua New Guinea</item>
+        <item name="country_paraguay">Paraguay</item>
+        <item name="country_peru">Pérou</item>
+        <item name="country_philippines">Philippines</item>
+        <item name="country_poland">Pologne</item>
+        <item name="country_portugal">Portugal</item>
+        <item name="country_prinicipality_of_monaco">Monaco</item>
+        <item name="country_puerto_rico">Puerto Rico</item>
+        <item name="country_qatar">Qatar</item>
+        <item name="country_romania">Roumanie</item>
+        <item name="country_russia">Russie</item>
+        <item name="country_rwanda">Rwanda</item>
+        <item name="country_saipan">Saipan</item>
+        <item name="country_san_marino">San Marino</item>
+        <item name="country_sao_tome_and_principe">Sao Tome and Principe</item>
+        <item name="country_saudi_arabia">Arabie Saoudite</item>
+        <item name="country_senegal">Sénégal</item>
+        <item name="country_serbia">Serbie</item>
+        <item name="country_serbia_and_montenegro">Serbie-et-Monténégro (ancienne)</item>
+        <item name="country_seychelles">Seychelles</item>
+        <item name="country_sierra_leone">Sierra Leone</item>
+        <item name="country_singapore">Singapour</item>
+        <item name="country_slovakia">Slovaquie</item>
+        <item name="country_slovenia">Slovénie</item>
+        <item name="country_solomon_islands">Solomon Islands</item>
+        <item name="country_somalia">Somalia</item>
+        <item name="country_south_africa">Afrique du Sud</item>
+        <item name="country_spain">Espagne</item>
+        <item name="country_sri_lanka">Sri Lanka</item>
+        <item name="country_st_helena">St. Helena</item>
+        <item name="country_st_kitts">St. Kitts/Nevis</item>
+        <item name="country_st_pierre_and_miquelon">St. Pierre and Miquelon</item>
+        <item name="country_sudan">Sudan</item>
+        <item name="country_suriname">Suriname</item>
+        <item name="country_swaziland">Swaziland</item>
+        <item name="country_sweden">Suède</item>
+        <item name="country_switzerland">Suisse</item>
+        <item name="country_syria">Syrie</item>
+        <item name="country_tahiti">Tahiti (French Polynesia)</item>
+        <item name="country_taiwan">Taiwan</item>
+        <item name="country_tajikistan">Tadjikistan</item>
+        <item name="country_tanzania">Tanzania, United Republic of</item>
+        <item name="country_thailand">Thaïlande</item>
+        <item name="country_togo">Togo</item>
+        <item name="country_tokelau">Tokelau</item>
+        <item name="country_tonga">Tonga</item>
+        <item name="country_trinidad_and_tobago">Trinité-et-Tobago</item>
+        <item name="country_tunisa">Tunisie</item>
+        <item name="country_turkey">Turquie</item>
+        <item name="country_turkmenistan">Turkménistan</item>
+        <item name="country_tuvalu">Tuvalu</item>
+        <item name="country_uganda">Ouganda</item>
+        <item name="country_uae">E.A.U.</item>
+        <item name="country_ukraine">Ukraine</item>
+        <item name="country_uruguay">Uruguay</item>
+        <item name="country_uzbekistan">Ouzbékistan</item>
+        <item name="country_vanuatu">Vanuatu</item>
+        <item name="country_vatican_city">Vatican City</item>
+        <item name="country_venezuela">Venezuela, Bolivarian Republic of</item>
+        <item name="country_vietnam">Vietnam</item>
+        <item name="country_virgin_islands">Virgin Islands</item>
+        <item name="country_wallis_and_futuna">Wallis et Futuna</item>
+        <item name="country_western_samoa">Western Samoa</item>
+        <item name="country_yemen">Yémen</item>
+        <item name="country_zaire">Zaire</item>
+        <item name="country_zambia">Zambie</item>
+        <item name="country_zimbabwe">Zimbabwe</item>
+    </string-array>
+
+
+    <string name="FIRST_CONNECTION_MESSAGE">Si vous n’êtes pas en train de manger décrivez votre dernier repas.</string>
+    <string name="BUTTON_START_NOW">Commencez maintenant</string>
+    <string name="OBJECTIVE_SOURCE">J’ai entendu parler de Savoir Manger\npour la première fois par&#8230;</string>
+    <string name="OBJECTIVE_SELECT">Sélectionner</string>
+    <string name="CALENDAR_MO">LUN</string>
+    <string name="CALENDAR_TU">MAR</string>
+    <string name="CALENDAR_WE">MER</string>
+    <string name="CALENDAR_TH">JEU</string>
+    <string name="CALENDAR_FR">VEN</string>
+    <string name="CALENDAR_SA">SAM</string>
+    <string name="CALENDAR_SU">DIM</string>
+    <string name="app_name">Savoir Manger</string>
+    <string name="TOUR_TEXT1">L\'appli pour rééquilibrer votre alimentation et être bien dans votre peau.\n(des résultats visibles en 5 jours)</string>
+    <string name="TOUR_TEXT2">C\'est très facile. Vous enregistrez 10 repas en 5 jours en photographiant ce que vous mangez.</string>
+    <string name="TOUR_TEXT3">Après cela, une diététicienne diplômée fera l’analyse de vos habitudes alimentaires et c’est GRATUIT!</string>
+
+    <string name="ONETOONECOACHING_PASSWORD_EMAIL">Un email vous a été envoyé.</string>
+    <string name="ONETOONECOACHING_PASSWORD_EMAIL_FAILED">Votre Email n’est pas identifié.</string>
+    <string name="BTN_GET_STARTED">Je commence</string>
+    <string name="LINK_ALREADY_REGISTERED">Déjà inscrit ? Connectez-vous</string>
+    <string name="BTN_WHATSINTHEAPP">Découvrez l’appli</string>
+    <string name="REG_MAIN_OBJECTIVE">Quel est votre objectif principal ?</string>
+    <string name="REG_GOAL_LOSEWEIGHT">Perdre du poids</string>
+    <string name="REG_GOAL_EATHEALTHIER">Manger plus équilibré</string>
+    <string name="REG_GOAL_GETMOREFIT">Être plus en forme</string>
+    <string name="REG_QUESTION_CURRENT_WEIGHT">1/4 - Quel est votre poids actuel ? \n(en kilos)</string>
+    <string name="REG_QUESTION_TARGET_WEIGHT">2/4 - Quel est votre objectif de poids ? \n(en kilos)</string>
+    <string name="REG_QUESTION_MOTIVATION_LEVEL">Quel est votre niveau de motivation ? \n(échelle de 1 à 10)</string>
+    <string name="REG_QUESTION_ENGAGEMENT">Combien de minutes voulez-vous consacrer quotidiennement à cet objectif ?</string>
+    <string name="REGISTRATION_TITLE">Inscription</string>
+    <string name="REG_I_AM_A_MAN">Je suis un homme</string>
+    <string name="REG_I_AM_A_WOMAN">Je suis une femme</string>
+    <string name="OPTIN_HEALTH_PROFESSIONAL">Je suis professionnel de santé ou de nutrition</string>
+    <string name="OPTIN_SEND_TIPS">Merci de m\'envoyer des conseils pratiques sur la minceur et la nutrition.</string>
+    <string name="OPTIN_SEND_TIPS_YES">Oui, super!</string>
+    <string name="OPTIN_SEND_TIPS_NO">Non, merci</string>
+    <string name="REG_OPTIN_PROFESSION">Profession</string>
+    <string name="FORGOT_PASSWORD_LABEL">Recevez un rappel de votre mot de passe par Email</string>
+
+    <string name="SAVING_PROGRESS_FAILED">Erreur</string>
+    <string name="SAVING_PROGRESS_TEXT">Sauvegarde</string>
+    <string name="SAVING_PROGRESS_RETRY">Réessayer</string>
+    <string name="SAVING_PROGRESS_LATER">Plus tard</string>
+
+    <string name="PROFILE_JOINED_SINCE">Membre depuis</string>
+
+    <string name="MEAL_PHOTO_TAKE_PHOTO">Prendre une photo </string>
+    <string name="MEAL_PHOTO_PICK_FROM_GALLERY">Choisir une photo</string>
+
+    <string name="LOAD_MORE_BTN">Voir les messages précédents</string>
+    <string name="LOAD_MORE_NO_MORE_BTN">Fin du contenu</string>
+
+    <string name="NOTIFICATIONS_MARK_ALL_AS_READ">Tout marquer comme lu</string>
+    <string name="NOTIFICATIONS_CLEAR_ALL">Tout supprimer</string>
+    <string name="NOTIFICATIONS_CANCEL">Annuler</string>
+    <string name="MEAL_WATER_GLASSES">Verres d\'eau</string>
+    <string name="MEALTYPE_WATER">Eau</string>
+
+    <string name="REGISTRATION_FAILED">Registration Failed</string>
+
+    <string name="CLOSE_BTN">Fermer</string>
+
+    <string name="LOCAL_NOTIF_HEADER">Choisissez l\'heure de vos alertes repas.</string>
+
+
+    <!--Meal Options-->
+    <string name="MEAL_OPTIONS_NAV_HEADER">Options pour les repas</string>
+    <string name="MEAL_OPTIONS_INTRO">Choisissez une option pour qualifier vos repas</string>
+    <string name="MEAL_OPTIONS_1">Je veux évaluer la qualité diététique de mon repas</string>
+    <string name="MEAL_OPTIONS_2">Je veux préciser les catégories d\'aliments</string>
+
+    <string name="MEAL_RATING_EVALUATE">Évaluez la qualité de votre repas</string>
+    <string name="MEAL_RATING_EVALUATE_0">Pas d\'évaluation</string>
+    <string name="MEAL_RATING_EVALUATE_1">Très mauvais pour la santé</string>
+    <string name="MEAL_RATING_EVALUATE_2">Plutôt mauvais pour la santé</string>
+    <string name="MEAL_RATING_EVALUATE_3">Ni bon ni mauvais pour la santé</string>
+    <string name="MEAL_RATING_EVALUATE_4">Plutôt bon pour la santé</string>
+    <string name="MEAL_RATING_EVALUATE_5">Très bon pour la santé</string>
+
+    <string name="MEAL_RATING_COACH">Évaluation du coach</string>
+    <string name="MEAL_RATING_PERSONAL">Votre propre évaluation</string>
+
+    <!--Progress-->
+
+    <string name="PROGRESS_TITLE">Progrès</string>
+
+    <string name="WEIGHT_BUTTON">Courbe de Poids</string>
+    <string name="STEPS_BUTTON">Courbe de Pas</string>
+    <string name="MEALS_BUTTON">Repas</string>
+
+    <!--Meal Stats-->
+
+    <string name="ALL_BUTTON">Tout</string>
+    <string name="HEALTHY_BUTTON">Bon</string>
+    <string name="JUSTOK_BUTTON">Moyen</string>
+    <string name="UNHEALTHY_BUTTON">Mauvais</string>
+
+    <string name="ALL_MEALS_RATED">%d repas évalués</string>
+    <string name="HEALTHY_MEALS">%d repas bons pour la santé</string>
+    <string name="JUST_OK_MEALS">%d repas moyens pour la santé</string>
+    <string name="UNHEALTHY_MEALS">%d repas mauvais pour la santé</string>
+
+    <string name="YOUR_MEAL_HISTORY">Historique de vos repas</string>
+    <string name="MEALS_LIKE_THIS_AS_OFTEN_AS_YOU_LIKE">A consommer aussi souvent que possible</string>
+    <string name="MEALS_LIKE_THIS_NOT_TOO_OFTEN">A consommer de temps en temps</string>
+    <string name="MEALS_LIKE_THIS_IN_MODERATION">A consommer avec modération</string>
+
+    <string name="SEE_MORE_BTN">Voir plus</string>
+
+    <!--Sharing-->
+    <string name="btn_options">Options</string>
+    <string name="MENU_EDIT_MEAL">Editer le repas</string>
+    <string name="MENU_SHARE_FACEBOOK">Partager via Facebook</string>
+    <string name="MENU_SHARE_TWITTER">Partager via Twitter</string>
+    <string name="MENU_SHARE_INSTAGRAM">Partager via Twitter</string>
+    <string name="MENU_DELETE_MEAL">Supprimer le repas</string>
+
+    <string name="FACEBOOK_TITLE"> avec Savoir Manger à </string>
+    <string name="FACEBOOK_CONTENT">Je viens de prendre un repas avec mon appli Savoir Manger.</string>
+    <string name="FACEBOOK_DESCRIPTION">#SavoirManger</string>
+    <string name="FACEBOOK_DESCRIPTION_HAPIMOMENT">#SavoirManger</string>
+    <string name="FACEBOOK_DESCRIPTION_EXERCISE">#SavoirManger</string>
+    <string name="FACEBOOK_FAILED_TITLE">Petit souci avec Facebook</string>
+    <string name="FACEBOOK_FAILED_CONTENT">Le partage sur Facebook est impossible car vous n\'avez pas configuré de compte Facebook sur votre appareil.</string>
+    <string name="FACEBOOK_HAPIMOMENT_CONTENT">Je partage ce bon moment avec l’appli #SavoirManger.</string>
+    <string name="FACEBOOK_EXERCISE_CONTENT">Je partage ce moment de sport avec l\’appli #SavoirManger.</string>
+
+    <string name="FACEBOOK_SUCCESSFUL_TITLE">Bien joué !</string>
+    <string name="FACEBOOK_SUCCESSFUL_CONTENT">Votre repas a bien été publié sur Facebook.</string>
+    <string name="FACEBOOK_SUCCESSFUL_TITLE_HAPIMOMENT">Bien joué !</string>
+    <string name="FACEBOOK_SUCCESSFUL_CONTENT_HAPIMOMENT">Votre moment de bonheur a bien été publié sur Facebook.</string>
+    <string name="FACEBOOK_SUCCESSFUL_TITLE_ACTIVITY">Félicitation !</string>
+    <string name="FACEBOOK_SUCCESSFUL_CONTENT_ACTIVITY">Votre séance de sport a bien été publiée sur Facebook.</string>
+
+    <string name="TWITTER_CONTENT">Je viens de prendre un repas avec mon appli Savoir Manger.</string>
+    <string name="TWITTER_SUCCESSFUL_CONTENT">Votre repas a bien été publié sur Twitter.</string>
+    <string name="TWITTER_SUCCESSFUL_CONTENT_HAPIMOMENT">Votre moment de bonheur a bien été publié sur Twitter.</string>
+    <string name="TWITTER_SUCCESSFUL_TITLE_ACTIVITY">Félicitation !</string>
+    <string name="TWITTER_SUCCESSFUL_CONTENT_ACTIVITY">Votre séance de sport a bien été publiée sur Twitter.</string>
+    <string name="TWITTER_FAILED_TITLE">Petit souci avec Twitter</string>
+    <string name="TWITTER_FAILED_CONTENT">Le partage sur Twitter est impossible car vous n\'avez pas configuré de compte Twitter sur votre appareil.</string>
+
+    <!--Free+-->
+    <string name="PAYMENT_OPTIONS_TITLE">Choisissez votre formule</string>
+    <string name="PAYMENT_OPTIONS_CONTENT">Cette application propose un\naccompagnement professionnel et\npersonnalisé par des diététiciennes\ndiplômées pour un tarif très inférieur\naux consultations en cabinet. </string>
+    <string name="PAYMENT_OPTIONS_CONTENT_GUARANTEE">Satisfait ou remboursé</string>
+
+    <string name="FREE_TRIAL_BIG">0€ - Essai gratuit</string>
+    <string name="FREE_TRIAL_SMALL">(offre à durée limitée)</string>
+    <string name="FOR_ONE_MONTH_BIG">12,49€ par semaine</string>
+    <string name="FOR_ONE_MONTH_SMALL">(49,99€ pour 1 mois)</string>
+    <string name="FOR_THREE_MONTHS_BIG">7.69€ par semaine</string>
+    <string name="FOR_THREE_MONTHS_SMALL">(99,99€ pour 3 mois)</string>
+
+    <string name="PREMIUM_ACCESS_TITLE">Vérifier votre numéro de téléphone</string>
+    <string name="PREMIUM_ACCESS_CONTENT_TOP">Pour recevoir votre code de vérification,\nconfirmez l’indicatif de votre pays\net entrez votre numéro de\nmobile ci-dessous.</string>
+    <string name="PREMIUM_ACCESS_COUNTRY">Country</string>
+    <string name="PREMIUM_ACCESS_CODE">Code</string>
+    <string name="PREMIUM_ACCESS_TEL_NUMBER">Tel. number</string>
+    <string name="PREMIUM_ACCESS_BUTTON_TITLE">Valider</string>
+
+    <string name="PREMIUM_TYPE_CONTACT_NUMBER">Pour recevoir votre code de vérification,\nconfirmez l’indicatif de votre pays\net entrez votre numéro de\nmobile ci-dessous.</string>
+    <string name="PREMIUM_TEL_NO_CONFIRMATION_TITLE">Confirmation</string>
+    <string name="PREMIUM_TEL_NO_CONFIRMATION_DES">Nous allons envoyer votre code de vérification au numéro suivant:\n</string>
+
+    <string name="PREMIUM_SENT_BY_SMS">Votre code de vérification a été envoyé par SMS au :</string>
+    <string name="PREMIUM_ENTER_IT_BELOW">Entrez-le ci-dessous :</string>
+    <string name="PREMIUM_RESEND_ACCESS_CODE_BUTTON">Renvoyer le code de vérification</string>
+
+    <string name="WELCOME_TITLE">Bienvenue</string>
+    <string name="WELCOME_BRAVO">Bravo, vous avez maintenant\naccès à la version complete.</string>
+    <string name="WELCOME_WHAT_HAPPENS_NEXT">Et maintenant ?</string>
+    <string name="WELCOME_POST_PREMIUM_DESCRIPTION">Essayez de m’envoyer des\nmessages et d’enregistrer vos\nrepas le plus souvent possible. \nJe pourrais ainsi vous proposer\nun vrai coaching de qualité."</string>
+    <string name="WELCOME_POST_PREMIUM_DESCRIPTION_QUESTIONNAIRE">Pour personnaliser votre\nexpérience, j’aimerais que vous\nrépondiez à quelques questions\nsur vos habitudes de vie et vos\npréférences alimentaires. On y va ?</string>
+    <string name="WELCOME_LETS_MOVE_ON">Allons-y !</string>
+
+    <!--Hapi moment-->
+    <string name="HAPIMOMENT_ADDPHOTO">Ajouter une photo du HAPI Moment</string>
+    <string name="HAPIMOMENT_YOURTHOUGHTS">Quels sont vos commentaires, $name?</string>
+    <string name="HAPIMOMENT_ADDLOCATION">Ajouter un lieu</string>
+    <string name="HAPIMOMENT_GREAT">HAPI Moment</string>
+    <string name="HAPIMOMENT_GOOD">Grand moment</string>
+    <string name="HAPIMOMENT_OKAY">Moment Normal</string>
+    <string name="HAPIMOMENT_NOTGOOD">Moment Triste</string>
+    <string name="HAPIMOMENT_BAD">Moment Pénible</string>
+    <string name="MENU_EDIT_HAPIMOMENT">Editer de moment</string>
+    <string name="MENU_DELETE_HAPIMOMENT">Supprimer le moment</string>
+    <string name="COACH_CHECKED">Consulté</string>
+    <string name="MEALTYPE_HAPIMOMENT">HAPI Moment</string>
+    <string name="CRM_CONTENT_2_MEAL1">En entrant régulièrement vos repas,\n vous apprenez à faire de meilleurs choix alimentaires.</string>
+    <string name="CRM_CONTENT_2_MEAL10">En enregistrant vos repas,\n vous adoptez le meilleur comportement\n pour perdre du poids efficacement.</string>
+    <string name="CRM_CONTENT_2_MEAL12">En enregistrant vos repas,\n vous identifiez vos petites manies\n quotidiennes: desserts, sucreries, grignotages, apéro...</string>
+    <string name="CRM_CONTENT_2_MEAL11">En enregistrant vos repas,\n vous vérifiez que vous ne consommez pas\n trop de produits salés (gâteaux, chips, cacahuètes…).</string>
+    <string name="CRM_CONTENT_2_MEAL13">En enregistrant vos repas,\n vous contrôlez que vous n\'abusez pas\n des produits gras (charcuterie, sauces, beurre, crème…).</string>
+    <string name="CRM_CONTENT_2_MEAL14">En enregistrant vos repas,\n vous vérifiez que vous mangez de façon variée et équilibrée,\n et en quantités adaptées.</string>
+    <string name="CRM_CONTENT_2_MEAL15">En enregistrant vos repas,\n vous contrôlez la variété de vos sources\n de calcium : lait, yaourts, fromages...</string>
+    <string name="CRM_CONTENT_2_MEAL16">En enregistrant vos repas,\n vous contrôlez votre consommation de féculents qui fournissent\n l\'énergie dont votre corps a besoin.</string>
+    <string name="CRM_CONTENT_2_MEAL17">En enregistrant vos repas,\n vous vérifiez que vous ne consommez pas\n trop de boissons et de produits sucrés.</string>
+    <string name="CRM_CONTENT_2_MEAL18">En enregistrant vos repas,\n vous prenez conscience de ce que vous mangez \nvraiment et, le cas échéant, de vos petits excès.</string>
+    <string name="CRM_CONTENT_2_MEAL19">En enregistrant vos repas,\n vous réalisez à quelle heure et de quelle façon \nvous avez pris l\'habitude de manger</string>
+    <string name="CRM_CONTENT_2_MEAL2">En entrant régulièrement vos repas,\n vous vous donnez les moyens d\'atteindre \nvotre objectif de poids.</string>
+    <string name="CRM_CONTENT_2_MEAL20">En enregistrant vos grignotages en\n dehors des repas, vous vous faites une idée \nprécise de vos prises alimentaires.</string>
+    <string name="CRM_CONTENT_2_MEAL21">En enregistrant vos repas,\n vous vous assurez de consommer la juste quantité\n de céréales (pain, pâtes, riz...).</string>
+    <string name="CRM_CONTENT_2_MEAL22">En enregistrant vos repas,\n vous réalisez à quel moment vous\n avez faim en général.</string>
+    <string name="CRM_CONTENT_2_MEAL23">En enregistrant vos repas,\n vous prenez conscience des plats et aliments\n qui vous attirent le plus.</string>
+    <string name="CRM_CONTENT_2_MEAL24">En enregistrant vos repas,\n vous vérifiez facilement si vous \nmangez toujours la même chose.</string>
+    <string name="CRM_CONTENT_2_MEAL25">En enregistrant vos repas,\n vous réalisez quelles saveurs vous plaisent\n le plus: salée, sucrée, épicée, acidulée...</string>
+    <string name="CRM_CONTENT_2_MEAL26">En enregistrant vos repas,\n vous prenez conscience des textures que vous \npréférez: croquante, moelleuse, liquide...</string>
+    <string name="CRM_CONTENT_2_MEAL27">En enregistrant vos repas,\n vous vérifiez si vous mangez suffisamment \nde protéines, de légumes et de fruits.</string>
+    <string name="CRM_CONTENT_2_MEAL28">En enregistrant vos repas,\n vous comprenez les situations qui vous poussent \nà manger même quand vous n\'avez pas faim.</string>
+    <string name="CRM_CONTENT_2_MEAL29">En enregistrant vos repas,\n vous "officialisez" ce que vous mangez vraiment,\n aussi bien en quantité qu\'en qualité.</string>
+    <string name="CRM_CONTENT_2_MEAL3">En enregistrant vos repas,\n vous vérifiez si vous consommez bien \n5 portions de fruits et légumes par jour.</string>
+    <string name="CRM_CONTENT_2_MEAL30">En enregistrant vos repas,\n vous repérez les situations, les états émotionnels \net les problèmes qui vous font manger en excès.</string>
+    <string name="CRM_CONTENT_2_MEAL4">En enregistrant vos repas, vous contrôlez si votre alimentation\n est suffisamment variée et équilibrée.</string>
+    <string name="CRM_CONTENT_2_MEAL5">En enregistrant vos repas,\n vous contrôlez que vous consommez bien \n3 produits laitiers par jour.</string>
+    <string name="CRM_CONTENT_2_MEAL6">En enregistrant vos repas,\n vous adoptez le bon modèle : protéines, \nféculents, un produit laitier et des fruits et légumes.</string>
+    <string name="CRM_CONTENT_2_MEAL7">En enregistrant vos repas, \nvous vérifiez votre consommation de \nféculents : pain, céréales, pâtes, légumineuses.</string>
+    <string name="CRM_CONTENT_2_MEAL8">En enregistrant vos repas,\n vous vous assurez de consommer au moins 2 \nportions de protéines (viandes, poissons...) par jour.</string>
+    <string name="CRM_CONTENT_2_MEAL9">En enregistrant vos repas,\n vous vérifiez si vous buvez suffisamment, \nc\'est à dire au moins 1,5 litre d\'eau par jour.</string>
+
+    <string name="EXERCISE">Exercice</string>
+    <string name="EXERCISE_WALK">Marche</string>
+    <string name="EXERCISE_RUN">Jogging</string>
+    <string name="EXERCISE_BIKE">Vélo</string>
+    <string name="EXERCISE_SWIM">Natation</string>
+    <string name="EXERCISE_WORKOUT">Fitness</string>
+    <string name="EXERCISE_OTHER">Autres</string>
+    <string name="ONETOONECOACHING_DESCRIBEACTIVITY">Décrire l\'activité (optionnel)</string>
+    <string name="EXERCISE_OTHEROPTION">Sélectionner</string>
+    <string name="EXERCISE_DURATION">Durée: </string>
+    <string name="EXERCISE_DISTANCE">Distance</string>
+    <string name="EXERCISE_STEPS">Nombre de pas (pas)</string>
+
+    <string name="EXERCISE_MENU_RUN_DEVICE">Jogging (%@)</string>
+    <string name="EXERCISE_MENU_ACTIVITY">Activité (%@)</string>
+    <string name="EXERCISE_MENU_OTHER">Autres</string>
+    <string name="EXERCISE_MENU_RUN">Jogging</string>
+    <string name="EXERCISE_MENU_BIKE">Vélo</string>
+    <string name="EXERCISE_MENU_MOUNTAIN_BIKING">VTT</string>
+    <string name="EXERCISE_MENU_WALK">Marche</string>
+    <string name="EXERCISE_MENU_HIKING">Randonnée</string>
+    <string name="EXERCISE_MENU_DOWNHILL_SKIING">Downhill Skiing</string>
+    <string name="EXERCISE_MENU_CROSS_COUNTRY_SKIING">Ski alpin</string>
+    <string name="EXERCISE_MENU_SNOWBOARDING">Snowboard</string>
+    <string name="EXERCISE_MENU_SKATING">Patinage</string>
+    <string name="EXERCISE_MENU_SWIM">Natation</string>
+    <string name="EXERCISE_MENU_WHEELCHAIR">Wheelchair</string>
+    <string name="EXERCISE_MENU_ROWING">Aviron</string>
+    <string name="EXERCISE_MENU_ELLIPTICAL">Vélo elliptique</string>
+    <string name="EXERCISE_MENU_YOGA">Yoga</string>
+    <string name="EXERCISE_MENU_PILATES">Pilates</string>
+    <string name="EXERCISE_MENU_CROSSFIT">Crossfit</string>
+    <string name="EXERCISE_MENU_SPINNING">Spinning</string>
+    <string name="EXERCISE_MENU_ZUMBA">Zumba</string>
+    <string name="EXERCISE_MENU_BARRE">Gymnastique</string>
+    <string name="EXERCISE_MENU_GROUP_WORKOUT">Entraînement en groupe</string>
+    <string name="EXERCISE_MENU_DANCE">Danse</string>
+    <string name="EXERCISE_MENU_BOOTCAMP">Stage d\'entraînement</string>
+    <string name="EXERCISE_MENU_BOXING">Boxe</string>
+    <string name="EXERCISE_MENU_MMA">MMA</string>
+    <string name="EXERCISE_MENU_MEDITATION">Méditation</string>
+    <string name="EXERCISE_MENU_STRENGTH_TRAINING">Musculation</string>
+    <string name="EXERCISE_MENU_CIRCUIT_TRAINING">Circuit Training</string>
+    <string name="EXERCISE_MENU_CORE_STRENGTHENING">Core Strengthening</string>
+    <string name="EXERCISE_MENU_ARC_TRAINER">Rameur</string>
+    <string name="EXERCISE_MENU_STAIRMASTER">Stepper</string>
+    <string name="EXERCISE_MENU_STEPWELL">Stepwell</string>
+    <string name="EXERCISE_MENU_NORDIC_WALKING">Marche nordique</string>
+    <string name="EXERCISE_MENU_SPORTS">Sport</string>
+    <string name="EXERCISE_MENU_WORKOUT">Fitness</string>
+    <string name="EXERCISE_MENU_AQUAGYM">Aquagym</string>
+    <string name="EXERCISE_MENU_GOLF">Golf</string>
+
+    <string-array name="otherexercise_array">
+        <item name="OTHER_EXERCISE_1">Aquagym</item>
+        <item name="OTHER_EXERCISE_2">VTT</item>
+        <item name="OTHER_EXERCISE_3">Randonnée</item>
+        <item name="OTHER_EXERCISE_4">Downhill Skiing</item>
+        <item name="OTHER_EXERCISE_5">Ski alpin</item>
+        <item name="OTHER_EXERCISE_6">Snowboard</item>
+        <item name="OTHER_EXERCISE_7">Patinage</item>
+        <item name="OTHER_EXERCISE_8">Aviron</item>
+        <item name="OTHER_EXERCISE_9">Vélo elliptique</item>
+        <item name="OTHER_EXERCISE_10">Yoga</item>
+        <item name="OTHER_EXERCISE_11">Pilates</item>
+        <item name="OTHER_EXERCISE_12">Zumba</item>
+        <item name="OTHER_EXERCISE_13">Gymnastique</item>
+        <item name="OTHER_EXERCISE_14">Entraînement en groupe</item>
+        <item name="OTHER_EXERCISE_15">Danse</item>
+        <item name="OTHER_EXERCISE_16">Stage d\'entraînement</item>
+        <item name="OTHER_EXERCISE_17">Boxe</item>
+        <item name="OTHER_EXERCISE_18">MMA</item>
+        <item name="OTHER_EXERCISE_19">Méditation</item>
+        <item name="OTHER_EXERCISE_20">Core Strengthening</item>
+        <item name="OTHER_EXERCISE_21">Rameur</item>
+        <item name="OTHER_EXERCISE_22">Stepper</item>
+        <item name="OTHER_EXERCISE_23">Marche nordique</item>
+        <item name="OTHER_EXERCISE_24">Sport</item>
+        <item name="OTHER_EXERCISE_25">Golf</item>
+    </string-array>
+
+    <string name="EXERCISE_HEADER">Exercice</string>
+    <string name="EDIT_EXERCISE_HEADER">Editer Exercice</string>
+    <string name="LOG_EXERCISE_HEADER">Exercice</string>
+    <string name="EXERCISEVIEW_STEPS">Nombre de pas</string>
+    <string name="EXERCISEVIEW_DISTANCE">Distance (Km)</string>
+    <string name="EXERCISEVIEW_DURATION">Durée</string>
+
+    <string name="STEPS">pas</string>
+
+    <string name="MENU_EDIT_EXERCISE">Editer de exercice</string>
+    <string name="MENU_DELETE_EXERCISE">Supprimer le exercice</string>
+    <string name="ALERTMESSAGE_EXERCISETYPE">Sélectionner votre exercice</string>
+
+    <string name="WATER_JOURNAL_EMPTY">Votre consommation d\'eau</string>
+    <string name="WATER_JOURNAL_NOT_EMPTY">%@ verres d\'eau</string>
+
+    <!--Upgrade Screens-->
+    <string name="UPGRADE_WELCOME_HEADER">Passez au Premium pour débloquer toutes les fonctionnalités</string>
+    <string name="UPGRADE_WELCOME_SUBTITLE1">Programme dédié pour atteindre votre objectif</string>
+    <string name="UPGRADE_WELCOME_SUBTITLE2">Plans de repas personnalisés</string>
+    <string name="UPGRADE_WELCOME_SUBTITLE3">Évaluation rapide pour chaque repas</string>
+    <string name="UPGRADE_WELCOME_SUBTITLE4">Échanges illimités avec le coach</string>
+    <string name="UPGRADE_WELCOME_SUBTITLE5">Bilan hebdomadaire de vos progrès</string>
+    <string name="UPGRADE_WELCOME_SUBTITLE6">Initiation aux bases de la nutrition</string>
+    <string name="UPGRADE_WELCOME_SUBTITLE7">Possibilité de changer de coach</string>
+    <string name="UPGRADE_SCREEN_HEADER">Débloquez votre accès illimité aux fonctionnalités Premium</string>
+    <string name="UPGRADE_NOW_BUTTON">Passez au premium</string>
+
+    <string name="ADD_PHOTO_MEAL">Ajouter une photo\nde votre repas</string>
+
+    <!--New Welcome Tour Page-->
+    <string name="TOUR_TITLE_1">Fixez vos objectifs</string>
+    <string name="TOUR_TITLE_2">Très simple</string>
+    <string name="TOUR_TITLE_3">Suivi professionnel</string>
+
+    <string name="TOUR_SUBTITLE_1">Perdre du poids ou rééquilibrer votre alimentation ?</string>
+    <string name="TOUR_SUBTITLE_2">Photographiez ce que vous mangez\nà chaque repas</string>
+    <string name="TOUR_SUBTITLE_3">Une diététicienne diplômée vous conseille\nsur vos habitudes alimentaires</string>
+
+    <string name="TOUR_NEXT">Suivant</string>
+    <string name="TOUR_START">Commencer</string>
+
+    <!--Improvement Registration Screen-->
+    <string name="REG_WELCOME">Bienvenue sur</string>
+    <string name="REG_BOTTOM_CONTENT">Commencez à maigrir et\nmanger mieux en 5 jours</string>
+    <string name="REG_CONTINUE_EMAIL">Continuer avec votre Email</string>
+    <string name="REG_CONTINUE_FACEBOOK">Continuer avec Facebook</string>
+
+    <!--Updated Me Page-->
+    <string name="ME_MY_COACH">Mon coach </string>
+
+    <!--Improved Progress Page-->
+    <string name="TAB_WEIGHT">Poids</string>
+    <string name="TAB_STEPS">Pas</string>
+    <string name="TAB_MEALS">Repas</string>
+
+    <!--Weight Graph-->
+    <string name="WEIGHT_GRAPH_CURRENT_WEIGHT_ASOF">Poids actuel: %@ kg le</string>
+    <string name="WEIGHT_GRAPH_NO_DATA">Poids actuel: Pas de données</string>
+    <string name="WEIGHT_GRAPH_WEIGHT_TIP">Notre conseil: pesez-vous régulièrement pour mettre votre courbe de poids à jour !</string>
+    <string name="WEIGHT_GRAPH_ENTER_CURRENT_WEIGHT">Entrez votre poids actuel</string>
+    <string name="WEIGHT_GRAPH_TARGET_WEIGHT">Poids visé</string>
+    <string name="WEIGHT_GRAPH_CURRENT_BMI">IMC actuel</string>
+    <string name="WEIGHT_GRAPH_WEIGHT_LOST">Poids perdu</string>
+    <string name="WEIGHT_GRAPH_WEIGHT_LOG">Historique</string>
+    <string name="NO_DATA">Pas de données</string>
+
+    <!--Weight Graph-->
+    <string name="WEIGHT_GRAPH_STEPS_LOG">Historique</string>
+    <string name="WEIGHT_GRAPH_DATE">Date</string>
+    <string name="WEIGHT_GRAPH_SEE_MORE">Voir plus</string>
+    <string name="WEIGHT_GRAPH_DEVICE">Appareil</string>
+    <string name="WEIGHT_GRAPH_NO_MORE_CONTENTS_TO_SHOW">Fin du contenu</string>
+    <string name="WEIGHT_GRAPH_EDIT_WEIGHT">Editer de Poids</string>
+
+    <string name="EDIT_STEPS">Editer de Pas</string>
+
+    <string name="LAST_RECORDED_STEPS">Dernier enregistrement : %d pas le "</string>
+    <string name="LAST_RECORDED_STEPS_NO_DATA">Dernier enregistrement : aucune donnée"</string>
+    <string name="NO_STEPS_DATA">aucune donnée</string>
+    <string name="ENTER_YOUR_CURRENT_STEPS">Entrez votre nombre de pas</string>
+    <string name="STEPS_TAKEN">Nombre de pas</string>
+    <string name="KM_TRAVELLED">Distance (Km)</string>
+    <string name="CALORIES_BURNED">Calories brûlées</string>
+
+    <string name="LOADING_TEXT">Chargement en cours…</string>
+
+    <string name="VOICE_MESSAGE">Message Audio:</string>
+    <string name="PROGRESS_MEALS_REGISTRATION">repas depuis votre inscription le </string>
+
+    <string name="COMMENTS_TITLE">Commentaires</string>
+
+    <!--Google Fit-->
+    <string name="GOOGLE_FIT_FIRST_LAUNCH">Vous pouvez utiliser votre compte Google Fit pour afficher votre nombre de pas dans HAPI.  Voulez-vous synchroniser votre compte Google ?</string>
+    <string name="GOOGLE_FIT_PAIR_ACCOUNT">Associez votre compte maintenant.</string>
+    <string name="GOOGLE_FIT_HEADER">Google Fit</string>
+    <string name="GOOGLE_FIT_POPUP">Gérez les paramètres Google Fit</string>
+    <string name="GOOGLE_FIT_STEP_COUNT_FAILED">Problème de récuperation de votre nombre de pas.</string>
+
+</resources>

@@ -1,0 +1,222 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+    <!--
+        <include
+                    android:id="@+id/buttonitem"
+                    android:layout_height="55dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="fill_parent"
+                    layout="@layout/button_item" /> -->
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:id="@+id/profile_ll"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.anxa.hapilabs.ui.RoundedImageView
+                        android:id="@+id/user_avatar"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_horizontal"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/hapicoach_default_profilepic" />
+
+                    <TextView
+                        android:id="@+id/user_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/text_blackgray"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/user_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="2dp"
+                        android:singleLine="true"
+                        android:textColor="@color/text_lightgray"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/common_gray_separator" />
+
+            <LinearLayout
+                android:id="@+id/coach_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                android:weightSum="8">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:orientation="horizontal">
+
+                    <com.anxa.hapilabs.ui.RoundedImageView
+                        android:id="@+id/coach_avatar"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/hapicoach_default_profilepic" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_toRightOf="@id/coach_avatar"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/coach_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/text_blackgray"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/coach_subtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:paddingLeft="10dp"
+                            android:singleLine="true"
+                            android:textColor="@color/text_lightgray"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/imageview"
+                        android:layout_width="10dp"
+                        android:layout_height="18dp"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/arrow_right_white"
+                        android:layout_centerVertical="true"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/common_gray_separator" />
+
+            <!--<include-->
+            <!--android:id="@+id/profile_mycoachlink"-->
+            <!--layout="@layout/list_item_generic"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="40dp" />-->
+
+            <!--<include-->
+            <!--android:id="@+id/profile_myprofilelink"-->
+            <!--layout="@layout/list_item_generic"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="40dp" />-->
+            <include
+                android:id="@+id/profile_weeklysummary"
+                layout="@layout/list_item_generic"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp" />
+
+            <include
+                android:id="@+id/profile_mysubslink"
+                layout="@layout/list_item_generic"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp" />
+
+            <include
+                android:id="@+id/profile_mycommunitylink"
+                layout="@layout/list_item_generic"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp" />
+
+            <include
+                android:id="@+id/profile_mysettingslink"
+                layout="@layout/list_item_generic"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp" />
+
+
+            <include
+                android:id="@+id/profile_myhelplink"
+                layout="@layout/list_item_generic"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp" />
+
+
+            <!-- <com.hapilabs.ui.CustomListView
+                android:id="@+id/listview_weblinks"
+                android:layout_width="fill_parent"
+                android:cacheColorHint="#00000000"
+                android:layout_height="fill_parent"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="1dp" /> -->
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/helpandcontact"
+        layout="@layout/helpanccontact"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/mycoachprofile"
+        layout="@layout/fragment_mycoach"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

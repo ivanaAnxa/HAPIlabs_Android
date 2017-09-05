@@ -1,0 +1,17 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+ android:gravity="center"
+ android:paddingTop="25dp"
+ android:background="@color/text_white"
+ android:paddingBottom="25dp"
+    android:layout_height="wrap_content" >
+
+    
+          <Button
+            android:id="@+id/footerbutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+      	     style="@style/btnStyleOrange"/>
+</LinearLayout>
