@@ -128,6 +128,8 @@ public class ApplicationEx extends Application {
     public double currentKmTravelled;
     public int selectedProgressMenu;
     public int selectedCalendarDay;
+    public Weight currentWeightView;
+    public Steps currentStepsView;
 
     public boolean googleFitAllowed = false;
 

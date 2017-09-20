@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.anxa.hapilabs.activities.fragments.HeaderFragments
+        android:id="@+id/fragment_header"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/text_orange" />
+    <ScrollView
+        android:id="@+id/weight_view_scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragment_header"
+        android:layout_above="@+id/weight_commentfieldcontainer"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/common_button_white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/text_white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/weight_community_header"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#f7f7f7"
+                android:visibility="gone">
+
+                <com.anxa.hapilabs.ui.RoundedImageView
+                    android:id="@+id/weight_community_avatar"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/hapicoach_default_profilepic" />
+
+                <TextView
+                    android:id="@+id/weight_community_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/weight_community_avatar"
+                    android:text="April Patio"
+                    android:textColor="@color/text_blue_comment"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/weightViewTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/exercise_community_header"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:id="@+id/weightViewTop_Date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center"
+                    android:text=""
+                    android:textAppearance="@style/blackNormal.ExtraLarge" />
+
+                <TextView
+                    android:id="@+id/weightViewTop_Time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:layout_centerVertical="true"
+                    android:text="" />
+
+            </RelativeLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/weight_details_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@id/weightViewTop">
+                <ImageView
+                    android:id="@+id/weight_DefaultImage"
+                    android:layout_width="fill_parent"
+                    android:layout_height="150dp"
+                    android:layout_below="@+id/weightViewTop"
+                    android:background="@drawable/weight_inner" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/weight_comments_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@id/weight_details_container">
+
+                <TextView
+                    style="@style/blackNormal.Large"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Comments"
+                    android:visibility="visible"/>
+
+                <LinearLayout
+                    android:id="@+id/weight_comments_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:id="@+id/weight_coach_comments_container"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/comments_background"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="coachCommentsSelected">
+
+                        <TextView
+                            android:id="@+id/weight_coach_comments_btn"
+                            style="@style/blackNormal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_horizontal"
+                            android:paddingLeft="5dp"
+                            android:text="Coach" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/weight_community_comments_container"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/comments_background"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="communityCommentsSelected">
+
+                        <TextView
+                            android:id="@+id/weight_community_comments_btn"
+                            style="@style/blackNormal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_horizontal"
+                            android:paddingLeft="5dp"
+                            android:text="@string/MYCOMMUNITY_TITLE" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/weight_hapi4u_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/weight_comments_ll"
+                    android:background="#f7f7f7"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/weight_hapi4u_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:src="@drawable/hapi4u_blue"
+                        android:clickable="true"
+                        android:onClick="postHAPI4U"/>
+
+                    <TextView
+                        android:id="@+id/weight_hapi4u_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/weight_hapi4u_iv"
+                        android:paddingLeft="10dp"
+                        android:text="HAPI 4U"
+                        android:textColor="@color/text_blue_comment"
+                        android:textSize="16dp"
+                        android:clickable="true"
+                        android:onClick="postHAPI4U"/>
+
+                    <com.anxa.hapilabs.ui.RoundedImageView
+                        android:id="@+id/weight_hapi4u_avatar"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/weight_hapi4u_num_image"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/hapicoach_default_profilepic"
+                        android:visibility="invisible"/>
+
+                    <com.anxa.hapilabs.ui.RoundedImageView
+                        android:id="@+id/weight_hapi4u_num_image"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@android:color/transparent"
+                        android:visibility="invisible"
+                        android:src="@drawable/rounded_button_dark_orange_borderless" />
+
+                    <TextView
+                        android:id="@+id/weight_hapi4u_num_label"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:text="2"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        style="@style/whiteNormal"
+                        android:gravity="center"
+                        android:visibility="invisible"/>
+
+                    <ImageView
+                        android:id="@+id/weight_hapi4u_smiley"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/meal_smiley_orange"
+                        android:layout_alignBottom="@+id/weight_hapi4u_avatar"
+                        android:layout_alignRight="@+id/weight_hapi4u_avatar"
+                        android:layout_alignEnd="@+id/weight_hapi4u_avatar"
+                        android:visibility="invisible"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <com.anxa.hapilabs.ui.CommentListLayout
+                android:id="@+id/weight_commentlist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/weight_comments_layout"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp" />
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

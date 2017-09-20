@@ -1799,6 +1799,16 @@ public class ProgressFragments extends Fragment implements View.OnClickListener,
         });
     }
 
+    @Override
+    public void getWeightDataSuccess(Weight response) {
+
+    }
+
+    @Override
+    public void getWeightDataFailedWithError(MessageObj response) {
+
+    }
+
     private void populateWeightLogs() {
         Collections.sort(weightLogsList, new Comparator<Weight>() {
             public int compare(Weight o1, Weight o2) {
@@ -2169,6 +2179,16 @@ public class ProgressFragments extends Fragment implements View.OnClickListener,
     }
 
     public void postStepsDataFailedWithError(MessageObj response) {
+
+    }
+
+    @Override
+    public void getStepsDataSuccess(Steps response) {
+
+    }
+
+    @Override
+    public void getStepsDataFailedWithError(MessageObj response) {
 
     }
 

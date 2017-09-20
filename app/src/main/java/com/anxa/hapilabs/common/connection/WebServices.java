@@ -135,6 +135,9 @@ public class WebServices {
         public static final String postStepsGoogleFit = "v2/activity/steps?command=v2/activity/steps";
 
         public static final String googleFitSupportURL = "https://support.google.com/accounts/answer/6098255";
+
+        public static final String getHapicoachSteps = "meal?command=get_hapicoach_steps&";
+        public static final String getHapicoachWeight = "meal?command=get_hapicoach_weight&";
     }
 
 
@@ -193,6 +196,8 @@ public class WebServices {
         public static final String GET_TIMELINE_ACTIVITY = "get_timelineactivity";
         public static final String REGISTER_DEVICE = "v2/device/register";
         public static final String POST_ACTIVITY_STEPS = "v2/activity/steps";
+        public static final String GET_HAPICOACH_WEIGHT = "get_hapicoach_weight";
+        public static final String GET_HAPICOACH_STEPS = "get_hapicoach_steps";
     }
 
     public static class ACTIVITYSTATUS {
@@ -274,7 +279,9 @@ public class WebServices {
         GET_TIMELINE_ACTIVITY,
         REGISTER_DEVICE,
         POST_ACTIVITY_STEPS,
-        GOOGLE_FIT_SUPPORT
+        GOOGLE_FIT_SUPPORT,
+        GET_HAPICOACH_WEIGHT,
+        GET_HAPICOACH_STEPS
     }
 
     public static String getCommand(SERVICES service) {
@@ -427,6 +434,12 @@ public class WebServices {
                 break;
             case POST_ACTIVITY_STEPS:
                 command = COMMAND.POST_ACTIVITY_STEPS;
+                break;
+            case GET_HAPICOACH_WEIGHT:
+                command = COMMAND.GET_HAPICOACH_WEIGHT;
+                break;
+            case GET_HAPICOACH_STEPS:
+                command = COMMAND.GET_HAPICOACH_STEPS;
                 break;
             default:
                 break;
@@ -646,6 +659,12 @@ public class WebServices {
                 break;
             case GOOGLE_FIT_SUPPORT:
                 url = URL.googleFitSupportURL;
+                break;
+            case GET_HAPICOACH_WEIGHT:
+                url = (ConnectionType == CONNECTION.LIVE) ? (URL.liveDomainURLString + URL.getHapicoachWeight) : (URL.qcDomainURLString + URL.getTimelineActivity);
+                break;
+            case GET_HAPICOACH_STEPS:
+                url = (ConnectionType == CONNECTION.LIVE) ? (URL.liveDomainURLString + URL.getHapicoachSteps) : (URL.qcDomainURLString + URL.getTimelineActivity);
                 break;
         }
         return url;

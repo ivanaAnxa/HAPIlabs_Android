@@ -794,6 +794,58 @@ public class JsonUtil {
         return stepsObj;
     }
 
+    public static Weight getWeightView(JSONObject json) {
+        Weight weightObj = new Weight();
+
+        weightObj.activity_id = json.optString("activity_id");
+        weightObj.device_name = json.optString("device_name");
+
+        Long timestamp_utc = json.optLong("activity_date");
+
+        //convert timestamp  based on user timezone
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTimeInMillis(timestamp_utc * 1000);
+        calendar.setTimeZone(TimeZone.getTimeZone("UTC"));
+        weightObj.start_datetime = AppUtil.getOffsetOnSync(calendar.getTime());
+        weightObj.currentWeightGrams = json.optDouble("weight");
+        weightObj.BodyFatRatio = json.optDouble("body_fat_ratio", 0);
+        weightObj.BodyWaterRatio = json.optDouble("body_water_ratio", 0);
+        weightObj.BoneWeightGrams = json.optDouble("bone_weight_grams", 0);
+        weightObj.LeanMassRatio = json.optDouble("lean_mass_ratio", 0);
+   try
+   {
+        if (json.has("comment_group")) {
+            JSONObject commentGroupObj = json.getJSONObject("comment_group");
+            if (commentGroupObj != null && commentGroupObj.length() > 0) {
+                Object commentsObj = new JSONTokener(commentGroupObj.getString("comment")).nextValue();
+                if (commentsObj instanceof JSONArray) {
+                    JSONArray commentArr = commentGroupObj.optJSONArray("comment");
+                    weightObj.comments = new ArrayList<Comment>();
+
+                    for (int i = 0; i < commentArr.length(); i++) {
+                        JSONObject commentgroup = commentArr.getJSONObject(i);
+                        weightObj.comments.add(getComment(commentgroup, Comment.STATUS.SYNC_COMMENT));
+                    }
+                }
+
+                Object hapi4uObj = new JSONTokener(commentGroupObj.getString("hapi4u")).nextValue();
+                if (hapi4uObj instanceof JSONArray) {
+                    JSONArray hapi4uArr = commentGroupObj.optJSONArray("hapi4u");
+                    weightObj.hapi4Us = new ArrayList<HAPI4U>();
+
+                    for (int i = 0; i < hapi4uArr.length(); i++) {
+                        JSONObject hapi4ugroup = hapi4uArr.getJSONObject(i);
+                        weightObj.hapi4Us.add(getHAPI4U(hapi4ugroup, Comment.STATUS.SYNC_COMMENT));
+                    }
+                }
+
+            }
+        }
+   } catch (JSONException e) {
+       e.printStackTrace();
+   }
+        return weightObj;
+    }
     public static Steps getStepsTimelineActivity(JSONObject json) {
         Steps stepsObj = new Steps();
 
