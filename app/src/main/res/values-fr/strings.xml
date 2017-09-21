@@ -987,6 +987,12 @@
     <string name="EXERCISEVIEW_DISTANCE">Distance (Km)</string>
     <string name="EXERCISEVIEW_DURATION">Durée</string>
 
+    <string name="WEIGHT_BODYFAT">Masse grasse</string>
+    <string name="WEIGHT_LEANMASS">Masse maigre</string>
+    <string name="WEIGHT_WATERWEIGHT">Masse hydrique</string>
+    <string name="WEIGHT_BONEMASS">Masse osseuse</string>
+    <string name="WEIGHT_BMI">Indice de Masse Corporelle</string>
+
     <string name="STEPS">pas</string>
 
     <string name="MENU_EDIT_EXERCISE">Editer de exercice</string>

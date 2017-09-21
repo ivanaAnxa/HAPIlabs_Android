@@ -6,8 +6,11 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+import com.anxa.hapilabs.common.connection.listener.StepsDataListener;
 import com.anxa.hapilabs.common.connection.listener.WeightDataListener;
+import com.anxa.hapilabs.controllers.progress.GetStepsDataController;
 import com.anxa.hapilabs.controllers.progress.GetWeightDataController;
+import com.anxa.hapilabs.models.Steps;
 import com.anxa.hapilabs.models.Weight;
 import com.hapilabs.R;
 import com.anxa.hapilabs.common.connection.listener.GetHapiMomentListener;
@@ -60,13 +63,14 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 public class NotificationActivity extends HAPIActivity implements GetNotificationListener, OnClickListener, OnMenuItemClickListener, GetHapiMomentListener, GetWorkoutListener, GetMealListener,
-        GetTimelineActivityListener, GetWaterListener, WeightDataListener {
+        GetTimelineActivityListener, GetWaterListener, WeightDataListener, StepsDataListener {
 
     private NotificationDAO notifDAO;
     private NotificationListAdapter adapter;
     private NotificationController notifController;
     private GetHapiMomentController getHapiMomentController;
     private GetWeightDataController getWeightDataController;
+    private GetStepsDataController getStepsDataController;
     private GetWorkoutController getWorkoutController;
     private List<Notification> notificationList;
 
@@ -277,14 +281,17 @@ public class NotificationActivity extends HAPIActivity implements GetNotificatio
                 } else if (item.ref_type.equalsIgnoreCase("ActivityId")) {
                     if(item.coachMessage.toLowerCase().contains("weight")){
                         entryType = "weight";
-                    }else {
+                    }else if(item.coachMessage.toLowerCase().contains("steps")){
+                        entryType = "steps";
+                    }
+                    else {
                         entryType = "exercise";
                     }
                 } else {
                     entryType = "hapimoment";
                 }
 
-                if (item.is_community && entryType != "weight") {
+                if (item.is_community && entryType != "weight" && entryType != "steps") {
                     //launch separate page
                     getTimelineActivityController.getTimelineActivity(ApplicationEx.getInstance().userProfile.getRegID(), item.ref_id, entryType);
 
@@ -374,12 +381,13 @@ public class NotificationActivity extends HAPIActivity implements GetNotificatio
                             getHAPIWater(item.ref_id);
                         }
                     }else if (item.ref_type.equalsIgnoreCase("ActivityId") && item.coachMessage.toLowerCase().contains("weight")) {
-                        notFound = true;
 
-
-                        if (notFound) {
                             getWeight(item.ref_id);
-                        }
+
+                    }else if (item.ref_type.equalsIgnoreCase("ActivityId") && item.coachMessage.toLowerCase().contains("steps")) {
+
+                        getSteps(item.ref_id);
+
                     }
                 }
 
@@ -766,6 +774,12 @@ public class NotificationActivity extends HAPIActivity implements GetNotificatio
         }
         getWeightDataController.getWeight(ApplicationEx.getInstance().userProfile.getRegID(), activityId);
     }
+    private void getSteps(String activityId) {
+        if (getStepsDataController == null) {
+            getStepsDataController = new GetStepsDataController(this, this);
+        }
+        getStepsDataController.getSteps(ApplicationEx.getInstance().userProfile.getRegID(), activityId);
+    }
     private void getMeal(String mealId) {
         GetMealController mealController = new GetMealController(this, this);
         mealController.getMealDetails(ApplicationEx.getInstance().userProfile.getRegID(), mealId);
@@ -793,6 +807,14 @@ public class NotificationActivity extends HAPIActivity implements GetNotificatio
     }
     private void proceedToWeightViewPage(boolean fromCommunity, boolean from3rdParty) {
         Intent mainIntent = new Intent(getBaseContext(), WeightViewActivity.class);
+        mainIntent.putExtra("FROM_NOTIF", true);
+        mainIntent.putExtra("FROM_NOTIF_COMMUNITY", fromCommunity);
+        mainIntent.putExtra("FROM_NOTIF_3RD_PARTY", from3rdParty);
+
+        startActivity(mainIntent);
+    }
+    private void proceedToStepsViewPage(boolean fromCommunity, boolean from3rdParty) {
+        Intent mainIntent = new Intent(getBaseContext(), StepsViewActivity.class);
         mainIntent.putExtra("FROM_NOTIF", true);
         mainIntent.putExtra("FROM_NOTIF_COMMUNITY", fromCommunity);
         mainIntent.putExtra("FROM_NOTIF_3RD_PARTY", from3rdParty);
@@ -870,11 +892,32 @@ public class NotificationActivity extends HAPIActivity implements GetNotificatio
     @Override
     public void getWeightDataSuccess(Weight response) {
         ApplicationEx.getInstance().currentWeightView = response;
-        proceedToWeightViewPage(false, false);
+        proceedToWeightViewPage(true, false);
     }
 
     @Override
     public void getWeightDataFailedWithError(MessageObj response) {
         System.out.println("getWeightDataFailedWithError");
+    }
+
+    @Override
+    public void postStepsDataSuccess(String response) {
+
+    }
+
+    @Override
+    public void postStepsDataFailedWithError(MessageObj response) {
+
+    }
+
+    @Override
+    public void getStepsDataSuccess(Steps response) {
+        ApplicationEx.getInstance().currentStepsView = response;
+        proceedToStepsViewPage(true, false);
+    }
+
+    @Override
+    public void getStepsDataFailedWithError(MessageObj response) {
+        System.out.println("getStepsDataFailedWithError");
     }
 }

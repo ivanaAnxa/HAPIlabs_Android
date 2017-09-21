@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
     <com.anxa.hapilabs.activities.fragments.HeaderFragments
         android:id="@+id/fragment_header"
         android:layout_width="match_parent"
@@ -9,19 +10,18 @@
         android:background="@color/text_orange" />
     <ScrollView
         android:id="@+id/weight_view_scrollview"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/fragment_header"
         android:layout_above="@+id/weight_commentfieldcontainer"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
-        android:background="@color/common_button_white">
+        android:background="@color/text_white">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/text_white"
-            android:orientation="vertical">
+            android:background="@color/text_white">
 
             <RelativeLayout
                 android:id="@+id/weight_community_header"
@@ -96,7 +96,290 @@
                     android:layout_below="@+id/weightViewTop"
                     android:background="@drawable/weight_inner" />
 
+                <LinearLayout
+                    android:id="@+id/weight_Details1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/weight_DefaultImage"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="3.04">
 
+                    <!-- step take -->
+
+                    <RelativeLayout
+                        android:id="@+id/weight_Weight"
+                        android:layout_width="0px"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_btn_gray"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="5dp">
+
+                        <ImageView
+                            android:id="@+id/weight_WeightIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/timeline_icon_weight" />
+
+                        <TextView
+                            android:id="@+id/weight_WeightText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/weight_WeightIcon"
+                            android:paddingLeft="3dp"
+                            android:text=""
+                            android:textAlignment="center"
+                            android:textColor="@color/text_black"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/weight_WeightLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/weight_WeightIcon"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/WEIGHT_BUTTON"
+                            android:textAppearance="@style/darkGrayNormal.Medium" />
+
+                    </RelativeLayout>
+
+
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="0dp"
+                        android:layout_weight=".02"></View>
+
+                    <!-- distance -->
+                    <RelativeLayout
+                        android:id="@+id/weight_BodyFat"
+                        android:layout_width="0px"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_btn_gray"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="5dp">
+
+                        <ImageView
+                            android:id="@+id/weight_BodyFatIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/timeline_icon_bodyfat" />
+
+                        <TextView
+                            android:id="@+id/weight_BodyFatText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/weight_BodyFatIcon"
+                            android:paddingLeft="3dp"
+                            android:text=""
+                            android:textAlignment="center"
+                            android:textColor="@color/text_black"
+                            android:textSize="20dp" />
+
+                        <TextView
+                            android:id="@+id/weight_BodyFatLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/weight_BodyFatIcon"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/WEIGHT_BODYFAT"
+                            android:textAppearance="@style/darkGrayNormal.Medium" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="0dp"
+                        android:layout_weight=".02"></View>
+
+                    <!-- distance -->
+                    <RelativeLayout
+                        android:id="@+id/weight_LeanMass"
+                        android:layout_width="0px"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_btn_gray"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="5dp">
+
+                        <ImageView
+                            android:id="@+id/weight_LeanMassIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/timeline_icon_musclemass" />
+
+                        <TextView
+                            android:id="@+id/weight_LeanMassText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="false"
+                            android:layout_alignParentTop="false"
+                            android:layout_toRightOf="@+id/weight_LeanMassIcon"
+                            android:text=""
+                            android:textAlignment="center"
+                            android:textColor="@color/text_black"
+                            android:textSize="20dp" />
+
+                        <TextView
+                            android:id="@+id/weight_LeanMassLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/weight_LeanMassIcon"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/WEIGHT_LEANMASS"
+                            android:textAppearance="@style/darkGrayNormal.Medium" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/weight_Details2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/weight_Details1"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="3.04">
+
+                    <!-- step take -->
+
+                    <RelativeLayout
+                        android:id="@+id/weight_WaterWeight"
+                        android:layout_width="0px"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_btn_gray"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="5dp">
+
+                        <ImageView
+                            android:id="@+id/weight_WaterWeightIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/timeline_icon_waterweight" />
+
+                        <TextView
+                            android:id="@+id/weight_WaterWeightText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/weight_WaterWeightIcon"
+                            android:paddingLeft="3dp"
+                            android:text=""
+                            android:textAlignment="center"
+                            android:textColor="@color/text_black"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/weight_WaterWeightLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/weight_WaterWeightIcon"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/WEIGHT_WATERWEIGHT"
+                            android:textAppearance="@style/darkGrayNormal.Medium" />
+
+                    </RelativeLayout>
+
+
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="0dp"
+                        android:layout_weight=".02"></View>
+
+                    <!-- distance -->
+                    <RelativeLayout
+                        android:id="@+id/weight_BoneMass"
+                        android:layout_width="0px"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_btn_gray"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="5dp">
+
+                        <ImageView
+                            android:id="@+id/weight_BoneMassIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/timeline_icon_bonemass" />
+
+                        <TextView
+                            android:id="@+id/weight_BoneMassText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/weight_BoneMassIcon"
+                            android:paddingLeft="3dp"
+                            android:text=""
+                            android:textAlignment="center"
+                            android:textColor="@color/text_black"
+                            android:textSize="20dp" />
+
+                        <TextView
+                            android:id="@+id/weight_BoneMassLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/weight_BoneMassIcon"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/WEIGHT_BONEMASS"
+                            android:textAppearance="@style/darkGrayNormal.Medium" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="0dp"
+                        android:layout_weight=".02"></View>
+
+                    <!-- distance -->
+                    <RelativeLayout
+                        android:id="@+id/weight_BMI"
+                        android:layout_width="0px"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_btn_gray"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="5dp">
+
+                        <ImageView
+                            android:id="@+id/weight_BMIIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/timeline_icon_bmi" />
+
+                        <TextView
+                            android:id="@+id/weight_BMIText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="false"
+                            android:layout_alignParentTop="false"
+                            android:layout_toRightOf="@+id/weight_BMIIcon"
+                            android:text=""
+                            android:textAlignment="center"
+                            android:textColor="@color/text_black"
+                            android:textSize="20dp" />
+
+                        <TextView
+                            android:id="@+id/weight_BMILabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/weight_BMIIcon"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/WEIGHT_BMI"
+                            android:textAppearance="@style/darkGrayNormal.Medium" />
+                    </RelativeLayout>
+
+                </LinearLayout>
             </LinearLayout>
 
 
@@ -253,5 +536,19 @@
                 android:layout_marginTop="5dp" />
         </RelativeLayout>
     </ScrollView>
+    <include
+        android:id="@+id/weight_commentfieldcontainer"
+        layout="@layout/commentfield"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:visibility="visible" />
+    <View
+        android:id="@+id/separator"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/weight_commentfieldcontainer"
+        android:background="@color/common_gray_separator" />
 
-</LinearLayout>
+</RelativeLayout>

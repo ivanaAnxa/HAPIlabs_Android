@@ -14,6 +14,7 @@ public class StepsDataController {
     Context context;
 
     StepsDataImplementer stepsDataImplementer;
+    GetStepsDataImplementer getStepsDataImplementer;
     StepsDataListener listener;
     ProgressChangeListener progressChangeListener;
 
@@ -33,5 +34,8 @@ public class StepsDataController {
 
     public void deleteGraphData(String userId, String activity_id, String steps, String date) {
         stepsDataImplementer = new StepsDataImplementer(context, userId, "delete", activity_id, steps, date, progressChangeListener, listener);
+    }
+    public void getSteps(String userId, String activity_id) {
+        getStepsDataImplementer = new GetStepsDataImplementer(context, userId, activity_id, listener);
     }
 }

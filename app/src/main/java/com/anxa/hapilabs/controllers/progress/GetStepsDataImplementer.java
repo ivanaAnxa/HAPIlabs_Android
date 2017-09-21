@@ -9,7 +9,9 @@ import com.anxa.hapilabs.common.connection.WebServices;
 import com.anxa.hapilabs.common.connection.listener.ProgressChangeListener;
 import com.anxa.hapilabs.common.connection.listener.StepsDataListener;
 import com.anxa.hapilabs.common.handlers.reader.JsonDefaultResponseHandler;
+import com.anxa.hapilabs.common.handlers.reader.JsonGetStepsDataResponseHandler;
 import com.anxa.hapilabs.common.handlers.reader.JsonStepsDataResponseHandler;
+import com.anxa.hapilabs.common.handlers.reader.JsonWeightDataResponseHandler;
 import com.anxa.hapilabs.common.handlers.writer.JsonRequestWriter;
 import com.anxa.hapilabs.common.util.ApplicationEx;
 import com.anxa.hapilabs.models.HapiMoment;
@@ -23,9 +25,8 @@ import com.anxa.hapilabs.models.Steps;
 public class GetStepsDataImplementer {
     Handler responseHandler;
 
-    ProgressChangeListener progressChangeListener;
     StepsDataListener stepsDataListener;
-    JsonStepsDataResponseHandler jsonStepsDataResponseHandler;
+    JsonGetStepsDataResponseHandler jsonGetStepsDataResponseHandler;
     Context context;
 
     public GetStepsDataImplementer(Context context, String username, String activity_id,
@@ -34,8 +35,8 @@ public class GetStepsDataImplementer {
         this.context = context;
         this.stepsDataListener = listener;
 
-
-            getSteps(username, activity_id, jsonStepsDataResponseHandler);
+        jsonGetStepsDataResponseHandler = new JsonGetStepsDataResponseHandler(getStepsHandler);
+            getSteps(username, activity_id, jsonGetStepsDataResponseHandler);
 
     }
 
@@ -53,7 +54,7 @@ public class GetStepsDataImplementer {
         connection.create(Connection.GET, url, "");
     }
 
-    final Handler addWeightHandler = new Handler() {
+    final Handler getStepsHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
@@ -63,8 +64,8 @@ public class GetStepsDataImplementer {
                     break;
                 case JsonDefaultResponseHandler.COMPLETED:
                     Steps currentStepsView = null;
-                    if (jsonStepsDataResponseHandler != null) {
-                        currentStepsView = (Steps) jsonStepsDataResponseHandler.getResponseObj();
+                    if (jsonGetStepsDataResponseHandler != null) {
+                        currentStepsView = (Steps) jsonGetStepsDataResponseHandler.getResponseObj();
 
                         if (currentStepsView!=null) {
                             ApplicationEx.getInstance().currentStepsView = currentStepsView;

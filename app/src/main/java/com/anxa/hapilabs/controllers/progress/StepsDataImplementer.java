@@ -46,6 +46,7 @@ public class StepsDataImplementer {
         } else if (command.equalsIgnoreCase("delete")) {
             deleteSteps(username, activity_id, data, jsonStepsDataResponseHandler);
         }
+
     }
 
     //where data = xml string format post data
