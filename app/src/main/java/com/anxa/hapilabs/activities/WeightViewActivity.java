@@ -11,6 +11,8 @@ import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupMenu;
@@ -27,6 +29,7 @@ import com.anxa.hapilabs.controllers.hapimoment.GetHapiMomentController;
 import com.anxa.hapilabs.controllers.progress.GetWeightDataController;
 import com.anxa.hapilabs.controllers.progress.WeightDataController;
 import com.anxa.hapilabs.models.Comment;
+import com.anxa.hapilabs.models.CommentUser;
 import com.anxa.hapilabs.models.HAPI4U;
 import com.anxa.hapilabs.models.HapiMoment;
 import com.anxa.hapilabs.models.MessageObj;
@@ -37,6 +40,7 @@ import com.anxa.hapilabs.ui.RoundedImageView;
 import com.hapilabs.R;
 
 import java.io.InputStream;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -72,6 +76,9 @@ public class WeightViewActivity extends HAPIActivity implements WeightDataListen
     private TextView boneMassText;
     private TextView bmiText;
     private TextView waterWeightText;
+
+    private TextView submit_tv;
+    private EditText comment_et;
 
     private boolean isHAPI4USelected = false;
 
@@ -112,6 +119,11 @@ public class WeightViewActivity extends HAPIActivity implements WeightDataListen
         boneMassText  = (TextView)findViewById(R.id.weight_BoneMassText);
         bmiText  = (TextView)findViewById(R.id.weight_BMIText);
 
+        comment_et = (EditText) findViewById(R.id.comment_et);
+
+        submit_tv = (TextView) findViewById(R.id.btnSubmit);
+        submit_tv.setOnClickListener(this);
+
         if (fromNotifCommunity) {
             community_header.setVisibility(View.VISIBLE);
             if (from3rdPartyCommunity) {
@@ -133,26 +145,19 @@ public class WeightViewActivity extends HAPIActivity implements WeightDataListen
             refreshUI();
         }
     }
-
-    private void refreshUI() {
-
-        weightViewTopDate.setText(AppUtil.getEditWeightDateFormat(currentWeightView.start_datetime));
-        weightViewTopTime.setText(AppUtil.getMealTime(currentWeightView.start_datetime));
-        weightText.setText(String.format("%.2f", currentWeightView.currentWeightGrams / 1000) + "kg" );
-        bodyFatText.setText(String.format("%.2f", currentWeightView.BodyFatRatio / 1000)+ "%");
-        leanMassText.setText(String.format("%.2f", currentWeightView.LeanMassRatio / 1000)+ "%");
-        waterWeightText.setText(String.format("%.2f", currentWeightView.BodyWaterRatio / 1000)+ "%");
-        boneMassText.setText(String.format("%.2f", currentWeightView.BoneWeightGrams / 1000)+ "kg");
-        bmiText.setText(String.format("%.2f", currentWeightView.BMI / 1000));
-
-        if (isCommunityTabSelected) {
-           // updateHAPI4ULayout();
-
-            commentlist.updateData(AppUtil.getCommunityComments(currentWeightView.comments));
-        } else {
-            commentlist.updateData(AppUtil.getCoachComments(currentWeightView.comments));
+    public void onClick(View v) {
+        if (v.getId() == R.id.header_left || v.getId() == R.id.header_left_tv) {
+            onBackPressed();
+        }else if (v == submit_tv) {
+            // check if the textview has something
+            if (comment_et != null && comment_et.getText() != null && comment_et.getText().length() > 0) {
+                String comment_message = comment_et.getText().toString();
+                comment_et.setText("");
+                createNewComment(comment_message);
+            }
         }
     }
+
 
     public void communityCommentsSelected() {
         isCommunityTabSelected = true;
@@ -180,6 +185,26 @@ public class WeightViewActivity extends HAPIActivity implements WeightDataListen
 
         updateHAPI4ULayout();
     }
+    private void refreshUI() {
+
+        weightViewTopDate.setText(AppUtil.getEditWeightDateFormat(currentWeightView.start_datetime));
+        weightViewTopTime.setText(AppUtil.getMealTime(currentWeightView.start_datetime));
+        weightText.setText(String.format("%.2f", currentWeightView.currentWeightGrams / 1000) + "kg" );
+        bodyFatText.setText(String.format("%.2f", currentWeightView.BodyFatRatio / 1000)+ "%");
+        leanMassText.setText(String.format("%.2f", currentWeightView.LeanMassRatio / 1000)+ "%");
+        waterWeightText.setText(String.format("%.2f", currentWeightView.BodyWaterRatio / 1000)+ "%");
+        boneMassText.setText(String.format("%.2f", currentWeightView.BoneWeightGrams / 1000)+ "kg");
+        bmiText.setText(String.format("%.2f", currentWeightView.BMI / 1000));
+
+        if (isCommunityTabSelected) {
+            // updateHAPI4ULayout();
+
+            commentlist.updateData(AppUtil.getCommunityComments(currentWeightView.comments));
+        } else {
+            commentlist.updateData(AppUtil.getCoachComments(currentWeightView.comments));
+        }
+    }
+
     private void getWeight(String activityId) {
         if (getWeightDataController == null) {
             getWeightDataController = new GetWeightDataController(this, this);
@@ -234,7 +259,35 @@ public class WeightViewActivity extends HAPIActivity implements WeightDataListen
             }
         });
     }
+    private void createNewComment(String comment_message) {
+        Comment comment = new Comment();
 
+        if (isCommunityTabSelected) {
+            comment.comment_type = 0;
+            CommentUser user = new CommentUser();
+            user.user_id = ApplicationEx.getInstance().userProfile.getRegID();
+            user.firstname = ApplicationEx.getInstance().userProfile.getFirstname();
+            comment.user = user;
+        } else {
+            comment.comment_type = 3;
+        }
+
+        comment.meal_id = String.valueOf(currentWeightView.activity_id);
+        comment.message = comment_message;
+        comment.timestamp = new Date();
+        comment.status = Comment.STATUS.ONGOING_COMMENTUPLOAD;
+
+        currentWeightView.comments.add(comment);
+        hideKeyboard();
+
+        if (isCommunityTabSelected) {
+            commentlist.updateData(AppUtil.getCommunityComments(currentWeightView.comments));
+        } else {
+            commentlist.updateData(AppUtil.getCoachComments(currentWeightView.comments));
+        }
+
+        nonBlockingUI(comment);
+    }
     public void coachCommentsSelected(View view) {
         isCommunityTabSelected = false;
 
@@ -275,7 +328,35 @@ public class WeightViewActivity extends HAPIActivity implements WeightDataListen
             }
         });
     }
+    public void nonBlockingUI(final Comment comment) {
+        this.runOnUiThread(new Runnable() {
 
+            @Override
+            public void run() {
+                submitComment(comment);
+            }
+        });
+    }
+
+    private void hideKeyboard() {
+        // hide virtual keyboard
+        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(comment_et.getWindowToken(), 0);
+    }
+    private void submitComment(Comment currentcomment) {
+        System.out.println("submitComment: " + currentcomment);
+        if (addHapiMomentCommentController == null) {
+            addHapiMomentCommentController = new AddHapiMomentCommentController(this, this, this);
+        }
+        String username = ApplicationEx.getInstance().userProfile.getRegID();
+        if (username != null) {
+            if (isCommunityTabSelected) {
+                addHapiMomentCommentController.uploadMealCommunityComment(String.valueOf(currentWeightView.activity_id), currentcomment, username);
+            } else {
+                addHapiMomentCommentController.uploadMealComment(String.valueOf(currentWeightView.activity_id), currentcomment, username);
+            }
+        }
+    }
     private void postHAPI4UtoAPI() {
         if (addHapiMomentCommentController == null) {
             addHapiMomentCommentController = new AddHapiMomentCommentController(this, this, this);
