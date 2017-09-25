@@ -19,6 +19,7 @@ import com.anxa.hapilabs.models.MessageObj;
 import com.anxa.hapilabs.models.Steps;
 import com.anxa.hapilabs.models.TimelineActivity;
 import com.anxa.hapilabs.models.Water;
+import com.anxa.hapilabs.models.Weight;
 import com.anxa.hapilabs.models.Workout;
 
 import java.sql.Time;
@@ -159,7 +160,29 @@ public class GetTimelineActivityImplementer {
 
                         getTimelineActivityListener.getTimelineActivitySuccess(timelineActivity);
 
-                    } else {
+                    }else if (entryType.equalsIgnoreCase("weight")) {
+                        TimelineActivity timelineActivity = new TimelineActivity();
+                        Weight currentWeightView = null;
+                        //STEP 1: stop progress here
+                        if (jsonTimelineActivityResponseHandler.getResponseObj() != null) {
+
+                        {
+                            timelineActivity = (TimelineActivity) jsonTimelineActivityResponseHandler.getResponseObj();
+                            currentWeightView = timelineActivity.weight;
+                            currentWeightView.comments = timelineActivity.comments;
+                            currentWeightView.activity_id = timelineActivity.activity_id;
+
+                            currentWeightView.hapi4Us = timelineActivity.hapi4Us;
+
+                                if (currentWeightView!=null) {
+                                    ApplicationEx.getInstance().currentWeightView = currentWeightView;
+                                }
+
+                        }
+
+                        getTimelineActivityListener.getTimelineActivitySuccess(timelineActivity);
+
+                    }} else {
                         TimelineActivity timelineActivity = new TimelineActivity();
                         HapiMoment hapiMomentObj = null;
 

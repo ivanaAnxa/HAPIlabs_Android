@@ -291,7 +291,7 @@ public class NotificationActivity extends HAPIActivity implements GetNotificatio
                     entryType = "hapimoment";
                 }
 
-                if (item.is_community && entryType != "weight" && entryType != "steps") {
+                if (item.is_community) {
                     //launch separate page
                     getTimelineActivityController.getTimelineActivity(ApplicationEx.getInstance().userProfile.getRegID(), item.ref_id, entryType);
 
@@ -872,6 +872,14 @@ public class NotificationActivity extends HAPIActivity implements GetNotificatio
             ApplicationEx.getInstance().currentWorkoutView = response.workout;
             ApplicationEx.getInstance().currentCommunityUser = response.commentUser;
             proceedToExercisePage(true, !response.commentUser.user_id.equalsIgnoreCase(ApplicationEx.getInstance().userProfile.getRegID()));
+        }else if (entryType.equalsIgnoreCase("weight")) {
+            ApplicationEx.getInstance().currentWeightView = response.weight;
+            ApplicationEx.getInstance().currentCommunityUser = response.commentUser;
+            proceedToWeightViewPage(true, !response.commentUser.user_id.equalsIgnoreCase(ApplicationEx.getInstance().userProfile.getRegID()));
+        }else if (entryType.equalsIgnoreCase("steps")) {
+            ApplicationEx.getInstance().currentStepsView = response.steps;
+            ApplicationEx.getInstance().currentCommunityUser = response.commentUser;
+            proceedToStepsViewPage(true, !response.commentUser.user_id.equalsIgnoreCase(ApplicationEx.getInstance().userProfile.getRegID()));
         }
 
     }
@@ -892,7 +900,7 @@ public class NotificationActivity extends HAPIActivity implements GetNotificatio
     @Override
     public void getWeightDataSuccess(Weight response) {
         ApplicationEx.getInstance().currentWeightView = response;
-        proceedToWeightViewPage(true, false);
+        //proceedToWeightViewPage(true, !response.c.user_id.equalsIgnoreCase(ApplicationEx.getInstance().userProfile.getRegID()));
     }
 
     @Override

@@ -58,7 +58,7 @@
                 android:id="@+id/weightViewTop"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/exercise_community_header"
+                android:layout_below="@+id/weight_community_header"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp">
 
@@ -89,12 +89,24 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_below="@id/weightViewTop">
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
                 <ImageView
                     android:id="@+id/weight_DefaultImage"
                     android:layout_width="fill_parent"
                     android:layout_height="150dp"
-                    android:layout_below="@+id/weightViewTop"
                     android:background="@drawable/weight_inner" />
+                    <TextView
+                        android:id="@+id/weight_deviceText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/text_white"
+                        android:text=""/>
+</RelativeLayout>
 
                 <LinearLayout
                     android:id="@+id/weight_Details1"
@@ -118,6 +130,7 @@
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
                         android:paddingTop="5dp">
+
 
                         <ImageView
                             android:id="@+id/weight_WeightIcon"
