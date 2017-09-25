@@ -182,7 +182,31 @@ public class GetTimelineActivityImplementer {
 
                         getTimelineActivityListener.getTimelineActivitySuccess(timelineActivity);
 
-                    }} else {
+                    }}
+                    else if (entryType.equalsIgnoreCase("steps")) {
+                        TimelineActivity timelineActivity = new TimelineActivity();
+                        Steps currentStepsView = null;
+                        //STEP 1: stop progress here
+                        if (jsonTimelineActivityResponseHandler.getResponseObj() != null) {
+
+                            {
+                                timelineActivity = (TimelineActivity) jsonTimelineActivityResponseHandler.getResponseObj();
+                                currentStepsView = timelineActivity.steps;
+                                currentStepsView.comments = timelineActivity.comments;
+                                currentStepsView.activity_id = timelineActivity.activity_id;
+
+                                currentStepsView.hapi4Us = timelineActivity.hapi4Us;
+
+                                if (currentStepsView!=null) {
+                                    ApplicationEx.getInstance().currentStepsView = currentStepsView;
+                                }
+
+                            }
+
+                            getTimelineActivityListener.getTimelineActivitySuccess(timelineActivity);
+
+                        }}
+                    else {
                         TimelineActivity timelineActivity = new TimelineActivity();
                         HapiMoment hapiMomentObj = null;
 
