@@ -382,7 +382,7 @@ public class NotificationActivity extends HAPIActivity implements GetNotificatio
                         }
                     }else if (item.ref_type.equalsIgnoreCase("ActivityId") && item.coachMessage.toLowerCase().contains("weight")) {
 
-                            getWeight(item.ref_id);
+                        getWeight(item.ref_id);
 
                     }else if (item.ref_type.equalsIgnoreCase("ActivityId") && item.coachMessage.toLowerCase().contains("steps")) {
 

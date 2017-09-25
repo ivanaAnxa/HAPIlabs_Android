@@ -906,7 +906,7 @@ public class JsonUtil {
 
         stepsObj.activity_id = json.optString("activity_id");
         stepsObj.device_name = json.optString("device_name");
-        stepsObj.steps_duration = json.optDouble("device_name");
+        stepsObj.steps_duration = json.optDouble("duration");
         stepsObj.steps_distance = json.optDouble("distance");
         stepsObj.steps_count = json.optString("steps");
         stepsObj.steps_calories = json.optDouble("calories");

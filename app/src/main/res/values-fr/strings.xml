@@ -986,6 +986,7 @@
     <string name="EXERCISEVIEW_STEPS">Nombre de pas</string>
     <string name="EXERCISEVIEW_DISTANCE">Distance (Km)</string>
     <string name="EXERCISEVIEW_DURATION">Durée</string>
+    <string name="STEPSVIEW_CALORIES">Calories brûlées</string>
 
     <string name="WEIGHT_BODYFAT">Masse grasse</string>
     <string name="WEIGHT_LEANMASS">Masse maigre</string>
