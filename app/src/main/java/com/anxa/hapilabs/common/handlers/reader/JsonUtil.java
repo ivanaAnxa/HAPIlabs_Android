@@ -923,7 +923,27 @@ public class JsonUtil {
 
         return stepsObj;
     }
+    public static Weight getWeightTimelineActivity(JSONObject json) {
+        Weight weightObj = new Weight();
 
+        weightObj.activity_id = json.optString("activity_id");
+        weightObj.device_name = json.optString("device_name");
+        weightObj.currentWeightGrams = json.optDouble("weight");
+        weightObj.BodyFatRatio = json.optDouble("body_fat_ratio", 0);
+        weightObj.BodyWaterRatio = json.optDouble("body_water_ratio", 0);
+        weightObj.BoneWeightGrams = json.optDouble("bone_weight_grams", 0);
+        weightObj.LeanMassRatio = json.optDouble("lean_mass_ratio", 0);
+        weightObj.BMI = json.optDouble("bmi", 0);
+
+        Long timestamp_utc = json.optLong("activity_date");
+
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTimeInMillis(timestamp_utc * 1000);
+        calendar.setTimeZone(TimeZone.getTimeZone("UTC"));
+        weightObj.start_datetime = AppUtil.getOffsetOnSync(calendar.getTime());
+
+        return weightObj;
+    }
     public static Photo getPhoto(JSONObject json, String tempID) {
 
         Photo photo = new Photo();

@@ -150,7 +150,16 @@ public class JsonTimelineActivityResponseHandler extends JsonDefaultResponseHand
                         }
                     }
                 }
+                if (timeline_activity_main.has("weight")) {
+                    System.out.println("JsonTimelineActivityResponseHandler steps: " + timeline_activity_main.get("weight"));
 
+                    if (timeline_activity_main.get("weight").equals(null) || (timeline_activity_main.get("weight").toString().equalsIgnoreCase("weight"))) {
+                    } else {
+                        if (JsonUtil.getStepsTimelineActivity(timeline_activity_main.getJSONObject("weight")) != null) {
+                            timelineActivity.weight = JsonUtil.getWeightTimelineActivity(timeline_activity_main.getJSONObject("weight"));
+                        }
+                    }
+                }
 
                 if (timeline_activity_main.has("user")) {
                     JSONObject commentUser = timeline_activity_main.optJSONObject("user");

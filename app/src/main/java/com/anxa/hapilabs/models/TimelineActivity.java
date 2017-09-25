@@ -20,6 +20,7 @@ public class TimelineActivity {
     public Water water;
     public Workout workout;
     public Steps steps;
+    public Weight weight;
 
     public List<Comment> comments;
     public List<HAPI4U> hapi4Us;
