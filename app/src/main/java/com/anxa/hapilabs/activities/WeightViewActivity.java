@@ -66,6 +66,7 @@ public class WeightViewActivity extends HAPIActivity implements WeightDataListen
     private RelativeLayout communityComments_rl;
     private RelativeLayout coachComments_rl;
     private RelativeLayout community_header;
+    private LinearLayout weightView_checked;
     private TextView hapi4u_post_tv;
     private TextView hapi4u_numCount_tv;
     private ImageView hapi4u_post_iv;
@@ -121,7 +122,7 @@ public class WeightViewActivity extends HAPIActivity implements WeightDataListen
         bmiText  = (TextView)findViewById(R.id.weight_BMIText);
         weightDeviceText = (TextView)findViewById(R.id.weight_deviceText);
         comment_et = (EditText) findViewById(R.id.comment_et);
-
+        weightView_checked = (LinearLayout) findViewById(R.id.weightView_checked);
         submit_tv = (TextView) findViewById(R.id.btnSubmit);
         submit_tv.setOnClickListener(this);
 
@@ -194,7 +195,11 @@ public class WeightViewActivity extends HAPIActivity implements WeightDataListen
         updateHAPI4ULayout();
     }
     private void refreshUI() {
-
+        if (currentWeightView.isChecked) {
+            weightView_checked.setVisibility(View.VISIBLE);
+        } else {
+            weightView_checked.setVisibility(View.GONE);
+        }
         weightViewTopDate.setText(AppUtil.getEditWeightDateFormat(currentWeightView.start_datetime));
         weightViewTopTime.setText(AppUtil.getMealTime(currentWeightView.start_datetime));
         weightText.setText(String.format("%.2f", currentWeightView.currentWeightGrams / 1000) + "kg" );
@@ -210,7 +215,10 @@ public class WeightViewActivity extends HAPIActivity implements WeightDataListen
 
             commentlist.updateData(AppUtil.getCommunityComments(currentWeightView.comments));
         } else {
-            commentlist.updateData(AppUtil.getCoachComments(currentWeightView.comments));
+            coachCommentsSelected();
+            getWeight(String.valueOf(currentWeightView.activity_id));
+
+
         }
     }
 
@@ -309,6 +317,20 @@ public class WeightViewActivity extends HAPIActivity implements WeightDataListen
         ((TextView) coachComments_rl.findViewById(R.id.weight_coach_comments_btn)).setTextColor(Color.BLACK);
         ((TextView) communityComments_rl.findViewById(R.id.weight_community_comments_btn)).setTextColor(Color.LTGRAY);
     }
+    public void coachCommentsSelected() {
+        isCommunityTabSelected = false;
+        if(currentWeightView.comments != null){
+            commentlist.updateData(AppUtil.getCoachComments(currentWeightView.comments));
+        }
+
+
+        coachComments_rl.setSelected(true);
+        communityComments_rl.setSelected(false);
+        hapi4u_ll.setVisibility(View.GONE);
+
+        ((TextView) coachComments_rl.findViewById(R.id.weight_coach_comments_btn)).setTextColor(Color.BLACK);
+        ((TextView) communityComments_rl.findViewById(R.id.weight_community_comments_btn)).setTextColor(Color.LTGRAY);
+    }
     private void updateCommunityHeader() {
 
         community_header.setVisibility(View.VISIBLE);
@@ -345,7 +367,18 @@ public class WeightViewActivity extends HAPIActivity implements WeightDataListen
 
     @Override
     public void getWeightDataSuccess(Weight response) {
+        currentWeightView = response;
+//        if(isCommunityTabSelected){
+//            updateHAPI4ULayout();
+//        }
 
+        this.runOnUiThread(new Runnable() {
+
+            @Override
+            public void run() {
+                refreshUI();
+            }
+        });
     }
 
     @Override

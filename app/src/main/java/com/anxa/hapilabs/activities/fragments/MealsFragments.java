@@ -11,6 +11,7 @@ import java.util.Hashtable;
 import java.util.List;
 import java.util.Locale;
 
+import com.anxa.hapilabs.models.Weight;
 import com.hapilabs.R;
 import com.anxa.hapilabs.activities.CoachSelectionActivity;
 import com.anxa.hapilabs.activities.LoginPageActivity;
@@ -81,6 +82,7 @@ public class MealsFragments extends Fragment implements OnClickListener,
     private List<Meal> selectedDailyList = new ArrayList<>();
     private List<HapiMoment> selectedDailyHAPImomenList = new ArrayList<>();
     private List<Workout> selectedDailyWorkoutList = new ArrayList<>();
+    private List<Weight> selectedDailyWeightList  = new ArrayList<>();
     private MealListFragment mealList;
     private int selectedDayIndex = 0;
 
@@ -90,6 +92,7 @@ public class MealsFragments extends Fragment implements OnClickListener,
     private Hashtable<String, List<Meal>> weeklyMeal = new Hashtable<>();
     private Hashtable<String, List<HapiMoment>> weeklyHapiMoments = new Hashtable<>();
     private Hashtable<String, List<Workout>> weeklyWorkout = new Hashtable<>();
+    private Hashtable<String, List<Weight>> weeklyWeight = new Hashtable<>();
 
     private int currentDate_day = 0;
 
@@ -230,6 +233,7 @@ public class MealsFragments extends Fragment implements OnClickListener,
 
         sort(selectedDailyHAPImomenList);
         selectedDailyWorkoutList = weeklyWorkout.get(AppUtil.getMonthonDate(ApplicationEx.getInstance().currentSelectedDate) + "_" + AppUtil.getDayonDate(ApplicationEx.getInstance().currentSelectedDate));
+        selectedDailyWeightList = weeklyWeight.get(AppUtil.getMonthonDate(ApplicationEx.getInstance().currentSelectedDate) + "_" + AppUtil.getDayonDate(ApplicationEx.getInstance().currentSelectedDate));
     }
 
     public void sort(final List<HapiMoment> hapiObj) {
@@ -287,12 +291,15 @@ public class MealsFragments extends Fragment implements OnClickListener,
                 ApplicationEx.getInstance().tempList, dayOfWeek + 1);
         weeklyWorkout = AppUtil.getWorkoutByDateRange(toDateUI, fromDateUI,
                 ApplicationEx.getInstance().workoutList, dayOfWeek + 1);
-
+        weeklyWeight = AppUtil.getWeightByDateRange(toDateUI, fromDateUI,
+                ApplicationEx.getInstance().tempWeightList, dayOfWeek + 1);
         mealCountPerWeek = AppUtil.getMealCountPerWeek(weeklyMeal);
 
         commentCountPerWeek = AppUtil.getCommentCountPerWeek(weeklyMeal);
         weeklyHapiMoments = AppUtil.getHapimomentsByDateRange(toDateUI, fromDateUI,
                 ApplicationEx.getInstance().tempHapimomentList, dayOfWeek + 1);
+        weeklyWeight= AppUtil.getWeightByDateRange(toDateUI, fromDateUI,
+                ApplicationEx.getInstance().tempWeightList, dayOfWeek + 1);
 //        weeklyHapiMoments = AppUtil.getHapimomentsByDateRange(toDate, fromDate,
 //                ApplicationEx.getInstance().tempHapimomentList, dayOfWeek + 1);
     }
@@ -440,7 +447,9 @@ public class MealsFragments extends Fragment implements OnClickListener,
 
         /*Workout*/
         selectedDailyWorkoutList = weeklyWorkout.get(currentDate_month + "_" + currentDate_day);
+        selectedDailyWeightList = weeklyWeight.get(currentDate_month + "_" + currentDate_day);
         mealList.updateExerciseData(selectedDailyWorkoutList);
+        mealList.updateWeightData(selectedDailyWeightList);
     }
 
     private void updateProgress() {
@@ -452,6 +461,7 @@ public class MealsFragments extends Fragment implements OnClickListener,
         if (mealList != null && selectedDailyList != null) {
             mealList.updateData(selectedDailyList, selectedDailyHAPImomenList);
             mealList.updateExerciseData(selectedDailyWorkoutList);
+            mealList.updateWeightData(selectedDailyWeightList);
         } else if (selectedDailyWorkoutList != null) {
 //            mealList.updateExerciseData(selectedDailyWorkoutList);
 //            mealList.updateExerciseData(new ArrayList<Workout>(selectedDailyWorkoutList));
@@ -484,6 +494,10 @@ public class MealsFragments extends Fragment implements OnClickListener,
                 if (selectedDailyWorkoutList != null) {
                     mealList.updateExerciseData(selectedDailyWorkoutList);
                 }
+                if (selectedDailyWeightList != null) {
+                    mealList.updateWeightData(selectedDailyWeightList);
+                }
+
 
             } else if (intent.getAction() == context.getResources().getString(R.string.meallist_photo_download_update)) {// update timeline only
                 // if this is the
@@ -492,6 +506,7 @@ public class MealsFragments extends Fragment implements OnClickListener,
 
                 mealList.updateData(selectedDailyList, selectedDailyHAPImomenList);
                 mealList.updateExerciseData(selectedDailyWorkoutList);
+                mealList.updateWeightData(selectedDailyWeightList);
 
             } else if (intent.getAction() == context.getResources().getString(R.string.meallist_photo_download)) {// update timeline only
                 // if this is the
@@ -517,6 +532,7 @@ public class MealsFragments extends Fragment implements OnClickListener,
 
                 mealList.updateData(selectedDailyList, selectedDailyHAPImomenList);
                 mealList.updateExerciseData(selectedDailyWorkoutList);
+                mealList.updateWeightData(selectedDailyWeightList);
             } else if (intent.getAction() == context.getResources().getString(R.string.meallist_deletehapimoment_refresh)
                     || intent.getAction() == context.getResources().getString(R.string.meallist_addhapimoment_refresh)) {// update timeline only if
                 // this is the content
@@ -525,6 +541,7 @@ public class MealsFragments extends Fragment implements OnClickListener,
                 updateTodaysMeal();
                 mealList.updateData(selectedDailyList, selectedDailyHAPImomenList);
                 mealList.updateExerciseData(selectedDailyWorkoutList);
+                mealList.updateWeightData(selectedDailyWeightList);
 
             } else if (intent.getAction() == context.getResources().getString(R.string.workoutListUpdate)) { //update workout list
                 System.out.println("broadcast: workoutListUpdate");
@@ -539,6 +556,7 @@ public class MealsFragments extends Fragment implements OnClickListener,
                         AppUtil.getWeekIndexOfDate(ApplicationEx.getInstance().currentSelectedDate));
                 mealList.updateData(selectedDailyList);
                 mealList.updateExerciseData(selectedDailyWorkoutList);
+                mealList.updateWeightData(selectedDailyWeightList);
             } else if (intent.getAction() == context.getResources().getString(R.string.workoutListDelete)) { //update workout list
                 System.out.println("broadcast: workoutListDelete");
                 updateWeeklyMeal();
@@ -564,6 +582,7 @@ public class MealsFragments extends Fragment implements OnClickListener,
 
                 mealList.updateData(selectedDailyList, selectedDailyHAPImomenList);
                 mealList.updateExerciseData(selectedDailyWorkoutList);
+                mealList.updateWeightData(selectedDailyWeightList);
 
             } else if (intent.getAction() == context.getResources().getString(R.string.meallist_get_new_week)) {// update week meal count only, not get_sync
                 // this is the content
@@ -574,6 +593,7 @@ public class MealsFragments extends Fragment implements OnClickListener,
                 dateC.initDate(ApplicationEx.getInstance().currentSelectedDate, mealCountPerWeek, commentCountPerWeek, dateTable, dayOfWeek);
                 mealList.updateData(selectedDailyList, selectedDailyHAPImomenList);
                 mealList.updateExerciseData(selectedDailyWorkoutList);
+                mealList.updateWeightData(selectedDailyWeightList);
             }
         }
     };

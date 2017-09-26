@@ -24,4 +24,5 @@ public class Weight {
 
     public List<Comment> comments;
     public List<HAPI4U> hapi4Us;
+    public boolean isChecked;
 }

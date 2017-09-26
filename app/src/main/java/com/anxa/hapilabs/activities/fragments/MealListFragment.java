@@ -26,6 +26,10 @@ import android.widget.ScrollView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import com.anxa.hapilabs.activities.WeightViewActivity;
+import com.anxa.hapilabs.models.Weight;
+import com.anxa.hapilabs.ui.adapters.WeightListAdapter;
+import com.anxa.hapilabs.ui.adapters.WeightLogsListAdapter;
 import com.hapilabs.R;
 import com.anxa.hapilabs.activities.ExerciseActivity;
 import com.anxa.hapilabs.activities.ExerciseViewActivity;
@@ -75,7 +79,7 @@ public class MealListFragment extends ScrollView implements DateChangeListener, 
     List<HapiMoment> hapimomentItems;
     List<Workout> workoutItems;
     List<Steps> stepsItems;
-
+    List<Weight> weightItems;
     Water waterEntry;
 
     LinearLayout llAMSnack;
@@ -88,11 +92,14 @@ public class MealListFragment extends ScrollView implements DateChangeListener, 
     LinearLayout llExerciseWithData;
     LinearLayout llSteps;
     LinearLayout llStepsGFitEmpty;
+    LinearLayout llWeight;
 
     private ListView workoutListView;
     private ListView stepsListView;
+    private ListView weightListView;
     private LinearLayout isCheckedExercise;
     private LinearLayout isCheckedWater;
+    private LinearLayout isCheckedWeight;
     private TextView exerciseChecked;
     LinearLayout llHapimoment;
 
@@ -195,6 +202,7 @@ public class MealListFragment extends ScrollView implements DateChangeListener, 
 
         workoutListView = (ListView) llExerciseWithData.findViewById(R.id.exerciseListView);
         isCheckedExercise = (LinearLayout) llExerciseWithData.findViewById(R.id.exerciseView_checked);
+
         exerciseChecked = (TextView) llExerciseWithData.findViewById(R.id.checked);
         exerciseChecked.setText(context.getString(R.string.COACH_CHECKED));
 
@@ -209,8 +217,10 @@ public class MealListFragment extends ScrollView implements DateChangeListener, 
         });
 
         llSteps = (LinearLayout) row.findViewById(R.id.mealitem_stepsdata);
+        llWeight = (LinearLayout) row.findViewById(R.id.mealitem_weight);
         stepsListView = (ListView) llSteps.findViewById(R.id.stepsListView);
-
+        weightListView = (ListView) llWeight.findViewById(R.id.weightListView);
+        isCheckedWeight = (LinearLayout) llWeight.findViewById(R.id.weightView_checked);
 
         llStepsGFitEmpty = (LinearLayout) row.findViewById(R.id.mealitem_stepsdata_gfit_empty);
 
@@ -611,6 +621,72 @@ public class MealListFragment extends ScrollView implements DateChangeListener, 
 
         return false;
     }
+    public static boolean isCheckedWeight(List<Weight> weightItemsList) {
+        for (Weight weightObj : weightItemsList) {
+            if (weightObj.isChecked) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+    public void refreshWeightUI()
+    {
+        if (weightItems.size() > 0 && weightItems != null) {
+            llWeight.setVisibility(LinearLayout.VISIBLE);
+
+            sortWeight(weightItems);
+
+            List<Weight> weightList = new ArrayList<Weight>();
+            SimpleDateFormat fmt = new SimpleDateFormat("yyyyMMdd");
+            if(weightItems.size() > 0) {
+                //today
+                if (fmt.format(ApplicationEx.getInstance().currentSelectedDate).equals(fmt.format(new Date()))) {
+                    weightList.add(weightItems.get(weightList.size() - 1));
+                }else
+                {
+                    weightList.add(weightItems.get(0));
+                }
+
+            }
+            //sort(weightItems);
+            WeightListAdapter weightAdapter = new WeightListAdapter(context, weightList);
+            weightAdapter.notifyDataSetChanged();
+
+            weightListView.invalidateViews();
+            weightListView.refreshDrawableState();
+
+            weightListView.setAdapter(weightAdapter);
+
+            setListViewHeightBasedOnChildren(weightListView);
+
+            if (isCheckedWeight(weightItems)) {
+                isCheckedWeight.setVisibility(LinearLayout.VISIBLE);
+            } else {
+                isCheckedWeight.setVisibility(LinearLayout.GONE);
+            }
+
+            weightListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position,
+                                        long id) {
+                    Weight weight = (Weight) weightListView.getAdapter().getItem(position);
+
+
+                        ApplicationEx.getInstance().currentWeightView = weight;
+
+                        Intent mainIntent = new Intent(context, WeightViewActivity.class);
+                        mainIntent.putExtra("FROM_NOTIF", false);
+                        mainIntent.putExtra("FROM_NOTIF_COMMUNITY", false);
+                        mainIntent.putExtra("FROM_NOTIF_3RD_PARTY", false);
+                        context.startActivity(mainIntent);
+
+                }
+            });
+        } else {
+            llWeight.setVisibility(LinearLayout.GONE);
+        }
+    }
 
     public void refreshExerciseUI() {
         if (workoutItems != null && workoutItems.size() > 0) {
@@ -895,6 +971,16 @@ public class MealListFragment extends ScrollView implements DateChangeListener, 
         }
     }
 
+    public void sortWeight(final List<Weight> weightObj) {
+        if (weightObj != null && weightObj.size() > 0) {
+            Collections.sort(weightObj, new Comparator<Weight>() {
+                public int compare(Weight weight1, Weight weight2) {
+                    return ((Weight) weight1).start_datetime.compareTo(((Weight) weight2).start_datetime);
+                }
+            });
+        }
+    }
+
     /****
      * Method for Setting the Height of the ListView dynamically.
      * *** Hack to fix the issue of not showing all the items of the ListView
@@ -1009,6 +1095,12 @@ public class MealListFragment extends ScrollView implements DateChangeListener, 
         // TODO Auto-generated method stub
         this.workoutItems = workoutItems;
         refreshExerciseUI();
+    }
+
+    public void updateWeightData(List<Weight> weightItems)
+    {
+        this.weightItems = weightItems;
+        refreshWeightUI();
     }
 
     private void updateWaterThumb(int waterProgress) {
