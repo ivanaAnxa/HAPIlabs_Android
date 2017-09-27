@@ -120,7 +120,7 @@
                 android:gravity="center_vertical"
                 android:paddingBottom="5dp"
                 android:paddingTop="5dp"
-                android:visibility="gone">
+                android:visibility="visible">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -128,7 +128,7 @@
                     android:src="@drawable/meal_approved_icon" />
 
                 <TextView
-                    android:id="@+id/checked"
+                    android:id="@+id/step_checked"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="5dp"

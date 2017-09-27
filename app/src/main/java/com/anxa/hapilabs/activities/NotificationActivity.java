@@ -290,7 +290,6 @@ public class NotificationActivity extends HAPIActivity implements GetNotificatio
                 } else {
                     entryType = "hapimoment";
                 }
-
                 if (item.is_community) {
                     //launch separate page
                     getTimelineActivityController.getTimelineActivity(ApplicationEx.getInstance().userProfile.getRegID(), item.ref_id, entryType);

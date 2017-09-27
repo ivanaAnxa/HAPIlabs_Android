@@ -9,17 +9,17 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
-import android.view.Menu;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.PopupMenu;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.anxa.hapilabs.common.connection.listener.GetTimelineActivityListener;
+import com.anxa.hapilabs.common.connection.listener.MealAddCommentListener;
 import com.anxa.hapilabs.common.connection.listener.StepsDataListener;
 import com.anxa.hapilabs.common.util.AppUtil;
 import com.anxa.hapilabs.common.util.ApplicationEx;
@@ -32,20 +32,20 @@ import com.anxa.hapilabs.models.CommentUser;
 import com.anxa.hapilabs.models.HAPI4U;
 import com.anxa.hapilabs.models.MessageObj;
 import com.anxa.hapilabs.models.Steps;
+import com.anxa.hapilabs.models.TimelineActivity;
 import com.anxa.hapilabs.ui.CommentListLayout;
 import com.anxa.hapilabs.ui.RoundedImageView;
 import com.hapilabs.R;
 
 import java.io.InputStream;
-import java.io.SyncFailedException;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by angelaanxa on 9/20/2017.
  */
 
-public class StepsViewActivity extends HAPIActivity implements StepsDataListener, View.OnClickListener
-{
+public class StepsViewActivity extends HAPIActivity implements StepsDataListener, View.OnClickListener, GetTimelineActivityListener, MealAddCommentListener {
     final Context context = this;
 
     GetStepsDataController getStepsDataController;
@@ -69,8 +69,13 @@ public class StepsViewActivity extends HAPIActivity implements StepsDataListener
     private Steps currentStepsView;
 
     private CommentListLayout commentlist;
-    private RelativeLayout communityComments_rl;
-    private RelativeLayout coachComments_rl;
+    private RelativeLayout step_communityComments_rl;
+    private RelativeLayout step_coachComments_rl;
+
+    private RelativeLayout community_header;
+
+    private LinearLayout step_isChecked_ll;
+    private TextView step_coachChecked;
 
     private RelativeLayout hapi4u_rl;
     private TextView hapi4u_numCount_tv;
@@ -93,6 +98,7 @@ public class StepsViewActivity extends HAPIActivity implements StepsDataListener
         fromNotifCommunity = getIntent().getBooleanExtra("FROM_NOTIF_COMMUNITY", false);
         from3rdPartyCommunity = getIntent().getBooleanExtra("FROM_NOTIF_3RD_PARTY", false);
 
+
         initUI();
 
         updateHeader(17, getResources().getString(R.string.STEPS_BUTTON), this);
@@ -104,25 +110,26 @@ public class StepsViewActivity extends HAPIActivity implements StepsDataListener
         }*/
 
         currentStepsView = ApplicationEx.getInstance().currentStepsView;
+
         if (fromNotifCommunity) {
-           // community_header.setVisibility(View.VISIBLE);
+            isCommunityTabSelected = true;
             if (from3rdPartyCommunity) {
-                //updateCommunityHeader();
+                updateCommunityHeader();
             } else {
                 getSteps(String.valueOf(currentStepsView.activity_id));
-
-                //community_header.setVisibility(View.GONE);
+                community_header.setVisibility(View.GONE);
             }
             communityCommentsSelected();
 
         } else {
-           // community_header.setVisibility(View.GONE);
             getSteps(String.valueOf(currentStepsView.activity_id));
-
-
+            community_header.setVisibility(View.GONE);
+            coachCommentsSelected();
         }
 
         if (currentStepsView != null) {
+            if (currentStepsView.isChecked == null)
+                currentStepsView.isChecked = false;
             refreshUI();
         }
     }
@@ -140,9 +147,11 @@ public class StepsViewActivity extends HAPIActivity implements StepsDataListener
         submit_tv.setOnClickListener(this);
         comment_et = (EditText) findViewById(R.id.comment_et);
 
+        community_header = (RelativeLayout) findViewById(R.id.step_community_header);
+
         commentlist = (CommentListLayout) findViewById(R.id.step_commentlist);
-        communityComments_rl = (RelativeLayout) findViewById(R.id.step_community_comments_container);
-        coachComments_rl = (RelativeLayout) findViewById(R.id.step_coach_comments_container);
+        step_communityComments_rl = (RelativeLayout) findViewById(R.id.step_community_comments_container);
+        step_coachComments_rl = (RelativeLayout) findViewById(R.id.step_coach_comments_container);
 
         hapi4u_rl = (RelativeLayout) findViewById(R.id.step_hapi4u_ll);
         hapi4u_numCount_tv = (TextView) hapi4u_rl.findViewById(R.id.step_hapi4u_num_label);
@@ -152,7 +161,9 @@ public class StepsViewActivity extends HAPIActivity implements StepsDataListener
 
         stepViewProgressBar = (ProgressBar)findViewById(R.id.step_progressBar);
 
-
+        step_isChecked_ll = (LinearLayout) findViewById(R.id.stepView_checked);
+        step_coachChecked = (TextView) findViewById(R.id.step_checked);
+        step_coachChecked.setText(getString(R.string.COACH_CHECKED));
     }
 
 
@@ -168,6 +179,12 @@ public class StepsViewActivity extends HAPIActivity implements StepsDataListener
         tv_stepDuration.setText(String.format("%d:%02d:00", hours, minutes));
 
         stepViewProgressBar.setVisibility(View.GONE);
+        if (currentStepsView.isChecked)
+            step_isChecked_ll.setVisibility (View.VISIBLE);
+        else {
+            step_isChecked_ll.setVisibility (View.GONE);
+            coachCommentsSelected();
+        }
     }
 
 
@@ -245,7 +262,7 @@ public class StepsViewActivity extends HAPIActivity implements StepsDataListener
     private void submitComment(Comment currentcomment) {
         System.out.println("submitComment: " + currentcomment);
         if (addHapiMomentCommentController == null) {
-            //addHapiMomentCommentController = new AddHapiMomentCommentController(this, this, this);
+            addHapiMomentCommentController = new AddHapiMomentCommentController(this, this, this);
         }
         String username = ApplicationEx.getInstance().userProfile.getRegID();
         if (username != null) {
@@ -268,15 +285,14 @@ public class StepsViewActivity extends HAPIActivity implements StepsDataListener
 
     public void communityCommentsSelected() {
         isCommunityTabSelected = true;
-
         commentlist.updateData(AppUtil.getCommunityComments(currentStepsView.comments));
 
-        communityComments_rl.setSelected(true);
-        coachComments_rl.setSelected(false);
-
+        step_communityComments_rl.setSelected(true);
+        step_coachComments_rl.setSelected(false);
         hapi4u_rl.setVisibility(View.VISIBLE);
-        ((TextView) coachComments_rl.findViewById(R.id.step_coach_comments_btn)).setTextColor(Color.LTGRAY);
-        ((TextView) communityComments_rl.findViewById(R.id.step_community_comments_btn)).setTextColor(Color.BLACK);
+
+        ((TextView) step_coachComments_rl.findViewById(R.id.step_coach_comments_btn)).setTextColor(Color.LTGRAY);
+        ((TextView) step_communityComments_rl.findViewById(R.id.step_community_comments_btn)).setTextColor(Color.BLACK);
 
         updateHAPI4ULayout();
     }
@@ -285,12 +301,12 @@ public class StepsViewActivity extends HAPIActivity implements StepsDataListener
         isCommunityTabSelected = true;
         commentlist.updateData(AppUtil.getCommunityComments(currentStepsView.comments));
 
-        communityComments_rl.setSelected(true);
-        coachComments_rl.setSelected(false);
-
+        step_communityComments_rl.setSelected(true);
+        step_coachComments_rl.setSelected(false);
         hapi4u_rl.setVisibility(View.VISIBLE);
-        ((TextView) coachComments_rl.findViewById(R.id.step_coach_comments_btn)).setTextColor(Color.LTGRAY);
-        ((TextView) communityComments_rl.findViewById(R.id.step_community_comments_btn)).setTextColor(Color.BLACK);
+
+        ((TextView) step_coachComments_rl.findViewById(R.id.step_coach_comments_btn)).setTextColor(Color.LTGRAY);
+        ((TextView) step_communityComments_rl.findViewById(R.id.step_community_comments_btn)).setTextColor(Color.BLACK);
 
         updateHAPI4ULayout();
     }
@@ -300,13 +316,29 @@ public class StepsViewActivity extends HAPIActivity implements StepsDataListener
 
         commentlist.updateData(AppUtil.getCoachComments(currentStepsView.comments));
 
-        coachComments_rl.setSelected(true);
-        communityComments_rl.setSelected(false);
+        step_coachComments_rl.setSelected(true);
+        step_communityComments_rl.setSelected(false);
         hapi4u_rl.setVisibility(View.GONE);
 
-        ((TextView) coachComments_rl.findViewById(R.id.step_coach_comments_btn)).setTextColor(Color.BLACK);
-        ((TextView) communityComments_rl.findViewById(R.id.step_community_comments_btn)).setTextColor(Color.LTGRAY);
+        ((TextView) step_coachComments_rl.findViewById(R.id.step_coach_comments_btn)).setTextColor(Color.BLACK);
+        ((TextView) step_communityComments_rl.findViewById(R.id.step_community_comments_btn)).setTextColor(Color.LTGRAY);
     }
+
+    public void coachCommentsSelected() {
+        isCommunityTabSelected = false;
+
+        if (currentStepsView.comments != null) {
+            commentlist.updateData(AppUtil.getCoachComments(currentStepsView.comments));
+        }
+        step_coachComments_rl.setSelected(true);
+        step_communityComments_rl.setSelected(false);
+        hapi4u_rl.setVisibility(View.GONE);
+
+        ((TextView) step_coachComments_rl.findViewById(R.id.step_coach_comments_btn)).setTextColor(Color.BLACK);
+        ((TextView) step_communityComments_rl.findViewById(R.id.step_community_comments_btn)).setTextColor(Color.LTGRAY);
+
+    }
+
 
     private void updateHAPI4ULayout() {
         final int hapi4U_count = currentStepsView.hapi4Us.size();
@@ -357,6 +389,98 @@ public class StepsViewActivity extends HAPIActivity implements StepsDataListener
         });
     }
 
+    private void updateCommunityHeader() {
+        community_header.setVisibility(View.VISIBLE);
+
+        (findViewById(R.id.header_right_tv)).setVisibility(View.GONE);
+        ((RelativeLayout) findViewById(R.id.step_community_header)).setVisibility(View.VISIBLE);
+
+        try {
+            String user3rdName = ApplicationEx.getInstance().currentCommunityUser.firstname + " " + ApplicationEx.getInstance().currentCommunityUser.lastname;
+            ((TextView) findViewById(R.id.step_community_name)).setText(user3rdName);
+        } catch (NullPointerException e) {
+            ((TextView) findViewById(R.id.step_community_name)).setText("");
+        }
+
+        ImageView community_avatar = (ImageView) findViewById(R.id.step_community_avatar);
+        //update useravatar
+        Bitmap bmp = ImageManager.getInstance().findImage(ApplicationEx.getInstance().currentCommunityUser.user_id);
+
+        if (bmp == null) {
+            new DownloadImageTask(community_avatar, Integer.parseInt(ApplicationEx.getInstance().currentCommunityUser.user_id)).execute(ApplicationEx.getInstance().currentCommunityUser.picture_url_large);
+        } else
+            community_avatar.setImageBitmap(bmp);
+
+        step_coachComments_rl.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void getTimelineActivitySuccess(TimelineActivity response) {
+
+    }
+
+    @Override
+    public void getTimelineActivityFailedWithError(MessageObj response) {
+
+    }
+
+    @Override
+    public void uploadMealCommentSuccess(String response) {
+
+    }
+
+    @Override
+    public void uploadMealCommentFailedWithError(MessageObj response, String entryID) {
+        updateHAPI4ULayout();
+    }
+
+    @Override
+    public void uploadMealCommentRefresh(Comment comment) {
+        if (currentStepsView != null) {
+            //upDATE COMMENT STATUS
+            List<Comment> comments = currentStepsView.comments;
+            for (int i = 0; i < comments.size(); i++) {
+                Comment commentFail = comments.get(i);
+                //update status to on going
+                if (comment.comment_id == commentFail.comment_id) {
+                    commentFail.status = Comment.STATUS.ONGOING_COMMENTUPLOAD;
+                    currentStepsView.comments.remove(i);
+                    currentStepsView.comments.add(i, comment);
+                    i = comments.size() + 1;
+                }
+            }
+        }
+
+        //submit to server
+        submitComment(comment);
+
+        updateHAPI4ULayout();
+
+        if (isCommunityTabSelected) {
+            commentlist.updateData(AppUtil.getCommunityComments(currentStepsView.comments));
+        } else {
+            commentlist.updateData(AppUtil.getCoachComments(currentStepsView.comments));
+        }
+    }
+
+    @Override
+    public void uploadMealCommentDelete(Comment comment) {
+        if (currentStepsView != null) {
+            //upDATE COMMENT STATUS
+            List<Comment> comments = currentStepsView.comments;
+            for (int i = 0; i < comments.size(); i++) {
+                Comment commentFail = comments.get(i);
+                //update status to on going
+                if (comment.comment_id == commentFail.comment_id) {
+                    currentStepsView.comments.remove(i);
+                    i = comments.size() + 1;
+                }
+            }
+        }
+        updateHAPI4ULayout();
+        commentlist.updateData(AppUtil.getAllComments(currentStepsView.comments));
+    }
+
     private class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
         final ImageView bmImage;
         String photoid = "";
@@ -403,7 +527,15 @@ public class StepsViewActivity extends HAPIActivity implements StepsDataListener
 
     @Override
     public void getStepsDataSuccess(Steps response) {
+        currentStepsView = response;
 
+        this.runOnUiThread(new Runnable() {
+
+            @Override
+            public void run() {
+                refreshUI();
+            }
+        });
     }
 
     @Override

@@ -790,10 +790,6 @@ public class MealListFragment extends ScrollView implements DateChangeListener, 
                     public void onItemClick(AdapterView<?> parent, View view, int position,
                                             long id) {
                         Steps stepsObj = (Steps) stepsListView.getAdapter().getItem(position);
-                        System.out.println("IVANA: stepsListView");
-
-                        System.out.println("IVANA: stepsListView-device");
-                        ApplicationEx.getInstance().currentSteps = stepsObj;
                         ApplicationEx.getInstance().currentStepsView = stepsObj;
 
                         Intent mainIntent = new Intent(context, StepsViewActivity.class);

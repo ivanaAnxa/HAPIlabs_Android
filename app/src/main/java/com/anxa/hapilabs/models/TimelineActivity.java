@@ -14,6 +14,7 @@ public class TimelineActivity {
     public String activity_date;
     public String rating;
     public boolean isdeleted;
+    public boolean isChecked;
 
     public Meal meal;
     public HapiMoment hapiMoment;

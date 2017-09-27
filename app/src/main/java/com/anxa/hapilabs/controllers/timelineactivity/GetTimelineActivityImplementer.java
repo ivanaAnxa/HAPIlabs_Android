@@ -194,6 +194,7 @@ public class GetTimelineActivityImplementer {
                                 currentStepsView = timelineActivity.steps;
                                 currentStepsView.comments = timelineActivity.comments;
                                 currentStepsView.activity_id = timelineActivity.activity_id;
+                                currentStepsView.isChecked = timelineActivity.isChecked;
 
                                 currentStepsView.hapi4Us = timelineActivity.hapi4Us;
 

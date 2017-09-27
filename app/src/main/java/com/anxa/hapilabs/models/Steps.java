@@ -18,6 +18,7 @@ public class Steps {
     public Date start_datetime;
     public Date end_datetime;
     public Boolean isDeleted;
+    public Boolean isChecked;
 
 
     public List<Comment> comments;
