@@ -642,7 +642,7 @@ public class MealListFragment extends ScrollView implements DateChangeListener, 
             if(weightItems.size() > 0) {
                 //today
                 if (fmt.format(ApplicationEx.getInstance().currentSelectedDate).equals(fmt.format(new Date()))) {
-                    weightList.add(weightItems.get(weightList.size() - 1));
+                    weightList.add(weightItems.get(weightItems.size() - 1));
                 }else
                 {
                     weightList.add(weightItems.get(0));

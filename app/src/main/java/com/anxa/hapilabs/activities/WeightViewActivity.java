@@ -131,8 +131,7 @@ public class WeightViewActivity extends HAPIActivity implements WeightDataListen
             if (from3rdPartyCommunity) {
                 updateCommunityHeader();
             } else {
-                //getWeight(String.valueOf(currentWeightView.activity_id));
-
+                getWeight(String.valueOf(currentWeightView.activity_id));
                 community_header.setVisibility(View.GONE);
             }
             communityCommentsSelected();

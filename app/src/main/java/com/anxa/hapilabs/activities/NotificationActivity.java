@@ -875,11 +875,11 @@ public class NotificationActivity extends HAPIActivity implements GetNotificatio
         }else if (entryType.equalsIgnoreCase("weight")) {
             ApplicationEx.getInstance().currentWeightView = response.weight;
             ApplicationEx.getInstance().currentCommunityUser = response.commentUser;
-            proceedToWeightViewPage(true, !response.commentUser.user_id.equalsIgnoreCase(ApplicationEx.getInstance().userProfile.getRegID()));
+            proceedToWeightViewPage(true, !response.user_id.equalsIgnoreCase(ApplicationEx.getInstance().userProfile.getRegID()));
         }else if (entryType.equalsIgnoreCase("steps")) {
             ApplicationEx.getInstance().currentStepsView = response.steps;
             ApplicationEx.getInstance().currentCommunityUser = response.commentUser;
-            proceedToStepsViewPage(true, !response.commentUser.user_id.equalsIgnoreCase(ApplicationEx.getInstance().userProfile.getRegID()));
+            proceedToStepsViewPage(true, !response.user_id.equalsIgnoreCase(ApplicationEx.getInstance().userProfile.getRegID()));
         }
 
     }
