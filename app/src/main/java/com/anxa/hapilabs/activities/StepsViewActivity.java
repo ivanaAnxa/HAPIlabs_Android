@@ -20,6 +20,7 @@ import android.widget.TextView;
 
 import com.anxa.hapilabs.common.connection.listener.GetTimelineActivityListener;
 import com.anxa.hapilabs.common.connection.listener.MealAddCommentListener;
+import com.anxa.hapilabs.common.connection.listener.MealISHapiCommentListener;
 import com.anxa.hapilabs.common.connection.listener.StepsDataListener;
 import com.anxa.hapilabs.common.util.AppUtil;
 import com.anxa.hapilabs.common.util.ApplicationEx;
@@ -45,7 +46,7 @@ import java.util.List;
  * Created by angelaanxa on 9/20/2017.
  */
 
-public class StepsViewActivity extends HAPIActivity implements StepsDataListener, View.OnClickListener, GetTimelineActivityListener, MealAddCommentListener {
+public class StepsViewActivity extends HAPIActivity implements StepsDataListener, View.OnClickListener, GetTimelineActivityListener, MealAddCommentListener, MealISHapiCommentListener {
     final Context context = this;
 
     GetStepsDataController getStepsDataController;
@@ -250,6 +251,17 @@ public class StepsViewActivity extends HAPIActivity implements StepsDataListener
         InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(comment_et.getWindowToken(), 0);
     }
+
+    public void postHAPI4U(View view) {
+        this.runOnUiThread(new Runnable() {
+
+            @Override
+            public void run() {
+                postHAPI4UtoAPI();
+            }
+        });
+    }
+
     public void nonBlockingUI(final Comment comment) {
         this.runOnUiThread(new Runnable() {
 
@@ -274,9 +286,19 @@ public class StepsViewActivity extends HAPIActivity implements StepsDataListener
         }
     }
 
+    private void postHAPI4UtoAPI() {
+        if (addHapiMomentCommentController == null) {
+            addHapiMomentCommentController = new AddHapiMomentCommentController(this, this, this);
+        }
+        String username = ApplicationEx.getInstance().userProfile.getRegID();
+        if (username != null) {
+            addHapiMomentCommentController.postHAPI4U(String.valueOf(currentStepsView.activity_id), null, username);
+        }
+    }
+
     private void isCommentHapi(Comment comment) {
         if (isHapiController == null) {
-            //isHapiController = new AddISHapiCommentController(this, this, this);
+            isHapiController = new AddISHapiCommentController(this, this, this);
         }
         String username = ApplicationEx.getInstance().userProfile.getRegID();
         if (username != null)
@@ -479,6 +501,16 @@ public class StepsViewActivity extends HAPIActivity implements StepsDataListener
         }
         updateHAPI4ULayout();
         commentlist.updateData(AppUtil.getAllComments(currentStepsView.comments));
+    }
+
+    @Override
+    public void uploadISHapiCommentSuccess(String response) {
+
+    }
+
+    @Override
+    public void uploadISHapiCommentFailedWithError(MessageObj response, String entryID) {
+
     }
 
     private class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
