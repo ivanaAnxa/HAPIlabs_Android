@@ -137,6 +137,7 @@ public class ApplicationEx extends Application {
     public Hashtable<String, Meal> mealsToAdd = new Hashtable<String, Meal>();
     public Hashtable<String, Meal> tempList = new Hashtable<String, Meal>();
     public Hashtable<String, HapiMoment> tempHapimomentList = new Hashtable<String, HapiMoment>();
+    public Hashtable<String, Weight> tempWeightList = new Hashtable<String, Weight>();
     public Hashtable<String, Meal> allMealList = new Hashtable<String, Meal>();
     public Hashtable<String, Meal> allHealthyMealList = new Hashtable<String, Meal>();
     public Hashtable<String, Meal> allOKMealList = new Hashtable<String, Meal>();

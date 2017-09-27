@@ -19,6 +19,7 @@ import com.anxa.hapilabs.models.MessageObj;
 import com.anxa.hapilabs.models.UserProfile;
 import com.anxa.hapilabs.models.MessageObj.MESSAGE_TYPE;
 import com.anxa.hapilabs.models.Water;
+import com.anxa.hapilabs.models.Weight;
 import com.anxa.hapilabs.models.Workout;
 
 import android.os.Handler;
@@ -136,6 +137,17 @@ public class JsonGetSyncResponseHandler extends JsonDefaultResponseHandler {
                     Workout workoutObj = JsonUtil.getWorkout(json);
                     workoutList.add(workoutObj);
                 }
+                // GET WEIGHT ARRAY
+                JSONArray _weightArray = jsonResponse.getJSONArray("weight");
+                ArrayList<Weight> weightList = new ArrayList<Weight>();
+
+                for (int index = 0; index < _weightArray.length(); index++)
+                {
+                    JSONObject json = _weightArray.getJSONObject(index);
+
+                    Weight weightObj = JsonUtil.getWeightView(json);
+                    weightList.add(weightObj);
+                }
 
                 // GET Hapimoment ARRAY
                 JSONArray _hapiMomentArray = jsonResponse.getJSONArray("mood");
@@ -173,6 +185,7 @@ public class JsonGetSyncResponseHandler extends JsonDefaultResponseHandler {
                 returnArrayList.addAll(_meallist);
                 returnArrayList.addAll(hapiMomentList);
                 returnArrayList.addAll(workoutList);
+                returnArrayList.addAll(weightList);
                 //transfer the message obj to the response handler
                 setResponseObj(returnArrayList);
 

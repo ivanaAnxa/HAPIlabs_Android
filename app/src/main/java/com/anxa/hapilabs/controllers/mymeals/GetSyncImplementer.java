@@ -22,6 +22,7 @@ import com.anxa.hapilabs.models.HapiMoment;
 import com.anxa.hapilabs.models.Meal;
 import com.anxa.hapilabs.models.MessageObj;
 import com.anxa.hapilabs.models.MessageObj.MESSAGE_TYPE;
+import com.anxa.hapilabs.models.Weight;
 import com.anxa.hapilabs.models.Workout;
 
 import android.os.Message;
@@ -73,6 +74,7 @@ public class GetSyncImplementer {
                         List<Meal> _meallist = new ArrayList<Meal>();
                         List<HapiMoment> _hapiMomentList= new ArrayList<HapiMoment>();
                         List<Workout> _workoutList = new ArrayList<Workout>();
+                        List<Weight> _weightList = new ArrayList<Weight>();
 
                         ApplicationEx.getInstance().tempHapimomentList = new Hashtable<String, HapiMoment>();
 
@@ -91,6 +93,10 @@ public class GetSyncImplementer {
                             {
                                 _workoutList.add((Workout) o);
                             }
+                            if(o.getClass() == Weight.class)
+                            {
+                                _weightList.add((Weight) o);
+                            }
                         }
                         DaoImplementer implDao = new DaoImplementer(new MealDAO(context, null), context);
                         for (int i = 0; i < _meallist.size(); i++) {
@@ -106,7 +112,11 @@ public class GetSyncImplementer {
                             HapiMoment moment = _hapiMomentList.get(i);
                             ApplicationEx.getInstance().tempHapimomentList.put(String.valueOf(moment.mood_id), moment);
                         }
+                        for (int i = 0; i < _weightList.size(); i++) {
 
+                            Weight weight = _weightList.get(i);
+                            ApplicationEx.getInstance().tempWeightList.put(String.valueOf(weight.activity_id), weight);
+                        }
                          /*Workout*/
 
                         //List<Workout> _workoutList = (List<Workout>) jsonResponseHandler.getResponseObj();

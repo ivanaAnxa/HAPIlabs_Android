@@ -704,7 +704,7 @@ public class JsonUtil {
         weightObj.activity_id = json.optString("activity_id");
         weightObj.device_name = json.optString("device_name");
         weightObj.graph_values_type = json.optString("graph_value_type");
-
+        weightObj.isChecked = json.optBoolean("isChecked", false);
         Long timestamp_utc = json.optLong("start_datetime");
 
         //convert timestamp  based on user timezone
@@ -799,7 +799,7 @@ public class JsonUtil {
 
         weightObj.activity_id = json.optString("activity_id");
         weightObj.device_name = json.optString("device_name");
-
+        weightObj.isChecked = json.optBoolean("isChecked", false);
         Long timestamp_utc = json.optLong("activity_date");
 
         //convert timestamp  based on user timezone
@@ -937,7 +937,7 @@ public class JsonUtil {
         weightObj.BoneWeightGrams = json.optDouble("bone_weight_grams", 0);
         weightObj.LeanMassRatio = json.optDouble("lean_mass_ratio", 0);
         weightObj.BMI = json.optDouble("bmi", 0);
-
+        weightObj.isChecked = json.optBoolean("isChecked", false);
         Long timestamp_utc = json.optLong("activity_date");
 
         Calendar calendar = Calendar.getInstance();

@@ -82,5 +82,12 @@
             android:layout_height="match_parent"
             android:theme="@android:style/Theme.Holo"/>
 
+        <include
+            android:id="@+id/mealitem_weight"
+            layout="@layout/weight_itemlist"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:theme="@android:style/Theme.Holo"/>
+
     </LinearLayout>
 </ScrollView>

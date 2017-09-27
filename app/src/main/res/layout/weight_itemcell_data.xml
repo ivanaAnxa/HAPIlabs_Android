@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:measureWithLargestChild="false">
+
+    <!-- activity details -->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_background_gray"
+        android:paddingTop="5dp">
+
+        <ImageView
+            android:id="@+id/weight_displayLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/journal_weight_icon"
+            android:layout_alignParentLeft="true" />
+
+
+        <TextView
+            android:id="@+id/weight_displayTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="HAPI Connected Scale"
+            android:layout_toRightOf="@id/weight_displayLogo"
+            android:textStyle="bold"
+            android:textColor="@color/text_black" />
+
+        <TextView
+            android:id="@+id/weight_selectedBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="81 min - 15.121 km"
+            android:layout_toRightOf="@id/weight_displayLogo"
+            android:layout_below="@id/weight_displayTitle"
+            android:textColor="@color/text_darkgray" />
+
+
+        <TextView
+            android:id="@+id/weight_displayTime"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="11:59 PM"
+            android:layout_toRightOf="@id/weight_displayLogo"
+            android:layout_below="@id/weight_selectedBody"
+            android:theme="@style/grayNormal"
+            android:textColor="@color/text_gray" />
+
+
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

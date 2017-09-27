@@ -1460,6 +1460,64 @@ public class AppUtil {
         return weeklyWorkout;
     }
 
+    public static Hashtable<String, List<Weight>> getWeightByDateRange(Date todate, Date fromdate, Hashtable<String, Weight> list, int dayInTheRange) {
+
+        Hashtable<String, List<Weight>> weeklyWeight = new Hashtable<String, List<Weight>>();
+        String key = "";
+
+        int date_day;
+
+        Calendar c = Calendar.getInstance();
+        c.setTime(fromdate);
+
+        int month_day = c.get(Calendar.MONTH) + 1;
+        Boolean last_day_reached = false;
+
+        //check if last day of month is reached
+        int max_day = c.getActualMaximum(Calendar.DAY_OF_MONTH);
+
+        //loop from date to to date range
+        for (int i = 0; i < dayInTheRange; i++) {
+            date_day = c.get(Calendar.DAY_OF_MONTH);
+
+            if (last_day_reached) {
+                month_day = month_day + 1;
+                last_day_reached = false;
+            }
+
+            if (date_day == max_day) {
+                last_day_reached = true;
+            }
+
+            //use month_daydate as a key 1_10
+            key = month_day + "_" + date_day;
+
+            //create dummy data
+            List<Weight> value = new ArrayList<Weight>();
+            weeklyWeight.put(key, value);
+            c.set(Calendar.DAY_OF_MONTH, c.get(Calendar.DAY_OF_MONTH) + 1);
+        }//end for
+        Enumeration<Weight> weightEnum = list.elements();
+
+        while (weightEnum.hasMoreElements()) {
+            Weight weightObj = weightEnum.nextElement();
+            //get date_day of the workout
+            c.setTime(weightObj.start_datetime);
+            date_day = c.get(Calendar.DAY_OF_MONTH);
+            month_day = c.get(Calendar.MONTH) + 1;
+
+            List<Weight> dummy = weeklyWeight.get(month_day + "_" + date_day);
+            if (dummy != null) {
+                dummy.add(weightObj);
+                weeklyWeight.remove(month_day + "_" + date_day);
+                weeklyWeight.put(month_day + "_" + date_day, dummy);
+            }
+        }//end while
+        //end for
+        return weeklyWeight;
+    }
+
+
     public static String getDayofWeek(Date date) {
         return new SimpleDateFormat("EE", Locale.getDefault()).format(date);
     }

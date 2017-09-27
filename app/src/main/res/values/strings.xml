@@ -1218,7 +1218,7 @@
     <string name="WEIGHT_WATERWEIGHT">Water Weight</string>
     <string name="WEIGHT_BONEMASS">Bone Mass</string>
     <string name="WEIGHT_BMI">Body Mass Index</string>
-
+    <string name="BMI">BMI</string>
     <!--Free+-->
     <string name="PAYMENT_OPTIONS_TITLE">Choose Your Plan</string>
     <string name="FREE_TRIAL_BIG">$0 - Free trial</string>
