@@ -1207,6 +1207,7 @@
     <string name="EXERCISEVIEW_STEPS">Steps Taken</string>
     <string name="EXERCISEVIEW_DISTANCE">Km travelled</string>
     <string name="EXERCISEVIEW_DURATION">Duration</string>
+    <string name="STEPSVIEW_CALORIES">Calories burned</string>
     <string name="STEPS">steps</string>
     <string name="MENU_EDIT_EXERCISE">Edit Exercise</string>
     <string name="MENU_DELETE_EXERCISE">Delete Exercise</string>

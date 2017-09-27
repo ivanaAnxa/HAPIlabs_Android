@@ -26,10 +26,12 @@ import android.widget.ScrollView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import com.anxa.hapilabs.activities.StepsViewActivity;
 import com.anxa.hapilabs.activities.WeightViewActivity;
 import com.anxa.hapilabs.models.Weight;
 import com.anxa.hapilabs.ui.adapters.WeightListAdapter;
 import com.anxa.hapilabs.ui.adapters.WeightLogsListAdapter;
+
 import com.hapilabs.R;
 import com.anxa.hapilabs.activities.ExerciseActivity;
 import com.anxa.hapilabs.activities.ExerciseViewActivity;
@@ -859,6 +861,20 @@ public class MealListFragment extends ScrollView implements DateChangeListener, 
                 stepsListView.refreshDrawableState();
                 stepsListView.setAdapter(stepsListAdapter);
                 setListViewHeightBasedOnChildren(stepsListView);
+
+                stepsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position,
+                                            long id) {
+                        Steps stepsObj = (Steps) stepsListView.getAdapter().getItem(position);
+                        ApplicationEx.getInstance().currentStepsView = stepsObj;
+
+                        Intent mainIntent = new Intent(context, StepsViewActivity.class);
+                        mainIntent.putExtra("EXERCISE_ACTIVITY_ID", stepsObj.activity_id);
+                        context.startActivity(mainIntent);
+                    }
+                });
+
 
             } else {
                 llSteps.setVisibility(LinearLayout.GONE);

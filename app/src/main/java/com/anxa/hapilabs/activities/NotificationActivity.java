@@ -290,7 +290,6 @@ public class NotificationActivity extends HAPIActivity implements GetNotificatio
                 } else {
                     entryType = "hapimoment";
                 }
-
                 if (item.is_community) {
                     //launch separate page
                     getTimelineActivityController.getTimelineActivity(ApplicationEx.getInstance().userProfile.getRegID(), item.ref_id, entryType);
@@ -382,7 +381,7 @@ public class NotificationActivity extends HAPIActivity implements GetNotificatio
                         }
                     }else if (item.ref_type.equalsIgnoreCase("ActivityId") && item.coachMessage.toLowerCase().contains("weight")) {
 
-                            getWeight(item.ref_id);
+                        getWeight(item.ref_id);
 
                     }else if (item.ref_type.equalsIgnoreCase("ActivityId") && item.coachMessage.toLowerCase().contains("steps")) {
 

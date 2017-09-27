@@ -1,6 +1,469 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
 
-</LinearLayout>
+    <com.anxa.hapilabs.activities.fragments.HeaderFragments
+        android:id="@+id/fragment_header"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/text_orange" />
+
+    <ScrollView
+        android:id="@+id/step_view_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/step_commentfieldcontainer"
+        android:layout_below="@id/fragment_header"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/common_button_white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/text_white">
+
+            <RelativeLayout
+                android:id="@+id/step_community_header"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#f7f7f7"
+                android:visibility="gone">
+
+                <com.anxa.hapilabs.ui.RoundedImageView
+                    android:id="@+id/step_community_avatar"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/hapicoach_default_profilepic" />
+
+                <TextView
+                    android:id="@+id/step_community_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/step_community_avatar"
+                    android:text="April Patio"
+                    android:textColor="@color/text_blue_comment"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <!-- title -->
+            <RelativeLayout
+                android:id="@+id/stepViewTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/step_community_header"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:id="@+id/stepViewTop_Type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center"
+                    android:text=""
+                    android:textAppearance="@style/blackNormal.ExtraLarge" />
+
+                <TextView
+                    android:id="@+id/stepViewTop_Time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:layout_centerVertical="true"
+                    android:text="" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/stepImageView"
+                android:layout_below="@+id/stepViewTop"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+
+                <ImageView
+                    android:id="@+id/stepView_TypeIcon"
+                    android:layout_width="fill_parent"
+                    android:layout_height="150dp"
+                    android:background="@drawable/steps_inner" />
+
+                <TextView
+                    android:id="@+id/step_deviceText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="10dp"
+                    android:text=""
+                    android:textColor="@color/text_white" />
+
+            </RelativeLayout>
+
+
+
+            <!-- checked -->
+            <LinearLayout
+                android:id="@+id/stepView_checked"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/stepImageView"
+                android:gravity="center_vertical"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/meal_approved_icon" />
+
+                <TextView
+                    android:id="@+id/step_checked"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:text="Checked"
+                    android:textColor="@android:color/holo_green_dark" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/stepView_Description"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/stepView_checked"
+                android:padding="5dp"
+                android:text=""
+                android:textColor="@color/common_gray_light_separator" />
+
+            <LinearLayout
+                android:id="@+id/stepViewBottom"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/stepView_Description"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="3.04">
+
+                <!-- step taken -->
+
+                <RelativeLayout
+                    android:id="@+id/stepView_StepTaken"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_btn_gray"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp">
+
+                    <ImageView
+                        android:id="@+id/stepView_StepTakenIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/timeline_icon_steps" />
+
+                    <TextView
+                        android:id="@+id/stepView_StepTakenText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/stepView_StepTakenIcon"
+                        android:paddingLeft="3dp"
+                        android:text=""
+                        android:textAlignment="center"
+                        android:textColor="@color/text_black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/stepView_StepTakenLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/stepView_StepTakenIcon"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/EXERCISEVIEW_STEPS"
+                        android:textAppearance="@style/darkGrayNormal.Medium" />
+
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="0dp"
+                    android:layout_weight=".02"></View>
+
+                <!-- duration -->
+                <RelativeLayout
+                    android:id="@+id/stepView_Duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_btn_gray"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp">
+
+                    <ImageView
+                        android:id="@+id/stepView_DurationIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/timeline_icon_duration" />
+
+                    <TextView
+                        android:id="@+id/stepView_DurationText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="false"
+                        android:layout_alignParentTop="false"
+                        android:layout_toRightOf="@+id/stepView_DurationIcon"
+                        android:text=""
+                        android:textAlignment="center"
+                        android:textColor="@color/text_black"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/stepView_DurationLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/stepView_DurationIcon"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/EXERCISEVIEW_DURATION"
+                        android:textAppearance="@style/darkGrayNormal.Medium" />
+                </RelativeLayout>
+
+
+                <!-- calories burn -->
+                <RelativeLayout
+                    android:id="@+id/stepView_Calories"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_btn_gray"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp">
+
+                    <ImageView
+                        android:id="@+id/stepView_CaloriesIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/timeline_icon_calories" />
+
+                    <TextView
+                        android:id="@+id/stepView_CaloriesText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/stepView_CaloriesIcon"
+                        android:paddingLeft="3dp"
+                        android:text=""
+                        android:textAlignment="center"
+                        android:textColor="@color/text_black"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/stepView_CaloriesLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/stepView_CaloriesIcon"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/STEPSVIEW_CALORIES"
+                        android:textAppearance="@style/darkGrayNormal.Medium" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="0dp"
+                    android:layout_weight=".02"></View>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/step_comments_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/stepViewBottom"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/blackNormal.ExtraLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Comments"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:id="@+id/step_comments_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:id="@+id/step_coach_comments_container"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/comments_background"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="coachCommentsSelected">
+
+                        <TextView
+                            android:id="@+id/step_coach_comments_btn"
+                            style="@style/blackNormal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_horizontal"
+                            android:paddingLeft="5dp"
+                            android:text="Coach" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/step_community_comments_container"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/comments_background"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="communityCommentsSelected">
+
+                        <TextView
+                            android:id="@+id/step_community_comments_btn"
+                            style="@style/blackNormal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_horizontal"
+                            android:paddingLeft="5dp"
+                            android:text="@string/MYCOMMUNITY_TITLE" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/step_hapi4u_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/step_comments_ll"
+                    android:background="#f7f7f7"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/step_hapi4u_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:onClick="postHAPI4U"
+                        android:paddingLeft="10dp"
+                        android:src="@drawable/hapi4u_blue" />
+
+                    <TextView
+                        android:id="@+id/step_hapi4u_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/step_hapi4u_iv"
+                        android:clickable="true"
+                        android:onClick="postHAPI4U"
+                        android:paddingLeft="10dp"
+                        android:text="HAPI 4U"
+                        android:textColor="@color/text_blue_comment"
+                        android:textSize="16dp" />
+
+                    <com.anxa.hapilabs.ui.RoundedImageView
+                        android:id="@+id/step_hapi4u_avatar"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/step_hapi4u_num_image"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/hapicoach_default_profilepic"
+                        android:visibility="invisible"/>
+
+                    <com.anxa.hapilabs.ui.RoundedImageView
+                        android:id="@+id/step_hapi4u_num_image"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/rounded_button_dark_orange_borderless"
+                        android:visibility="invisible"/>
+
+                    <TextView
+                        android:id="@+id/step_hapi4u_num_label"
+                        style="@style/whiteNormal"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center"
+                        android:text="2" />
+
+                    <ImageView
+                        android:id="@+id/step_hapi4u_smiley"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_alignBottom="@+id/step_hapi4u_avatar"
+                        android:layout_alignEnd="@+id/step_hapi4u_avatar"
+                        android:layout_alignRight="@+id/step_hapi4u_avatar"
+                        android:src="@drawable/meal_smiley_orange"
+                        android:visibility="invisible"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <com.anxa.hapilabs.ui.CommentListLayout
+                android:id="@+id/step_commentlist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/step_comments_layout"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/step_commentfieldcontainer"
+        layout="@layout/commentfield"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:visibility="visible" />
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/step_commentfieldcontainer"
+        android:background="@color/common_gray_separator" />
+
+    <ProgressBar
+        android:id="@+id/step_progressBar"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerInParent="true"
+        android:indeterminateDrawable="@drawable/animateprogress"
+        android:visibility="visible" />
+
+</RelativeLayout>

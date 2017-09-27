@@ -3150,8 +3150,9 @@ public class AppUtil {
 
         for (Comment comment : allComments) {
             //community
-            if (comment.comment_type != 0)
+            if (comment.comment_type != 0){
                 coachComments.add(comment);
+            }
         }
 
         return coachComments;

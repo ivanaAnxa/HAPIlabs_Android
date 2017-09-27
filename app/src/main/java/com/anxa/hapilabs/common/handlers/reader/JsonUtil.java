@@ -768,6 +768,7 @@ public class JsonUtil {
         stepsObj.end_datetime = AppUtil.getOffsetOnSync(calendar.getTime());
 
         stepsObj.isDeleted = json.optBoolean("is_deleted");
+        stepsObj.isChecked = json.optBoolean("isChecked",false);
 
         try {
             JSONArray graph_value = json.getJSONArray("graph_value");
@@ -790,7 +791,6 @@ public class JsonUtil {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-
         return stepsObj;
     }
 
@@ -865,6 +865,8 @@ public class JsonUtil {
         stepsObj.steps_duration = json.optDouble("duration", 0);
         stepsObj.steps_distance = json.optDouble("distance", 0);
         stepsObj.steps_calories = json.optDouble("calories", 0);
+        stepsObj.isChecked = json.optBoolean("isChecked",false);
+
         try
         {
             if (json.has("comment_group")) {
@@ -920,6 +922,7 @@ public class JsonUtil {
         stepsObj.start_datetime = AppUtil.getOffsetOnSync(calendar.getTime());
 
         stepsObj.isDeleted = json.optBoolean("is_deleted");
+        stepsObj.isChecked = json.optBoolean("isChecked",false);
 
         return stepsObj;
     }
