@@ -712,7 +712,9 @@ public class MealsFragments extends Fragment implements OnClickListener,
         //clear the saved login credentials
         ApplicationEx.getInstance().clearLoginCredentials();
         ApplicationEx.getInstance().currentSelectedDate = AppUtil.getCurrentDateinDate();
-
+        ApplicationEx.getInstance().currentWeightView = null;
+        ApplicationEx.getInstance().currentStepsView = null;
+        ApplicationEx.getInstance().tempWeightList = null;
         clearTables();
 
         Intent mainIntent;

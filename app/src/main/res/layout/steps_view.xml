@@ -95,7 +95,7 @@
                 <ImageView
                     android:id="@+id/stepView_TypeIcon"
                     android:layout_width="fill_parent"
-                    android:layout_height="150dp"
+                    android:layout_height="wrap_content"
                     android:background="@drawable/steps_inner" />
 
                 <TextView

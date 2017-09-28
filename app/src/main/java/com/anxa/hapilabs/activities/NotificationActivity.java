@@ -479,6 +479,14 @@ public class NotificationActivity extends HAPIActivity implements GetNotificatio
                         workout_id = Integer.parseInt(item.ref_id);
                         getWorkoutDetails(item.ref_id);
                     }
+                }else if (item.ref_type.equalsIgnoreCase("WeightId") && item.coachMessage.toLowerCase().contains("weight")) {
+
+                    getWeight(item.ref_id);
+
+                }else if (item.ref_type.equalsIgnoreCase("StepsId") && item.coachMessage.toLowerCase().contains("steps")) {
+
+                    getSteps(item.ref_id);
+
                 } else {
                     for (Meal meal : ApplicationEx.getInstance().tempList.values()) {
                         if (meal.meal_id.compareTo(item.ref_id) == 0) {
@@ -899,7 +907,7 @@ public class NotificationActivity extends HAPIActivity implements GetNotificatio
     @Override
     public void getWeightDataSuccess(Weight response) {
         ApplicationEx.getInstance().currentWeightView = response;
-        //proceedToWeightViewPage(true, !response.c.user_id.equalsIgnoreCase(ApplicationEx.getInstance().userProfile.getRegID()));
+        proceedToWeightViewPage(false, false);
     }
 
     @Override
@@ -920,7 +928,7 @@ public class NotificationActivity extends HAPIActivity implements GetNotificatio
     @Override
     public void getStepsDataSuccess(Steps response) {
         ApplicationEx.getInstance().currentStepsView = response;
-        proceedToStepsViewPage(true, false);
+        proceedToStepsViewPage(false, false);
     }
 
     @Override

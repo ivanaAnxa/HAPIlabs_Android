@@ -3,7 +3,7 @@
 
 
     <string name="app_name">HAPI</string>
-    <string name="app_version" translatable="false">Version 2.2</string>
+    <string name="app_version" translatable="false">Version 2.4</string>
 
     <!-- broadcastStrings -->
     <string name="broadcast_sync" translatable="false">HAPI_BROADCAST_SYNCUPDATE</string>

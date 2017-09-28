@@ -2,8 +2,10 @@ package com.anxa.hapilabs.activities.fragments;
 
 
 import java.util.ArrayList;
+import java.util.Hashtable;
 import java.util.List;
 
+import com.anxa.hapilabs.models.Weight;
 import com.hapilabs.R;
 import com.anxa.hapilabs.activities.AboutActivity;
 import com.anxa.hapilabs.activities.CoachSelectionActivity;
@@ -486,7 +488,9 @@ public class MeFragments extends Fragment implements OnClickListener, ProgressCh
         //clear the saved login credentials
         ApplicationEx.getInstance().clearLoginCredentials();
         ApplicationEx.getInstance().currentSelectedDate = AppUtil.getCurrentDateinDate();
-
+        ApplicationEx.getInstance().currentWeightView = null;
+        ApplicationEx.getInstance().currentStepsView = null;
+        ApplicationEx.getInstance().tempWeightList = new Hashtable<String, Weight>();
         clearTables();
 
         Intent mainIntent;

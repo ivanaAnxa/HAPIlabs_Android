@@ -5,6 +5,7 @@ import java.util.Date;
 public class Notification {
 
     public static enum NOTIFICATION_TYPE {
+        NOTIFICATION_COACH_ACKNOWLEDGE(0),
         NOTIFICATION_MEAL_APPROVAL_COACH(1),
         NOTIFICATION_MEAL_COMMENT_COACH(2),
         NOTIFICATION_MESSAGE_COACH(3),
