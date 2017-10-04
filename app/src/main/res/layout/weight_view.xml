@@ -97,7 +97,7 @@
                 <ImageView
                     android:id="@+id/weight_DefaultImage"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="150dp"
                     android:background="@drawable/weight_inner" />
                     <TextView
                         android:id="@+id/weight_deviceText"

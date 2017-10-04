@@ -133,6 +133,7 @@ public class StepsViewActivity extends HAPIActivity implements StepsDataListener
                 currentStepsView.isChecked = false;
             refreshUI();
         }
+
     }
 
 

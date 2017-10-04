@@ -333,6 +333,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener, M
         // save userAgent
         ApplicationEx.getInstance().customAgent = TAG + " v/" + ver;
         ApplicationEx.getInstance().selectedTabIndex = tabIndex;
+        ApplicationEx.getInstance().setCrashlyticsUser();
 
     }
 
