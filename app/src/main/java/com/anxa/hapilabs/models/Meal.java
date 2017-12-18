@@ -75,6 +75,8 @@ public class Meal {
 
     public int userRating;
     public int coachRating;
+    public boolean isHapiForkMeal;
+    public boolean isPairedWithHapicoach;
 
     public List<Photo> photos;
 

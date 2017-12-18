@@ -1371,6 +1371,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener, M
             displayLastWeeksCaloriesData();
             return null;
         }
+
     }
 
     private void displayLastWeeksCaloriesData() {

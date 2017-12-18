@@ -174,12 +174,31 @@ public class JsonGetSyncResponseHandler extends JsonDefaultResponseHandler {
                 for (int index = 0; index < _array.length(); index++) {
                     JSONObject json = _array.getJSONObject(index);
                     if (JsonUtil.getMeal(json, offsetInMillis) != null) {
-                        _meallist.add(JsonUtil.getMeal(json, offsetInMillis));
+                        Meal m = JsonUtil.getMeal(json, offsetInMillis);
+                        if(m.isHapiForkMeal)
+                        {
+                            m.isPairedWithHapicoach = true; //hack as api is always returning false
+                        }
+                        _meallist.add(m);
                     }else{
                         System.out.println("JsonUtil.meal == null");
                     }
                 }
+                // GET MEAL HAPIFORK ARRAY
+                JSONArray _arrayhf = jsonResponse.getJSONArray("unpairedHapiforkMeal"); //all meals here are unpaired
 
+
+
+                for (int index = 0; index < _arrayhf.length(); index++) {
+                    JSONObject json = _arrayhf.getJSONObject(index);
+                    if (JsonUtil.getMeal(json, offsetInMillis) != null) {
+                        Meal m = JsonUtil.getMeal(json, offsetInMillis);
+                        m.isPairedWithHapicoach = false;
+                        _meallist.add(m);
+                    }else{
+                        System.out.println("JsonUtil.meal == null");
+                    }
+                }
 
                 ArrayList returnArrayList = new ArrayList<Object>();
                 returnArrayList.addAll(_meallist);

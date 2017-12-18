@@ -397,6 +397,8 @@ public class JsonUtil {
         meal.meal_status = json.optString("status");
         meal.isApproved = json.optBoolean("isapproved");
         meal.isCommented = json.optBoolean("iscommented");
+        meal.isHapiForkMeal = json.optBoolean("isHapiForkMeal", false);
+        meal.isPairedWithHapicoach = json.optBoolean("isPairedWithHapicoach", false);
 
         if (json.has("coachRating")) {
             meal.coachRating = json.optInt("coachRating");

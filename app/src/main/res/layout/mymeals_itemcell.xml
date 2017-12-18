@@ -119,7 +119,31 @@
             <!--android:visibility="visible" />-->
         </LinearLayout>
         >
+        <RelativeLayout
+            android:id="@+id/hapiforkextra"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:layout_alignBottom="@+id/mealphoto"
+            android:background="#7F333333"
+            android:visibility="gone">
 
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:gravity="center"
+               android:textColor="@color/text_white"
+               android:text="@string/btn_delete"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:layout_alignParentRight="true"
+                style="@style/btnStyleOrange"
+                android:text="@string/btn_savemeal"
+                android:padding="5dp"/>
+        </RelativeLayout>
+        >
 
         <LinearLayout
             android:id="@+id/meal_uploadfailed"
