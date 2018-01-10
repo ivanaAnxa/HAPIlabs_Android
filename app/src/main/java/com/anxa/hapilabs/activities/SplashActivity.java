@@ -1,12 +1,14 @@
 package com.anxa.hapilabs.activities;
 
 
+import com.crashlytics.android.Crashlytics;
 import com.hapilabs.R;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import io.fabric.sdk.android.Fabric;
 
 public class SplashActivity extends Activity {
     protected int _splashTime = 3000; // time to display the splash screen in ms
@@ -14,6 +16,7 @@ public class SplashActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Fabric.with(this, new Crashlytics());
 
         setRequestedOrientation(1);
         setContentView(R.layout.splash);

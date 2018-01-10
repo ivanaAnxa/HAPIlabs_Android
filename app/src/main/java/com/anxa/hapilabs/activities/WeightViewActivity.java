@@ -50,7 +50,7 @@ import java.util.List;
  * Created by angelaanxa on 9/20/2017.
  */
 
-public class WeightViewActivity extends HAPIActivity implements WeightDataListener, MealAddCommentListener, MealISHapiCommentListener {
+public class WeightViewActivity extends HAPIActivity implements WeightDataListener, MealAddCommentListener, MealISHapiCommentListener  {
     final Context context = this;
 
     GetWeightDataController getWeightDataController;
@@ -215,7 +215,7 @@ public class WeightViewActivity extends HAPIActivity implements WeightDataListen
             commentlist.updateData(AppUtil.getCommunityComments(currentWeightView.comments));
         } else {
             coachCommentsSelected();
-            getWeight(String.valueOf(currentWeightView.activity_id));
+           // getWeight(String.valueOf(currentWeightView.activity_id));
 
 
         }

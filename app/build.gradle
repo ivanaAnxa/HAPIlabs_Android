@@ -47,7 +47,7 @@ dependencies {
     compile('com.twitter.sdk.android:tweet-composer:1.0.5@aar') {
         transitive = true;
     }
-    compile('com.crashlytics.sdk.android:crashlytics:2.6.5@aar') {
+    compile('com.crashlytics.sdk.android:crashlytics:2.6.8@aar') {
         transitive = true;
         compile "com.google.android.gms:play-services-gcm:9.8.0"
 

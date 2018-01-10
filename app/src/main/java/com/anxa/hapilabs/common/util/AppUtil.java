@@ -1296,7 +1296,15 @@ public class AppUtil {
             date_day = c.get(Calendar.DAY_OF_MONTH);
 
             if (last_day_reached) {
-                month_day = (month_day + 1) % 12;
+                if(month_day + 1 == 12)
+                {
+                    month_day = month_day + 1;
+                }
+                else
+                {
+                    month_day = (month_day + 1) % 12;
+                }
+
                 last_day_reached = false;
             }
 

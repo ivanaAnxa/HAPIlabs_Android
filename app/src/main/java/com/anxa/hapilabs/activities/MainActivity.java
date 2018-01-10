@@ -333,6 +333,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener, M
         // save userAgent
         ApplicationEx.getInstance().customAgent = TAG + " v/" + ver;
         ApplicationEx.getInstance().selectedTabIndex = tabIndex;
+        ApplicationEx.getInstance().setCrashlyticsUser();
 
     }
 
@@ -1370,6 +1371,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener, M
             displayLastWeeksCaloriesData();
             return null;
         }
+
     }
 
     private void displayLastWeeksCaloriesData() {

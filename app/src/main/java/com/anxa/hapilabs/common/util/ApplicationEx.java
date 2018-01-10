@@ -11,6 +11,7 @@ import android.support.annotation.NonNull;
 import android.util.DisplayMetrics;
 import android.view.WindowManager;
 
+import com.crashlytics.android.core.BuildConfig;
 import com.hapilabs.R;
 import com.anxa.hapilabs.activities.MainActivity;
 import com.anxa.hapilabs.common.connection.WebServices;
@@ -170,7 +171,7 @@ public class ApplicationEx extends Application {
     public AlarmManager alarmMgr = null;
     public PendingIntent alarmIntent[] = new PendingIntent[9];
     public boolean fromFBConnect;
-
+    Crashlytics crashlytics;
 
     public ApplicationEx() {
         super();
@@ -335,7 +336,8 @@ public class ApplicationEx extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-//        Fabric.with(this, new Crashlytics());
+        crashlytics = new Crashlytics.Builder().build();
+        Fabric.with(this, crashlytics);
 
         // Initialize the SDK before executing any other operations,
         FacebookSdk.sdkInitialize(getApplicationContext());
@@ -345,6 +347,20 @@ public class ApplicationEx extends Application {
 
         String ver = getResources().getString(R.string.app_version);
         customAgent = getResources().getString(R.string.app_name) + ver;
+
+    }
+
+    public void setCrashlyticsUser()
+    {
+        if(crashlytics != null && ApplicationEx.getInstance().userProfile != null
+                && ApplicationEx.getInstance().userProfile.getEmail() != null
+                && ApplicationEx.getInstance().userProfile.getRegID() != null
+                && ApplicationEx.getInstance().userProfile.getFirstname() != null)
+        {
+            Crashlytics.setUserEmail(ApplicationEx.getInstance().userProfile.getEmail());
+            Crashlytics.setUserIdentifier(ApplicationEx.getInstance().userProfile.getRegID());
+            Crashlytics.setUserName(ApplicationEx.getInstance().userProfile.getFirstname());
+        }
     }
 
     public void setAllMealsRated(int mealsRated)

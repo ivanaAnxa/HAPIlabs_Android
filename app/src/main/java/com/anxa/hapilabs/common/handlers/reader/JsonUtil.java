@@ -397,6 +397,8 @@ public class JsonUtil {
         meal.meal_status = json.optString("status");
         meal.isApproved = json.optBoolean("isapproved");
         meal.isCommented = json.optBoolean("iscommented");
+        meal.isHapiForkMeal = json.optBoolean("isHapiForkMeal", false);
+        meal.isPairedWithHapicoach = json.optBoolean("isPairedWithHapicoach", false);
 
         if (json.has("coachRating")) {
             meal.coachRating = json.optInt("coachRating");
@@ -1004,7 +1006,14 @@ public class JsonUtil {
         notification.notificationID = json.optInt("notification_id");
         notification.coachMessage = json.optString("notification_message");
         try {
-            notification.notificationType = NOTIFICATION_TYPE.values()[json.optInt("notification_type") - 1];
+            //coach check or community comment
+            if(json.optInt("notification_type", 0) == 0 || json.optInt("notification_type", 0) == 8|| json.optInt("notification_type", 0) == 7){
+                notification.notificationType = NOTIFICATION_TYPE.values()[json.optInt("notification_type")];
+            }
+            else{
+                notification.notificationType = NOTIFICATION_TYPE.values()[json.optInt("notification_type") - 1];
+            }
+
         } catch (ArrayIndexOutOfBoundsException e) {
 //            System.out.println("ArrayIndexOutOfBoundsException notificationType: " + json.optInt("notification_type"));
             return null;

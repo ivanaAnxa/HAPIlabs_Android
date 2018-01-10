@@ -323,8 +323,8 @@ public class MealListFragment extends ScrollView implements DateChangeListener, 
         ((ImageView) layout.findViewById(R.id.mealinfo)).setOnClickListener(listener);
         ((ImageView) layout.findViewById(R.id.mealinfo)).setTag(meal.meal_type);
 
-        ((TextView) layout.findViewById(R.id.mealtitle)).setText(AppUtil.getMealTitle(context, meal.meal_type));
-        ((TextView) layout.findViewById(R.id.mealtime)).setVisibility(View.VISIBLE);
+
+            ((TextView) layout.findViewById(R.id.mealtime)).setVisibility(View.VISIBLE);
 
         ////update meal_creation_date = date of the meal(date tab)
         ((TextView) layout.findViewById(R.id.mealtime)).setText(AppUtil.getMealTime(meal.meal_creation_date));
@@ -342,7 +342,7 @@ public class MealListFragment extends ScrollView implements DateChangeListener, 
 
 
             if (meal.photos.size() > 0)
-                updatePhotoMain(meal.photos.get(0), photoMain, meal.meal_type);
+                updatePhotoMain(meal.photos.get(0), photoMain, meal.meal_type, meal.isHapiForkMeal);
 
             if (meal.photos.size() > 1) {
                 ((LinearLayout) layout.findViewById(R.id.multiPhoto_layout)).setVisibility(View.VISIBLE);
@@ -384,7 +384,7 @@ public class MealListFragment extends ScrollView implements DateChangeListener, 
             }
 
         } else {
-            updatePhotoMain(null, photoMain, meal.meal_type);
+            updatePhotoMain(null, photoMain, meal.meal_type, meal.isHapiForkMeal);
             ((LinearLayout) layout.findViewById(R.id.multiPhoto_layout)).setVisibility(View.GONE);
         }
 
@@ -494,6 +494,14 @@ public class MealListFragment extends ScrollView implements DateChangeListener, 
 
             ((LinearLayout) layout.findViewById(R.id.meal_uploadfailed)).setVisibility(View.GONE);
             ((LinearLayout) layout.findViewById(R.id.meal_uploadresume)).setVisibility(View.GONE);
+        }
+
+        if(!meal.isHapiForkMeal) {
+            ((TextView) layout.findViewById(R.id.mealtitle)).setText(AppUtil.getMealTitle(context, meal.meal_type));
+        }else {
+            ((TextView) layout.findViewById(R.id.mealtitle)).setText(meal.meal_description);
+            ((TextView) layout.findViewById(R.id.mealtime)).setVisibility(GONE);
+            ((TextView) layout.findViewById(R.id.mealdesc)).setVisibility(GONE);
         }
     }
 
@@ -1024,7 +1032,7 @@ public class MealListFragment extends ScrollView implements DateChangeListener, 
     }
 
 
-    public ImageView updatePhotoMain(Photo photo, ImageView item, MEAL_TYPE type) {
+    public ImageView updatePhotoMain(Photo photo, ImageView item, MEAL_TYPE type, boolean isHapiforkMeal ) {
 
 //        if (photo != null && photo.image != null)
 //            item.setImageBitmap(photo.image);
@@ -1049,8 +1057,15 @@ public class MealListFragment extends ScrollView implements DateChangeListener, 
                 new DownloadImageTask(item, Integer.parseInt(photo.photo_id)).execute(photo.photo_url_large);
             } else
                 item.setImageBitmap(bmp);
-        } else
-            item.setImageResource(AppUtil.getPhotoResource(type));
+        } else {
+            if(isHapiforkMeal)
+            {
+                item.setImageResource(R.drawable.meal_hapifork_default);
+            }else{
+                item.setImageResource(AppUtil.getPhotoResource(type));
+            }
+
+        }
 
         return item;
     }

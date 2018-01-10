@@ -3,7 +3,7 @@
 
 
     <string name="app_name">HAPI</string>
-    <string name="app_version" translatable="false">Version 2.2</string>
+    <string name="app_version" translatable="false">Version 2.4.2</string>
 
     <!-- broadcastStrings -->
     <string name="broadcast_sync" translatable="false">HAPI_BROADCAST_SYNCUPDATE</string>
@@ -28,6 +28,7 @@
     <string name="btn_no">No</string>
     <string name="btn_ok">OK</string>
     <string name="btn_save">Save</string>
+    <string name="btn_savemeal">Save Meal</string>
     <string name="btn_continue">Continue</string>
     <string name="btn_premium" translatable="false">Premium</string>
     <string name="btn_now" translatable="false">Now</string>

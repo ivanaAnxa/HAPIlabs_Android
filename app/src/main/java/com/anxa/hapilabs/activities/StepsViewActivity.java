@@ -133,6 +133,7 @@ public class StepsViewActivity extends HAPIActivity implements StepsDataListener
                 currentStepsView.isChecked = false;
             refreshUI();
         }
+
     }
 
 
@@ -184,7 +185,18 @@ public class StepsViewActivity extends HAPIActivity implements StepsDataListener
             step_isChecked_ll.setVisibility (View.VISIBLE);
         else {
             step_isChecked_ll.setVisibility (View.GONE);
+
+        }
+
+        if (isCommunityTabSelected) {
+            // updateHAPI4ULayout();
+
+            commentlist.updateData(AppUtil.getCommunityComments(currentStepsView.comments));
+        } else {
             coachCommentsSelected();
+            //getSteps(String.valueOf(currentStepsView.activity_id));
+
+
         }
     }
 
@@ -260,6 +272,7 @@ public class StepsViewActivity extends HAPIActivity implements StepsDataListener
                 postHAPI4UtoAPI();
             }
         });
+
     }
 
     public void nonBlockingUI(final Comment comment) {
